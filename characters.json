@@ -1,0 +1,9 @@
+[
+	{
+		"id":"cavaleiro1",
+		"name":"Erick Mavine ou só Cavaleiro, depende se é um NPC de fundo ou um NPC importante"
+		"damage":20,
+		"skill":"lançada",
+		"pathImage":"pasta/seila.png"
+	},
+]

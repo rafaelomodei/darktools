@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.FXMLController">
+    <children>
+        <Button fx:id="button" layoutX="179.0" layoutY="59.0" onAction="#handleButtonAction" text="save" />
+        <Label fx:id="label" layoutX="121.0" layoutY="154.0" minHeight="16" minWidth="69" />
+      <Button fx:id="button2" layoutX="92.0" layoutY="59.0" mnemonicParsing="false" onAction="#loadButtonAction" text="load" />
+      <Button fx:id="delete" layoutX="173.0" layoutY="115.0" mnemonicParsing="false" onAction="#deleteSaveButtonAction" text="delete" />
+      <Button fx:id="upgrade" layoutX="79.0" layoutY="115.0" mnemonicParsing="false" onAction="#upgradeSaveButtonAction" text="upgrade" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="newClassDiagramTemplate">
+  <ClassDiagramComponents>
+    <Class name="Team" package="models" visibility="public" xPosition="276.0" yPosition="476.0">
+      <Fields>
+        <Field name="personages" type="List&lt;Personage&gt;" visibility="private"/>
+        <Field name="money" type="Double" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Personage" package="models" visibility="public" xPosition="317.0" yPosition="643.0">
+      <Fields>
+        <Field name="life" type="float" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="skills" type="List&lt;Skill&gt;" visibility="private"/>
+        <Field name="imagePath" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="atack" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Skill" package="models" visibility="public" xPosition="560.0" yPosition="476.0">
+      <Fields>
+        <Field name="damage" type="float" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="useSkill" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Board" package="models" visibility="public" xPosition="276.0" yPosition="18.0">
+      <Fields>
+        <Field name="gameState" type="GameState" visibility="private"/>
+        <Field name="teamPlayer" type="Team" visibility="private"/>
+        <Field name="teamEnemy" type="Team" visibility="private"/>
+        <Field name="currentScenario" type="Scenario" visibility="private"/>
+        <Field name="scriptSegments" type="List&lt;ScriptSegment&gt;" visibility="private"/>
+        <Field name="turnSide" type="TeamTurn" visibility="private"/>
+        <Field name="cityPeoplesAlive" type="Int" visibility="private"/>
+        <Field name="map" type="Map" visibility="private"/>
+        <Field name="dataSaved" type="Date" visibility="private"/>
+        <Field name="segmentStoppedId" type="String" visibility="private"/>
+        <Field name="nameSave" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="readScriptSegments" returnType="void" visibility="public"/>
+        <Method name="createBattle" returnType="void" visibility="public"/>
+        <Method name="rollDice" returnType="void" visibility="public"/>
+        <Method name="saveGame" returnType="void" visibility="public"/>
+        <Method name="loadGame" returnType="void" visibility="public"/>
+        <Method name="changeScenario" returnType="ScriptSegment" visibility="public">
+          <Argument type="ScriptSegment" name="scriptSegment"/>
+        </Method>
+        <Method name="ScriptSegmentsBuilder" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Map" package="models" visibility="public" xPosition="34.0" yPosition="73.0">
+      <Fields>
+        <Field name="scenarios" type="List&lt;Scenario&gt;" visibility="private"/>
+        <Field name="image" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Scenario" package="models" visibility="public" xPosition="42.0" yPosition="276.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="imagePath" type="String" visibility="private"/>
+        <Field name="map" type="Map" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="ScriptSegment" package="models" visibility="public" xPosition="771.0" yPosition="362.0">
+      <Fields>
+        <Field name="turnSide" type="TeamTurn" visibility="private"/>
+        <Field name="messages" type="List&lt;String&gt;" visibility="private"/>
+        <Field name="voicesPath" type="List&lt;String&gt;" visibility="private"/>
+        <Field name="commands" type="List&lt;String&gt;" visibility="private"/>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="whoSpeaks" type="String" visibility="private"/>
+        <Field name="currentScenarioPath" type="String" visibility="private"/>
+        <Field name="routes" type="List&lt;String&gt;" visibility="private"/>
+        <Field name="enemyPath" type="List&lt;String&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Enum name="GameState" package="models" visibility="public" xPosition="718.0" yPosition="23.0">
+      <Literals>
+        <Literal name="Stopped"/>
+        <Literal name="Running"/>
+      </Literals>
+    </Enum>
+    <Enum name="TeamTurn" package="models" visibility="public" xPosition="797.0" yPosition="166.0">
+      <Literals>
+        <Literal name="Enemy"/>
+        <Literal name="Player"/>
+        <Literal name="Neutral"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="have" source="models.ScriptSegment" target="models.TeamTurn" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="have" source="models.Board" target="models.Scenario" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="has" source="models.Board" target="models.ScriptSegment" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <UseRelation name="had" source="models.Map" target="models.Scenario" sourceCardinality="1..1" targetCardinality="1..*"/>
+    <HasRelation name="had" source="models.Team" target="models.Personage" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="have" source="models.Board" target="models.TeamTurn" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="have" source="models.Board" target="models.GameState" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="had" source="models.Personage" target="models.Skill" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+    <HasRelation name="has" source="models.Board" target="models.Map" type="Default" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <HasRelation name="had" source="models.Board" target="models.Team" type="Default" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

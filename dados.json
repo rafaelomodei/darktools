@@ -1,0 +1,48 @@
+[
+    {
+        "id":"1a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Olá guerreiros","Bem vindos ao caos","Preparados para sofrer?"],
+		"currentScenario":"taberna",
+        "commands":["showButtons"],
+        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
+        "routes":["2a","3a","4a"]
+    },
+    {
+        "id":"2a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Então se prepare"],
+        "commands":["changeScenario"],
+        "showButtons":["teste"],
+        "scenario":"rua1",
+        "routes":["5a"]
+    },
+    {
+        "id":"3a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Bem, faz parte"],
+        "routes":["6a"]
+    },
+    {
+        "id":"4a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Que assim seja!"],
+        "commands":["showDiePage"]
+    },
+    {
+        "id":"5a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Final da rota do \" Sim\" "]
+    },
+    {
+        "id":"6a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Final da rota do \" Não\" "]
+    }
+]
