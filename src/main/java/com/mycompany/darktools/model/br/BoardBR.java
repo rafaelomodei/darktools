@@ -47,6 +47,11 @@ public class BoardBR {
     }
     
     public List<Board> ListAll(){
-        return boardDao.listAll();
+        try {
+            return boardDao.listAll();
+        } catch (HibernateException he){
+            System.out.println("Erro in show board list :"+he);
+            return null;
+        }
     }
 }

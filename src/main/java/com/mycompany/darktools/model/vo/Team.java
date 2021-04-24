@@ -13,12 +13,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import java.util.List;
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
-import javax.persistence.Transient;
 
 /**
  *
@@ -41,7 +38,11 @@ public class Team {
     @Column(name = "money", nullable = false)
     Double money;
 
-    public Team(List<Personage> personages, Double money) {
+    public Team(){
+        
+    }
+    
+    public Team(List personages, Double money) {
         this.personages = personages;
         this.money = money;
     }

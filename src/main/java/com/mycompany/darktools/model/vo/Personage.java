@@ -42,6 +42,8 @@ public class Personage {
     @Column(name = "imagepath", nullable = false, unique = true)
     String imagePath;
 
+    public Personage(){}
+    
     public Personage(String name, List skills, String imagePath) {
         this.name = name;
         this.skills = skills;

@@ -47,7 +47,13 @@ public class SkillBR {
     }
     
     public List<Skill> ListAll(){
-        return skillDao.listAll();
+        try {
+            return skillDao.listAll();
+        } catch (HibernateException he) {
+            System.out.println("Erro in list all skills :"+he);
+            return null;
+        }
+        
     }
     
     public void saveAll(List Skills){
