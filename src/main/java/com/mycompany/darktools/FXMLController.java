@@ -2,13 +2,11 @@ package com.mycompany.darktools;
 
 import com.mycompany.darktools.controller.BoardController;
 import com.mycompany.darktools.controller.BoardControllerImp;
-import com.mycompany.darktools.model.br.PersonageBR;
 import com.mycompany.darktools.model.dao.ConectionHibernate;
 import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
-import java.lang.reflect.Array;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -70,9 +68,9 @@ public class FXMLController implements Initializable {
 
         boardList = boardController.loadGames();
         
-        for(Board b: boardList){
-            System.out.println("Saves: "+b.getNameSave());
-        }
+//        for(Board b: boardList){
+//            System.out.println("Saves: "+b.getNameSave());
+//        }
         
         board2 = boardList.get(0);//é carregado a mesa do banco, pegando a primeira que tá lá
 

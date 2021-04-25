@@ -5,20 +5,16 @@
  */
 package com.mycompany.darktools.model.vo;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import java.util.List;
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import java.util.List;
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.OneToMany;
-import javax.persistence.Transient;
+import javax.persistence.Table;
 
 /**
  *
@@ -40,6 +36,10 @@ public class Team {
    
     @Column(name = "money", nullable = false)
     Double money;
+
+    public Team() {
+    }
+    
 
     public Team(List<Personage> personages, Double money) {
         this.personages = personages;
