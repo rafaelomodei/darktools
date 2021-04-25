@@ -9,7 +9,7 @@ package com.mycompany.darktools.model.vo;
  *
  * @author acer
  */
-enum TeamTurn {
+public enum TeamTurn {
     Enemy,
     Player,
     Neutral
