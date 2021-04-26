@@ -145,3 +145,16 @@ Exemplo arquivo json com dados dos personagens não jogáveis.
 
 
 ###  Agradecimentos
+
+
+### Bugs
+
+[Maven: Failed to retrieve plugin descriptor error](https://stackoverflow.com/questions/7819163/maven-failed-to-retrieve-plugin-descriptor-error)
+Local: ```netbeans.home/java/maven/conf/settings.xml```
+```
+<proxy>
+   <active>true</active>
+   <host>myproxy.host.net</host>
+   <port>80</port>
+ </proxy>
+```
