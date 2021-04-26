@@ -17,5 +17,6 @@
             <Font size="14.0" />
          </font>
       </Button>
+      <Button fx:id="brn_test" layoutX="957.0" layoutY="603.0" mnemonicParsing="false" onAction="#text" prefHeight="26.0" prefWidth="107.0" text="Button" />
    </children>
 </AnchorPane>

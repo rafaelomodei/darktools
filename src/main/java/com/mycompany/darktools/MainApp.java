@@ -5,6 +5,10 @@ import java.io.IOException;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 
 
@@ -28,13 +32,27 @@ public class MainApp extends Application {
 //   
 //    }
     
+   private String VIDEO_URL = getClass().getResource("/video/trailer_dark_tools.mp4").toString();
    private static Scene scene;
     
    @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(ViwerController.loadFXML("/viwer/OpeningTrailer"), 640, 480);
+        scene = new Scene(ViwerController.loadFXML("/viwer/OpeningTrailer"), 1080, 720);
         stage.setScene(scene);
         stage.show();
+        
+        Media media = new Media(VIDEO_URL); // 1
+        MediaPlayer mediaPlayer = new MediaPlayer(media); // 2
+        MediaView mediaView = new MediaView(mediaPlayer); // 3
+        
+        StackPane raiz = new StackPane();
+        raiz.getChildren().add(mediaView); // 4
+        Scene cena = new Scene(raiz, 600, 400);
+        stage.setTitle("Tocando Video em JavaFX");
+        stage.setScene(cena);
+        stage.show();
+        mediaPlayer.play(); // 
+        
     }
 
     /**
