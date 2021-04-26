@@ -1,11 +1,5 @@
 [
-    // Turno: neutral - player - enemy
-    //routes 1a (numero do dialogo)
-    //routes 1.1a (seguindo o dialogo anterior)
-    //routes 2a (numero do proximo dialogo)
-    // enemy inimogos
-    // imagepath id
-    {
+{
         "id":"0a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
