@@ -27,7 +27,7 @@ import org.json.simple.JSONObject;
 
 
 public class MainApp extends Application {
-    List<ScriptSegment> scriptSegments;
+//    List<ScriptSegment> scriptSegments;
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -42,11 +42,11 @@ public class MainApp extends Application {
         
         //JsonTratament.readAllArraysInArchiveJSON()
         
-        scriptSegments = readScriptSegments(readAllArraysInArchiveJSON());
-        
-        for(ScriptSegment ss: scriptSegments){
-            System.out.println("Id :"+ss.getId());
-        }
+//        scriptSegments = readScriptSegments(readAllArraysInArchiveJSON());
+//        
+//        for(ScriptSegment ss: scriptSegments){
+//            System.out.println("Id :"+ss.getId());
+//        }
         
          
     }

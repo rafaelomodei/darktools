@@ -165,12 +165,19 @@ public class JsonTratament {
             //!! É preciso fazer um meio de ler o arquivo com o formato UTF-8 !!
             
             BufferedReader arqIn = new BufferedReader(new InputStreamReader(new FileInputStream("dados.json"), "UTF-8"));
-            //JSONArray array = (JSONArray) arqIn.lines();
+            JSONArray array = (JSONArray) parser.parse(arqIn);
             
-            //System.out.println("dado :"+linha);
-//            for(int i=0; i< array.size(); i++){
-//                jsonObjects.add((JSONObject)array.get(i));
-//            }
+            //String str;
+            //str = arqIn.r;
+            //System.out.println(str);
+//            while ((str = arqIn.readLine()) != null) {
+//                System.out.println(str);
+//            } 
+
+            //System.out.println("dado :"+array);
+            for(int i=0; i< array.size(); i++){
+                jsonObjects.add((JSONObject)array.get(i));
+            }
             
             return jsonObjects;
             
