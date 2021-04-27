@@ -103,6 +103,11 @@ Exemplo arquivo json responsável pro direcionar os acontecimentos ao decorrer d
 - ``showButtons`` -> Textos dos botões que irão aparecer (valor definido pela quantidade de atributos)
 - ``routes`` -> Armazena o endereço dos proximos segmentos de script;
  
+ Comportamentos da chave ``commands``:
+   - ``showButtons`` -> Faz aparecer os botões de pergunta, eles são de acordo com a quandidade de textos na chave ``showButtons``
+   - ``battle`` -> Indica que ao final dos textos de fala se iniciará o combate, ele vai de acordo com a quantidade e inimigos que se tem atribuidos na chave ``enemy``
+   - ``changeScenario`` -> Indica a mudança de scenario (a view mudará imagem de fundo)
+   - ``changeMusic`` -> Indica mudança de musica de fundo
 
 **Cenário**<br>
 Exemplo arquivo json responsável por conter dados de informações de cenários pertencentes ao mapa do jogo.
