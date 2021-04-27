@@ -13,7 +13,7 @@
             <MediaView fx:id="mediaView" fitHeight="720.0" fitWidth="1280.0" nodeOrientation="INHERIT" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
-      <Button fx:id="btn_next" alignment="CENTER" contentDisplay="CENTER" layoutX="478.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="54.0" prefWidth="183.0" style="-fx-background-color: rgba(0, 0, 0, 0.3); -fx-border-color: #FFFFFF; -fx-border-width: 3px; -fx-border-radius: 3px; -fx-background-radius: 6px;" text="Pular abertura" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <Button fx:id="btn_next" alignment="CENTER" contentDisplay="CENTER" layoutX="478.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToWindow" prefHeight="54.0" prefWidth="183.0" style="-fx-background-color: rgba(0, 0, 0, 0.3); -fx-border-color: #FFFFFF; -fx-border-width: 3px; -fx-border-radius: 3px; -fx-background-radius: 6px;" text="Pular abertura" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

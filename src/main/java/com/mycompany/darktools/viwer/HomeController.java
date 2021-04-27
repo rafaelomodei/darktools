@@ -5,12 +5,15 @@
  */
 package com.mycompany.darktools.viwer;
 
+import java.io.FileInputStream;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 
 /**
  * FXML Controller class
@@ -18,20 +21,23 @@ import javafx.scene.control.Label;
  * @author Rafae
  */
 public class HomeController implements Initializable {
-
-    @FXML
-    private Label lb_NameGame;
-
-    @FXML
-    private Button btn_start;
-
-    @FXML
-    private Button btn_exit;
     
+    
+    @FXML
+    private BorderPane borderPane;
+    
+    @FXML
+    private ImageView background;
+
+    private String BACKGROUNG_URL =  getClass().getResource("/iu/img/image_02.png").toString();
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+       background = new ImageView(BACKGROUNG_URL);
+       background.setPreserveRatio(true);
+       background.setFitWidth(1280);
+       background.setX(152.0);
+       borderPane.setCenter(background);
     }    
     
 }

@@ -27,7 +27,7 @@ import javafx.stage.Stage;
  * @author Rafae
  */
 public class OpeningTrailerController implements Initializable {
-    
+
     private Stage stage;
     private String VIDEO_URL = getClass().getResource("/iu/video/OpeningTraileDarkTools.mp4").toString();
     private Media media;
@@ -44,22 +44,21 @@ public class OpeningTrailerController implements Initializable {
         media  = new Media(VIDEO_URL);
         mediaPlayer = new MediaPlayer(media);
         mediaPlayer.setAutoPlay(true);
-        //mediaPlayer.setOnReady(( stage.sizeToScene());
         mediaView = new MediaView(mediaPlayer);
         
         borderPane.setCenter(mediaView);
     }
     
     @FXML
-    private void switchToSecondary() throws IOException {
-        System.out.println("Ir para o menu");
+    private void switchToWindow() throws IOException {
+        try{
+            ViwerController.setRoot("/viwer/Home");
+        }catch(Exception e){
+            System.out.println("\n>> Infelizmente não foi possivel pular a abertura :( \n" +
+                               ">> Aproveite essa linda abertura! :D \n" +
+                               ">> Erro: " + e);
+        }
 
-    }
-    
-    
-    @FXML
-    public void text(){
-        System.out.println("\n\n>>>> Testando...\n\n");
     }
     
 }
