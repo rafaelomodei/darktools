@@ -7,12 +7,19 @@ package com.mycompany.darktools.viwer;
 
 import com.mycompany.darktools.controller.ViwerController;
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.Scene;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -20,23 +27,39 @@ import javafx.scene.control.Label;
  * @author Rafae
  */
 public class OpeningTrailerController implements Initializable {
-
-    @FXML
-    private Label lb_open;
-
-    @FXML
-    private Button btn_next;
     
-    
+    private Stage stage;
+    private String VIDEO_URL = getClass().getResource("/iu/video/OpeningTraileDarkTools.mp4").toString();
+    private Media media;
+    private MediaPlayer mediaPlayer;
+    @FXML
+    private MediaView mediaView;
+    @FXML
+    private BorderPane borderPane;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        stage = new Stage();
+        stage.setTitle("Dark Tools");
+        media  = new Media(VIDEO_URL);
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+        //mediaPlayer.setOnReady(( stage.sizeToScene());
+        mediaView = new MediaView(mediaPlayer);
+        
+        borderPane.setCenter(mediaView);
     }
     
     @FXML
     private void switchToSecondary() throws IOException {
-        ViwerController.setRoot("/fxml/Scene");
+        System.out.println("Ir para o menu");
+
+    }
+    
+    
+    @FXML
+    public void text(){
+        System.out.println("\n\n>>>> Testando...\n\n");
     }
     
 }

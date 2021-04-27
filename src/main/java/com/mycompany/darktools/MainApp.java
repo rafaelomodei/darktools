@@ -14,44 +14,13 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
     
-//    private static Scene scene;
-//
-//    @Override
-//    public void start(Stage stage) throws Exception {
-///       Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
-//        
-//        Scene scene = new Scene(root);
-//        scene.getStylesheets().add("/styles/Styles.css");
-//        
-//        stage.setTitle("JavaFX and Maven");
-//        stage.setScene(scene);
-//        stage.show();
-//       // ViwerController.setRoot();
-//
-//       
-//   
-//    }
-    
-   private String VIDEO_URL = getClass().getResource("/video/trailer_dark_tools.mp4").toString();
    private static Scene scene;
     
    @Override
     public void start(Stage stage) throws IOException {
-        scene = new Scene(ViwerController.loadFXML("/viwer/OpeningTrailer"), 1080, 720);
+        scene = new Scene(ViwerController.loadFXML("/viwer/OpeningTrailer"), 1280, 720);
         stage.setScene(scene);
         stage.show();
-        
-        Media media = new Media(VIDEO_URL); // 1
-        MediaPlayer mediaPlayer = new MediaPlayer(media); // 2
-        MediaView mediaView = new MediaView(mediaPlayer); // 3
-        
-        StackPane raiz = new StackPane();
-        raiz.getChildren().add(mediaView); // 4
-        Scene cena = new Scene(raiz, 600, 400);
-        stage.setTitle("Tocando Video em JavaFX");
-        stage.setScene(cena);
-        stage.show();
-        mediaPlayer.play(); // 
         
     }
 

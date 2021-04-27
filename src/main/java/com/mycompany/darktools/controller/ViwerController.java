@@ -18,9 +18,9 @@ import javafx.scene.Scene;
 public class ViwerController {
     
     private static Scene scene;
-//    private static Stage stage;
+//    //private static Stage stage;
 //            
-//    public void start() throws IOException {
+//    public void start(Stage stage) throws IOException {
 //        scene = new Scene(loadFXML("/fxml/Scene"), 640, 480);
 //        stage.setScene(scene);
 //        stage.show();

@@ -12,12 +12,12 @@
             <Font name="System Bold" size="75.0" />
          </font>
       </Label>
-      <Button fx:id="btn_start" alignment="CENTER" contentDisplay="CENTER" layoutX="465.0" layoutY="360.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Iniciar jogo" textAlignment="CENTER" AnchorPane.bottomAnchor="309.6" AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="464.6" AnchorPane.topAnchor="360.0">
+      <Button fx:id="btn_exit" alignment="CENTER" contentDisplay="CENTER" layoutX="465.0" layoutY="440.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Sair" textAlignment="CENTER" AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="464.6">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="btn_exit" alignment="CENTER" contentDisplay="CENTER" layoutX="465.0" layoutY="440.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" text="Sair" textAlignment="CENTER" AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="464.6">
+      <Button fx:id="btn_start" alignment="CENTER" contentDisplay="CENTER" layoutX="465.0" layoutY="360.0" mnemonicParsing="false" onAction="#switchToSecondary" prefHeight="50.0" prefWidth="150.0" text="Iniciar jogo" textAlignment="CENTER" AnchorPane.bottomAnchor="309.6" AnchorPane.leftAnchor="465.0" AnchorPane.rightAnchor="464.6" AnchorPane.topAnchor="360.0">
          <font>
             <Font size="14.0" />
          </font>
