@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.darktools.viwer;
+package com.mycompany.darktools.controller.viwer;
 
 import java.io.FileInputStream;
 import java.net.URL;
@@ -28,8 +28,15 @@ public class HomeController implements Initializable {
     
     @FXML
     private ImageView background;
+    
+    @FXML
+    private Button btn_start;
 
     private String BACKGROUNG_URL =  getClass().getResource("/iu/img/image_02.png").toString();
+    
+    public void start(){
+        
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

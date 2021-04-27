@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -8,24 +9,27 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.viwer.HomeController">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.HomeController">
    <children>
       <BorderPane fx:id="borderPane" layoutY="-360.0" prefHeight="720.0" prefWidth="1280.0">
          <center>
             <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" y="360.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1119.0" layoutY="575.0" prefHeight="82.0" prefWidth="184.0" style="-fx-font-weight: bold;" text="Iníciar" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <Button id="btn_start" fx:id="btn_start" alignment="CENTER" contentDisplay="CENTER" layoutX="1056.0" layoutY="543.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
          <font>
-            <Font size="36.0" />
+            <Font name="System Bold" size="25.0" />
          </font>
          <effect>
-            <DropShadow blurType="GAUSSIAN" height="42.45" radius="29.66" spread="0.9" width="78.19">
+            <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
                <color>
-                  <Color red="0.4553999900817871" green="0.7761600017547607" blue="0.9900000095367432" opacity="0.5437716245651245" />
+                  <Color green="0.8833333253860474" blue="1.0" />
                </color>
             </DropShadow>
          </effect>
-      </Label>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
    </children>
 </AnchorPane>

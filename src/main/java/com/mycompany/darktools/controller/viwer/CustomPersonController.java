@@ -3,36 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.darktools.viwer;
+package com.mycompany.darktools.controller.viwer;
 
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.CheckBox;
 
 /**
  * FXML Controller class
  *
  * @author Rafae
  */
-public class SaveController implements Initializable {
+public class CustomPersonController implements Initializable {
 
-    
-    
-    @FXML
-    private CheckBox cb_Easy;
-
-    @FXML
-    private CheckBox cb_medium;
-
-    @FXML
-    private CheckBox cb_hard;
-
-    @FXML
-    private Button btn_exit;
-    
+    /**
+     * Initializes the controller class.
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

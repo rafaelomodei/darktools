@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.mycompany.darktools.viwer;
+package com.mycompany.darktools.controller.viwer;
 
 import com.mycompany.darktools.controller.ViwerController;
 import java.io.IOException;
