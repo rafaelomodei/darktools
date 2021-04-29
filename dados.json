@@ -491,74 +491,76 @@
         "id":"9a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["Bem parece que encontraram a ultima trilha para a floresta", ""],
+        "words":["Bem parece que encontraram a ultima trilha para a floresta", "So precisam encontrar a Catacumba agora!", "Rolem os dados vamos ver se os Deuses estão com vocês!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons", "RollDiceD6"],
+        "routes":["9.1a", "9.2a", "9.3a", "9.4a", "9.5a", "9.6a"]
+    },
+    {
+        "id":"9.1a",
+        "turnSide":"player",
+        "whoSpeaks":"Arletics",
+        "words":["Pessoal aqui esta ela!", "Esquecida pelo tempo, olhem o tamanho dessa porta!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":[""],
-        "routes":[""]
+        "routes":["10"]
     },
     {
-        "id":"4.5a",
+        "id":"9.2a",
+        "enemy":["ogro1", "Lobo1", "Lobo4" , "Lobo3"],
+        "turnSide":"enemy",
+        "whoSpeaks":"ogro",
+        "words":["Meus cachorrinhos tem fome! so quero um de voces HAHA"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["battle"],
+        "routes":["9a"]
+    },
+    {
+        "id":"9.3a",
+        "enemy":["goblin1", "goblin1", "goblin2", "goblin3", "goblin4"],
+        "turnSide":"enemy",
+        "whoSpeaks":"goblin",
+        "words":["Não vão nunca encontrar a Catacumba!", "então ja vomos matalos aqui!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Battle"],
+        "routes":["9a"]
+    },
+    {
+        "id":"9.4a",
+        "enemy":["troll1", "troll2"],
+        "turnSide":"enemy",
+        "whoSpeaks":"troll",
+        "words":["Argh! Que fedor fedorento!", "Se eu matar melhora!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Battle"],
+        "routes":["9a"]
+    },
+    {
+        "id":"9.5a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Olha só ... nem um inimigo apareceu .. quem programou esse jogo? Assim fica facil ne produção!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Proximo"],
+        "routes":["10a"]
+    },
+    {
+        "id":"9.6a",
+        "turnSide":"player",
+        "whoSpeaks":"Arletics",
+        "words":["Encontrei a Catacumba!", "Cheira a morte, sera que devemos mesmo entrar?"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":[""],
-        "routes":[""]
+        "routes":["10"]
     },
     {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },
-    {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },
-    {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },
-    {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },
-    {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },
-    {
-        "id":"4.5a",
+        "id":"10a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":[""],
