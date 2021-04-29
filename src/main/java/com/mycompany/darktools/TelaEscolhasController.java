@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.media.AudioClip;
 
 /**
  * FXML Controller class
@@ -39,6 +40,7 @@ public class TelaEscolhasController implements Initializable {
     
     
     
+    
     /**
      * Initializes the controller class.
      */
@@ -46,19 +48,27 @@ public class TelaEscolhasController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         boardControllerImp.startGame();
         
-        label.setText(""+boardControllerImp.getBoard().getCurrentScriptSegment().getWords().get(0));
+        label.setText(""+boardControllerImp.goToNextWord());        
     }    
     
     
     @FXML
     private void nextButton() {
-        //boardControllerImp.goToNextScriptSegment(0);
-        
         label.setText(""+boardControllerImp.goToNextWord());
         
     }
     
+    @FXML
+    private void option1Button() {
+        boardControllerImp.goToNextScriptSegment(0);
+               
+    }
     
+    @FXML
+    private void option2Button() {
+        boardControllerImp.goToNextScriptSegment(1);
+        
+    }
     
     
 }

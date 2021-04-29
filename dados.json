@@ -6,8 +6,8 @@
         "words": [
             "A Floresta de Taiga"
         ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
+        "wordsSongsPath": [
+            "/audios/gravacao1.mp3"
         ],
         "scenario": [
             "florestaDeTaiga"
@@ -41,19 +41,23 @@
             "A floresta de Taiga é uma floresta bem densa e cheia de criaturas perigosas.",
             "Muitos goblins vivem por lá, além de seres mitológicos segundo as lendas."
         ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
+        "wordsSongsPath": [
+            "/audios/gravacao2.mp3",
+            "/audios/gravacao3.mp3",
+            "/audios/gravacao4.mp3",
+            "/audios/gravacao5.mp3",
+            "/audios/gravacao6.mp3",
+            "/audios/gravacao7.mp3",
+            "/audios/gravacao8.mp3",
+            "/audios/gravacao9.mp3",
+            "/audios/gravacao10.mp3",
+            "/audios/gravacao11.mp3"
         ],
         "scenario": [
             "florestaDeTaiga",
             "changeScenario"
         ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
-        ],
+        "commands": [],
         "routes": [
             "1a"
         ]
@@ -68,15 +72,11 @@
             "Na manhã do dia seguinte à chegada dos heróis",
             "A cidade acorda com explosões e gritos de dor e desespero vindos das ruas"
         ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
+        "wordsSongsPath": [
+            "/audios/gravacao1.mp3"
         ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
-        ],
+        "commands": [],
+        "showButtons": [],
         "routes": [
             "1.1a"
         ]
@@ -88,8 +88,8 @@
         "words": [
             "Ao olhar para o céu avistam um grande dragão sobrevoando a cidade e cuspindo fogo nas casas."
         ],
-        "wordsSongs": [
-            "etc/songs/speaks2.mp3"
+        "wordsSongsPath": [
+            "/audios/gravacao1.mp3"
         ],
         "commands": [
             "showButtons"
@@ -111,8 +111,8 @@
             "O Dragão se dirige até a torre da cidade.",
             "Lá de cima ele dá um grande rugido e diz:"
         ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
+        "wordsSongsPath": [
+            "/audios/gravacao1.mp3"
         ],
         "commands": [
             "showButtons"
@@ -132,8 +132,8 @@
             "IMPORTANTE!",
             "Um combate é algo difícil pelo seu nivel, você pode morrer tentando!"
         ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
+        "wordsSongsPath": [
+            "/audios/gravacao1.mp3"
         ],
         "commands": [
             "showButtons"
@@ -154,7 +154,7 @@
         "words": [
             "O Dragão evita os ataques e tenta se afastar."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -178,7 +178,7 @@
             "Me devolvam o Artefato de ITAMARium e seu patético planeta será poupado.",
             "Enquanto não me devolverem, irei devorar uma família por dia."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -198,7 +198,7 @@
         "words": [
             "Ele dá uma rasante e pega com suas garras um homem e duas crianças, e voa até as montanhas distantes."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -219,7 +219,7 @@
             "Não é possível persegui-lo",
             "Ele segue voando sobre a floresta em direção às montanhas."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -241,7 +241,7 @@
             "A única maneira de acabar com isto é encontrando o artefato de ITAMARium",
             "Um artefato amaldiçoado por uma antiga entidade, um Deus da Tecnologia daquela época."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -263,7 +263,7 @@
             "Há várias pessoas feridas na rua.",
             "No caos, as pessoas gritam para que Rei faça algo."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -286,7 +286,7 @@
             "Alguém corajoso o bastante?",
             "Seu Rei está a oferecer uma boa quantia a quem aceitar essa missão suicida"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -308,7 +308,7 @@
         "words": [
             "Os únicos capazes de salvar o planeta se recusaram!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -328,7 +328,7 @@
         "words": [
             "Os Guardas retornam ao castelo enquanto as pessoas imploram por piedade."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -361,7 +361,7 @@
             "A floresta de Taiga é uma floresta bem densa e cheia de criaturas perigosas.",
             "Muitos goblins vivem lá, além de seres mitológicos segundo as lendas."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -385,7 +385,7 @@
             "Ele lhes oferece as mais diversas bebidas e depois uma mesa farta de comidas variadas.",
             "Após se deliciar com a refeição, o rei se levanta e diz:"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -407,7 +407,7 @@
             "Não que eu me importe com a vida das pessoas aqui",
             "Mas é através delas que vem todo meu ouro e impostos, certo?"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -427,7 +427,7 @@
         "words": [
             "Após uma risadinha de canto, o Rei prossegue:"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -448,7 +448,7 @@
             "Se vocês me trouxer o artefato, estou disposto a lhe fornecer 6 mil peças de ouro por pessoa.",
             "Dessa forma, poderei negociar com este maldito dragão para que deixe minhas terras."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -473,7 +473,7 @@
             "Não sei ao certo onde está este Artefato",
             "Mas acredito que esteja enterrado nas profundezas da floresta de Taiga"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -496,7 +496,7 @@
             "Os aventureiros seguem então para a floresta de Taiga",
             "A ultima localizaçao conhecida do Artefato"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -516,7 +516,7 @@
         "words": [
             "A Floresta de Taiga"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -544,7 +544,7 @@
         "words": [
             "A floresta é grande e densa, é difícil de ver além de alguns metros à frente, as árvores ficam muito próximas umas das outras."
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -564,7 +564,7 @@
         "words": [
             "Entrar na floresta parece ser o unico caminho para encontrar a catacumba e conseguir cumprir o pedido do Rei, ou voces podem tentar ir atras do Dragão, por onde deseja começar?"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -586,7 +586,7 @@
         "words": [
             "Começar a procura pela trilha do Dragão ou procurar pela Catacumba"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -608,7 +608,7 @@
         "words": [
             "Vamos ver se voces tem Sorte!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -630,7 +630,7 @@
         "words": [
             "UAU! olhem o tamanho dassas pegadas, acho que este é o caminho para o covil do Dragão"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -656,7 +656,7 @@
         "words": [
             "Quanto ouro vocês tem? Goblins estava a espreita, atacango o grupo!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -680,7 +680,7 @@
         "words": [
             "Ahuuuuu!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -704,7 +704,7 @@
         "words": [
             "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -728,7 +728,7 @@
         "words": [
             "Voces Fedem a roupa lavada, bruhg! Credo eu matar oces pra ajudar a cheirar bem podre!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -754,7 +754,7 @@
         "words": [
             "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -774,7 +774,7 @@
         "words": [
             "Vamos começar a procurar pela Catacumba!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -794,7 +794,7 @@
         "words": [
             "Vamos ver se o dado vai lhes ajudar!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -819,7 +819,7 @@
         "words": [
             "Voces Fedem a roupa lavada, bruhg! Credo eu matar oces pra ajudar a cheirar bem podre!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -842,7 +842,7 @@
         "words": [
             "Ouro, ouro, ouro, eu so quero muis ouro!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -866,7 +866,7 @@
         "words": [
             "A beleza provoca o ladrão, mais do que o ouro, que que eu estou falando... me de logo este ouro!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -890,7 +890,7 @@
         "words": [
             "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -914,7 +914,7 @@
         "words": [
             "Ahuuuuu!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -934,7 +934,7 @@
         "words": [
             "Ei! aqui! acho que encontrei algo, essas arvores parecem pessoas!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -954,7 +954,7 @@
         "words": [
             "Voces encontraram a primeira parte da Trilha, boa sorte para encontrar o proximo"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -979,7 +979,7 @@
         "words": [
             "Voces tem ouro ai ne, Eu quero!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1002,7 +1002,7 @@
         "words": [
             "Voces Fedem a florzinha, bruhg! Credo eu matar oces, tripas cheirar muito gostoso, bem podre!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1026,7 +1026,7 @@
         "words": [
             "Nossa, Nossa, como brilha... Quero essa espada pra mim agora!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1046,7 +1046,7 @@
         "words": [
             "Ja passamos por aqui antes, estamos perdidos, vamos ter que voltar a procurar a trilha novamente!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1074,7 +1074,7 @@
         "words": [
             "Ahuuuuu! Ahuuuuu!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1094,7 +1094,7 @@
         "words": [
             "Estão sentindo esta energia, ela parece vir daquela direção, acho que estamos no caminho certo!"
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1114,7 +1114,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1134,7 +1134,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1154,7 +1154,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1174,7 +1174,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1194,7 +1194,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1214,7 +1214,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1234,7 +1234,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1254,7 +1254,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1274,7 +1274,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1294,7 +1294,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1314,7 +1314,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1334,7 +1334,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1354,7 +1354,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1374,7 +1374,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1394,7 +1394,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1414,7 +1414,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1434,7 +1434,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1454,7 +1454,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1474,7 +1474,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1494,7 +1494,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1514,7 +1514,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1534,7 +1534,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1554,7 +1554,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1574,7 +1574,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1594,7 +1594,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1614,7 +1614,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1634,7 +1634,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1654,7 +1654,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1674,7 +1674,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1694,7 +1694,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1714,7 +1714,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1734,7 +1734,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1754,7 +1754,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1774,7 +1774,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1794,7 +1794,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1814,7 +1814,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1834,7 +1834,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1854,7 +1854,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1874,7 +1874,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1894,7 +1894,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1918,7 +1918,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1942,7 +1942,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1966,7 +1966,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -1990,7 +1990,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -2014,7 +2014,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -2038,7 +2038,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -2062,7 +2062,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -2086,7 +2086,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
@@ -2110,7 +2110,7 @@
         "words": [
             ""
         ],
-        "wordsSongs": [
+        "wordsSongsPath": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [

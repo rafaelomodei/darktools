@@ -59,14 +59,15 @@ public class JsonTratament {
         }
                 
         ScriptSegment scriptSegment = new ScriptSegment(
-                (String) jsonObject.get("id"),
-                verifyTeamTurnInJsonBloc(jsonObject),
-                jsonObject.get("whoSpeaks") != null ? (String)jsonObject.get("whoSpeaks") : null,
-                parseJsonObjectToList(jsonObject,"words") != null ? parseJsonObjectToList(jsonObject,"words") : null,
-                parseJsonObjectToList(jsonObject,"commands") != null ? parseJsonObjectToList(jsonObject,"commands") : null,
-                scenario,
-                parseJsonObjectToList(jsonObject,"showButtons") != null ? parseJsonObjectToList(jsonObject,"showButtons") : null,
-                parseJsonObjectToList(jsonObject, "routes") != null ? parseJsonObjectToList(jsonObject, "routes") : null
+                (String) jsonObject.get("id"), //id
+                verifyTeamTurnInJsonBloc(jsonObject), //TurnSide
+                jsonObject.get("whoSpeaks") != null ? (String)jsonObject.get("whoSpeaks") : null, //whoSpeaks
+                parseJsonObjectToList(jsonObject,"words") != null ? parseJsonObjectToList(jsonObject,"words") : null, //words
+                parseJsonObjectToList(jsonObject, "wordsSongsPath") != null ? parseJsonObjectToList(jsonObject,"wordsSongsPath") : null, //wordsSongsPath
+                parseJsonObjectToList(jsonObject,"commands") != null ? parseJsonObjectToList(jsonObject,"commands") : null,//commands
+                scenario,//scenario
+                parseJsonObjectToList(jsonObject,"showButtons") != null ? parseJsonObjectToList(jsonObject,"showButtons") : null,//showButton
+                parseJsonObjectToList(jsonObject, "routes") != null ? parseJsonObjectToList(jsonObject, "routes") : null//routes
         );
         
         //scriptSegment.showData();

@@ -13,7 +13,9 @@ import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
+import com.mycompany.darktools.utils.ScriptSegmentConditions;
 import java.util.List;
+import javafx.scene.media.AudioClip;
 
 /**
  * Classe controladora da instância Board que será a base de todas as informações do jogador
@@ -28,7 +30,9 @@ public class BoardControllerImp implements BoardController{
     
     Board board;
     
-    int currentWord;
+    int currentWord;//fala atual
+    
+    AudioClip clip;//clipe
     
     static BoardControllerImp uniqueIndex;
     
@@ -149,24 +153,38 @@ public class BoardControllerImp implements BoardController{
     public void goToNextScriptSegment(int choice){
         ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
         
-        board.setCurrentScriptSegment(scriptSegmentController.foundNextScriptSegment(board.getScriptSegments(), board.getCurrentScriptSegment(), 0));
+        board.setCurrentScriptSegment(scriptSegmentController.foundNextScriptSegment(board.getScriptSegments(), board.getCurrentScriptSegment(), choice));
+        
+        this.currentWord = 0;//vai para a fala inicial do scriptSegment
+        
     }
 
     /**
-     * Função que irá passando os textos de fala
-     * @param currentWord Fala atual do segmento que está sendo apresentada
+     * Função que irá passando os textos de fala (organizar as responsabilidades!)
      * @return String com a fala
      */
     @Override
     public String goToNextWord() {
+        
+        if(clip != null){
+            clip.stop();
+        }
+        
+        String AUDIO_URL = getClass().getResource(board.getCurrentScriptSegment().getWordsSongsPath().get(currentWord)).toString();
+        clip = new AudioClip(AUDIO_URL);
+        
+        clip.play();
         
         if (this.currentWord < board.getCurrentScriptSegment().getWords().size()-1){
             this.currentWord++;
             return board.getCurrentScriptSegment().getWords().get(currentWord);
         } else {
             try {
-                goToNextScriptSegment(currentWord);
-                this.currentWord = 0;
+                //goToNextScriptSegment(currentWord);
+                //this.currentWord = 0;
+                
+                //ScriptSegmentConditions.ScriptSegmentTargetingConditions(board.getCurrentScriptSegment());//teste
+                
                 return board.getCurrentScriptSegment().getWords().get(currentWord);
             } catch (Exception e) {
                 System.out.println("Você está inserindo um valor que está fora da lista! "+e);
@@ -174,9 +192,6 @@ public class BoardControllerImp implements BoardController{
             return null;
         }
         
-    }
-    
-    
-    
+    }    
    
 }
