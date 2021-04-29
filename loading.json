@@ -20,4 +20,11 @@
 		"music":"pasta/FlorestaDeTaigaLoading.mp3",
 		"pathImage":"pasta/FlorestaDeTaigaLoading.png"
 	},
+    {
+		"id":"catacumb",
+		"title":"A Catacumba Perdida",
+        "discripition":"",
+		"music":"pasta/CatacumbaLoading.mp3",
+		"pathImage":"pasta/CatacumbaLoading.png"
+	},
 ]
