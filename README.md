@@ -146,7 +146,7 @@ Exemplo arquivo json com dados dos personagens não jogáveis.
 
 **Loadings**<br>
 Aquivo json com dados que serão apresentados em cada tela de carregamento
-``
+```
 [
 	{
 		"id":"city",
@@ -156,7 +156,7 @@ Aquivo json com dados que serão apresentados em cada tela de carregamento
 		"pathImage":"pasta/sanctusHeleneLoading.png"
 	},
 ]
-``
+```
 
 - ``id`` -> Endereço
 - ``title`` -> Titulo apresentado na tela
