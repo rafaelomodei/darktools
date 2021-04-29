@@ -30,36 +30,41 @@ import java.nio.charset.StandardCharsets;
 public class JsonTratament {
     /**
      * Função que irá pegar todos os JSONObject do arquivo e criar as classes ScriptSegment
-     * @return 
+     * @return Lista com as instancias de ScriptSegment
      */
     public static List<ScriptSegment> readScriptSegments(List<JSONObject> jsonObjects){
         List<ScriptSegment> scriptSegments = new ArrayList<ScriptSegment>();
         
         for(JSONObject data: jsonObjects){
-            System.out.println("data :"+data.toString());
-            readScriptSegment(data);
+            //System.out.println("data :"+data.toString());
+            
+            scriptSegments.add(readScriptSegment(data));
         }
-        
         return scriptSegments;
     }
     
     
     /**
      * Função que vai ler todo o arquivo JSON e vai construíndo a classe ScriptSegment com os dados desse JSON
+     * @param jsonObject JsonObject com os dados do segmento
+     * @return A instância do ScriptSegment já com os dados preenchidos
      */
     public static ScriptSegment readScriptSegment(JSONObject jsonObject){
-        //ScriptSegment scriptSegment = new ScriptSegment(null, null, null, null, null, null, null, null, null);
         
-        //JSONObject jsonObject = readArrayInArchiveJSON(blocInJSON);
-        
-        
+        String scenario;
+        try {
+            scenario = (String) jsonObject.get("scenario");
+        } catch (Exception e) {
+            scenario = null;
+        }
+                
         ScriptSegment scriptSegment = new ScriptSegment(
                 (String) jsonObject.get("id"),
                 verifyTeamTurnInJsonBloc(jsonObject),
                 jsonObject.get("whoSpeaks") != null ? (String)jsonObject.get("whoSpeaks") : null,
                 parseJsonObjectToList(jsonObject,"words") != null ? parseJsonObjectToList(jsonObject,"words") : null,
                 parseJsonObjectToList(jsonObject,"commands") != null ? parseJsonObjectToList(jsonObject,"commands") : null,
-                (String) jsonObject.get("currentScenario") != null ? (String) jsonObject.get("currentScenario") : null,
+                scenario,
                 parseJsonObjectToList(jsonObject,"showButtons") != null ? parseJsonObjectToList(jsonObject,"showButtons") : null,
                 parseJsonObjectToList(jsonObject, "routes") != null ? parseJsonObjectToList(jsonObject, "routes") : null
         );
@@ -72,9 +77,9 @@ public class JsonTratament {
     
     /**
      * Função responsável por percorrer a linha Line do jsonObject e escrever uma lista com os dados do array contido no json
-     * @param jsonObject
-     * @param line
-     * @return 
+     * @param jsonObject JsonObject com os dados
+     * @param line A string contendo no nome da chave
+     * @return Retorna a lista de string com os dados que estava no vetorzinho no JSON
      */
     static List<String> parseJsonObjectToList(JSONObject jsonObject, String line){
         List<String> stringSegment = new ArrayList<String>();
@@ -95,9 +100,9 @@ public class JsonTratament {
     }
     
     /**
-     * Função que verifica o String TeamTurn no JSON para torna-lo a classe TeamTurn
-     * @param jsonObject
-     * @return 
+     * Função que verifica o String TeamTurn no JSON para torna-lo a classe TeamTurn com o enum
+     * @param jsonObject 
+     * @return Retorna o TeamTurn já definido
      */
     static TeamTurn verifyTeamTurnInJsonBloc(JSONObject jsonObject){
         
@@ -118,9 +123,11 @@ public class JsonTratament {
     
     
     /**
-     * Função que lê o array dentro do JSON e retorna o JSONObject do bloco
+     * Função que lê um array dentro do JSON e retorna o JSONObject do bloco
+     * @param bloc Qual segmeto dentro do adrquivo JSON será lido
+     * @return Retorna o JSONObject com os dados desse segmento do arquivo JSON
      */
-    public static JSONObject readArrayInArchiveJSON(int bloc){
+    public static JSONObject readArrayInArchiveJSON(int segment){
         
         JSONObject jsonObject = new JSONObject();
         JSONParser parser = new JSONParser();//Variaveis que irao armazenar os dados do arquivo JSON
@@ -131,7 +138,7 @@ public class JsonTratament {
             //Lê o arquivo JSON, o parser separa od dados e no final é tudo colocado em um array, no caso o JSONArray
             JSONArray array = (JSONArray) parser.parse(new FileReader("dados.json"));
             
-            JSONObject j1 = new JSONObject((JSONObject)array.get(bloc));//pega o bloco "bloc" da lista
+            JSONObject j1 = new JSONObject((JSONObject)array.get(segment));//pega o bloco "bloc" da lista
             
             //texto = (String) j1.get(line);//pega os dados da linha "line"
             
@@ -150,31 +157,20 @@ public class JsonTratament {
     
     
     /**
-     * Função que lê o array dentro do JSON e retorna todos os JSONObject do arquivo
+     * Funçào que irá ler todos os segmentos do arquivo JSON
+     * @param filePath Caminho do arquivo JSON que será lido
+     * @return Retorna uma lista de JSONObject com os dados contidos no JSON
      */
-    public static List<JSONObject> readAllArraysInArchiveJSON(){
+    public static List<JSONObject> readAllArraysInArchiveJSON(String filePath){
         
         List<JSONObject> jsonObjects = new ArrayList<JSONObject>();
         JSONParser parser = new JSONParser();//Variaveis que irao armazenar os dados do arquivo JSON
         
         try{
-            //Lê o arquivo JSON, o parser separa od dados e no final é tudo colocado em um array, no caso o JSONArray
-            //JSONArray array = (JSONArray) parser.parse(new FileReader ("dados.json"));
             
-            
-            //!! É preciso fazer um meio de ler o arquivo com o formato UTF-8 !!
-            
-            BufferedReader arqIn = new BufferedReader(new InputStreamReader(new FileInputStream("dados.json"), "UTF-8"));
+            BufferedReader arqIn = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "UTF-8"));
             JSONArray array = (JSONArray) parser.parse(arqIn);
             
-            //String str;
-            //str = arqIn.r;
-            //System.out.println(str);
-//            while ((str = arqIn.readLine()) != null) {
-//                System.out.println(str);
-//            } 
-
-            //System.out.println("dado :"+array);
             for(int i=0; i< array.size(); i++){
                 jsonObjects.add((JSONObject)array.get(i));
             }

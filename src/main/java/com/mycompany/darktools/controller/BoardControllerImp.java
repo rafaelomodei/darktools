@@ -16,7 +16,8 @@ import com.mycompany.darktools.model.vo.Team;
 import java.util.List;
 
 /**
- *
+ * Classe controladora da instância Board que será a base de todas as informações do jogador
+ * Contém a responsabilidade do manuseio de informações da Instancia Board e a interação com as classes de regra de negócio para a persistencia de dados da classe Board e outras que a compoem.
  * @author acer
  */
 public class BoardControllerImp implements BoardController{
@@ -24,6 +25,34 @@ public class BoardControllerImp implements BoardController{
     PersonageBR personageBR;
     SkillBR skillBR;
     TeamBR teamBR;
+    
+    Board board;
+    
+    int currentWord;
+    
+    static BoardControllerImp uniqueIndex;
+    
+    public BoardControllerImp(){}
+    
+    /**
+     * A classe board controller será singleton para só tem um de sua existência operante em todo o código
+     * @return A instância unica do BoardController
+     */
+    public static BoardControllerImp getInstante(){ 
+        if(uniqueIndex == null){ //se não existir a instancia
+            uniqueIndex = new BoardControllerImp(); //cria
+        }
+        return uniqueIndex;//se ela já existe, retorna a mesma
+    }
+
+    public Board getBoard() {
+        return board;
+    }
+
+    public void setBoard(Board board) {
+        this.board = board;
+    }
+    
     
     @Override
     public void inicialize() {
@@ -33,6 +62,11 @@ public class BoardControllerImp implements BoardController{
         teamBR = new TeamBR();
     }
     
+    /**
+     * Função re realiza o salvamento do jogo.
+     * Sendo o jogo a Board, e todos os dados que estão contidos dentro dela.
+     * @param board A instância Board que será salva no banco de dados.
+     */
     @Override
     public void saveGame(Board board) {
 
@@ -54,11 +88,11 @@ public class BoardControllerImp implements BoardController{
     public List<Board> loadGames() { 
         return boardBR.ListAll();
     }
-    
-    public List<Skill> loadSkills(){
-        return skillBR.ListAll();
-    }
 
+    /**
+     * Função responsável por deletar a board salva
+     * @param board Board que será deletada
+     */
     @Override
     public void deleteSave(Board board) {
         Team t = board.getTeamPlayer();
@@ -71,6 +105,10 @@ public class BoardControllerImp implements BoardController{
         personageBR.DeleteAll(t.getPersonages());//deleta todos os personagens do time
     }
 
+    /**
+     * Função que atualizará o save
+     * @param board Board que será atualizada
+     */
     @Override
     public void upgradeSave(Board board) {
         //boardBR.Upgrade(board);
@@ -83,5 +121,62 @@ public class BoardControllerImp implements BoardController{
         teamBR.Upgrade(t);
         boardBR.Upgrade(board);
     }
+    
+    /**
+     * Função que inicializa a classe board que o jogo irá utilizar para manupular dados.
+     * O começo do game inicia com dados padrões, assim que for realizado o primero salvamento, os dados serão alterados.
+     */
+    @Override
+    public void startGame(){
+        ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
+        
+        Board board = new Board(null, 10000, "default", "0a");
+        
+        board.setScriptSegments(scriptSegmentController.getScriptSegments());
+        
+        board.setCurrentScriptSegment(scriptSegmentController.foundScriptSegment(board.getScriptSegments(), board.getSegmentStoppedId()));
+        
+        currentWord = 0;//provisório
+        
+        setBoard(board);
+    }
+    
+    /**
+     * Avança para o proximo ScriptSegment de acordo com a escolha
+     * @param choice Inteiro que define a escolha de qual segmento irá
+     */
+    @Override
+    public void goToNextScriptSegment(int choice){
+        ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
+        
+        board.setCurrentScriptSegment(scriptSegmentController.foundNextScriptSegment(board.getScriptSegments(), board.getCurrentScriptSegment(), 0));
+    }
+
+    /**
+     * Função que irá passando os textos de fala
+     * @param currentWord Fala atual do segmento que está sendo apresentada
+     * @return String com a fala
+     */
+    @Override
+    public String goToNextWord() {
+        
+        if (this.currentWord < board.getCurrentScriptSegment().getWords().size()-1){
+            this.currentWord++;
+            return board.getCurrentScriptSegment().getWords().get(currentWord);
+        } else {
+            try {
+                goToNextScriptSegment(currentWord);
+                this.currentWord = 0;
+                return board.getCurrentScriptSegment().getWords().get(currentWord);
+            } catch (Exception e) {
+                System.out.println("Você está inserindo um valor que está fora da lista! "+e);
+            }
+            return null;
+        }
+        
+    }
+    
+    
+    
    
 }

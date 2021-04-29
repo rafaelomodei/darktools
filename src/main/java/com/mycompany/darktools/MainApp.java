@@ -2,6 +2,7 @@ package com.mycompany.darktools;
 
 import com.mycompany.darktools.controller.BoardController;
 import com.mycompany.darktools.controller.BoardControllerImp;
+import com.mycompany.darktools.controller.ScriptSegmentController;
 import com.mycompany.darktools.model.br.SkillBR;
 import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
@@ -27,11 +28,11 @@ import org.json.simple.JSONObject;
 
 
 public class MainApp extends Application {
-//    List<ScriptSegment> scriptSegments;
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TelaEscolhas.fxml"));
         
         Scene scene = new Scene(root);
         scene.getStylesheets().add("/styles/Styles.css");
@@ -40,25 +41,10 @@ public class MainApp extends Application {
         stage.setScene(scene);
         stage.show();
         
-        //JsonTratament.readAllArraysInArchiveJSON()
-        
-//        scriptSegments = readScriptSegments(readAllArraysInArchiveJSON());
-//        
-//        for(ScriptSegment ss: scriptSegments){
-//            System.out.println("Id :"+ss.getId());
-//        }
-        
+        ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
          
     }
 
-    /**
-     * The main() method is ignored in correctly deployed JavaFX application.
-     * main() serves only as fallback in case the application can not be
-     * launched through deployment artifacts, e.g., in IDEs with limited FX
-     * support. NetBeans ignores main().
-     *
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }

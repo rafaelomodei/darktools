@@ -57,8 +57,7 @@ public class FXMLController implements Initializable {
             
         } catch (Exception e) {
             System.out.println("erro: "+e);
-        }
-             
+        }   
         
         //ConectionHibernate.close();
     }

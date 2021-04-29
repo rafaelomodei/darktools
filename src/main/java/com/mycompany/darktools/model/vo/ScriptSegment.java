@@ -36,65 +36,34 @@ public class ScriptSegment {
         return id;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
     public TeamTurn getTurnSide() {
         return turnSide;
-    }
-
-    public void setTurnSide(TeamTurn turnSide) {
-        this.turnSide = turnSide;
     }
 
     public String getWhoSpeaks() {
         return whoSpeaks;
     }
 
-    public void setWhoSpeaks(String whoSpeaks) {
-        this.whoSpeaks = whoSpeaks;
-    }
-
     public List<String> getWords() {
         return words;
-    }
-
-    public void setWords(List<String> words) {
-        this.words = words;
     }
 
     public List<String> getCommands() {
         return commands;
     }
 
-    public void setCommands(List<String> commands) {
-        this.commands = commands;
-    }
-
     public String getScenario() {
         return scenario;
-    }
-
-    public void setScenario(String scenario) {
-        this.scenario = scenario;
     }
 
     public List<String> getShowButton() {
         return showButton;
     }
 
-    public void setShowButton(List<String> showButton) {
-        this.showButton = showButton;
-    }
-
     public List<String> getRoutes() {
         return routes;
     }
 
-    public void setRoutes(List<String> routes) {
-        this.routes = routes;
-    }
 
     
     
