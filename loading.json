@@ -2,35 +2,35 @@
 	{
 		"id":"city",
 		"title":"Sanctus Helene",
-        "discripition":"",
+        "descripition":"",
 		"music":"pasta/sanctusHeleneLoading.mp3",
 		"pathImage":"pasta/sanctusHeleneLoading.png"
 	},
     {
 		"id":"castle",
 		"title":"Castelo",
-        "discripition":"",
+        "descripition":"",
 		"music":"pasta/CasteloLoading.mp3",
 		"pathImage":"pasta/CasteloLoading.png"
 	},
     {
 		"id":"forest",
 		"title":"Floresta de Taiga",
-        "discripition":"",
+        "descripition":"",
 		"music":"pasta/FlorestaDeTaigaLoading.mp3",
 		"pathImage":"pasta/FlorestaDeTaigaLoading.png"
 	},
     {
 		"id":"catacumb",
 		"title":"A Catacumba Perdida",
-        "discripition":"",
+        "descripition":"",
 		"music":"pasta/CatacumbaLoading.mp3",
 		"pathImage":"pasta/CatacumbaLoading.png"
 	},
     {
 		"id":"catacumb2",
 		"title":"O caminho dentro da Catacumba",
-        "discripition":"",
+        "descripition":"",
 		"music":"pasta/Catacumba2Loading.mp3",
 		"pathImage":"pasta/Catacumba2Loading.png"
 	}
