@@ -1,8 +1,20 @@
 [
 	{
-		"id":"01",
+		"id":"city",
 		"name":"Sanctus Helene",
 		"music":"pasta/sanctusHeleneLoading.mp3",
 		"pathImage":"pasta/sanctusHeleneLoading.png"
+	},
+    {
+		"id":"castle",
+		"name":"castelo",
+		"music":"pasta/CasteloLoading.mp3",
+		"pathImage":"pasta/CasteloLoading.png"
+	},
+    {
+		"id":"forest",
+		"name":"floresta de Taiga",
+		"music":"pasta/FlorestaDeTaigaLoading.mp3",
+		"pathImage":"pasta/FlorestaDeTaigaLoading.png"
 	},
 ]
