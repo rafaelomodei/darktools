@@ -561,156 +561,171 @@
     },
     {
         "id":"10a",
+        "loading": "catacumb",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["A Catacumba"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "commands":["changeScenario", "showButtons"],
+        "scenario":["catacumba"],
+        "showButtons":["Proximo", "Pular"],
+        "routes":["10.1a", "11a"]
     },
     {
-        "id":"4.5a",
+        "id":"10.1a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Em meio a muitas plantas, vimes e raízes de árvores, o grupo encontra a Catacumba.", "É uma imensa pedra com algumas inscrições."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Remover plantas", "Pular"],
+        "routes":["10.2a", "11a"]
     },
     {
-        "id":"4.5a",
+        "id":"10.2a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Ao remover algumas plantas que enraizaram entre as pedras, os vocês encontram uma inscrição!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Ler inscrição", "Pular"],
+        "routes":["10.3a", "11a"]
     },
     {
-        "id":"4.5a",
+        "id":"10.3a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Não há tesouros ou fortunas aqui. Uma terrível maldição foi presa. Entre nesta Catacumba e você condenará a sua alma e a de todos."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Examinar melhor", "Pular"],
+        "routes":["10.4a", "11a"]
     },
     {
-        "id":"4.5a",
+        "id":"10.4a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Examinando melhor, você descobre que um pedaço está quebrado e que há um buraco de aproximadamente 80cm em um dos cantos. Lá dentro está muito escuro."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Iluminar", "Pular"],
+        "routes":["10.5a", "11a"]
     },
     {
-        "id":"4.5a",
+        "id":"10.5a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["iluminando, é possível ver que há um buraco no fundo que é tão fundo que a luz não chega."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Jogar a tocha pelo buraco", "Pular"],
+        "routes":["10.6a", "11a"]
     },
     {
-        "id":"4.5a",
+        "id":"10.6a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Atirando uma tocha, os heróis verão que este buraco tem uns 8 metros de profundidade."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Proximo"],
+        "routes":["11a"]
     },
     {
-        "id":"4.5a",
+        "id":"11a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["A pequena entrada na tumba não parece ser compatível com o tamanho do Victus!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Deixa-lo para trás", "Tentar abrir mais a entrada"],
+        "routes":["11.1a", "11.2"]
     },
     {
-        "id":"4.5a",
+        "id":"11.1a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Pode ser bem complicado sem ele la dentro, está certo disso?"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Seguir sem o Victus", "Tentar abrir mais a entrada"],
+        "routes":["11.1.1a", "11.2"]
     },
     {
-        "id":"4.5a",
+        "id":"11.1.1a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["O Victus foi deixado para trás!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Proximo"],
+        "routes":["12a"]
     },
     {
-        "id":"4.5a",
+        "id":"11.2a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Para tentar abrir vocês precisam passar por um teste de força de 10 rolando um D20"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Rolar dado"],
+        "valueDice":[">10", "<10"],
+        "routes":["12", "11.2a"]
     },
     {
-        "id":"4.5a",
+        "id":"12a",
+        "loading": "catacumb2",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["O caminho dentro da Catacumba"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "commands":["changeScenario", "showButtons"],
+        "scenario":["catacumba2"],
+        "showButtons":["Proximo", "Pular"],
+        "routes":["12.1a", "13a"]
     },
     {
-        "id":"4.5a",
+        "id":"12.1a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["O buraco no fundo da catacumba desce uns 8 metros e possui quase 2 metros de largura.", "Nas paredes de pedra e ossos há mais inscrições dizendo:"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Proximo", "Pular"],
+        "routes":["12.2a", "13a"]
     },
     {
-        "id":"4.5a",
+        "id":"12.2a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Saiam daqui antes que seja tarde", "Não há tesouros aqui, apenas a morte!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Proximo", "Pular"],
+        "routes":["12.3a", "13a"]
     },
     {
-        "id":"4.5a",
+        "id":"12.3a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Pode-se observar que as paredes foram construídas de qualquer jeito e aparentemente às pressas.", "Lá embaixo está úmido e um túnel lateral segue em direção ao norte."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "showButtons":["Proximo", "Pular"],
+        "routes":["12.4a", "13a"]
     },
     {
-        "id":"4.5a",
+        "id":"12.4a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["No chão há pedaços de pedras e galhos vindo lá de cima. Parece que alguém passou por aqui ou algo.", "O corredor estava escuro e se estendia por 50 metros até chegar em um grande salão."],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Proximo"],
+        "routes":["13a"]
+    },
+    {
+        "id":"13a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":[""],
