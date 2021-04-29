@@ -1,26 +1,17 @@
 [
 {
         "id":"0a",
+        "loading": "01",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["A Floresta de Taiga"],
+        "words":["Sanctus Helene"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["changeScenario", "showButtons"],
-        "scenario":["florestaDeTaiga"],
+        "scenario":["SanctusHelene"],
         "showButtons":["Proximo", "Pular"],
         "routes":["0.1a", "1a"]
     },
-    {
-        "id":"0.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Desde que a cidade foi fundada. Quase todas as pessoas conhecem a tal história.", "A 3 mil anos atrás, quando a cidade de Sanctus Heléne foi fundada", "Os exploradores encontraram um baú preto que emergia uma luz azul de dentro", "Ao abrir toda luz se esvaiu e dentro, um artefato preto com dourado ornamentado com pedras preciosas.", "O líder da exploração logo suspeitou que o baú fosse amaldiçoado", "Pois depois que abriram, alguns de seus homens ficaram doentes.", "Então ele a escondeu no meio da floresta de Taiga (a floresta próxima)", "E lá ele mandou construir uma catacumba de pedra para que ninguém pudesse abrir.", "A floresta de Taiga é uma floresta bem densa e cheia de criaturas perigosas.", "Muitos goblins vivem por lá, além de seres mitológicos segundo as lendas."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["changeScenario", "showButtons"],
-        "scenario":["florestaDeTaiga"],
-        "showButtons":["Proximo"],
-        "routes":["1a"]
-    },
+ 
     {
         "id":"1a",
         "turnSide":"neutral",
