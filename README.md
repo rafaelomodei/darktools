@@ -102,6 +102,7 @@ Exemplo arquivo json responsável pro direcionar os acontecimentos ao decorrer d
 - ``commands`` -> Armazenará atributos que definirão certos comportamentos (``showButtons`` = Define o aparecimentos de botões de escolha na tela)
 - ``showButtons`` -> Textos dos botões que irão aparecer (valor definido pela quantidade de atributos)
 - ``routes`` -> Armazena o endereço dos proximos segmentos de script;
+- ``loading`` -> Se existir essa chave, seu atributo (no loading.json) irá indicar os dados que serão mostrados na tela de carregamento
  
  Comportamentos da chave ``commands``:
    - ``showButtons`` -> Faz aparecer os botões de pergunta, eles são de acordo com a quandidade de textos na chave ``showButtons``
@@ -142,6 +143,26 @@ Exemplo arquivo json com dados dos personagens não jogáveis.
 - ``damage`` -> Dano do personagem
 - ``skill`` -> Nome da habilidade de combate usada pelo personagem
 - ``pathImage`` -> Caminho para o documento da imagem do personagem
+
+**Loadings**<br>
+Aquivo json com dados que serão apresentados em cada tela de carregamento
+``
+[
+	{
+		"id":"city",
+		"title":"Sanctus Helene",
+        	"description":"A cidade de Sanctus Helene é x y z..",
+		"music":"pasta/sanctusHeleneLoading.mp3",
+		"pathImage":"pasta/sanctusHeleneLoading.png"
+	},
+]
+``
+
+- ``id`` -> Endereço
+- ``title`` -> Titulo apresentado na tela
+- ``description`` -> Descrição apresentada na tela
+- ``music`` -> Caminho do arquivo da musica de fundo
+- ``pathImage`` -> Caminho do arquivo com a imagem de fundo 
 
 ### ✅ Autores
 - [Jeferson Carlos Martin](https://github.com/jefersoncmn)
