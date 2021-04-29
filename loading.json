@@ -27,4 +27,11 @@
 		"music":"pasta/CatacumbaLoading.mp3",
 		"pathImage":"pasta/CatacumbaLoading.png"
 	},
+    {
+		"id":"catacumb2",
+		"title":"O caminho dentro da Catacumba",
+        "discripition":"",
+		"music":"pasta/Catacumba2Loading.mp3",
+		"pathImage":"pasta/Catacumba2Loading.png"
+	},
 ]
