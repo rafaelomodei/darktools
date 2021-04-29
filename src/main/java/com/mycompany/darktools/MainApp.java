@@ -19,7 +19,7 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
     
    private static Scene scene;
-   private String STYLESHEET_MODENA = "/viwer/OpeningTrailer";
+   private String STYLESHEET_MODENA = "/viwer/Loading/Loading";
    
    public void start(Stage stage) throws IOException {
         scene = new Scene(ViwerController.loadFXML(STYLESHEET_MODENA), 1280, 720);
