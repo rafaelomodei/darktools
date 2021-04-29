@@ -82,7 +82,7 @@ Exemplo arquivo json responsável pro direcionar os acontecimentos ao decorrer d
       "turnSide":"neutral",
       "whoSpeaks":"Master",
       "words":["Olá guerreiros","Bem vindos ao caos","Preparados para sofrer?"],
-      "wordsSongs":["etc/songs/speaks1.mp3"],
+      "wordsSongsPath":["etc/songs/speaks1.mp3"],
       "enemy":["cavaleiro"],
       "currentScenario":"taberna",
       "commands":["showButtons"],
@@ -96,7 +96,7 @@ Exemplo arquivo json responsável pro direcionar os acontecimentos ao decorrer d
 - ``turnSide`` -> De qual lado é quem está falando (neutral, enemy, player)
 - ``whoSpeaks`` -> Nome da pessoa que esta falando
 - ``words`` -> Falas
-- ``wordsSongs`` -> Caminho do arquivo de audio das falas
+- ``wordsSongsPath`` -> Caminho do arquivo de audio das falas
 - ``enemy`` -> Endereço dos personagens que estão a falar e batalhar (caso o atributo "battle" exista na chave ``commands``)
 - ``currentScenario`` -> Cenário
 - ``commands`` -> Armazenará atributos que definirão certos comportamentos (``showButtons`` = Define o aparecimentos de botões de escolha na tela)
