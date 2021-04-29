@@ -1,7 +1,7 @@
 [
 {
         "id":"0a",
-        "loading": "01",
+        "loading": "city",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["Sanctus Helene"],
@@ -155,6 +155,7 @@
     },
     {
         "id":"4a",
+        "loading":"castle",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["No castelo o Rei os recebe com um banquete.", "Ele lhes oferece as mais diversas bebidas e depois uma mesa farta de comidas variadas.", "Após se deliciar com a refeição, o rei se levanta e diz:"],
@@ -205,6 +206,7 @@
     },
     {
         "id":"4.5a",
+        "loading":"forest",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["Os aventureiros seguem então para a floresta de Taiga", "A ultima localizaçao conhecida do Artefato"],
@@ -489,7 +491,7 @@
         "id":"9a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":[""],
+        "words":["Bem parece que encontraram a ultima trilha para a floresta", ""],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":[""],
