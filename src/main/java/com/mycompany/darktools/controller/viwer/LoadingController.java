@@ -65,8 +65,8 @@ public class LoadingController implements Initializable {
        mediaPlayer.setAutoPlay(true);
        md_loading = new MediaView(mediaPlayer);
        bp_loading.setCenter(md_loading);
-       bp_loading.setS
-       mediaPlayer.play();
+//       bp_loading.setS
+//       mediaPlayer.play();
     }    
     
 }

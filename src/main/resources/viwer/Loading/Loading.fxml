@@ -20,11 +20,11 @@
             <ImageView fx:id="imgv_background" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" y="-360.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
-      <BorderPane fx:id="bp_loading" layoutX="1087.0" layoutY="524.0" maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" prefHeight="150.0" prefWidth="150.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <BorderPane id="md_loading" fx:id="bp_loading" layoutX="1087.0" layoutY="524.0" maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-size: 150;" styleClass="md_loading" stylesheets="@Loading.css" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
          <center>
-            <MediaView fx:id="md_loading" fitHeight="200.0" fitWidth="200.0" scaleX="0.2" scaleY="0.2" BorderPane.alignment="CENTER">
+            <MediaView id="md_loading" fx:id="md_loading" fitHeight="150.0" fitWidth="150.0" styleClass="md_loading" BorderPane.alignment="CENTER">
                <viewport>
-                  <Rectangle2D height="200.0" minX="200.0" minY="200.0" width="200.0" />
+                  <Rectangle2D height="150.0" minX="150.0" minY="150.0" width="150.0" />
                </viewport></MediaView>
          </center>
       </BorderPane>
