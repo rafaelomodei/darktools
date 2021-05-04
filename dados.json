@@ -73,7 +73,10 @@
             "A cidade acorda com explosões e gritos de dor e desespero vindos das ruas"
         ],
         "wordsSongsPath": [
-            "/audios/gravacao1.mp3"
+            "/audios/gravacao12.mp3",
+            "/audios/gravacao13.mp3",
+            "/audios/gravacao14.mp3",
+            "/audios/gravacao15.mp3"
         ],
         "commands": [],
         "showButtons": [],
@@ -89,7 +92,7 @@
             "Ao olhar para o céu avistam um grande dragão sobrevoando a cidade e cuspindo fogo nas casas."
         ],
         "wordsSongsPath": [
-            "/audios/gravacao1.mp3"
+            "/audios/gravacao16.mp3"
         ],
         "commands": [
             "showButtons"
@@ -112,7 +115,8 @@
             "Lá de cima ele dá um grande rugido e diz:"
         ],
         "wordsSongsPath": [
-            "/audios/gravacao1.mp3"
+            "/audios/gravacao18.mp3",
+            "/audios/gravacao19.mp3"
         ],
         "commands": [
             "showButtons"
@@ -179,7 +183,11 @@
             "Enquanto não me devolverem, irei devorar uma família por dia."
         ],
         "wordsSongsPath": [
-            "etc/songs/speaks1.mp3"
+            "/audios/gravacao20.mp3",
+            "/audios/gravacao21.mp3",
+            "/audios/gravacao22.mp3",
+            "/audios/gravacao23.mp3",
+            "/audios/gravacao24.mp3"
         ],
         "commands": [
             "showButtons"

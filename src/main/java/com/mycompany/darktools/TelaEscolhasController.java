@@ -9,6 +9,11 @@ import com.mycompany.darktools.controller.BoardControllerImp;
 import com.mycompany.darktools.controller.ScriptSegmentController;
 import com.mycompany.darktools.model.vo.ScriptSegment;
 import java.net.URL;
+import java.util.Hashtable;
+import java.util.List;
+import java.util.Map;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -21,7 +26,7 @@ import javafx.scene.media.AudioClip;
  *
  * @author acer
  */
-public class TelaEscolhasController implements Initializable {
+public class TelaEscolhasController implements Initializable, Observer {
 
     
     BoardControllerImp boardControllerImp = new BoardControllerImp();
@@ -39,22 +44,44 @@ public class TelaEscolhasController implements Initializable {
     private Button option2;
     
     
-    
+    Observable boardController;
     
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        boardControllerImp.startGame();
+        boardControllerImp.startGame();//main
         
-        label.setText(""+boardControllerImp.goToNextWord());        
+        this.boardController = boardControllerImp;
+        boardController.addObserver(this);//adiciona o observer
+        
+        boardControllerImp.goToNextWord();    
     }    
     
     
     @FXML
     private void nextButton() {
-        label.setText(""+boardControllerImp.goToNextWord());
+        boardControllerImp.goToNextWord();
+        
+    }
+    
+    private void setTextInLabel(String word){
+        label.setText(word);
+    }
+    
+    private void hideButtons(){
+        option1.setVisible(false);
+        option2.setVisible(false);
+        
+    }
+    
+    private void showButtons(List listChoices){
+        System.out.println("Mostrar botao");
+        option1.setText((String) listChoices.get(0));
+        option1.setVisible(true);
+        option2.setText((String) listChoices.get(1));
+        option2.setVisible(true);
         
     }
     
@@ -68,6 +95,35 @@ public class TelaEscolhasController implements Initializable {
     private void option2Button() {
         boardControllerImp.goToNextScriptSegment(1);
         
+    }
+
+    @Override
+    public void update(Observable boardController, Object object) {
+        //System.out.println("Mudou o rolê lá");
+        //Map<String, Object> map;
+        
+        if(object instanceof Map){
+            
+            //Hashtable<String, String> my_dict = (Hashtable<String, String>) object;
+            Map<String, Object> map = (Map<String, Object>) object;
+            
+            if(map.containsKey("word")){
+                setTextInLabel((String) map.get("word"));
+            }
+            if(map.containsKey("showButtons")){
+                System.out.println("aqui tem");
+                
+                showButtons((List) map.get("showButtons"));
+            }
+            
+        }
+        if(object instanceof String){
+            if(object.equals("hideButtons")){
+                hideButtons();
+            }
+            
+
+        }
     }
     
     

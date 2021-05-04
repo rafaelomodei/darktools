@@ -14,15 +14,18 @@ import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
 import com.mycompany.darktools.utils.ScriptSegmentConditions;
+import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.List;
 import javafx.scene.media.AudioClip;
+import java.util.Observable;
 
 /**
  * Classe controladora da instância Board que será a base de todas as informações do jogador
  * Contém a responsabilidade do manuseio de informações da Instancia Board e a interação com as classes de regra de negócio para a persistencia de dados da classe Board e outras que a compoem.
  * @author acer
  */
-public class BoardControllerImp implements BoardController{
+public class BoardControllerImp extends Observable implements BoardController {
     BoardBR boardBR;
     PersonageBR personageBR;
     SkillBR skillBR;
@@ -157,41 +160,92 @@ public class BoardControllerImp implements BoardController{
         
         this.currentWord = 0;//vai para a fala inicial do scriptSegment
         
+        hideButtons();
+        readWord(currentWord);
+        reproduceAudio();
     }
 
     /**
-     * Função que irá passando os textos de fala (organizar as responsabilidades!)
-     * @return String com a fala
+     * Função que irá passando os textos de fala
      */
     @Override
-    public String goToNextWord() {
+    public void goToNextWord() {
         
+        if (this.currentWord < board.getCurrentScriptSegment().getWords().size()-1){
+            
+            this.currentWord++;
+            readWord(currentWord);
+            reproduceAudio();
+            
+        } else {
+            
+            if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
+                showButtons(1);
+                readWord(currentWord);
+                reproduceAudio();
+                System.out.println("Responda a pergunta!");  
+            } else {
+                goToNextScriptSegment(0);
+            }
+            
+            
+        }
+            
+    }
+
+    /**
+     * Função responsável pro fazer o retorno dos dados de fala para interface
+     * @param currentWord Variável que armazena qual a fala sendo falada no momento
+     */
+    public void readWord(int currentWord){
+        
+        /*-------aqui preciso direcionar para filtragem de comportamentos 
+        
+        if(this.currentWord == board.getCurrentScriptSegment().getWords().size()-1){
+            if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
+                showButtons(1);
+            } 
+        }
+        */
+        Hashtable<String, String> my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
+        my_dict.put("word", board.getCurrentScriptSegment().getWords().get(this.currentWord));
+        setChanged();
+        notifyObservers(my_dict);
+
+    }
+    
+    /**
+     * Função responsável por interromper se tem algum audio operando e reproduzir o a audio da fala atual
+     */
+    public void reproduceAudio(){
         if(clip != null){
             clip.stop();
         }
-        
+        //System.out.println("currentWOrd"+currentWord);
         String AUDIO_URL = getClass().getResource(board.getCurrentScriptSegment().getWordsSongsPath().get(currentWord)).toString();
         clip = new AudioClip(AUDIO_URL);
         
         clip.play();
-        
-        if (this.currentWord < board.getCurrentScriptSegment().getWords().size()-1){
-            this.currentWord++;
-            return board.getCurrentScriptSegment().getWords().get(currentWord);
-        } else {
-            try {
-                //goToNextScriptSegment(currentWord);
-                //this.currentWord = 0;
-                
-                //ScriptSegmentConditions.ScriptSegmentTargetingConditions(board.getCurrentScriptSegment());//teste
-                
-                return board.getCurrentScriptSegment().getWords().get(currentWord);
-            } catch (Exception e) {
-                System.out.println("Você está inserindo um valor que está fora da lista! "+e);
-            }
-            return null;
-        }
-        
-    }    
+    }
+    
+    /**
+     * Função responsável por envio de aviso para os botões da inteface serem ocultados
+     */
+    public void hideButtons(){
+        setChanged();
+        notifyObservers("hideButtons");
+    }
+    
+    /**
+     * Função que manda para o view os dados dos botões de resposta
+     * @param quantity Quantidade de botões de resposta
+     */
+    public void showButtons(int quantity){
+        System.out.println("Mostrar");
+        Hashtable<String, ArrayList<String>> my_dict = new Hashtable<String, ArrayList<String>>();//uso de map para ajudar na identificação no view
+        my_dict.put("showButtons", (ArrayList<String>) board.getCurrentScriptSegment().getShowButton());
+        setChanged();
+        notifyObservers(my_dict);
+    }
    
 }

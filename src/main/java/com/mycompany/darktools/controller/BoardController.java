@@ -32,5 +32,5 @@ public interface BoardController {
     
     void goToNextScriptSegment(int choice);
     
-    String goToNextWord();
+    void goToNextWord();
 }
