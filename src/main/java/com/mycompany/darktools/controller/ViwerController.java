@@ -33,12 +33,10 @@ public class ViwerController {
            
             uniqueIndex = new ViwerController();
         }
-        
         return uniqueIndex;
     }
     
     
-//    public void inicialize() throws IOException{
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML(STYLESHEET_MODENA), 1280, 720);
         stage.setScene(scene);
@@ -46,7 +44,6 @@ public class ViwerController {
        
     }
     
-    //ciar sigton
     public void setRoot(String fxml) throws IOException {
         try{
             scene.setRoot(loadFXML(fxml));    
