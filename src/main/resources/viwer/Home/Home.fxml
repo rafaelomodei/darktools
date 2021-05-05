@@ -16,7 +16,7 @@
             <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" y="360.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
-      <Button id="btn_start" fx:id="btn_start" alignment="CENTER" contentDisplay="CENTER" layoutX="1056.0" layoutY="543.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+      <Button id="btn_start" fx:id="btn_start" alignment="CENTER" contentDisplay="CENTER" layoutX="1056.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToWindow" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
          <font>
             <Font name="System Bold" size="25.0" />
          </font>

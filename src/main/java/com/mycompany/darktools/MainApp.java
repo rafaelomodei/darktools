@@ -18,27 +18,11 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
     
-   private static Scene scene;
-   private String STYLESHEET_MODENA = "/viwer/OpeningTrailer/OpeningTrailer";
-   
    public void start(Stage stage) throws IOException {
-       
-//        scene = new Scene(ViwerController.loadFXML(STYLESHEET_MODENA), 1280, 720);
-//        stage.setScene(scene);
-//        stage.show();
-        ViwerController vc =  ViwerController.getStante();
-        vc.start(stage);
-       // vc.setRoot(STYLESHEET_MODENA);
+        ViwerController.getStante().start(stage);
    }
 
-    /**
-     * The main() method is ignored in correctly deployed JavaFX application.
-     * main() serves only as fallback in case the application can not be
-     * launched through deployment artifacts, e.g., in IDEs with limited FX
-     * support. NetBeans ignores main().
-     *
-     * @param args the command line arguments
-     */
+    
     public static void main(String[] args) {
         System.out.println(">> Função main iNICIANDO... [MainApp]");
         launch(args);

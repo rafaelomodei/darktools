@@ -5,7 +5,9 @@
  */
 package com.mycompany.darktools.controller.viwer;
 
+import com.mycompany.darktools.controller.ViwerController;
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -45,6 +47,17 @@ public class HomeController implements Initializable {
        background.setFitWidth(1280);
        background.setX(152.0);
        borderPane.setCenter(background);
-    }    
+    }   
+    
+    @FXML
+    private void switchToWindow() throws IOException {
+        try{
+            ViwerController viwerController = ViwerController.getStante();
+            viwerController.setRoot("/viwer/Historie/Historie");
+        }catch(Exception e){
+            System.out.println("Erro: " + e);
+        }
+
+    }
     
 }

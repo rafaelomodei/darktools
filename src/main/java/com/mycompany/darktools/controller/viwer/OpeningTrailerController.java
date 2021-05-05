@@ -54,12 +54,10 @@ public class OpeningTrailerController implements Initializable {
     @FXML
     private void switchToWindow() throws IOException {
         try{
-             ViwerController vc = ViwerController.getStante();
-            vc.setRoot("/viwer/Historie/Historie");
+            ViwerController viwerController = ViwerController.getStante();
+            viwerController.setRoot("/viwer/Home/Home");
         }catch(Exception e){
-            System.out.println("\n>> Infelizmente não foi possivel pular a abertura :( \n" +
-                               ">> Aproveite essa linda abertura! :D \n" +
-                               ">> Erro: " + e);
+            System.out.println("Erro: " + e);
         }
 
     }
