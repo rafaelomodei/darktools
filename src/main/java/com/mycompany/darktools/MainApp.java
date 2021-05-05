@@ -19,12 +19,16 @@ import javafx.stage.Stage;
 public class MainApp extends Application {
     
    private static Scene scene;
-   private String STYLESHEET_MODENA = "/viwer/Historie/Historie";
+   private String STYLESHEET_MODENA = "/viwer/OpeningTrailer/OpeningTrailer";
    
    public void start(Stage stage) throws IOException {
-        scene = new Scene(ViwerController.loadFXML(STYLESHEET_MODENA), 1280, 720);
-        stage.setScene(scene);
-        stage.show();
+       
+//        scene = new Scene(ViwerController.loadFXML(STYLESHEET_MODENA), 1280, 720);
+//        stage.setScene(scene);
+//        stage.show();
+        ViwerController vc =  ViwerController.getStante();
+        vc.start(stage);
+       // vc.setRoot(STYLESHEET_MODENA);
    }
 
     /**

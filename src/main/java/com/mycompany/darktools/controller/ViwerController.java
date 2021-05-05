@@ -1,7 +1,9 @@
 package com.mycompany.darktools.controller;
 
 import static akka.event.jul.Logger.root;
+import static com.google.common.io.Resources.getResource;
 import java.io.IOException;
+import java.net.URL;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -22,24 +24,50 @@ public class ViwerController {
     private static Scene scene;
     private static Stage stage;
     
+    static ViwerController uniqueIndex;
+    
+    public ViwerController(){}
+    
+    public static ViwerController getStante() throws IOException{
+        if(uniqueIndex == null){
+            System.out.println(">> Função getStante [ViwerController]");
+            uniqueIndex = new ViwerController();
+        }
+        System.out.println(">> Função getStante RETURN [ViwerController]");
+        return uniqueIndex;
+    }
+    
     
 //    public void inicialize() throws IOException{
-//        System.out.println(">> Função inicialize [ViwerController]");
-//        scene = new Scene(ViwerController.loadFXML("/viwer/OpeningTrailer"), 1280, 720);
-//        stage.setScene(scene);
-//        stage.show();
-//    }
+    public void start(Stage stage) throws IOException {
+        System.out.println(">> Função inicialize [ViwerController]");
+        scene = new Scene(loadFXML("/viwer/OpeningTrailer/OpeningTrailer"), 1280, 720);
+        stage.setScene(scene);
+        stage.show();
+       
+    }
     
-    public static void setRoot(String fxml) throws IOException {
+    //ciar sigton
+    public void setRoot(String fxml) throws IOException {
         
-        System.out.println(">> Função setRoot [ViwerController]");
+//        System.out.println(">> Função setRoot [ViwerController]");
+//        Parent parent = FXMLLoader.load(getResource("main.fxml"));
+        //Parent root = FXMLLoader.load(getClass().getResource(fxml + ".fxml"));
            scene.setRoot(loadFXML(fxml)); 
     }
 
-    public static Parent loadFXML(String fxml) throws IOException {
-         System.out.println(">> Função loadFXML [ViwerController]");
-        FXMLLoader fxmlLoader = new FXMLLoader(ViwerController.class.getResource(fxml + ".fxml"));
+    private  Parent loadFXML(String fxml) throws IOException {
+        System.out.println(">> Função loadFXML [ViwerController]");
+        URL url = ViwerController.class.getResource(fxml + ".fxml");
+//        URL url = Url(fxml);
+        
+        System.out.println(">> URL: " + url);
+        FXMLLoader fxmlLoader = new FXMLLoader(url);
+        System.out.println(">> FXMLLoader: " + fxmlLoader.getLocation());
         return fxmlLoader.load();
     }
-
+    
+//    private URL Url(String fxml){
+//        return getClass().getResource(fxml + ".fxml");
+//    }
 }

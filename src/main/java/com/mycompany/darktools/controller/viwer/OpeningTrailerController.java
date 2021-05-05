@@ -37,6 +37,8 @@ public class OpeningTrailerController implements Initializable {
     @FXML
     private BorderPane borderPane;
     
+   
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         stage = new Stage();
@@ -52,7 +54,8 @@ public class OpeningTrailerController implements Initializable {
     @FXML
     private void switchToWindow() throws IOException {
         try{
-            ViwerController.setRoot("/viwer/Home");
+             ViwerController vc = ViwerController.getStante();
+            vc.setRoot("/viwer/Historie/Historie");
         }catch(Exception e){
             System.out.println("\n>> Infelizmente não foi possivel pular a abertura :( \n" +
                                ">> Aproveite essa linda abertura! :D \n" +
