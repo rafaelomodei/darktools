@@ -180,7 +180,7 @@ public class BoardControllerImp extends Observable implements BoardController {
         } else {
             
             if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
-                showButtons(1);
+                showButtons();
                 readWord(currentWord);
                 reproduceAudio();
                 System.out.println("Responda a pergunta!");  
@@ -221,11 +221,15 @@ public class BoardControllerImp extends Observable implements BoardController {
         if(clip != null){
             clip.stop();
         }
-        //System.out.println("currentWOrd"+currentWord);
-        String AUDIO_URL = getClass().getResource(board.getCurrentScriptSegment().getWordsSongsPath().get(currentWord)).toString();
-        clip = new AudioClip(AUDIO_URL);
         
-        clip.play();
+        try {
+            String AUDIO_URL = getClass().getResource(board.getCurrentScriptSegment().getWordsSongsPath().get(currentWord)).toString();
+            clip = new AudioClip(AUDIO_URL);
+            clip.play();
+        } catch (Exception e) {
+            System.out.println("Sem arquivos de audio!");
+        }
+        
     }
     
     /**
@@ -238,14 +242,13 @@ public class BoardControllerImp extends Observable implements BoardController {
     
     /**
      * Função que manda para o view os dados dos botões de resposta
-     * @param quantity Quantidade de botões de resposta
      */
-    public void showButtons(int quantity){
-        System.out.println("Mostrar");
+    public void showButtons(){
         Hashtable<String, ArrayList<String>> my_dict = new Hashtable<String, ArrayList<String>>();//uso de map para ajudar na identificação no view
         my_dict.put("showButtons", (ArrayList<String>) board.getCurrentScriptSegment().getShowButton());
         setChanged();
         notifyObservers(my_dict);
+        
     }
    
 }
