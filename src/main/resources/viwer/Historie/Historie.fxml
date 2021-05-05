@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
@@ -14,19 +17,25 @@
    <children>
       <BorderPane fx:id="borderPane_scene" prefHeight="720.0" prefWidth="1280.0">
          <center>
-            <ImageView fx:id="imageView_scene" fitHeight="720.0" fitWidth="1280.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" smooth="false" BorderPane.alignment="CENTER" />
+            <ImageView fx:id="imageView_scene" fitHeight="720.0" fitWidth="1280.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0" smooth="false" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@../../iu/img/image_03.png" />
+               </image></ImageView>
          </center>
       </BorderPane>
       <BorderPane fx:id="borderPane_historie" prefHeight="170.0" prefWidth="1100.0" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
          <center>
-            <Pane prefHeight="162.0" prefWidth="1100.0" style="-fx-background-color: rgb(0, 0, 0, 0.4); -fx-background-radius: 20px;" BorderPane.alignment="CENTER">
+            <Pane prefHeight="162.0" prefWidth="1100.0" style="-fx-background-color: rgb(0, 0, 0, 0.8); -fx-background-radius: 20px;" BorderPane.alignment="CENTER">
                <children>
                   <Label fx:id="label_titleHistorie" layoutX="141.0" layoutY="14.0" text="Dive Rock" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="imageView_charater" fitHeight="200.0" fitWidth="200.0" layoutX="-86.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView_character" fitHeight="200.0" fitWidth="200.0" layoutX="-86.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../iu/img/acher_self.png" />
+                     </image></ImageView>
                   <Label fx:id="label_descripitionHistorie" alignment="TOP_LEFT" layoutX="141.0" layoutY="58.0" prefHeight="87.0" prefWidth="950.0" text="Herdeiro de uma cultura que remonta à origem do mundo, que os faz chamar de história tudo aquilo que chamamos de mitologia, Dive Rock cresceu em um vilarejo bastante tradicional, hoje ele vive em busca de novas aventuras para elevar o nome e a história do seu povo." textFill="WHITE" wrapText="true">
                      <font>
                         <Font size="18.0" />
@@ -44,6 +53,59 @@
                         </DropShadow>
                      </effect>
                   </Button>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+      <BorderPane AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <padding>
+            <Insets left="300.0" right="300.0" />
+         </padding>
+         <center>
+            <Pane style="-fx-background-color: rgb(0, 0, 0, 0.8); -fx-background-radius: 20px;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox layoutX="66.0" layoutY="6.0" spacing="20.0">
+                     <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefWidth="548.0" text="Repetir Lenda" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefWidth="548.0" text="Ir ao castelo" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefWidth="548.0" text="Ir ao castelo" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefWidth="548.0" text="Ir ao castelo" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefWidth="548.0" text="Ir ao castelo" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefWidth="548.0" text="Repetir Lenda" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="CENTER" mnemonicParsing="false" prefWidth="548.0" text="Repetir Lenda" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
                </children>
             </Pane>
          </center>
