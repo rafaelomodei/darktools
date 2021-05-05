@@ -124,7 +124,6 @@ public class TelaEscolhasController implements Initializable, Observer {
                 hideButtons();
             }
             
-
         }
     }
     
