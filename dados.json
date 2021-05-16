@@ -87,7 +87,7 @@
         "id":"2.2a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["Não é possível persegui-lo", "Ele segue voando sobre a floresta em direção às montanhas."],
+        "words":["Não é possível persegui-lo. Ele segue voando sobre a floresta em direção às montanhas."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["proximo"],
@@ -280,7 +280,7 @@
         "enemy":["goblin1", "goblin2"],
         "turnSide":"enemy",
         "whoSpeaks":"goblin",
-        "words":["Quanto ouro vocês tem? Goblins estava a espreita, atacango o grupo!"],
+        "words":["Quanto ouro vocês tem?", "Goblins estavam a espreita, atacando o grupo!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["battle"],
@@ -738,7 +738,7 @@
         "id":"13.1a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de pedaços de sucata, o goblin diz que aquilo é o teu tesouro, apesar de ser apenas um monte de pedaço de metal enferrujado investigando melhor pode-se encontrar algumas moedas de ouro (200 moedas) e uma chave velha."],
+        "words":["O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de sucatas...", "O goblin diz que aquilo é o teu tesouro, apesar de ser apenas um monte de pedaço de metal enferrujado investigando melhor pode-se encontrar algumas moedas de ouro (200 moedas) e uma chave velha."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":[""],
@@ -1018,7 +1018,6 @@
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["Algumas pessoas conseguiram deixar o planeta!", "Os que ficaram, lutaram inutilmente contra o Dragão e morreram", "O planeta inteiro foi dizimado!"],
-        "scenario":["destruicaoTotal"],
-
+        "scenario":["destruicaoTotal"]
     }
 ]
