@@ -55,8 +55,7 @@ public class FXMLController implements Initializable {
             
         } catch (Exception e) {
             System.out.println("erro: "+e);
-        }
-             
+        }   
         
         //ConectionHibernate.close();
     }
@@ -95,7 +94,7 @@ public class FXMLController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        boardController = new BoardControllerImp();//controlador
-        boardController.inicialize();
+        //boardController = new BoardControllerImp();//controlador
+        //boardController.inicialize();
     }    
 }

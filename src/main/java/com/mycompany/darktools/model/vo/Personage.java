@@ -30,6 +30,12 @@ public class Personage {
     @Column(name = "id")
     private Long id;
     
+    @Column(name = "isalive")
+    boolean isAlive;
+    
+    @Column(name = "isactivetobattle")
+    boolean isActiveToBattle;
+    
     @Transient
     float life;
     

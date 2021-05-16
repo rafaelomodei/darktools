@@ -27,7 +27,8 @@
                 <configuration>
                   <skip>true</skip>
                 </configuration>
-            </plugin>
+             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -81,6 +82,7 @@
                             <goal>exec</goal>                            
                         </goals>
                         <configuration>
+                            
                             <executable>${java.home}/bin/java</executable>
                             <commandlineArgs>${runfx.args}</commandlineArgs>
                         </configuration>
@@ -131,6 +133,11 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>8.0.13</version>
         </dependency>
+        <dependency>
+            <groupId>com.googlecode.json-simple</groupId>
+            <artifactId>json-simple</artifactId>
+            <version>1.1.1</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/org.openjfx/javafx-media -->
         <dependency>
             <groupId>org.openjfx</groupId>
@@ -143,7 +150,5 @@
             <artifactId>play_2.13</artifactId>
             <version>2.8.8</version>
         </dependency>
-
-
     </dependencies>
 </project>

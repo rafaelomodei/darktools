@@ -14,7 +14,7 @@ import com.mycompany.darktools.model.vo.Skill;
 import java.util.List;
 
 /**
- * Classe responsável pelo controle geral de game
+ * Classe controladora da instância Board que será a base de todas as informações do jogador
  * @author acer
  */
 public interface BoardController {
@@ -24,9 +24,13 @@ public interface BoardController {
     
     List<Board> loadGames();
     
-    List<Skill> loadSkills();
-    
     void deleteSave(Board board);
     
     void upgradeSave(Board board);
+    
+    void startGame();
+    
+    void goToNextScriptSegment(int choice);
+    
+    void goToNextWord();
 }
