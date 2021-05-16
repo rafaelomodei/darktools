@@ -5,10 +5,16 @@
  */
 package com.mycompany.darktools.controller.viwer;
 
+import com.mycompany.darktools.controller.BoardControllerImp;
+import java.beans.EventHandler;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.Observable;
+import java.util.Observer;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -25,7 +31,9 @@ import javafx.scene.layout.VBox;
  *
  * @author Rafae
  */
-public class HistorieController implements Initializable {
+public class HistorieController implements Initializable, Observer {
+    
+    BoardControllerImp boardControllerImp = new BoardControllerImp();
     
     @FXML
     private BorderPane borderPane_scene;
@@ -50,8 +58,9 @@ public class HistorieController implements Initializable {
     @FXML
     private Button button_option03;
     
-     List<Button> buttonList = new ArrayList<Button>();
+    List<Button> buttonList = new ArrayList<Button>();
     
+    Observable boardController;
     
     @FXML
     private VBox vbox_option;
@@ -65,13 +74,12 @@ public class HistorieController implements Initializable {
     private String CHARATER_URL =  getClass().getResource("/iu/img/acher_self.png").toString();
     private Image imgScene;
     private Image imgCharacter;
-    /**
-     * Initializes the controller class.
-     */
    
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        boardControllerImp.startGame();//comeca o jogo
+        
         imgScene = new Image(SCENE_URL);
                 
         imageView_scene.setImage(imgScene);
@@ -82,31 +90,113 @@ public class HistorieController implements Initializable {
         imgCharacter = new Image(CHARATER_URL);
         imageView_character.setImage(imgCharacter);
         
+        this.boardController = boardControllerImp;
+        boardController.addObserver(this);//adiciona o observer
+                
+        buttonList.add(button_option01);
+        buttonList.add(button_option02);
+        buttonList.add(button_option03);
         
+        hideButtons();
         
+        boardControllerImp.goToNextWord();  
         
-        button_option01.setText("Soneca");
-        button_option02.setText("Rafael");
-        button_option03.setText("Omodei");
-        button_option02.setVisible(false);
+    }
+    
+    @FXML
+    private void buttonOption0(){
+        boardControllerImp.goToNextScriptSegment(0); 
+    }
+    
+    @FXML
+    private void buttonOption1(){
+        boardControllerImp.goToNextScriptSegment(1); 
+    }
+    
+    @FXML
+    private void buttonOption2(){
+        boardControllerImp.goToNextScriptSegment(2); 
+    }
+    
+    @FXML
+    private void buttonOption3(){
+        boardControllerImp.goToNextScriptSegment(3); 
+    }
+    
+    @FXML
+    private void buttonOption4(){
+        boardControllerImp.goToNextScriptSegment(4); 
+    }
+    
+    @FXML
+    private void buttonOption5(){
+        boardControllerImp.goToNextScriptSegment(5); 
+    }
+    
+    @FXML
+    private void buttonNextWord(){
+        
+        boardControllerImp.goToNextWord();
+        
+    }
 
-
-        //button_option1.setStyle("/viwer/Historie/style.css");
-//        btn_option.setText("Omodei");
-       // buttonList.add(button_option);
-       // buttonList.add(button_option);
+    /**
+     * Setar o texto da fala
+     * @param word String com a fala
+     */
+    private void setTextInLabelHistory(String word){
+        label_descripitionHistorie.setText(word);
+    }
+    
+    /**
+     * Função que esconde os botões
+     */
+    private void hideButtons(){
         
-        //buttonList.add(button_option);
+        for(int i=0; i<buttonList.size(); i++){
+            buttonList.get(i).setVisible(false);
+        }
+ 
+    }
+    
+    /**
+     * Mostra os botões com o texto
+     * @param listChoices Lista com os textos das opções de escolha
+     */
+    private void showButtons(List listChoices){
         
-        //borderPane_options.setCenter(vbox_option);
-//        
-        
-//        imageView_charater = new ImageView(CHARATER_URL);
-//        imageView_charater.setPreserveRatio(true);
-//        imageView_charater.setFitWidth(100);
-//        imageView_charater.setX(100);
-        //borderPane_historie.setCenter(label_titleHistorie);
+        for(int i=0; i<listChoices.size(); i++){
+            buttonList.get(i).setText(listChoices.get(i).toString());
+            buttonList.get(i).setVisible(true);
+        }
         
     }    
+
+    /**
+     * Função update do Observer
+     * @param o
+     * @param object Objeto que está recebendo do controlador "linkado" 
+     */
+    @Override
+    public void update(Observable o, Object object) {
+        if(object instanceof Map){
+            
+            Map<String, Object> map = (Map<String, Object>) object;
+            
+            if(map.containsKey("word")){
+                setTextInLabelHistory((String) map.get("word"));
+            }
+            if(map.containsKey("showButtons")){
+                showButtons((List) map.get("showButtons"));
+            }
+            
+        }
+        if(object instanceof String){
+            if(object.equals("hideButtons")){
+                hideButtons();
+            }
+            
+        }
+    }
     
 }

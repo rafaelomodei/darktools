@@ -1,15 +1,14 @@
 [
-{
-        "id":"0a",
+    {
+        "id": "0a",
         "loading": "city",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["Sanctus Helene"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["changeScenario", "showButtons"],
+        "commands":["changeScenario"],
         "scenario":["SanctusHelene"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["0.1a", "1a"]
+        "routes":["1a"]
     },
  
     {
