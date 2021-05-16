@@ -22,7 +22,10 @@ import javafx.stage.Stage;
 public class ViwerController {
     
     private static Scene scene;
-    private String STYLESHEET_MODENA = "/viwer/OpeningTrailer/OpeningTrailer";
+    private final double width = 1280;
+    private final double height = 720;
+    
+    private String STYLESHEET_MODENA = "Historie";
     
     static ViwerController uniqueIndex;
     
@@ -38,7 +41,7 @@ public class ViwerController {
     
     
     public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML(STYLESHEET_MODENA), 1280, 720);
+        scene = new Scene(loadFXML(STYLESHEET_MODENA), width, height);
         stage.setScene(scene);
         stage.show();
        
@@ -54,9 +57,8 @@ public class ViwerController {
 
     private Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = null;
-        
-        try{
-            fxmlLoader = new FXMLLoader(ViwerController.class.getResource(fxml + ".fxml"));
+        try{                                                                // /viwer/fxml/fxml.fmxl
+            fxmlLoader = new FXMLLoader(ViwerController.class.getResource("/viwer/" + fxml + "/" + fxml + ".fxml"));
         }catch(Exception e){
             System.out.println("Erro: " + e);
         }

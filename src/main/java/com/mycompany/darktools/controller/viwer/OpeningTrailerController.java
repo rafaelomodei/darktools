@@ -7,15 +7,11 @@ package com.mycompany.darktools.controller.viwer;
 
 import com.mycompany.darktools.controller.ViwerController;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
@@ -36,6 +32,7 @@ public class OpeningTrailerController implements Initializable {
     private MediaView mediaView;
     @FXML
     private BorderPane borderPane;
+   
     
    
     
@@ -55,7 +52,7 @@ public class OpeningTrailerController implements Initializable {
     private void switchToWindow() throws IOException {
         try{
             ViwerController viwerController = ViwerController.getStante();
-            viwerController.setRoot("/viwer/Home/Home");
+            viwerController.setRoot("Home");
         }catch(Exception e){
             System.out.println("Erro: " + e);
         }

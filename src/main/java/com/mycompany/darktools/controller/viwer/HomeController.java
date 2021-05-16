@@ -53,7 +53,7 @@ public class HomeController implements Initializable {
     private void switchToWindow() throws IOException {
         try{
             ViwerController viwerController = ViwerController.getStante();
-            viwerController.setRoot("/viwer/Historie/Historie");
+            viwerController.setRoot("Historie");
         }catch(Exception e){
             System.out.println("Erro: " + e);
         }
