@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.HomeController">
+   <children>
+      <BorderPane fx:id="borderPane" layoutY="-360.0" prefHeight="720.0" prefWidth="1280.0">
+         <center>
+            <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" y="360.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Button id="btn_start" fx:id="btn_start" alignment="CENTER" contentDisplay="CENTER" layoutX="1056.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToWindow" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
+               <color>
+                  <Color green="0.8833333253860474" blue="1.0" />
+               </color>
+            </DropShadow>
+         </effect>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

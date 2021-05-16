@@ -1,3 +1,7 @@
 .button {
     -fx-font-weight: bold;
 }
+
+#btn_start:hover{
+   -fx-effect: dropshadow( one-pass-box, rgba(0, 255, 255, 1),198.31,105.565, 0.63, 225.95);
+}
