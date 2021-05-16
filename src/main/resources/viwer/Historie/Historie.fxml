@@ -68,7 +68,29 @@
          <center>
             <VBox fx:id="vbox_option" alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button id="btn_option" fx:id="button_option" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="548.0" styleClass="btn_option" stylesheets="@style.css" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                  <Button id="btn_option" fx:id="button_option01" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="548.0" styleClass="btn_option" stylesheets="@style.css" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </Button>
+                  <Button id="btn_option" fx:id="button_option02" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="548.0" styleClass="btn_option" stylesheets="@style.css" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets bottom="20.0" top="20.0" />
+                     </padding>
+                  </Button>
+                  <Button id="btn_option" fx:id="button_option03" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefWidth="548.0" styleClass="btn_option" stylesheets="@style.css" textAlignment="CENTER" textFill="WHITE" wrapText="true">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>

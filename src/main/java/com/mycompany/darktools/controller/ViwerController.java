@@ -25,7 +25,7 @@ public class ViwerController {
     private final double width = 1280;
     private final double height = 720;
     
-    private String STYLESHEET_MODENA = "Historie";
+    private String STYLESHEET_MODENA = "OpeningTrailer";
     
     static ViwerController uniqueIndex;
     

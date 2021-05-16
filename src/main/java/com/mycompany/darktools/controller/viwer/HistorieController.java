@@ -44,8 +44,11 @@ public class HistorieController implements Initializable {
     @FXML
     private Button button_back;
     @FXML
-    private Button button_option;
-    
+    private Button button_option01;
+    @FXML
+    private Button button_option02;
+    @FXML
+    private Button button_option03;
     
      List<Button> buttonList = new ArrayList<Button>();
     
@@ -82,16 +85,18 @@ public class HistorieController implements Initializable {
         
         
         
-        button_option.setText("Soneca");
+        button_option01.setText("Soneca");
+        button_option02.setText("Rafael");
+        button_option03.setText("Omodei");
+        button_option02.setVisible(false);
+
+
+        //button_option1.setStyle("/viwer/Historie/style.css");
 //        btn_option.setText("Omodei");
-        buttonList.add(button_option);
+       // buttonList.add(button_option);
        // buttonList.add(button_option);
         
         //buttonList.add(button_option);
-        
-       
-        
-        vbox_option.getChildren().add(button_option);
         
         //borderPane_options.setCenter(vbox_option);
 //        
