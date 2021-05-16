@@ -72,6 +72,10 @@ public class TelaEscolhasController implements Initializable, Observer {
         
     }
     
+    /**
+     * Setar o texto da fala
+     * @param word String com a fala
+     */
     private void setTextInLabel(String word){
         label.setText(word);
     }
@@ -79,6 +83,7 @@ public class TelaEscolhasController implements Initializable, Observer {
     private void hideButtons(){
         option1.setVisible(false);
         option2.setVisible(false);
+        
         
     }
     
@@ -114,7 +119,6 @@ public class TelaEscolhasController implements Initializable, Observer {
                 setTextInLabel((String) map.get("word"));
             }
             if(map.containsKey("showButtons")){
-                
                 showButtons((List) map.get("showButtons"));
             }
             
