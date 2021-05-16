@@ -18,8 +18,7 @@
         "whoSpeaks":"Master",
         "words":["Sanctus Heléne! Uma pequena cidade perdida no mapa", "Na manhã do dia seguinte à chegada dos heróis, a cidade acorda com explosões e gritos de dor e desespero vindos das ruas"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["1.1a"]
     },
         {
@@ -38,8 +37,7 @@
         "whoSpeaks":"Master",
         "words":["O Dragão se dirige até a torre da cidade. Lá de cima ele dá um grande rugido e diz:"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
+        "commands":[""],
         "routes":["2a"]
     },
         {
@@ -59,8 +57,7 @@
         "whoSpeaks":"Master",
         "words":["O Dragão evita os ataques e tenta se afastar."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
+        "commands":[""],
         "routes":["1.2a"]
     },
             {
@@ -69,8 +66,7 @@
         "whoSpeaks":"Dragon",
         "words":["Escutem-me reles humanos! Eu sou Beryllus, o terrível e estou à procura de algo que vocês me roubaram há 300 anos atrás. Me devolvam o Artefato de ITAMARium e seu patético planeta será poupado. Enquanto não me devolverem, irei devorar uma família por dia."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
+        "commands":[""],
         "routes":["2.1a"]
     },
             {
@@ -79,8 +75,7 @@
         "whoSpeaks":"Master",
         "words":["Ele dá uma rasante e pega com suas garras um homem e duas crianças, e voa até as montanhas distantes."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
+        "commands":[""],
         "routes":["2.2a"]
     },
             {
@@ -89,8 +84,7 @@
         "whoSpeaks":"Master",
         "words":["Não é possível persegui-lo. Ele segue voando sobre a floresta em direção às montanhas."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
+        "commands":[""],
         "routes":["3a"]
     },
             {
@@ -99,8 +93,7 @@
         "whoSpeaks":"Master",
         "words":["A cidade é ameaçada por um terrível dragão. A única maneira de acabar com isto é encontrando o artefato de ITAMARium, um artefato amaldiçoado por uma antiga entidade, um Deus da Tecnologia daquela época."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
+        "commands":[""],
         "routes":["3.1a"]
     },
             {
@@ -129,8 +122,7 @@
         "whoSpeaks":"Master",
         "words":["Os únicos capazes de salvar o planeta se recusaram!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
+        "commands":[""],
         "routes":["182a"]
     },
     {
@@ -160,8 +152,7 @@
         "whoSpeaks":"Master",
         "words":["No castelo o Rei os recebe com um banquete. Ele lhes oferece as mais diversas bebidas e depois uma mesa farta de comidas variadas. Após se deliciar com a refeição, o rei se levanta e diz:"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["4.1a"]
     },
     {
@@ -170,8 +161,7 @@
         "whoSpeaks":"Rei",
         "words":["Vou perder este planeta, e para piorar as coisas, esse maldito dragão está destruindo tudo. Não que eu me importe com a vida das pessoas aqui Mas é através delas que vem todo meu ouro e impostos, certo?"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["4.2a"]
     },
     {
@@ -180,8 +170,7 @@
         "whoSpeaks":"Master",
         "words":["Após uma risadinha de canto, o Rei prossegue:"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["4.3a"]
     },
     {
@@ -211,8 +200,7 @@
         "whoSpeaks":"Master",
         "words":["Os aventureiros seguem então para a floresta de Taiga. A ultima localizaçao conhecida do Artefato"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["5a"]
     },
     {
@@ -232,8 +220,7 @@
         "whoSpeaks":"Master",
         "words":["A floresta é grande e densa, é difícil de ver além de alguns metros à frente, as árvores ficam muito próximas umas das outras."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["5.1"]
     },
     {
@@ -336,8 +323,7 @@
         "whoSpeaks":"Victus",
         "words":["Vamos começar a procurar pela Catacumba!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["7.0a"]
     },
     {
@@ -410,8 +396,7 @@
         "whoSpeaks":"Arlekts",
         "words":["Ei! aqui! acho que encontrei algo, essas arvores parecem pessoas!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Seguir trilha"],
+        "commands":[""],
         "routes":["8a"]
     },
     {
@@ -545,8 +530,7 @@
         "whoSpeaks":"Master",
         "words":["Olha só ... nem um inimigo apareceu .. quem programou esse jogo? Assim fica facil ne produção!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["10a"]
     },
     {
@@ -555,8 +539,7 @@
         "whoSpeaks":"Arletics",
         "words":["Encontrei a Catacumba! Cheira a morte, sera que devemos mesmo entrar?"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
+        "commands":[""],
         "routes":["10"]
     },
     {
@@ -627,8 +610,7 @@
         "whoSpeaks":"Master",
         "words":["Atirando uma tocha, os heróis verão que este buraco tem uns 8 metros de profundidade."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["11a"]
     },
     {
@@ -657,8 +639,7 @@
         "whoSpeaks":"Master",
         "words":["O Victus foi deixado para trás!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["12a"]
     },
     {
@@ -720,8 +701,7 @@
         "whoSpeaks":"Master",
         "words":["No chão há pedaços de pedras e galhos vindo lá de cima. Parece que alguém passou por aqui ou algo. O corredor estava escuro e se estendia por 50 metros até chegar em um grande salão."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["13a"]
     },
     {
@@ -730,8 +710,7 @@
         "whoSpeaks":"Master",
         "words":["A luz da tocha alerta três criaturas, são goblins!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["13.0"]
     },
     {
@@ -850,8 +829,7 @@
         "whoSpeaks":"Master",
         "words":["Esta chave é tão velha quanto a porta e parece encaixar perfeitamente"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["15a"]
     },
     {
@@ -870,8 +848,7 @@
         "whoSpeaks":"Master",
         "words":["Atrás da porta segue um pequeno corredor que os leva até uma grande sala, ao adentrar a sala é possível ver 5 goblins comendo carne de cervo, um deles é um Xamã."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["15.0"]
     },
     {
@@ -959,10 +936,9 @@
         "id":"17a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["ao se aproximar, Surge do monte de troncos um verme nojento gigantesco que os ataca."],
+        "words":["Ao se aproximar, Surge do monte de troncos um verme nojento gigantesco que os ataca."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
+        "commands":[""],
         "routes":["17.1a"]
     },
     {
