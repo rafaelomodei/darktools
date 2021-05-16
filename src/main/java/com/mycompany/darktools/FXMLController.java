@@ -31,15 +31,15 @@ public class FXMLController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         //boardController.inicialize(); <-- erro
         
-        Skill skill = new Skill(10, "punch2");//crei a skill
-        Skill skill2 = new Skill(20, "kick2");//crei a skill
+        Skill skill = new Skill(10, "punch1");//crei a skill
+        Skill skill2 = new Skill(20, "kick1");//crei a skill
         List<Skill> skills = new ArrayList<Skill>();
         skills.add(skill);
         skills.add(skill2);
  
-        Personage p = new Personage("Lucas", skills, "image4.png");//criei o personagem e passei a lista de skills que fiz antes
-        Personage p1 = new Personage("Maria", skills, "image5.png");//criei o personagem e passei a lista de skills que fiz antes
-        Personage p2 = new Personage("Erick", skills, "image6.png");//criei o personagem e passei a lista de skills que fiz antes
+        Personage p = new Personage("Lucas", skills, "image1.png");//criei o personagem e passei a lista de skills que fiz antes
+        Personage p1 = new Personage("Maria", skills, "image2.png");//criei o personagem e passei a lista de skills que fiz antes
+        Personage p2 = new Personage("Erick", skills, "image3.png");//criei o personagem e passei a lista de skills que fiz antes
 
         List<Personage> ps = new ArrayList<Personage>(); 
 
@@ -50,7 +50,7 @@ public class FXMLController implements Initializable {
         Team t = new Team(ps,200.0); //criei o time com a lista de personagens que fiz
 
         try {
-            board = new Board(t,8100,"save2","1d"); //criei a mesa com o time, que é nós
+            board = new Board(t,8100,"save1","1d"); //criei a mesa com o time, que é nós
             
             boardController.saveGame(board);//salvei  
             //boardController.upgradeSave(board);

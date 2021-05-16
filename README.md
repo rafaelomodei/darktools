@@ -145,3 +145,64 @@ Exemplo arquivo json com dados dos personagens não jogáveis.
 
 
 ###  Agradecimentos
+
+
+### Bugs
+
+---
+
+[Maven: Failed to retrieve plugin descriptor error](https://stackoverflow.com/questions/7819163/maven-failed-to-retrieve-plugin-descriptor-error)
+Local: ```netbeans.home/java/maven/conf/settings.xml```
+Descrição: Erro prox Maven
+Obs: Todas as vezes que reinstalar a ide, deve fazer essa alteração
+```
+<proxy>
+   <active>true</active>
+   <host>myproxy.host.net</host>
+   <port>80</port>
+ </proxy>
+```
+
+---
+
+[Error “No plugin found for prefix 'archetype' in the current project and in the plugin groups” getting in creating new java maven project](https://stackoverflow.com/questions/60124030/error-no-plugin-found-for-prefix-archetype-in-the-current-project-and-in-the)
+Local: ```netbeans.home/java/maven/conf/settings.xml```
+Descrição: Erro ao baixar dependências do repositóro Maven
+Obs: Todas as vezes que reinstalar a ide, deve fazer essa alteração
+```
+<mirror>
+      <id>mirror1</id>
+      <mirrorOf>central</mirrorOf>
+      <name>mirror1</name>
+      <url>https://repo.maven.apache.org/maven2/</url>
+</mirror>
+```
+
+---
+
+[How to stop Maven from unpacking on every Project Run](https://stackoverflow.com/questions/43398751/how-to-stop-maven-from-unpacking-on-every-project-run/)
+Descrição: Lentidão ao compilar
+Obs: Alterar no arquivo pom.xml
+```
+  <plugin>
+  <artifactId>maven-clean-plugin</artifactId>
+  <version>2.4.1</version>
+  <configuration>
+    <skip>true</skip>
+  </configuration>
+</plugin>
+```
+No mesmo arquivo:
+```
+<execution>
+    <id>default-cli</id>
+	    <goals>
+		<goal>exec</goal>                            
+	    </goals>
+	    <configuration>
+		<skip>true</skip>
+		<executable>${java.home}/bin/java</executable>
+		<commandlineArgs>${runfx.args}</commandlineArgs>
+	    </configuration>
+    </execution>
+```
