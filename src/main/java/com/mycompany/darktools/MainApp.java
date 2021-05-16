@@ -1,21 +1,19 @@
 package com.mycompany.darktools;
 
-import com.mycompany.darktools.controller.BoardController;
-import com.mycompany.darktools.controller.BoardControllerImp;
 import com.mycompany.darktools.controller.ScriptSegmentController;
-import com.mycompany.darktools.model.br.SkillBR;
-import com.mycompany.darktools.model.vo.Board;
-import com.mycompany.darktools.model.vo.Personage;
-import com.mycompany.darktools.model.vo.ScriptSegment;
-import com.mycompany.darktools.model.vo.Skill;
-import com.mycompany.darktools.model.vo.Team;
-import java.util.ArrayList;
-import java.util.List;
+import com.mycompany.darktools.controller.ViwerController;
+import com.sun.java.swing.plaf.windows.resources.windows;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import static javafx.application.Application.launch;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
 import javafx.stage.Stage;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -29,23 +27,19 @@ import org.json.simple.JSONObject;
 
 public class MainApp extends Application {
     
+
     @Override
     public void start(Stage stage) throws Exception {
-        //Parent root = FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
-        Parent root = FXMLLoader.load(getClass().getResource("/fxml/TelaEscolhas.fxml"));
         
-        Scene scene = new Scene(root);
-        scene.getStylesheets().add("/styles/Styles.css");
-        
-        stage.setTitle("JavaFX and Maven");
-        stage.setScene(scene);
-        stage.show();
+        ViwerController.getStante().start(stage);
         
         ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
          
     }
 
+
     public static void main(String[] args) {
+        
         launch(args);
     }
 

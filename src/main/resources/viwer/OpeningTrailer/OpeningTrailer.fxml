@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mycompany.darktools.controller.viwer.OpeningTrailerController">
+   <children>
+      <BorderPane fx:id="borderPane" prefHeight="720.0" prefWidth="1280.0">
+         <center>
+            <MediaView fx:id="mediaView" fitHeight="720.0" fitWidth="1280.0" nodeOrientation="INHERIT" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Button fx:id="btn_next" alignment="CENTER" contentDisplay="CENTER" layoutX="478.0" layoutY="325.0" mnemonicParsing="false" onAction="#switchToWindow" prefHeight="54.0" prefWidth="183.0" style="-fx-background-color: rgba(0, 0, 0, 0.3); -fx-border-color: #FFFFFF; -fx-border-width: 3px; -fx-border-radius: 3px; -fx-background-radius: 6px;" text="Pular abertura" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
