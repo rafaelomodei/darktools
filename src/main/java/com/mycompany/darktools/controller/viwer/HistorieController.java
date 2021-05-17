@@ -97,12 +97,15 @@ public class HistorieController implements Initializable, Observer {
         buttonList.add(button_option02);
         buttonList.add(button_option03);
         
+        button_back.setVisible(false);
+        
         hideButtons();
         
         boardControllerImp.goToNextWord();  
         
     }
     
+    /** Essas funções deve ser retiradas!**/
     @FXML
     private void buttonOption0(){
         boardControllerImp.goToNextScriptSegment(0); 
@@ -148,6 +151,10 @@ public class HistorieController implements Initializable, Observer {
         label_descripitionHistorie.setText(word);
     }
     
+    private void setTextInLabelTitle(String title){
+        label_titleHistorie.setText(title);
+    }
+    
     /**
      * Função que esconde os botões
      */
@@ -185,6 +192,9 @@ public class HistorieController implements Initializable, Observer {
             
             if(map.containsKey("word")){
                 setTextInLabelHistory((String) map.get("word"));
+            }
+            if(map.containsKey("title")){
+                setTextInLabelTitle((String) map.get("title"));
             }
             if(map.containsKey("showButtons")){
                 showButtons((List) map.get("showButtons"));
