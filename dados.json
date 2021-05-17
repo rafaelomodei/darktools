@@ -8,10 +8,9 @@
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["changeScenario", "showButtons"],
         "scenario":["SanctusHelene"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["0.1a", "1a"]
+        "commands":[""],
+        "routes":["1a"]
     },
- 
     {
         "id":"1a",
         "turnSide":"neutral",
@@ -102,8 +101,7 @@
         "whoSpeaks":"Master",
         "words":["A cidade está em chamas! Há várias pessoas feridas na rua. No caos, as pessoas gritam para que Rei faça algo."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
+        "commands":[""],
         "routes":["3.2a"]
     },
             {
@@ -113,8 +111,8 @@
         "words":["Dois Guardas a cavalo aparecem e perguntam: Alguém aqui se atreve a ajudar? Alguém corajoso o bastante? Seu Rei está a oferecer uma boa quantia a quem aceitar essa missão suicida"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":["Aceitar o Desafio", "Recusar"],
-        "routes":["3.3a", "3.4a"]
+        "showButtons":["Aceitar o Desafio", "Recusar Proposta"],
+        "routes":["3.3a", "3.4"]
     },
         {
         "id":"3.4",
@@ -132,7 +130,7 @@
         "words":["Os Guardas retornam ao castelo enquanto as pessoas imploram por piedade."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":["perguntar sobre o Artefato", "Ir ao castelo"],
+        "showButtons":["Perguntar sobre o Artefato", "Ir ao castelo"],
         "routes":["3.4a","4a"]
     },
     {
@@ -190,7 +188,7 @@
         "words":["Não sei ao certo onde está este Artefato. Mas acredito que esteja enterrado nas profundezas da floresta de Taiga"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":["Aceitar", "Recusar"],
+        "showButtons":["Aceitar", "Recusar Proposta"],
         "routes":["4.5a","3.4a"]
     },
     {
@@ -211,7 +209,7 @@
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "scenario":["florestaDeTaiga"],
         "commands":["changeScenario", "showButtons"],
-        "showButtons":["Proximo", "Pular"],
+        "showButtons":["Ouvir História", "Pular História"],
         "routes":["5.1.1a", "5.1a"]
     },
     {
@@ -221,7 +219,7 @@
         "words":["A floresta é grande e densa, é difícil de ver além de alguns metros à frente, as árvores ficam muito próximas umas das outras."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":[""],
-        "routes":["5.1"]
+        "routes":["5.1a"]
     },
     {
         "id":"5.1a",
@@ -247,7 +245,7 @@
         "id":"6a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["Vamos ver se voces tem Sorte!"],
+        "words":["Vamos ver se vocês tem Sorte!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["RollDiceD6"],
         "routes":["6.1a", "6.2a", "6.3a", "6.4a", "6.5a", "6.6a"]
@@ -267,10 +265,9 @@
         "enemy":["goblin1", "goblin2"],
         "turnSide":"enemy",
         "whoSpeaks":"goblin",
-        "words":["Quanto ouro vocês tem?", "Goblins estavam a espreita, atacando o grupo!"],
+        "words":["Quanto ouro vocês tem?"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["5.2a"]
     },
     {
@@ -280,8 +277,7 @@
         "whoSpeaks":"Lobo",
         "words":["Ahuuuuu!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["5.2a"]
     },
     {
@@ -291,8 +287,7 @@
         "whoSpeaks":"Troll",
         "words":["Vocês não passar daqui, Troll forte, não deixar, Vai embora!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["5.2a"]
     },
     {
@@ -302,8 +297,7 @@
         "whoSpeaks":"Ogros",
         "words":["Voces Fedem a roupa lavada, bruhg! Credo eu matar oces pra ajudar a cheirar bem podre!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["5.2a"]
     },
     {
@@ -313,8 +307,7 @@
         "whoSpeaks":"Troll",
         "words":["Vocês não passar daqui, Troll forte, não deixar, Vai embora!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["5.2a"]
     },
     {
@@ -342,8 +335,7 @@
         "whoSpeaks":"Ogros",
         "words":["Voces Fedem a roupa lavada, bruhg! Credo eu matar oces pra ajudar a cheirar bem podre!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["7.0a"]
     },
     {
@@ -353,8 +345,7 @@
         "whoSpeaks":"goblin",
         "words":["Ouro, ouro, ouro, eu so quero muis ouro!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["7.0a"]
     },
     {
@@ -364,8 +355,7 @@
         "whoSpeaks":"goblin",
         "words":["A beleza provoca o ladrão, mais do que o ouro, que que eu estou falando... me de logo este ouro!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["7.0a"]
     },
     {
@@ -375,8 +365,7 @@
         "whoSpeaks":"Troll",
         "words":["Vocês não passar daqui, Troll forte, não deixar, Vai embora!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["7.0a"]
     },
     {
@@ -386,8 +375,7 @@
         "whoSpeaks":"Lobo",
         "words":["Ahuuuuu!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["7.0a"]
     },
     {
@@ -415,8 +403,7 @@
         "whoSpeaks":"goblin",
         "words":["Voces tem ouro ai ne, Eu quero!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["8a"]
     },
     {
@@ -426,8 +413,7 @@
         "whoSpeaks":"Ogros",
         "words":["Voces Fedem a florzinha, bruhg! Credo eu matar oces, tripas cheirar muito gostoso, bem podre!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["8a"]
     },
     {
@@ -437,8 +423,7 @@
         "whoSpeaks":"goblin",
         "words":["Nossa, Nossa, como brilha... Quero essa espada pra mim agora!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["8a"]
     },
     {
@@ -458,8 +443,7 @@
         "whoSpeaks":"Lobo",
         "words":["Ahuuuuu! Ahuuuuu!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["8a"]
     },
     {
@@ -476,7 +460,7 @@
         "id":"9a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["Bem parece que encontraram a ultima trilha para a floresta So precisam encontrar a Catacumba agora! Rolem os dados vamos ver se os Deuses estão com vocês!"],
+        "words":["Bem parece que encontraram a ultima trilha para a Catacumba. So precisam encontrar o local da Catacumba agora! Rolem os dados vamos ver se os Deuses estão com vocês!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons", "RollDiceD6"],
         "routes":["9.1a", "9.2a", "9.3a", "9.4a", "9.5a", "9.6a"]
@@ -498,8 +482,7 @@
         "whoSpeaks":"ogro",
         "words":["Meus cachorrinhos tem fome! so quero um de voces HAHA"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
+        "commands":["Battle"],
         "routes":["9a"]
     },
     {
@@ -509,8 +492,7 @@
         "whoSpeaks":"goblin",
         "words":["Não vão nunca encontrar a Catacumba! então ja vomos matalos aqui!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["9a"]
     },
     {
@@ -520,8 +502,7 @@
         "whoSpeaks":"troll",
         "words":["Argh! Que fedor fedorento! Se eu matar melhora!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["9a"]
     },
     {
@@ -651,7 +632,7 @@
         "commands":["showButtons"],
         "showButtons":["Rolar dado"],
         "valueDice":[">10", "<10"],
-        "routes":["12", "11.2a"]
+        "routes":["12a", "11.2a"]
     },
     {
         "id":"12a",
@@ -720,8 +701,7 @@
         "whoSpeaks":"goblin",
         "words":["Não vão nunca encontrar! mais carne pra gente!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["13.1a"]
     },
     {
@@ -858,8 +838,7 @@
         "whoSpeaks":"goblin",
         "words":["Não vão nunca encontrar! mais carne pra gente!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["15.1a"]
     },
     {
@@ -948,18 +927,27 @@
         "whoSpeaks":"verme",
         "words":[""],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
+        "commands":["Battle"],
         "routes":["18a"]
     },
     {
         "id":"18a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["finallll"],
+        "words":["A sala está totalmente suja depois de muito tempo investigando o lugar e retirando troncos podres da frente, vocês encontram um alçapão no chão", "Ele é de ferro e está muito bem selado, há uma fechadura bem resistente difícil de quebrar, pode ser usado a chave encontrada com o goblin."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":[""],
+        "showButtons":["Utilizar Chave"],
+        "routes":["18.1a"]
+    },
+    {
+        "id":"18.1a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Ao abrir a porta do alçapão, os heróis encontram escadaria que leva até uma sala ainda mais profunda"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Descer Escadaria"],
         "routes":[""]
     },
     {
