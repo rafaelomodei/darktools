@@ -1,1024 +1,2059 @@
 [
-{
-        "id":"0a",
+    {
+        "id": "0a",
         "loading": "city",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Sanctus Helene"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["changeScenario", "showButtons"],
-        "scenario":["SanctusHelene"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["0.1a", "1a"]
-    },
- 
-    {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Sanctus Heléne! Uma pequena cidade perdida no mapa", "Na manhã do dia seguinte à chegada dos heróis, a cidade acorda com explosões e gritos de dor e desespero vindos das ruas"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["1.1a"]
-    },
-        {
-        "id":"1.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Ao olhar para o céu avistam um grande dragão sobrevoando a cidade e cuspindo fogo nas casas."],
-        "wordsSongs":["etc/songs/speaks2.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo", "Tentar acertar o dragão"],
-        "routes":["1.2a", "1.3a"]
-    },
-        {
-        "id":"1.2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["O Dragão se dirige até a torre da cidade. Lá de cima ele dá um grande rugido e diz:"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
-        "routes":["2a"]
-    },
-        {
-        "id":"1.3a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["IMPORTANTE! Um combate é algo difícil pelo seu nivel, você pode morrer tentando!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Desistir do combate", "Tentar"],
-        "routes":["1.2a","1.3.1a"]
-    },
-            {
-
-        "id":"1.3.1a",
-        "turnSide":"enemy",
-        "whoSpeaks":"Master",
-        "words":["O Dragão evita os ataques e tenta se afastar."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
-        "routes":["1.2a"]
-    },
-            {
-        "id":"2a",
-        "turnSide":"enemy",
-        "whoSpeaks":"Dragon",
-        "words":["Escutem-me reles humanos! Eu sou Beryllus, o terrível e estou à procura de algo que vocês me roubaram há 300 anos atrás. Me devolvam o Artefato de ITAMARium e seu patético planeta será poupado. Enquanto não me devolverem, irei devorar uma família por dia."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
-        "routes":["2.1a"]
-    },
-            {
-        "id":"2.1a",
-        "turnSide":"enemy",
-        "whoSpeaks":"Master",
-        "words":["Ele dá uma rasante e pega com suas garras um homem e duas crianças, e voa até as montanhas distantes."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
-        "routes":["2.2a"]
-    },
-            {
-        "id":"2.2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Não é possível persegui-lo", "Ele segue voando sobre a floresta em direção às montanhas."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
-        "routes":["3a"]
-    },
-            {
-        "id":"3a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["A cidade é ameaçada por um terrível dragão. A única maneira de acabar com isto é encontrando o artefato de ITAMARium, um artefato amaldiçoado por uma antiga entidade, um Deus da Tecnologia daquela época."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
-        "routes":["3.1a"]
-    },
-            {
-        "id":"3.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["A cidade está em chamas! Há várias pessoas feridas na rua. No caos, as pessoas gritam para que Rei faça algo."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
-        "routes":["3.2a"]
-    },
-            {
-        "id":"3.2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Dois Guardas a cavalo aparecem e perguntam: Alguém aqui se atreve a ajudar? Alguém corajoso o bastante? Seu Rei está a oferecer uma boa quantia a quem aceitar essa missão suicida"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Aceitar o Desafio", "Recusar"],
-        "routes":["3.3a", "3.4a"]
-    },
-        {
-        "id":"3.4",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Os únicos capazes de salvar o planeta se recusaram!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["proximo"],
-        "routes":["182a"]
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Sanctus Helene"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "changeScenario"
+        ],
+        "scenario": [
+            "SanctusHelene"
+        ],
+        "routes": [
+            "1a"
+        ]
     },
     {
-        "id":"3.3a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Os Guardas retornam ao castelo enquanto as pessoas imploram por piedade."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["perguntar sobre o Artefato", "Ir ao castelo"],
-        "routes":["3.4a","4a"]
+        "id": "1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Sanctus Heléne! Uma pequena cidade perdida no mapa",
+            "Na manhã do dia seguinte à chegada dos heróis, a cidade acorda com explosões e gritos de dor e desespero vindos das ruas"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "1.1a"
+        ]
     },
     {
-        "id":"3.4a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Ao investigar melhor sobre o artefato, irá descobrir que é uma velha lenda na cidade. Desde a época em que a cidade foi fundada.", "Quase todas as pessoas conhecem a tal história. Há 3 mil anos atrás, quando a cidade de Sanctus Heléne foi fundada. Os exploradores encontraram um baú preto que emergia uma luz azul de dentro.", "Ao abrir, toda luz se esvaiu e dentro, um artefato preto com dourado ornamentado com pedras preciosas. O líder da exploração logo suspeitou que o baú fosse amaldiçoado. Depois que abriram, algumas pessoas que participaram da expedição ficaram doentes.", "Então ele foi escondido no meio da floresta de Taiga (a floresta próxima). Lá foi construido uma catacumba de pedra, para que ninguém pudesse abrir. A floresta de Taiga é uma floresta bem densa e cheia de criaturas perigosas.", "Muitos goblins vivem lá, além de seres mitológicos segundo as lendas."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Repetir Lenda", "Ir ao castelo"],
-        "routes":["3.4a","4a"]
+        "id": "1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao olhar para o céu avistam um grande dragão sobrevoando a cidade e cuspindo fogo nas casas."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks2.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Proximo",
+            "Tentar acertar o dragão"
+        ],
+        "routes": [
+            "1.2a",
+            "1.3a"
+        ]
     },
     {
-        "id":"4a",
-        "loading":"castle",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["No castelo o Rei os recebe com um banquete. Ele lhes oferece as mais diversas bebidas e depois uma mesa farta de comidas variadas. Após se deliciar com a refeição, o rei se levanta e diz:"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["4.1a"]
+        "id": "1.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O Dragão se dirige até a torre da cidade. Lá de cima ele dá um grande rugido e diz:"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "2a"
+        ]
     },
     {
-        "id":"4.1a",
-        "turnSide":"enemy",
-        "whoSpeaks":"Rei",
-        "words":["Vou perder este planeta, e para piorar as coisas, esse maldito dragão está destruindo tudo. Não que eu me importe com a vida das pessoas aqui Mas é através delas que vem todo meu ouro e impostos, certo?"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["4.2a"]
+        "id": "1.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "IMPORTANTE! Um combate é algo difícil pelo seu nivel, você pode morrer tentando!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Desistir do combate",
+            "Tentar"
+        ],
+        "routes": [
+            "1.2a",
+            "1.3.1a"
+        ]
     },
     {
-        "id":"4.2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Após uma risadinha de canto, o Rei prossegue:"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["4.3a"]
+        "id": "1.3.1a",
+        "turnSide": "enemy",
+        "whoSpeaks": "Master",
+        "words": [
+            "O Dragão evita os ataques e tenta se afastar."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "1.2a"
+        ]
     },
     {
-        "id":"4.3a",
-        "turnSide":"enemy",
-        "whoSpeaks":"Rei",
-        "words":["Se vocês me trouxer o artefato, estou disposto a lhe fornecer 6 mil peças de ouro por pessoa.", "Dessa forma, poderei negociar com este maldito dragão para que deixe minhas terras."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Questionar", "Aceitar", "Recusar"],
-        "routes":["4.4a","4.5a","3.4a"]
+        "id": "2a",
+        "turnSide": "enemy",
+        "whoSpeaks": "Dragon",
+        "words": [
+            "Escutem-me reles humanos! Eu sou Beryllus, o terrível e estou à procura de algo que vocês me roubaram há 300 anos atrás. Me devolvam o Artefato de ITAMARium e seu patético planeta será poupado. Enquanto não me devolverem, irei devorar uma família por dia."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "2.1a"
+        ]
     },
     {
-        "id":"4.4a",
-        "turnSide":"enemy",
-        "whoSpeaks":"Rei",
-        "words":["Não sei ao certo onde está este Artefato. Mas acredito que esteja enterrado nas profundezas da floresta de Taiga"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Aceitar", "Recusar"],
-        "routes":["4.5a","3.4a"]
+        "id": "2.1a",
+        "turnSide": "enemy",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ele dá uma rasante e pega com suas garras um homem e duas crianças, e voa até as montanhas distantes."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "2.2a"
+        ]
     },
     {
-        "id":"4.5a",
-        "loading":"forest",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Os aventureiros seguem então para a floresta de Taiga. A ultima localizaçao conhecida do Artefato"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["5a"]
+        "id": "2.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Não é possível persegui-lo. Ele segue voando sobre a floresta em direção às montanhas."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "3a"
+        ]
     },
     {
-        "id":"5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["A Floresta de Taiga"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "scenario":["florestaDeTaiga"],
-        "commands":["changeScenario", "showButtons"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["5.1.1a", "5.1a"]
+        "id": "3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "A cidade é ameaçada por um terrível dragão. A única maneira de acabar com isto é encontrando o artefato de ITAMARium, um artefato amaldiçoado por uma antiga entidade, um Deus da Tecnologia daquela época."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "3.1a"
+        ]
     },
     {
-        "id":"5.1.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["A floresta é grande e densa, é difícil de ver além de alguns metros à frente, as árvores ficam muito próximas umas das outras."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["5.1"]
+        "id": "3.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "A cidade está em chamas! Há várias pessoas feridas na rua. No caos, as pessoas gritam para que Rei faça algo."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "proximo"
+        ],
+        "routes": [
+            "3.2a"
+        ]
     },
     {
-        "id":"5.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Entrar na floresta parece ser o unico caminho para encontrar a catacumba e conseguir cumprir o pedido do Rei, ou voces podem tentar ir atras do Dragão, por onde deseja começar?"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Procurar pelo Dragão", "Entrar na floresta"],
-        "routes":["6a","7a"]
+        "id": "3.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Dois Guardas a cavalo aparecem e perguntam: Alguém aqui se atreve a ajudar? Alguém corajoso o bastante? Seu Rei está a oferecer uma boa quantia a quem aceitar essa missão suicida"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Aceitar o Desafio",
+            "Recusar"
+        ],
+        "routes": [
+            "3.3a",
+            "3.4"
+        ]
     },
     {
-        "id":"5.2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Começar a procura pela trilha do Dragão ou procurar pela Catacumba"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Procurar pelo Dragão", "Procurar pela Catacumba na floresta"],
-        "routes":["6a","7a"]
+        "id": "3.4",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Os únicos capazes de salvar o planeta se recusaram!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "182a"
+        ]
     },
     {
-        "id":"6a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Vamos ver se voces tem Sorte!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["RollDiceD6"],
-        "routes":["6.1a", "6.2a", "6.3a", "6.4a", "6.5a", "6.6a"]
+        "id": "3.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Os Guardas retornam ao castelo enquanto as pessoas imploram por piedade."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "perguntar sobre o Artefato",
+            "Ir ao castelo"
+        ],
+        "routes": [
+            "3.4a",
+            "4a"
+        ]
     },
     {
-        "id":"6.1a",
-        "turnSide":"Victus",
-        "whoSpeaks":"player",
-        "words":["UAU! olhem o tamanho dassas pegadas, acho que este é o caminho para o covil do Dragão"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Ir para o covil do Dragão", "Continuar procurando a Catacumba"],
-        "routes":["20a", "7a"]
+        "id": "3.4a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao investigar melhor sobre o artefato, irá descobrir que é uma velha lenda na cidade. Desde a época em que a cidade foi fundada.",
+            "Quase todas as pessoas conhecem a tal história. Há 3 mil anos atrás, quando a cidade de Sanctus Heléne foi fundada. Os exploradores encontraram um baú preto que emergia uma luz azul de dentro.",
+            "Ao abrir, toda luz se esvaiu e dentro, um artefato preto com dourado ornamentado com pedras preciosas. O líder da exploração logo suspeitou que o baú fosse amaldiçoado. Depois que abriram, algumas pessoas que participaram da expedição ficaram doentes.",
+            "Então ele foi escondido no meio da floresta de Taiga (a floresta próxima). Lá foi construido uma catacumba de pedra, para que ninguém pudesse abrir. A floresta de Taiga é uma floresta bem densa e cheia de criaturas perigosas.",
+            "Muitos goblins vivem lá, além de seres mitológicos segundo as lendas."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Repetir Lenda",
+            "Ir ao castelo"
+        ],
+        "routes": [
+            "3.4a",
+            "4a"
+        ]
     },
     {
-        "id":"6.2a",
-        "enemy":["goblin1", "goblin2"],
-        "turnSide":"enemy",
-        "whoSpeaks":"goblin",
-        "words":["Quanto ouro vocês tem? Goblins estava a espreita, atacango o grupo!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["5.2a"]
+        "id": "4a",
+        "loading": "castle",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "No castelo o Rei os recebe com um banquete. Ele lhes oferece as mais diversas bebidas e depois uma mesa farta de comidas variadas. Após se deliciar com a refeição, o rei se levanta e diz:"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "4.1a"
+        ]
     },
     {
-        "id":"6.3a",
-        "enemy":["lobo1", "lobo2"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Lobo",
-        "words":["Ahuuuuu!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["5.2a"]
+        "id": "4.1a",
+        "turnSide": "enemy",
+        "whoSpeaks": "Rei",
+        "words": [
+            "Vou perder este planeta, e para piorar as coisas, esse maldito dragão está destruindo tudo. Não que eu me importe com a vida das pessoas aqui Mas é através delas que vem todo meu ouro e impostos, certo?"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "4.2a"
+        ]
     },
     {
-        "id":"6.4a",
-        "enemy":["troll1", "troll2"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Troll",
-        "words":["Vocês não passar daqui, Troll forte, não deixar, Vai embora!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["5.2a"]
+        "id": "4.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Após uma risadinha de canto, o Rei prossegue:"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "4.3a"
+        ]
     },
     {
-        "id":"6.5a",
-        "enemy":["ogro1", "ogro2"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Ogros",
-        "words":["Voces Fedem a roupa lavada, bruhg! Credo eu matar oces pra ajudar a cheirar bem podre!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["5.2a"]
+        "id": "4.3a",
+        "turnSide": "enemy",
+        "whoSpeaks": "Rei",
+        "words": [
+            "Se vocês me trouxer o artefato, estou disposto a lhe fornecer 6 mil peças de ouro por pessoa.",
+            "Dessa forma, poderei negociar com este maldito dragão para que deixe minhas terras."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Questionar",
+            "Aceitar",
+            "Recusar"
+        ],
+        "routes": [
+            "4.4a",
+            "4.5a",
+            "3.4a"
+        ]
     },
     {
-        "id":"6.6a",
-        "enemy":["troll1", "troll1", "troll1", "troll2"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Troll",
-        "words":["Vocês não passar daqui, Troll forte, não deixar, Vai embora!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["5.2a"]
+        "id": "4.4a",
+        "turnSide": "enemy",
+        "whoSpeaks": "Rei",
+        "words": [
+            "Não sei ao certo onde está este Artefato. Mas acredito que esteja enterrado nas profundezas da floresta de Taiga"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Aceitar",
+            "Recusar"
+        ],
+        "routes": [
+            "4.5a",
+            "3.4a"
+        ]
     },
     {
-        "id":"7a",
-        "turnSide":"player",
-        "whoSpeaks":"Victus",
-        "words":["Vamos começar a procurar pela Catacumba!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["7.0a"]
+        "id": "4.5a",
+        "loading": "forest",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Os aventureiros seguem então para a floresta de Taiga. A ultima localizaçao conhecida do Artefato"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "5a"
+        ]
     },
     {
-        "id":"7.0a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Vamos ver se o dado vai lhes ajudar!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["RollDiceD6"],
-        "routes":["7.1a", "7.2a", "7.3a", "7.4a", "7.5a", "7.6a"]
+        "id": "5a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "A Floresta de Taiga"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "scenario": [
+            "florestaDeTaiga"
+        ],
+        "commands": [
+            "changeScenario",
+            "showButtons"
+        ],
+        "showButtons": [
+            "Proximo",
+            "Pular"
+        ],
+        "routes": [
+            "5.1.1a",
+            "5.1a"
+        ]
     },
     {
-        "id":"7.1a",
-        "enemy":["ogro1"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Ogros",
-        "words":["Voces Fedem a roupa lavada, bruhg! Credo eu matar oces pra ajudar a cheirar bem podre!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["7.0a"]
+        "id": "5.1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "A floresta é grande e densa, é difícil de ver além de alguns metros à frente, as árvores ficam muito próximas umas das outras."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "5.1a"
+        ]
     },
     {
-        "id":"7.2a",
-        "enemy":["goblin4"],
-        "turnSide":"enemy",
-        "whoSpeaks":"goblin",
-        "words":["Ouro, ouro, ouro, eu so quero muis ouro!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["7.0a"]
+        "id": "5.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Entrar na floresta parece ser o unico caminho para encontrar a catacumba e conseguir cumprir o pedido do Rei, ou voces podem tentar ir atras do Dragão, por onde deseja começar?"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Procurar pelo Dragão",
+            "Entrar na floresta"
+        ],
+        "routes": [
+            "6a",
+            "7a"
+        ]
     },
     {
-        "id":"7.3a",
-        "enemy":["gobli3", "goblin1"],
-        "turnSide":"enemy",
-        "whoSpeaks":"goblin",
-        "words":["A beleza provoca o ladrão, mais do que o ouro, que que eu estou falando... me de logo este ouro!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["7.0a"]
+        "id": "5.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Começar a procura pela trilha do Dragão ou procurar pela Catacumba"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Procurar pelo Dragão",
+            "Procurar pela Catacumba na floresta"
+        ],
+        "routes": [
+            "6a",
+            "7a"
+        ]
     },
     {
-        "id":"7.4a",
-        "enemy":["troll1", "troll2"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Troll",
-        "words":["Vocês não passar daqui, Troll forte, não deixar, Vai embora!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["7.0a"]
+        "id": "6a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Vamos ver se voces tem Sorte!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "RollDiceD6"
+        ],
+        "routes": [
+            "6.1a",
+            "6.2a",
+            "6.3a",
+            "6.4a",
+            "6.5a",
+            "6.6a"
+        ]
     },
     {
-        "id":"7.5a",
-        "enemy":["lobo3", "lobo1"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Lobo",
-        "words":["Ahuuuuu!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["7.0a"]
+        "id": "6.1a",
+        "turnSide": "Victus",
+        "whoSpeaks": "player",
+        "words": [
+            "UAU! olhem o tamanho dassas pegadas, acho que este é o caminho para o covil do Dragão"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Ir para o covil do Dragão",
+            "Continuar procurando a Catacumba"
+        ],
+        "routes": [
+            "20a",
+            "7a"
+        ]
     },
     {
-        "id":"7.6a",
-        "turnSide":"player",
-        "whoSpeaks":"Arlekts",
-        "words":["Ei! aqui! acho que encontrei algo, essas arvores parecem pessoas!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Seguir trilha"],
-        "routes":["8a"]
+        "id": "6.2a",
+        "enemy": [
+            "goblin1",
+            "goblin2"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Quanto ouro vocês tem?",
+            "Goblins estavam a espreita, atacando o grupo!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "battle"
+        ],
+        "routes": [
+            "5.2a"
+        ]
     },
     {
-        "id":"8a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Voces encontraram a primeira parte da Trilha, boa sorte para encontrar o proximo"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["RollDiceD6"],
-        "routes":["8.1a", "8.2a", "8.3a", "8.4a", "8.5a", "8.6a"]
+        "id": "6.3a",
+        "enemy": [
+            "lobo1",
+            "lobo2"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Lobo",
+        "words": [
+            "Ahuuuuu!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "5.2a"
+        ]
     },
     {
-        "id":"8.1a",
-        "enemy":["goblin1"],
-        "turnSide":"enemy",
-        "whoSpeaks":"goblin",
-        "words":["Voces tem ouro ai ne, Eu quero!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
-        "routes":["8a"]
+        "id": "6.4a",
+        "enemy": [
+            "troll1",
+            "troll2"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Troll",
+        "words": [
+            "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "5.2a"
+        ]
     },
     {
-        "id":"8.2a",
-        "enemy":["ogro1"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Ogros",
-        "words":["Voces Fedem a florzinha, bruhg! Credo eu matar oces, tripas cheirar muito gostoso, bem podre!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
-        "routes":["8a"]
+        "id": "6.5a",
+        "enemy": [
+            "ogro1",
+            "ogro2"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Ogros",
+        "words": [
+            "Voces Fedem a roupa lavada, bruhg! Credo eu matar oces pra ajudar a cheirar bem podre!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "5.2a"
+        ]
     },
     {
-        "id":"8.3a",
-        "enemy":["goblin2", "goblin4"],
-        "turnSide":"enemy",
-        "whoSpeaks":"goblin",
-        "words":["Nossa, Nossa, como brilha... Quero essa espada pra mim agora!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
-        "routes":["8a"]
+        "id": "6.6a",
+        "enemy": [
+            "troll1",
+            "troll1",
+            "troll1",
+            "troll2"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Troll",
+        "words": [
+            "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "5.2a"
+        ]
     },
     {
-        "id":"8.4a",
-        "turnSide":"player",
-        "whoSpeaks":"Davis",
-        "words":["Ja passamos por aqui antes, estamos perdidos, vamos ter que voltar a procurar a trilha novamente!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Começar a procurar novamente", "E se fossemos atras do Dragão"],
-        "routes":["7a","5.2a"]
+        "id": "7a",
+        "turnSide": "player",
+        "whoSpeaks": "Victus",
+        "words": [
+            "Vamos começar a procurar pela Catacumba!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "7.0a"
+        ]
     },
     {
-        "id":"8.5a",
-        "enemy":["lobo1","lobo2", "lobo3", "lobo4"],
-        "turnSide":"enemy",
-        "whoSpeaks":"Lobo",
-        "words":["Ahuuuuu! Ahuuuuu!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
-        "routes":["8a"]
+        "id": "7.0a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Vamos ver se o dado vai lhes ajudar!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "RollDiceD6"
+        ],
+        "routes": [
+            "7.1a",
+            "7.2a",
+            "7.3a",
+            "7.4a",
+            "7.5a",
+            "7.6a"
+        ]
     },
     {
-        "id":"8.6a",
-        "turnSide":"player",
-        "whoSpeaks":"Davis",
-        "words":["Estão sentindo esta energia, ela parece vir daquela direção, acho que estamos no caminho certo!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Procurar a Catacumba"],
-        "routes":["9a"]
+        "id": "7.1a",
+        "enemy": [
+            "ogro1"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Ogros",
+        "words": [
+            "Voces Fedem a roupa lavada, bruhg! Credo eu matar oces pra ajudar a cheirar bem podre!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "7.0a"
+        ]
     },
     {
-        "id":"9a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Bem parece que encontraram a ultima trilha para a floresta So precisam encontrar a Catacumba agora! Rolem os dados vamos ver se os Deuses estão com vocês!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons", "RollDiceD6"],
-        "routes":["9.1a", "9.2a", "9.3a", "9.4a", "9.5a", "9.6a"]
+        "id": "7.2a",
+        "enemy": [
+            "goblin4"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Ouro, ouro, ouro, eu so quero muis ouro!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "7.0a"
+        ]
     },
     {
-        "id":"9.1a",
-        "turnSide":"player",
-        "whoSpeaks":"Arletics",
-        "words":["Pessoal aqui esta ela!", "Esquecida pelo tempo, olhem o tamanho dessa porta!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":["10"]
+        "id": "7.3a",
+        "enemy": [
+            "gobli3",
+            "goblin1"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "A beleza provoca o ladrão, mais do que o ouro, que que eu estou falando... me de logo este ouro!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "7.0a"
+        ]
     },
     {
-        "id":"9.2a",
-        "enemy":["ogro1", "Lobo1", "Lobo4" , "Lobo3"],
-        "turnSide":"enemy",
-        "whoSpeaks":"ogro",
-        "words":["Meus cachorrinhos tem fome! so quero um de voces HAHA"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["battle"],
-        "routes":["9a"]
+        "id": "7.4a",
+        "enemy": [
+            "troll1",
+            "troll2"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Troll",
+        "words": [
+            "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "7.0a"
+        ]
     },
     {
-        "id":"9.3a",
-        "enemy":["goblin1", "goblin1", "goblin2", "goblin3", "goblin4"],
-        "turnSide":"enemy",
-        "whoSpeaks":"goblin",
-        "words":["Não vão nunca encontrar a Catacumba! então ja vomos matalos aqui!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
-        "routes":["9a"]
+        "id": "7.5a",
+        "enemy": [
+            "lobo3",
+            "lobo1"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Lobo",
+        "words": [
+            "Ahuuuuu!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "7.0a"
+        ]
     },
     {
-        "id":"9.4a",
-        "enemy":["troll1", "troll2"],
-        "turnSide":"enemy",
-        "whoSpeaks":"troll",
-        "words":["Argh! Que fedor fedorento! Se eu matar melhora!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Battle"],
-        "routes":["9a"]
+        "id": "7.6a",
+        "turnSide": "player",
+        "whoSpeaks": "Arlekts",
+        "words": [
+            "Ei! aqui! acho que encontrei algo, essas arvores parecem pessoas!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "8a"
+        ]
     },
     {
-        "id":"9.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Olha só ... nem um inimigo apareceu .. quem programou esse jogo? Assim fica facil ne produção!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["10a"]
+        "id": "8a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Voces encontraram a primeira parte da Trilha, boa sorte para encontrar o proximo"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "RollDiceD6"
+        ],
+        "routes": [
+            "8.1a",
+            "8.2a",
+            "8.3a",
+            "8.4a",
+            "8.5a",
+            "8.6a"
+        ]
     },
     {
-        "id":"9.6a",
-        "turnSide":"player",
-        "whoSpeaks":"Arletics",
-        "words":["Encontrei a Catacumba! Cheira a morte, sera que devemos mesmo entrar?"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":["10"]
+        "id": "8.1a",
+        "enemy": [
+            "goblin1"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Voces tem ouro ai ne, Eu quero!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "8a"
+        ]
     },
     {
-        "id":"10a",
+        "id": "8.2a",
+        "enemy": [
+            "ogro1"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Ogros",
+        "words": [
+            "Voces Fedem a florzinha, bruhg! Credo eu matar oces, tripas cheirar muito gostoso, bem podre!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "8a"
+        ]
+    },
+    {
+        "id": "8.3a",
+        "enemy": [
+            "goblin2",
+            "goblin4"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Nossa, Nossa, como brilha... Quero essa espada pra mim agora!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "8a"
+        ]
+    },
+    {
+        "id": "8.4a",
+        "turnSide": "player",
+        "whoSpeaks": "Davis",
+        "words": [
+            "Ja passamos por aqui antes, estamos perdidos, vamos ter que voltar a procurar a trilha novamente!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Começar a procurar novamente",
+            "E se fossemos atras do Dragão"
+        ],
+        "routes": [
+            "7a",
+            "5.2a"
+        ]
+    },
+    {
+        "id": "8.5a",
+        "enemy": [
+            "lobo1",
+            "lobo2",
+            "lobo3",
+            "lobo4"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "Lobo",
+        "words": [
+            "Ahuuuuu! Ahuuuuu!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "8a"
+        ]
+    },
+    {
+        "id": "8.6a",
+        "turnSide": "player",
+        "whoSpeaks": "Davis",
+        "words": [
+            "Estão sentindo esta energia, ela parece vir daquela direção, acho que estamos no caminho certo!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Procurar a Catacumba"
+        ],
+        "routes": [
+            "9a"
+        ]
+    },
+    {
+        "id": "9a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Bem parece que encontraram a ultima trilha para a floresta So precisam encontrar a Catacumba agora! Rolem os dados vamos ver se os Deuses estão com vocês!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons",
+            "RollDiceD6"
+        ],
+        "routes": [
+            "9.1a",
+            "9.2a",
+            "9.3a",
+            "9.4a",
+            "9.5a",
+            "9.6a"
+        ]
+    },
+    {
+        "id": "9.1a",
+        "turnSide": "player",
+        "whoSpeaks": "Arletics",
+        "words": [
+            "Pessoal aqui esta ela!",
+            "Esquecida pelo tempo, olhem o tamanho dessa porta!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            ""
+        ],
+        "routes": [
+            "10"
+        ]
+    },
+    {
+        "id": "9.2a",
+        "enemy": [
+            "ogro1",
+            "Lobo1",
+            "Lobo4",
+            "Lobo3"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "ogro",
+        "words": [
+            "Meus cachorrinhos tem fome! so quero um de voces HAHA"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "battle"
+        ],
+        "routes": [
+            "9a"
+        ]
+    },
+    {
+        "id": "9.3a",
+        "enemy": [
+            "goblin1",
+            "goblin1",
+            "goblin2",
+            "goblin3",
+            "goblin4"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Não vão nunca encontrar a Catacumba! então ja vomos matalos aqui!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "9a"
+        ]
+    },
+    {
+        "id": "9.4a",
+        "enemy": [
+            "troll1",
+            "troll2"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "troll",
+        "words": [
+            "Argh! Que fedor fedorento! Se eu matar melhora!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "9a"
+        ]
+    },
+    {
+        "id": "9.5a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Olha só ... nem um inimigo apareceu .. quem programou esse jogo? Assim fica facil ne produção!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "10a"
+        ]
+    },
+    {
+        "id": "9.6a",
+        "turnSide": "player",
+        "whoSpeaks": "Arletics",
+        "words": [
+            "Encontrei a Catacumba! Cheira a morte, sera que devemos mesmo entrar?"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "10"
+        ]
+    },
+    {
+        "id": "10a",
         "loading": "catacumb",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["A Catacumba"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["changeScenario", "showButtons"],
-        "scenario":["catacumba"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["10.1a", "11a"]
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "A Catacumba"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "changeScenario",
+            "showButtons"
+        ],
+        "scenario": [
+            "catacumba"
+        ],
+        "showButtons": [
+            "Proximo",
+            "Pular"
+        ],
+        "routes": [
+            "10.1a",
+            "11a"
+        ]
     },
     {
-        "id":"10.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Em meio a muitas plantas, vimes e raízes de árvores, o grupo encontra a Catacumba. É uma imensa pedra com algumas inscrições."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Remover plantas", "Pular"],
-        "routes":["10.2a", "11a"]
+        "id": "10.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Em meio a muitas plantas, vimes e raízes de árvores, o grupo encontra a Catacumba. É uma imensa pedra com algumas inscrições."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Remover plantas",
+            "Pular"
+        ],
+        "routes": [
+            "10.2a",
+            "11a"
+        ]
     },
     {
-        "id":"10.2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Ao remover algumas plantas que enraizaram entre as pedras, os vocês encontram uma inscrição!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Ler inscrição", "Pular"],
-        "routes":["10.3a", "11a"]
+        "id": "10.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao remover algumas plantas que enraizaram entre as pedras, os vocês encontram uma inscrição!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Ler inscrição",
+            "Pular"
+        ],
+        "routes": [
+            "10.3a",
+            "11a"
+        ]
     },
     {
-        "id":"10.3a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Não há tesouros ou fortunas aqui. Uma terrível maldição foi presa. Entre nesta Catacumba e você condenará a sua alma e a de todos."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Examinar melhor", "Pular"],
-        "routes":["10.4a", "11a"]
+        "id": "10.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Não há tesouros ou fortunas aqui. Uma terrível maldição foi presa. Entre nesta Catacumba e você condenará a sua alma e a de todos."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Examinar melhor",
+            "Pular"
+        ],
+        "routes": [
+            "10.4a",
+            "11a"
+        ]
     },
     {
-        "id":"10.4a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Examinando melhor, você descobre que um pedaço está quebrado e que há um buraco de aproximadamente 80cm em um dos cantos. Lá dentro está muito escuro."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Iluminar", "Pular"],
-        "routes":["10.5a", "11a"]
+        "id": "10.4a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Examinando melhor, você descobre que um pedaço está quebrado e que há um buraco de aproximadamente 80cm em um dos cantos. Lá dentro está muito escuro."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Iluminar",
+            "Pular"
+        ],
+        "routes": [
+            "10.5a",
+            "11a"
+        ]
     },
     {
-        "id":"10.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["iluminando, é possível ver que há um buraco no fundo que é tão fundo que a luz não chega."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Jogar a tocha pelo buraco", "Pular"],
-        "routes":["10.6a", "11a"]
+        "id": "10.5a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "iluminando, é possível ver que há um buraco no fundo que é tão fundo que a luz não chega."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Jogar a tocha pelo buraco",
+            "Pular"
+        ],
+        "routes": [
+            "10.6a",
+            "11a"
+        ]
     },
     {
-        "id":"10.6a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Atirando uma tocha, os heróis verão que este buraco tem uns 8 metros de profundidade."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["11a"]
+        "id": "10.6a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Atirando uma tocha, os heróis verão que este buraco tem uns 8 metros de profundidade."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "11a"
+        ]
     },
     {
-        "id":"11a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["A pequena entrada na tumba não parece ser compatível com o tamanho do Victus!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Deixa-lo para trás", "Tentar abrir mais a entrada"],
-        "routes":["11.1a", "11.2"]
+        "id": "11a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "A pequena entrada na tumba não parece ser compatível com o tamanho do Victus!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Deixa-lo para trás",
+            "Tentar abrir mais a entrada"
+        ],
+        "routes": [
+            "11.1a",
+            "11.2"
+        ]
     },
     {
-        "id":"11.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Pode ser bem complicado sem ele la dentro, está certo disso?"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Seguir sem o Victus", "Tentar abrir mais a entrada"],
-        "routes":["11.1.1a", "11.2"]
+        "id": "11.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Pode ser bem complicado sem ele la dentro, está certo disso?"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Seguir sem o Victus",
+            "Tentar abrir mais a entrada"
+        ],
+        "routes": [
+            "11.1.1a",
+            "11.2"
+        ]
     },
     {
-        "id":"11.1.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["O Victus foi deixado para trás!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["12a"]
+        "id": "11.1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O Victus foi deixado para trás!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "12a"
+        ]
     },
     {
-        "id":"11.2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Para tentar abrir vocês precisam passar por um teste de força de 10 rolando um D20"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Rolar dado"],
-        "valueDice":[">10", "<10"],
-        "routes":["12", "11.2a"]
+        "id": "11.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Para tentar abrir vocês precisam passar por um teste de força de 10 rolando um D20"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Rolar dado"
+        ],
+        "valueDice": [
+            ">10",
+            "<10"
+        ],
+        "routes": [
+            "12",
+            "11.2a"
+        ]
     },
     {
-        "id":"12a",
+        "id": "12a",
         "loading": "catacumb2",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["O caminho dentro da Catacumba"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["changeScenario", "showButtons"],
-        "scenario":["catacumba2"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["12.1a", "13a"]
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O caminho dentro da Catacumba"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "changeScenario",
+            "showButtons"
+        ],
+        "scenario": [
+            "catacumba2"
+        ],
+        "showButtons": [
+            "Proximo",
+            "Pular"
+        ],
+        "routes": [
+            "12.1a",
+            "13a"
+        ]
     },
     {
-        "id":"12.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["O buraco no fundo da catacumba desce uns 8 metros e possui quase 2 metros de largura. Nas paredes de pedra e ossos há mais inscrições dizendo:"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["12.2a", "13a"]
+        "id": "12.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O buraco no fundo da catacumba desce uns 8 metros e possui quase 2 metros de largura. Nas paredes de pedra e ossos há mais inscrições dizendo:"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Proximo",
+            "Pular"
+        ],
+        "routes": [
+            "12.2a",
+            "13a"
+        ]
     },
     {
-        "id":"12.2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Saiam daqui antes que seja tarde", "Não há tesouros aqui, apenas a morte!"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["12.3a", "13a"]
+        "id": "12.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Saiam daqui antes que seja tarde",
+            "Não há tesouros aqui, apenas a morte!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Proximo",
+            "Pular"
+        ],
+        "routes": [
+            "12.3a",
+            "13a"
+        ]
     },
     {
-        "id":"12.3a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Pode-se observar que as paredes foram construídas de qualquer jeito e aparentemente às pressas. Lá embaixo está úmido e um túnel lateral segue em direção ao norte."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo", "Pular"],
-        "routes":["12.4a", "13a"]
+        "id": "12.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Pode-se observar que as paredes foram construídas de qualquer jeito e aparentemente às pressas. Lá embaixo está úmido e um túnel lateral segue em direção ao norte."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Proximo",
+            "Pular"
+        ],
+        "routes": [
+            "12.4a",
+            "13a"
+        ]
     },
     {
-        "id":"12.4a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["No chão há pedaços de pedras e galhos vindo lá de cima. Parece que alguém passou por aqui ou algo. O corredor estava escuro e se estendia por 50 metros até chegar em um grande salão."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Proximo"],
-        "routes":["13a"]
+        "id": "12.4a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "No chão há pedaços de pedras e galhos vindo lá de cima. Parece que alguém passou por aqui ou algo. O corredor estava escuro e se estendia por 50 metros até chegar em um grande salão."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "13a"
+        ]
     },
     {
-        "id":"13a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["A luz da tocha alerta três criaturas, são goblins! Se sobrar um goblin ele irá tentar fugir ou negociar sua vida quando interrogado ele dirá que não sabe de nada e que ali é apenas um local onde ele se esconde e que os chefes estão na porta da direita."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":["13.1"]
+        "id": "13a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "A luz da tocha alerta três criaturas, são goblins!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "13.0"
+        ]
     },
     {
-        "id":"13.1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de pedaços de sucata, o goblin diz que aquilo é o teu tesouro, apesar de ser apenas um monte de pedaço de metal enferrujado investigando melhor pode-se encontrar algumas moedas de ouro (200 moedas) e uma chave velha."],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "id": "13.0a",
+        "enemy": [
+            "goblin1",
+            "goblin3",
+            "goblin4"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Não vão nunca encontrar! mais carne pra gente!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "13.1a"
+        ]
     },
     {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "id": "13.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de sucatas...",
+            "Antes do morrer o goblin diz que aquilo é o seu tesouro, apesar de ser apenas um monte de pedaço de metal enferrujado."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Pilha de carne",
+            "Sucatas",
+            "Proximo"
+        ],
+        "routes": [
+            "13.1.1a",
+            "13.1.2a",
+            "13.1.3a"
+        ]
     },
     {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "id": "13.1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Carne é tudo o que tem aqui, nada de mais"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "13.1a"
+        ]
     },
     {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "id": "13.1.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Realmente era um belo tesouro, uma chave velha é tudo que encontraram"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "14.1a"
+        ]
     },
     {
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
-    },{
-        "id":"4.5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":[""],
-        "routes":[""]
+        "id": "13.1.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Há duas portas na sala, uma em cada lado, na parede da frente, uma grande mensagem entalhada nas pedras, saia daqui para que a maldição não seja liberta"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Porta da Direita",
+            "Porta da Esquerda",
+            "Olhar Novamente"
+        ],
+        "routes": [
+            "13.2.1a",
+            "13.2.2a",
+            "13.1a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "13.2.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Esta porta estra trancada tem um aspecto de velha, talvez uma velha chave a abra!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "13.1a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "13.2.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Uma porta de metal pesado, com uma grande fechadura, precisarão de uma grande chave para isso..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "13.1a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "14.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de sucatas..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Pilha de carne",
+            "Sucatas",
+            "Proximo"
+        ],
+        "routes": [
+            "14.1.1a",
+            "14.1.2a",
+            "14.1.3a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "14.1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Voces não vão querer comer isso né ..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "14.1a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "14.1.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Realmente era um belo tesouro, vocês acharam uma chave velha, tente usar em alguma porta!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "14.1a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "14.1.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Há duas portas na sala, uma em cada lado, na parede da frente, uma grande mensagem entalhada nas pedras, saia daqui para que a maldição não seja liberta"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Porta da Direita",
+            "Porta da Esquerda",
+            "Olhar Novamente"
+        ],
+        "routes": [
+            "14.2.1a",
+            "14.2.2a",
+            "14.1a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "14.2.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Esta chave é tão velha quanto a porta e parece encaixar perfeitamente"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "15a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "14.2.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Uma porta de metal pesado, com uma grande fechadura, não achou que essa chave velha abriria esta porta né ..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "14.1a"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "15a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Atrás da porta segue um pequeno corredor que os leva até uma grande sala, ao adentrar a sala é possível ver 5 goblins comendo carne de cervo, um deles é um Xamã."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "15.0"
+        ]
     },
     {
-        "id":"1a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":[""],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["showButtons"],
-        "showButtons":["Sim", "Não", "Estou pronto pra morte!"],
-        "routes":["2a","3a","4a"]
+        "id": "15.0a",
+        "enemy": [
+            "goblin1",
+            "goblin3",
+            "goblinBoss",
+            "goblin3",
+            "goblin4"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Não vão nunca encontrar! mais carne pra gente!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "15.1a"
+        ]
     },
     {
-        "id":"2a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Então se prepare"],
-        "commands":["changeScenario"],
-        "showButtons":["teste"],
-        "scenario":"rua1",
-        "routes":["5a"]
+        "id": "15.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao morrer o goblin Xamã deixa cair algo de metal."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Revistar Goblin"
+        ],
+        "routes": [
+            "15.2"
+        ]
     },
     {
-        "id":"3a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Bem, faz parte"],
-        "routes":["6a"]
+        "id": "15.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao revistar o Xamã, vocês encontra uma grande chave de metal, pesada e prateada"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "voltar"
+        ],
+        "routes": [
+            "16.1a"
+        ]
     },
     {
-        "id":"4a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Que assim seja!"],
-        "commands":["showDiePage"]
+        "id": "16.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de sucatas..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Pilha de carne",
+            "Sucatas",
+            "Proximo"
+        ],
+        "routes": [
+            "16.1.1a",
+            "16.1.2a",
+            "16.1.3a"
+        ]
     },
     {
-        "id":"5a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Final da rota do ", "Sim"]
+        "id": "16.1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Sério ... Não tem nada aqui, eu ja falei"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "16.1a"
+        ]
     },
     {
-        "id":"182a",
-        "turnSide":"neutral",
-        "whoSpeaks":"Master",
-        "words":["Algumas pessoas conseguiram deixar o planeta!", "Os que ficaram, lutaram inutilmente contra o Dragão e morreram", "O planeta inteiro foi dizimado!"],
-        "scenario":["destruicaoTotal"],
-
+        "id": "16.1.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Vocês já até usaram a chave... aqui nao tem respawn!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "16.1a"
+        ]
+    },
+    {
+        "id": "16.1.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Bom lhes resta a porta da esquerda, mas ainda esta trancada"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Destrancar Porta"
+        ],
+        "routes": [
+            "16.2a"
+        ]
+    },
+    {
+        "id": "16.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Atrás da porta segue uma extenso corredor que leva até uma grande sala, parece um tipo de depósito de madeira há muitos troncos podres por toda a sala."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Vasculhar"
+        ],
+        "routes": [
+            "17a"
+        ]
+    },
+    {
+        "id": "17a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao se aproximar, Surge do monte de troncos um verme nojento gigantesco que os ataca."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "17.1a"
+        ]
+    },
+    {
+        "id": "17.1a",
+        "enemy": [
+            "verme1"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "verme",
+        "words": [
+            ""
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "18a"
+        ]
+    },
+    {
+        "id": "18a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "finallll"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            ""
+        ],
+        "routes": [
+            ""
+        ]
+    },
+    {
+        "id": "182a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Algumas pessoas conseguiram deixar o planeta!",
+            "Os que ficaram, lutaram inutilmente contra o Dragão e morreram",
+            "O planeta inteiro foi dizimado!"
+        ],
+        "scenario": [
+            "destruicaoTotal"
+        ]
     }
 ]

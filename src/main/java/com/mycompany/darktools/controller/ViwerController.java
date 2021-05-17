@@ -1,7 +1,5 @@
 package com.mycompany.darktools.controller;
 
-import static akka.event.jul.Logger.root;
-import static com.google.common.io.Resources.getResource;
 import java.io.IOException;
 import java.net.URL;
 import javafx.fxml.FXMLLoader;
