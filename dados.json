@@ -1,14 +1,17 @@
 [
-{
-        "id":"0a",
+    {
+        "id": "0a",
         "loading": "city",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["Sanctus Helene"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
-        "commands":["changeScenario", "showButtons"],
+        "commands":["changeScenario"],
         "scenario":["SanctusHelene"],
+<<<<<<< HEAD
         "commands":[""],
+=======
+>>>>>>> 228c1a3a8def7a3bfa4a67e19776282932748e46
         "routes":["1a"]
     },
     {
