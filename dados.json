@@ -11,18 +11,12 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "changeScenario",
-            "showButtons"
+            "changeScenario"
         ],
         "scenario": [
             "SanctusHelene"
         ],
-        "showButtons": [
-            "Proximo",
-            "Pular"
-        ],
         "routes": [
-            "0.1a",
             "1a"
         ]
     },
@@ -38,10 +32,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "1.1a"
@@ -80,10 +71,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "proximo"
+            ""
         ],
         "routes": [
             "2a"
@@ -122,10 +110,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "proximo"
+            ""
         ],
         "routes": [
             "1.2a"
@@ -142,10 +127,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "proximo"
+            ""
         ],
         "routes": [
             "2.1a"
@@ -162,10 +144,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "proximo"
+            ""
         ],
         "routes": [
             "2.2a"
@@ -176,17 +155,13 @@
         "turnSide": "neutral",
         "whoSpeaks": "Master",
         "words": [
-            "Não é possível persegui-lo",
-            "Ele segue voando sobre a floresta em direção às montanhas."
+            "Não é possível persegui-lo. Ele segue voando sobre a floresta em direção às montanhas."
         ],
         "wordsSongs": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "proximo"
+            ""
         ],
         "routes": [
             "3a"
@@ -203,10 +178,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "proximo"
+            ""
         ],
         "routes": [
             "3.1a"
@@ -251,7 +223,7 @@
         ],
         "routes": [
             "3.3a",
-            "3.4a"
+            "3.4"
         ]
     },
     {
@@ -265,10 +237,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "proximo"
+            ""
         ],
         "routes": [
             "182a"
@@ -334,10 +303,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "4.1a"
@@ -354,10 +320,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "4.2a"
@@ -374,10 +337,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "4.3a"
@@ -442,10 +402,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "5a"
@@ -488,13 +445,10 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
-            "5.1"
+            "5.1a"
         ]
     },
     {
@@ -594,15 +548,13 @@
         "turnSide": "enemy",
         "whoSpeaks": "goblin",
         "words": [
-            "Quanto ouro vocês tem? Goblins estava a espreita, atacango o grupo!"
+            "Quanto ouro vocês tem?",
+            "Goblins estavam a espreita, atacando o grupo!"
         ],
         "wordsSongs": [
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "battle"
         ],
         "routes": [
@@ -718,10 +670,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "7.0a"
@@ -878,10 +827,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Seguir trilha"
+            ""
         ],
         "routes": [
             "8a"
@@ -1179,10 +1125,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "10a"
@@ -1199,9 +1142,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             ""
         ],
         "routes": [
@@ -1356,10 +1296,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "11a"
@@ -1420,10 +1357,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "12a"
@@ -1559,10 +1493,7 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Proximo"
+            ""
         ],
         "routes": [
             "13a"
@@ -1573,7 +1504,29 @@
         "turnSide": "neutral",
         "whoSpeaks": "Master",
         "words": [
-            "A luz da tocha alerta três criaturas, são goblins! Se sobrar um goblin ele irá tentar fugir ou negociar sua vida quando interrogado ele dirá que não sabe de nada e que ali é apenas um local onde ele se esconde e que os chefes estão na porta da direita."
+            "A luz da tocha alerta três criaturas, são goblins!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "13.0"
+        ]
+    },
+    {
+        "id": "13.0a",
+        "enemy": [
+            "goblin1",
+            "goblin3",
+            "goblin4"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Não vão nunca encontrar! mais carne pra gente!"
         ],
         "wordsSongs": [
             "etc/songs/speaks1.mp3"
@@ -1582,10 +1535,10 @@
             "showButtons"
         ],
         "showButtons": [
-            ""
+            "Battle"
         ],
         "routes": [
-            "13.1"
+            "13.1a"
         ]
     },
     {
@@ -1593,7 +1546,489 @@
         "turnSide": "neutral",
         "whoSpeaks": "Master",
         "words": [
-            "O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de pedaços de sucata, o goblin diz que aquilo é o teu tesouro, apesar de ser apenas um monte de pedaço de metal enferrujado investigando melhor pode-se encontrar algumas moedas de ouro (200 moedas) e uma chave velha."
+            "O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de sucatas...",
+            "Antes do morrer o goblin diz que aquilo é o seu tesouro, apesar de ser apenas um monte de pedaço de metal enferrujado."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Pilha de carne",
+            "Sucatas",
+            "Proximo"
+        ],
+        "routes": [
+            "13.1.1a",
+            "13.1.2a",
+            "13.1.3a"
+        ]
+    },
+    {
+        "id": "13.1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Carne é tudo o que tem aqui, nada de mais"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "13.1a"
+        ]
+    },
+    {
+        "id": "13.1.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Realmente era um belo tesouro, uma chave velha é tudo que encontraram"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "14.1a"
+        ]
+    },
+    {
+        "id": "13.1.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Há duas portas na sala, uma em cada lado, na parede da frente, uma grande mensagem entalhada nas pedras, saia daqui para que a maldição não seja liberta"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Porta da Direita",
+            "Porta da Esquerda",
+            "Olhar Novamente"
+        ],
+        "routes": [
+            "13.2.1a",
+            "13.2.2a",
+            "13.1a"
+        ]
+    },
+    {
+        "id": "13.2.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Esta porta estra trancada tem um aspecto de velha, talvez uma velha chave a abra!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "13.1a"
+        ]
+    },
+    {
+        "id": "13.2.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Uma porta de metal pesado, com uma grande fechadura, precisarão de uma grande chave para isso..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "13.1a"
+        ]
+    },
+    {
+        "id": "14.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de sucatas..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Pilha de carne",
+            "Sucatas",
+            "Proximo"
+        ],
+        "routes": [
+            "14.1.1a",
+            "14.1.2a",
+            "14.1.3a"
+        ]
+    },
+    {
+        "id": "14.1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Voces não vão querer comer isso né ..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "14.1a"
+        ]
+    },
+    {
+        "id": "14.1.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Realmente era um belo tesouro, vocês acharam uma chave velha, tente usar em alguma porta!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "14.1a"
+        ]
+    },
+    {
+        "id": "14.1.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Há duas portas na sala, uma em cada lado, na parede da frente, uma grande mensagem entalhada nas pedras, saia daqui para que a maldição não seja liberta"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Porta da Direita",
+            "Porta da Esquerda",
+            "Olhar Novamente"
+        ],
+        "routes": [
+            "14.2.1a",
+            "14.2.2a",
+            "14.1a"
+        ]
+    },
+    {
+        "id": "14.2.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Esta chave é tão velha quanto a porta e parece encaixar perfeitamente"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "15a"
+        ]
+    },
+    {
+        "id": "14.2.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Uma porta de metal pesado, com uma grande fechadura, não achou que essa chave velha abriria esta porta né ..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "14.1a"
+        ]
+    },
+    {
+        "id": "15a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Atrás da porta segue um pequeno corredor que os leva até uma grande sala, ao adentrar a sala é possível ver 5 goblins comendo carne de cervo, um deles é um Xamã."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "15.0"
+        ]
+    },
+    {
+        "id": "15.0a",
+        "enemy": [
+            "goblin1",
+            "goblin3",
+            "goblinBoss",
+            "goblin3",
+            "goblin4"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "goblin",
+        "words": [
+            "Não vão nunca encontrar! mais carne pra gente!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "15.1a"
+        ]
+    },
+    {
+        "id": "15.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao morrer o goblin Xamã deixa cair algo de metal."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Revistar Goblin"
+        ],
+        "routes": [
+            "15.2"
+        ]
+    },
+    {
+        "id": "15.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao revistar o Xamã, vocês encontra uma grande chave de metal, pesada e prateada"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "voltar"
+        ],
+        "routes": [
+            "16.1a"
+        ]
+    },
+    {
+        "id": "16.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "O salão é grande e não possui móveis, no canto direito uma pilha de carne de animais mortos que os goblins comiam, em outro canto está um uma pilha de sucatas..."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Pilha de carne",
+            "Sucatas",
+            "Proximo"
+        ],
+        "routes": [
+            "16.1.1a",
+            "16.1.2a",
+            "16.1.3a"
+        ]
+    },
+    {
+        "id": "16.1.1a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Sério ... Não tem nada aqui, eu ja falei"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "16.1a"
+        ]
+    },
+    {
+        "id": "16.1.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Vocês já até usaram a chave... aqui nao tem respawn!"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Voltar"
+        ],
+        "routes": [
+            "16.1a"
+        ]
+    },
+    {
+        "id": "16.1.3a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Bom lhes resta a porta da esquerda, mas ainda esta trancada"
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Destrancar Porta"
+        ],
+        "routes": [
+            "16.2a"
+        ]
+    },
+    {
+        "id": "16.2a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Atrás da porta segue uma extenso corredor que leva até uma grande sala, parece um tipo de depósito de madeira há muitos troncos podres por toda a sala."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Vasculhar"
+        ],
+        "routes": [
+            "17a"
+        ]
+    },
+    {
+        "id": "17a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "Ao se aproximar, Surge do monte de troncos um verme nojento gigantesco que os ataca."
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            ""
+        ],
+        "routes": [
+            "17.1a"
+        ]
+    },
+    {
+        "id": "17.1a",
+        "enemy": [
+            "verme1"
+        ],
+        "turnSide": "enemy",
+        "whoSpeaks": "verme",
+        "words": [
+            ""
+        ],
+        "wordsSongs": [
+            "etc/songs/speaks1.mp3"
+        ],
+        "commands": [
+            "showButtons"
+        ],
+        "showButtons": [
+            "Battle"
+        ],
+        "routes": [
+            "18a"
+        ]
+    },
+    {
+        "id": "18a",
+        "turnSide": "neutral",
+        "whoSpeaks": "Master",
+        "words": [
+            "finallll"
         ],
         "wordsSongs": [
             "etc/songs/speaks1.mp3"
@@ -1606,595 +2041,6 @@
         ],
         "routes": [
             ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "4.5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            ""
-        ],
-        "routes": [
-            ""
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "1a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            ""
-        ],
-        "wordsSongs": [
-            "etc/songs/speaks1.mp3"
-        ],
-        "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
-            "Sim",
-            "Não",
-            "Estou pronto pra morte!"
-        ],
-        "routes": [
-            "2a",
-            "3a",
-            "4a"
-        ]
-    },
-    {
-        "id": "2a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            "Então se prepare"
-        ],
-        "commands": [
-            "changeScenario"
-        ],
-        "showButtons": [
-            "teste"
-        ],
-        "scenario": "rua1",
-        "routes": [
-            "5a"
-        ]
-    },
-    {
-        "id": "3a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            "Bem, faz parte"
-        ],
-        "routes": [
-            "6a"
-        ]
-    },
-    {
-        "id": "4a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            "Que assim seja!"
-        ],
-        "commands": [
-            "showDiePage"
-        ]
-    },
-    {
-        "id": "5a",
-        "turnSide": "neutral",
-        "whoSpeaks": "Master",
-        "words": [
-            "Final da rota do ",
-            "Sim"
         ]
     },
     {
@@ -2208,6 +2054,6 @@
         ],
         "scenario": [
             "destruicaoTotal"
-        ],
+        ]
     }
 ]

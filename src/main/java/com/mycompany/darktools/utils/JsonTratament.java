@@ -60,11 +60,12 @@ public class JsonTratament {
             scenario = null;
         }
         
-        List<String> showButtons;
-        try {
+        List<String> showButtons; 
+        try{
             showButtons = parseJsonObjectToList(jsonObject,"showButtons");
-        } catch (Exception e) {
-            scenario = null;
+        } catch (Exception e){
+            showButtons = null;
+
         }
                 
         ScriptSegment scriptSegment = new ScriptSegment(
@@ -75,7 +76,7 @@ public class JsonTratament {
                 parseJsonObjectToList(jsonObject, "wordsSongsPath") != null ? parseJsonObjectToList(jsonObject,"wordsSongsPath") : null, //wordsSongsPath
                 parseJsonObjectToList(jsonObject,"commands") != null ? parseJsonObjectToList(jsonObject,"commands") : null,//commands
                 scenario,//scenario
-                parseJsonObjectToList(jsonObject,"showButtons") != null ? parseJsonObjectToList(jsonObject,"showButtons") : null,//showButton
+                showButtons,//showButton
                 parseJsonObjectToList(jsonObject, "routes") != null ? parseJsonObjectToList(jsonObject, "routes") : null//routes
         );
         
@@ -140,7 +141,14 @@ public class JsonTratament {
     static List<String> parseJsonObjectToList(JSONObject jsonObject, String line){
         List<String> stringSegment = new ArrayList<String>();
         
-        JSONArray arr = (JSONArray) jsonObject.get(line);
+        JSONArray arr;
+        
+        try{
+            arr = (JSONArray) jsonObject.get(line);
+        } catch (Exception e){
+            System.out.println("Erro ao tentar encontrar o dado no segmento JSON");
+            return null;
+        }
         
         if(arr != null){
                        
