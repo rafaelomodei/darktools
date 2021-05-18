@@ -1,9 +1,10 @@
 [
 	{
-		"id":"cavaleiro1",
-		"name":"Erick Mavine ou só Cavaleiro, depende se é um NPC de fundo ou um NPC importante"
-		"damage":20,
-		"skill":"lançada",
-		"pathImage":"pasta/seila.png"
-	},
+		"id": "cavaleiro1",
+		"name": "Erick Mavine",
+		"damage": 20.0,
+		"skill": "Lançada",
+		"pathimagebody": "ui.character.archer/acher_back_battle.png",
+		"pathimageface": "ui.img/acher_self.png"
+	}
 ]

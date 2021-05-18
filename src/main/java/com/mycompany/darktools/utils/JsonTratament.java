@@ -5,6 +5,7 @@
  */
 package com.mycompany.darktools.utils;
 
+import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.ScriptSegment;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -18,6 +19,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import com.mycompany.darktools.model.vo.TeamTurn;
 import com.mycompany.darktools.model.vo.ScriptSegment;
+import com.mycompany.darktools.model.vo.Skill;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.InputStreamReader;
@@ -57,6 +59,13 @@ public class JsonTratament {
         } catch (Exception e) {
             scenario = null;
         }
+        
+        List<String> showButtons;
+        try {
+            showButtons = parseJsonObjectToList(jsonObject,"showButtons");
+        } catch (Exception e) {
+            scenario = null;
+        }
                 
         ScriptSegment scriptSegment = new ScriptSegment(
                 (String) jsonObject.get("id"), //id
@@ -73,6 +82,52 @@ public class JsonTratament {
         //scriptSegment.showData();
         return scriptSegment;
         
+    }
+    
+    /**
+     * Função que cria a lista de NPCs de acordo com as informações contidas no Json dos NPCs
+     * @param jsonObject Os dados pego do arquivo JSON
+     * @return Lista de personagens contendo os NPCs
+     */
+    public static List<Personage> createAllNPCs(List<JSONObject> jsonObjects){
+        
+        List<Personage> personages = new ArrayList<Personage>();
+        
+        for(JSONObject data: jsonObjects){           
+            personages.add(createNPC(data));
+        }
+        return personages;
+        
+        
+    }
+    
+    /**
+     * Função que cria o NPC de acordo com os dados do JSON de characters
+     * @param jsonObject JsonObject com o segmento de dados do 
+     * @return Retorna a instância Personage com dados do NPC
+     */
+    public static Personage createNPC(JSONObject jsonObject){
+        
+        List<Skill> skills = new ArrayList<Skill>();
+        JSONParser parser = new JSONParser();
+        
+        try{
+            Skill skill = new Skill(jsonObject.get("skill").toString(),((Double)jsonObject.get("damage")).floatValue());
+            skills.add(skill);
+        } catch (Exception e){
+            skills = null;
+            System.out.println("Erro ao criar a skill: "+e);
+        };
+        
+        Personage personage = new Personage(
+                (String) jsonObject.get("id"),
+                (String) jsonObject.get("name"),
+                skills,
+                (String) jsonObject.get("pathimagebody"),
+                (String) jsonObject.get("pathimageface")
+        );
+        
+        return personage;
     }
     
     
@@ -99,6 +154,7 @@ public class JsonTratament {
         return null;
        
     }
+    
     
     /**
      * Função que verifica o String TeamTurn no JSON para torna-lo a classe TeamTurn com o enum

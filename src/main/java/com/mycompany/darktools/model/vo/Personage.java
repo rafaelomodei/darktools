@@ -30,6 +30,9 @@ public class Personage {
     @Column(name = "id")
     private Long id;
     
+    @Transient
+    private String NPCid;
+    
     @Column(name = "isalive")
     boolean isAlive;
     
@@ -48,12 +51,33 @@ public class Personage {
     @Column(name = "imagepath", nullable = false, unique = true)
     String imagePath;
 
+    @Transient
+    String pathImageFace;
+    
+    @Transient
+    String pathImageBody;
+    
     public Personage(String name, List skills, String imagePath) {
         this.name = name;
         this.skills = skills;
         this.imagePath = imagePath;
     }
 
+    /**
+     * Contrutos para NPC (Personagens não jogáveis)
+     * @param NPCid Id do NPC
+     * @param name Nome
+     * @param skills Lista de Skill, com as habilidades
+     * @param pathImageBody Caminho onde se encontra a imagem de corpo do personagem
+     * @param pathImageFace Caminho onde se encontra a imagem de rosto do personagem
+     */
+    public Personage(String NPCid ,String name, List skills, String pathImageFace, String pathImageBody){
+        this.NPCid = NPCid;
+        this.name = name;
+        this.skills = skills;
+        this.pathImageFace = pathImageFace;
+        this.pathImageBody = pathImageBody;
+    }
     
     
     public float getLife() {
@@ -86,6 +110,38 @@ public class Personage {
 
     public void setImagePath(String imagePath) {
         this.imagePath = imagePath;
+    }
+
+    public String getPathImageFace() {
+        return pathImageFace;
+    }
+
+    public String getPathImageBody() {
+        return pathImageBody;
+    }
+
+    public String getNPCid() {
+        return NPCid;
+    }
+
+    public void setNPCid(String NPCid) {
+        this.NPCid = NPCid;
+    }
+
+    public boolean isIsAlive() {
+        return isAlive;
+    }
+
+    public void setIsAlive(boolean isAlive) {
+        this.isAlive = isAlive;
+    }
+
+    public boolean isIsActiveToBattle() {
+        return isActiveToBattle;
+    }
+
+    public void setIsActiveToBattle(boolean isActiveToBattle) {
+        this.isActiveToBattle = isActiveToBattle;
     }
     
     
