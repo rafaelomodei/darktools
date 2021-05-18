@@ -624,9 +624,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "battle"
         ],
         "routes": [

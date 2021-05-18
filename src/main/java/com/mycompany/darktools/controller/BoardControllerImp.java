@@ -137,7 +137,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void startGame(){
         ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
         
-        Board board = new Board(null, 10000, "default", "0a");
+        Board board = new Board(createDefaulTeam(), 10000, "default", "0a");
         
         board.setScriptSegments(scriptSegmentController.getScriptSegments());
         
@@ -147,6 +147,25 @@ public class BoardControllerImp extends Observable implements BoardController {
         
         setBoard(board);
     }
+    
+    /**
+     * Função que cria uma time padrão com 1 só personagem com uma só skill para testes
+     * @return Retorna o time para testes
+     */
+    private Team createDefaulTeam(){
+        Skill skill1 = new Skill("soco", 20.0f);
+        List<Skill> skillList = new ArrayList<Skill>();
+        skillList.add(skill1);
+        
+        Personage personage1 = new Personage("joao", skillList, null);
+        List<Personage> personages = new ArrayList<Personage>();
+        personages.add(personage1);
+        
+        Team teamDefault = new Team(personages, 0.0);
+        
+        return teamDefault;
+    }
+    
     
     /**
      * Avança para o proximo ScriptSegment de acordo com a escolha
@@ -199,14 +218,23 @@ public class BoardControllerImp extends Observable implements BoardController {
      */
     public void readWord(int currentWord){
         
-        /*-------aqui preciso direcionar para filtragem de comportamentos 
-        
+        /*-------aqui preciso direcionar para filtragem de comportamentos */
+        System.out.println("Esse screptSegment tem: "+board.getCurrentScriptSegment().getCommands());
+        if(board.getCurrentScriptSegment().getCommands().contains("battle")){
+                System.out.println("Momento batalha!");
+                setChanged();
+                notifyObservers("battle");
+            }
         if(this.currentWord == board.getCurrentScriptSegment().getWords().size()-1){
-            if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
-                showButtons(1);
-            } 
+            //if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
+                
+            //}
+            
+            
         }
-        */
+        /*-------aqui preciso direcionar para filtragem de comportamentos */
+        
+        
         Hashtable<String, String> my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
         my_dict.put("word", board.getCurrentScriptSegment().getWords().get(this.currentWord));
         setChanged();

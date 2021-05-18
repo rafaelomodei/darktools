@@ -42,6 +42,9 @@ public class Personage {
     @Transient
     float life;
     
+    @Transient
+    float maxlife;
+    
     @Column(name = "name", nullable = false)
     String name;
     

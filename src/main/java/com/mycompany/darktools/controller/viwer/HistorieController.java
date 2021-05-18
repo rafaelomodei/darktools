@@ -6,7 +6,9 @@
 package com.mycompany.darktools.controller.viwer;
 
 import com.mycompany.darktools.controller.BoardControllerImp;
+import com.mycompany.darktools.controller.ViwerController;
 import java.beans.EventHandler;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,6 +16,8 @@ import java.util.Map;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -205,8 +209,29 @@ public class HistorieController implements Initializable, Observer {
             if(object.equals("hideButtons")){
                 hideButtons();
             }
+            if(object.equals("battle")){
+                try {
+                    switchToWindow("BattleTest");
+                } catch (IOException ex) {
+                    Logger.getLogger(HistorieController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
             
         }
     }
     
+    /**
+     * Função que muda para outra tela
+     * @param Screen String com o nome ta tela
+     * @throws IOException 
+     */
+    private void switchToWindow(String screen) throws IOException {
+        try{
+            ViwerController viwerController = ViwerController.getStante();
+            viwerController.setRoot(screen);
+        }catch(Exception e){
+            System.out.println("Erro ao acessar a tela "+ screen +" / "+e);
+        }
+
+    }
 }
