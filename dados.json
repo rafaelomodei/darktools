@@ -8,10 +8,6 @@
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["changeScenario"],
         "scenario":["SanctusHelene"],
-<<<<<<< HEAD
-        "commands":[""],
-=======
->>>>>>> 228c1a3a8def7a3bfa4a67e19776282932748e46
         "routes":["1a"]
     },
     {
@@ -261,7 +257,7 @@
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["Ir para o covil do Dragão", "Continuar procurando a Catacumba"],
-        "routes":["20a", "7a"]
+        "routes":["30a", "7a"]
     },
     {
         "id":"6.2a",
@@ -542,7 +538,7 @@
         "id":"10.1a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["Em meio a muitas plantas, vimes e raízes de árvores, o grupo encontra a Catacumba. É uma imensa pedra com algumas inscrições."],
+        "words":["A Catacumba"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["Remover plantas", "Pular"],
@@ -878,7 +874,7 @@
         "id":"16.1.1a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["Sério ... Não tem nada aqui, eu ja falei"],
+        "words":["Sério ... Não tem nada aqui, eu ja falei!"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["Voltar"],
@@ -951,13 +947,250 @@
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["Descer Escadaria"],
+        "routes":["18.2a"]
+    },
+    {
+        "id":"18.2a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Essa é uma enorme sala, coberta por esqueletos de trabalhadores locais, são esqueletos deformados, alguns parecem demônios e criaturas asquerosas, um vento gélido como a noite na floresta uiva dos pequenos orifícios nas paredes rochosas, elas parecem vivas."],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["18.3a"]
+    },
+    {
+        "id":"18.3a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["É possível ver que os buracos finos nas paredes levam até o topo da catacumba, onde o vento é encanado.", "No final do corredor há uma grande porta dupla com escrito “saiam agora” a porta está trancada, como a porta é de madeira também pode ser derrubada com teste de força nivel 10 rolando um D20."],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Rolar dado"],
+        "valueDice":[">10", "<10"],
+        "routes":["18.4a"]
+    },
+    {
+        "id":"18.4a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["No centro dessa sala está um grande baú Dourado incrustado de joias.", "É brilhante e ilumina toda sala, ao lado do baú está de pé uma figura, vestindo uma armadura completa, não é possível ver qualquer parte do seu corpo."],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["18.5a"]
+    },
+    {
+        "id":"18.5a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Ao se aproximar, uma luz sai de dentro do Elmo e uma voz aterrorizante diz:"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Aproximar do Bau"],
+        "routes":["18.6a"]
+    },
+    {
+        "id":"18.6a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Guardiao",
+        "words":["Eu sou o guardião do artefato, e não posso deixar que libertem a maldição"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Enfrentar Guardião", "Explicar para Guardião"],
+        "routes":["19a","20a"]
+    },
+    {
+        "id":"19a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Guardiao",
+        "words":["Não achei que seriam tão tolos"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["battle"],
+        "routes":["19.1a"]
+    },
+    {
+        "id":"20a",
+        "turnSide":"player",
+        "whoSpeaks":"Davi",
+        "words":["Guardião voce precisa nos ajudar, Berylus o terrivel Dragão ira destruir todo planeta se não levarmos o calice para ele! Ajude-nos antes que seja tarde"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["18.7a"]
+    },
+    {
+        "id":"18.7a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Guardião",
+        "words":["Berylus não é um simples dragão, irei com voces levar o artefato ate ele!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["18.8a"]
+    },
+    {
+        "id":"18.8a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Guardião",
+        "words":["Berylus não é um simples dragão, irei com voces levar o artefato ate ele!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["23a"]
+    },
+    {
+        "id":"19.1a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Um ataque fatal! O guardião cai de joelhos e começa a se transformar em madeira, até se transformar totalmente em uma arvore, o bau a tempo guardado pelo guardião esta na sua frente, feixes de uma luz azul emergem de dentro do bau"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Abrir o Bau", "Levar o Bau para o Rei", "Levar o bau ate o Dragão"],
+        "routes":["21a","22a", "23"]
+    },
+    {
+        "id":"21a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["300 anos de uma misteriosa energia acumulada em um simples bau, agora toda energia agora se foi, e minutos depois de aberto, vocês ja não conseguem se mecher, um triste fim para guerreiros tão destemidos."],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["181a"]
+    },
+    {
+        "id":"22a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["O caminho de volta para o castelo é bem tranquilo, aparentementte o Guardião controlava as criaturas para afastar curiosos do artefato.", "Ao sair da floresta com o bau, a cidade por mais que destruida, lhes recebe com festa, vocês agora são mais que uma lenda, agora são os HERÓIS daquele planeta, Bardos Cantam musicas sobre suas histórias, o Rei aparece com um bau com moedas de ouro e diz:"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["22.1a"]
+    },
+    {
+        "id":"22.1a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Rei",
+        "words":["Bem guerreiros, confesso que duvidei que voltariam vivos, então adicionei uma bonificação... 30 mil moedas de ouro deve pagar o trabalho, a cidade esta em divida eterna com vocês, agora vou negociar com o dragão"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["showButtons"],
+        "showButtons":["Trocar Baús"],
+        "routes":["22.2a"]
+    },
+    {
+        "id":"22.2a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Vocês trocam de baús, o Rei Omodeis II leva o bau até Berylus.", "O Dragão pega o baú, o quebra e inala toda aquela energia, ele coloca o artefato em sua boca e o encaixa em meio a seus dentes.", "Ele começa a se transformar, mas não em madeira. Poucos acreditam no que veem, Berylus na verdade não era um dragão, mas sim, um antigo demônio aprisionado a milhões de anos.", "As antigas civilizações o chamavam de Umanakshumaná o Deus da destruição."],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["180a"]
+    },
+    {
+        "id":"23a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["O caminho ate o dragão é bem tranquilo, aparentemente o Guardião controlava as criaturas para afastar curiosos do artefato.", "Ao chegar  no covil, Berylus diz:"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["23.1a"]
+    },
+    {
+        "id":"23.1a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Berylus",
+        "words":["Obrigado, guerreiros por me libertarem, vocês sempre terão um lugar no meu novo Reino!", "O Dragão pega o baú, o quebra e inala toda aquela energia, ele coloca o artefato em sua boca e o encaixa em meio a seus dentes.", "Ele começa a se transformar, mas não em madeira. Berylus na verdade não era um dragão, mas sim, um antigo demônio aprisionado a milhões de anos.", "As antigas civilizações o chamavam de Umanakshumaná o Deus da destruição."],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["23.2a"]
+    },
+    {
+        "id":"23.2a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Umanakshumaná",
+        "words":["Nos veremos em breve Guerreiros! Escolher libertar um demônio com certeza foi a melhor escolha!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["180a"]
+    },
+    {
+        "id":"30a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Ao chegar no covil, Encontram berylus levitando, ele parece estar ainda mais forte que antes, tem sangue por toda parte", "As pessoas estavam sendo usadas em rituais para que berylus ficasse ainda mais forte", "Derrepente berylus acorda do transe e diz:"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["30.1a"]
+    },
+    {
+        "id":"30.1a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Berylus",
+        "words":["Guerreiros tenho algo melhor que ouro a lhes oferecer, também sou um guerreiro porém aprisionado na forma de dragão, preciso me libertar!", "Lhes ofereço este planeta e a chance de continuarem vivos, vão a catacumba, peguem o baú, matem o guardião e todas essas terras serão suas!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["Aceitar e ir a Catacumba", "Recusar e atacar Berylus"],
+        "routes":["31a", "32a"]
+    },
+    {
+        "id":"31a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Berylus então leva-os até a entrada da catacumba, quebra a porta e diz que dali pra frente é com vocês, ele retorna ao covil para esperar por vocês!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":[""],
+        "routes":["12a"]
+    },
+    {
+        "id":"32a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Berylus",
+        "words":["Não conhecem o limite entre coragem e burrice? Que desperdicio!"],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["battle"],
+        "routes":["183a"]
+    },
+    {
+        "id":"180a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":[""],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["demonio"],
         "routes":[""]
     },
+    {
+        "id":"180.1a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":[""],
+        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "commands":["creditos"],
+        "scenario":["cidade"],
+        "routes":[""]
+    },
+    {
+        "id":"181a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["Os guerreiros nunca voltaram da floresta!", "Algumas pessoas conseguiram deixar o planeta!", "Os que ficaram, lutaram inutilmente contra o Dragão e morreram", "O planeta inteiro foi dizimado!"],
+        "scenario":["destruicaoTotal"]
+    }
     {
         "id":"182a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["Algumas pessoas conseguiram deixar o planeta!", "Os que ficaram, lutaram inutilmente contra o Dragão e morreram", "O planeta inteiro foi dizimado!"],
         "scenario":["destruicaoTotal"]
+    }
+    {
+        "id":"183a",
+        "turnSide":"neutral",
+        "whoSpeaks":"Master",
+        "words":["O Rei Omodeis II parece não acreditar que conseguiram derrotar Berylus."],
+        "scenario":["cidade"],
+        "routes":["183.1"]
+    }
+    {
+        "id":"183.1a",
+        "turnSide":"enemy",
+        "whoSpeaks":"Rei",
+        "words":["Bem guerreiros, confesso que duvidei que voltariam vivos, então adicionei uma bonificação... 100 mil moedas de ouro deve pagar o trabalho, a cidade está em divida eterna com vocês"],
+        "scenario":["cidade"],
+        "routes":["180.1"]
     }
 ]
