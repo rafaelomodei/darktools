@@ -125,11 +125,13 @@ public class BattleControllerViwer implements Initializable, Observer {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
-        TeamEnemy = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));//Isso deverá ser colocado na classe que fará o controle de comportamento com o sistema do dado e depois direcionado pra cá
+        //TeamEnemy = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));//Isso deverá ser colocado na classe que fará o controle de comportamento com o sistema do dado e depois direcionado pra cá
         
         List<Personage> TeamPlayer = boardControllerImp.getBoard().getTeamPlayer().getPersonages();
         
-        battleController = new BattleController(TeamEnemy, TeamPlayer);
+        TeamEnemy = boardControllerImp.getBoard().getTeamEnemy().getPersonages();
+        
+        battleController = new BattleController(TeamEnemy, TeamPlayer);//isso
 
         this.battleControllerObservable = battleController;
         battleControllerObservable.addObserver(this);

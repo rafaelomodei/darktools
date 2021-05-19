@@ -25,5 +25,41 @@
 		"skill": "Lançada",
 		"pathimagebody": "ui.character.archer/acher_back_battle.png",
 		"pathimageface": "ui.img/acher_self.png"
+	},
+	{
+		"id": "ogro1",
+		"name": "Ogro1",
+		"life": 100.0,
+		"damage": 30.0,
+		"skill": "Chute",
+		"pathimagebody": "ui.character.archer/acher_back_battle.png",
+		"pathimageface": "ui.img/acher_self.png"
+	},
+	{
+		"id": "goblin4",
+		"name": "goblin4",
+		"life": 50.0,
+		"damage": 20.0,
+		"skill": "Pedrada",
+		"pathimagebody": "ui.character.archer/acher_back_battle.png",
+		"pathimageface": "ui.img/acher_self.png"
+	},
+	{
+		"id": "troll1",
+		"name": "troll1",
+		"life": 120.0,
+		"damage": 50.0,
+		"skill": "Porretada",
+		"pathimagebody": "ui.character.archer/acher_back_battle.png",
+		"pathimageface": "ui.img/acher_self.png"
+	},
+	{
+		"id": "lobo1",
+		"name": "lobo1",
+		"life": 40.0,
+		"damage": 10.0,
+		"skill": "Mordida",
+		"pathimagebody": "ui.character.archer/acher_back_battle.png",
+		"pathimageface": "ui.img/acher_self.png"
 	}
 ]

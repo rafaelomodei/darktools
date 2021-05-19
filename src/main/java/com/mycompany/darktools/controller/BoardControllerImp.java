@@ -13,6 +13,7 @@ import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
+import com.mycompany.darktools.utils.JsonTratament;
 import com.mycompany.darktools.utils.ScriptSegmentConditions;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -198,7 +199,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     }
 
     /**
-     * Função que irá passando os textos de fala
+     * Função que irá passando os textos de fala e filtrando de acordo com o commands
      */
     @Override
     public void goToNextWord() {
@@ -215,14 +216,25 @@ public class BoardControllerImp extends Observable implements BoardController {
                 showButtons();
                 readWord(currentWord);
                 reproduceAudio();
-                //System.out.println("Responda a pergunta!");  
-            } else {
+                System.out.println("Responda a pergunta!");  
+            } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD6")) {
+                System.out.println("Momento do D6!");
+                readWord(currentWord);
+                reproduceAudio();
+                goToNextScriptSegment(ScriptSegmentConditions.rollDice6());
+            } else if(board.getCurrentScriptSegment().getCommands().contains("battle")){
+                System.out.println("Momento batalha!");
+                
+                updateTeamEnemy();//Fazer mais testes!
+                
+                setChanged();
+                notifyObservers("battle");
+            } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD20")){
+            //
+            }else {
                 goToNextScriptSegment(0);
             }
-            
-            
         }
-            
     }
 
     /**
@@ -230,25 +242,9 @@ public class BoardControllerImp extends Observable implements BoardController {
      * @param currentWord Variável que armazena qual a fala sendo falada no momento
      */
     public void readWord(int currentWord){
-        
-        /*-------aqui preciso direcionar para filtragem de comportamentos */
+
         System.out.println("Esse scriptSegment e o : "+board.getCurrentScriptSegment().getId());
-        //System.out.println("Esse screptSegment tem: "+board.getCurrentScriptSegment().getCommands());
-        if(board.getCurrentScriptSegment().getCommands().contains("battle")){
-                //System.out.println("Momento batalha!");
-                setChanged();
-                notifyObservers("battle");
-            }
-        if(this.currentWord == board.getCurrentScriptSegment().getWords().size()-1){
-            //if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
                 
-            //}
-            
-            
-        }
-        /*-------aqui preciso direcionar para filtragem de comportamentos */
-        
-        
         Hashtable<String, String> my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
         my_dict.put("word", board.getCurrentScriptSegment().getWords().get(this.currentWord));
         setChanged();
@@ -298,4 +294,23 @@ public class BoardControllerImp extends Observable implements BoardController {
         
     }
    
+    /**
+     * Função que atualiza o time inimigo que irá batalhar com o jogador
+     */
+    private void updateTeamEnemy(){
+        List<Personage> enemiesList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        Team teamEnemy = new Team();
+        List<Personage> selectecEnemiesList = new ArrayList<Personage>();
+
+        for(int i = 0; i < getBoard().getCurrentScriptSegment().getEnemies().size(); i++){
+            for(int y = 0; y < enemiesList.size(); y++){
+                if(getBoard().getCurrentScriptSegment().getEnemies().get(i).equals(enemiesList.get(y).getNPCid())){
+                    selectecEnemiesList.add(enemiesList.get(y));
+                }
+            }
+        }
+
+        teamEnemy.setPersonages(selectecEnemiesList);
+        board.setTeamEnemy(teamEnemy);
+    }
 }
