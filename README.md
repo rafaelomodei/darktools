@@ -131,9 +131,11 @@ Exemplo arquivo json com dados dos personagens não jogáveis.
   {
 		"id":"cavaleiro1",
 		"name":"Erick Mavine ou só Cavaleiro, depende se é um NPC de fundo ou um NPC importante"
+		"life": 100.0,
 		"damage":20,
 		"skill":"lançada",
-		"pathImage":"pasta/seila.png"
+		"pathimagebody": "pasta/imagemdecorpodoarqueiroY.png",
+		"pathimageface": "pasta/imagemderostodoarqueiroY.png"
 	},
 ]
 ```
@@ -141,8 +143,10 @@ Exemplo arquivo json com dados dos personagens não jogáveis.
 - ``id`` -> Endereço
 - ``name`` -> Nome do personagem
 - ``damage`` -> Dano do personagem
+- ``life`` -> Vida do inimigo
 - ``skill`` -> Nome da habilidade de combate usada pelo personagem
-- ``pathImage`` -> Caminho para o documento da imagem do personagem
+- ``pathimagebody`` -> Caminho para o documento da imagem de corpo do personagem
+- ``pathimageface`` -> Caminho para o documento da imagem de rosto do personagem
 
 **Loadings**<br>
 Aquivo json com dados que serão apresentados em cada tela de carregamento
