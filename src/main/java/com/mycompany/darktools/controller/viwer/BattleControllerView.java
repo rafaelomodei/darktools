@@ -49,8 +49,6 @@ public class BattleControllerView implements Initializable, Observer {
         
         List<Personage> TeamPlayer = boardControllerImp.getBoard().getTeamPlayer().getPersonages();
         
-        System.out.println("Quantidade de inimigos "+TeamEnemy.size());
-        
         battleController = new BattleController(TeamEnemy, TeamPlayer);
         
         this.battleControllerObservable = battleController;
@@ -83,6 +81,18 @@ public class BattleControllerView implements Initializable, Observer {
     private void selectEnemy(){
         System.out.println("Enemy0 selecionado!");
         selectedEnemyToAttack = "0";
+    }
+    
+    @FXML
+    private void selectEnemy1(){
+        System.out.println("Enemy0 selecionado!");
+        selectedEnemyToAttack = "1";
+    }
+    
+    @FXML
+    private void selectEnemy2(){
+        System.out.println("Enemy0 selecionado!");
+        selectedEnemyToAttack = "2";
     }
 
     @Override

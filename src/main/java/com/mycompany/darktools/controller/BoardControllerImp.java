@@ -149,17 +149,30 @@ public class BoardControllerImp extends Observable implements BoardController {
     }
     
     /**
-     * Função que cria uma time padrão com 1 só personagem com uma só skill para testes
+     * Função que cria uma time padrão com 3 personages e cada um com uma habilidade unica
      * @return Retorna o time para testes
      */
     private Team createDefaulTeam(){
-        Skill skill1 = new Skill("soco", 20.0f);
+        Skill skill1 = new Skill("Soco", 20.0f);
+        Skill skill2 = new Skill("Tiro", 50.0f);
+        Skill skill3 = new Skill("Bola de fogo", 20.0f);
         List<Skill> skillList = new ArrayList<Skill>();
         skillList.add(skill1);
         
-        Personage personage1 = new Personage("joao", skillList, null);
+        List<Skill> skillList1 = new ArrayList<Skill>();
+        skillList1.add(skill2);
+        
+        List<Skill> skillList2 = new ArrayList<Skill>();
+        skillList2.add(skill3);
+        
+        Personage personage0 = new Personage("Guerreiro", skillList, null);
+        Personage personage1 = new Personage("Arqueiro", skillList1, null);
+        Personage personage2 = new Personage("Mago", skillList2, null);
+        
         List<Personage> personages = new ArrayList<Personage>();
+        personages.add(personage0);
         personages.add(personage1);
+        personages.add(personage2);
         
         Team teamDefault = new Team(personages, 0.0);
         
@@ -222,7 +235,7 @@ public class BoardControllerImp extends Observable implements BoardController {
         System.out.println("Esse scriptSegment e o : "+board.getCurrentScriptSegment().getId());
         //System.out.println("Esse screptSegment tem: "+board.getCurrentScriptSegment().getCommands());
         if(board.getCurrentScriptSegment().getCommands().contains("battle")){
-                System.out.println("Momento batalha!");
+                //System.out.println("Momento batalha!");
                 setChanged();
                 notifyObservers("battle");
             }

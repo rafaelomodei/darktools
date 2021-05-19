@@ -174,7 +174,7 @@ public class BattleController extends Observable{
      */
     private Personage EnemyBasicIA(){
         Personage selectedPersonage = null;
-        int betterdeterministicValue = 0;
+        float betterdeterministicValue = 0;
         
         for(int i = 0; i < TeamPlayer.size(); i++){
          
@@ -185,14 +185,17 @@ public class BattleController extends Observable{
                 }
                 
                 Float deterministicValue = (TeamPlayer.get(i).getSkills().get(0).getDamage()/TeamPlayer.get(i).getLife());
+                //System.out.println("Fator deterministico de "+TeamPlayer.get(i).getName()+" = "+deterministicValue);
                 
                 if(betterdeterministicValue < deterministicValue){
+                    betterdeterministicValue = deterministicValue;
                     selectedPersonage = TeamPlayer.get(i);
                 }
             }
             
         }
         
+        //System.out.println("Personagem escolhido para ser atacado: "+selectedPersonage.getName());
         return selectedPersonage;
     }
 }
