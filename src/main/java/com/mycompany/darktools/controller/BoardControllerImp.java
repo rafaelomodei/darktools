@@ -211,6 +211,11 @@ public class BoardControllerImp extends Observable implements BoardController {
         my_dict.put("word", board.getCurrentScriptSegment().getWords().get(this.currentWord));
         setChanged();
         notifyObservers(my_dict);
+        
+        my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
+        my_dict.put("title", board.getCurrentScriptSegment().getWhoSpeaks());
+        setChanged();
+        notifyObservers(my_dict);
 
     }
     
