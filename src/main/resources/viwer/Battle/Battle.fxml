@@ -42,17 +42,17 @@
          <center>
             <HBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imagebody_character01" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../iu/character/mage/mago_back_batlle.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imagebody_character02" fitHeight="200.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../iu/character/warrior/guerreiro_back_batlle.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="imagebody_character03" fitHeight="200.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../iu/character/acher/acher_back_battle.png" />
                      </image>
@@ -112,12 +112,12 @@
             </Pane>
          </children>
       </VBox>
-      <Button fx:id="bottun_enemy01" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="bottun_enemy02" layoutX="350.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy1" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="bottun_enemy03" layoutX="500.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy2" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="bottun_enemy04" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="bottun_enemy05" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="bottun_enemy06" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="bottun_enemy07" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
+      <Button fx:id="botton_enemy01" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
+      <Button fx:id="botton_enemy02" layoutX="350.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy1" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
+      <Button fx:id="botton_enemy03" layoutX="500.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy2" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
+      <Button fx:id="botton_enemy04" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
+      <Button fx:id="botton_enemy05" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
+      <Button fx:id="botton_enemy06" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
+      <Button fx:id="botton_enemy07" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
    </children>
 </AnchorPane>
