@@ -21,8 +21,9 @@ public class ScriptSegment {
     String scenario;
     List<String> showButton;
     List<String> routes;
+    List<String> enemies;
 
-    public ScriptSegment(String id, TeamTurn turnSide, String whoSpeaks, List<String> words, List<String> wordsSongsPath, List<String> commands, String scenario, List<String> showButton, List<String> routes) {
+    public ScriptSegment(String id, TeamTurn turnSide, String whoSpeaks, List<String> words, List<String> wordsSongsPath, List<String> commands, String scenario, List<String> showButton, List<String> routes, List<String> enemies) {
         this.id = id;
         this.turnSide = turnSide;
         this.whoSpeaks = whoSpeaks;
@@ -32,6 +33,7 @@ public class ScriptSegment {
         this.scenario = scenario;
         this.showButton = showButton;
         this.routes = routes;
+        this.enemies = enemies;
     }
 
     public String getId() {
@@ -69,5 +71,10 @@ public class ScriptSegment {
     public List<String> getWordsSongsPath() {
         return wordsSongsPath;
     }
+
+    public List<String> getEnemies() {
+        return enemies;
+    }
+    
     
 }

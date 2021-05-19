@@ -67,6 +67,13 @@ public class JsonTratament {
             showButtons = null;
 
         }
+        
+        List<String> enemies;
+        try {
+            enemies = parseJsonObjectToList(jsonObject, "enemy");
+        } catch (Exception e) {
+            enemies = null;
+        }
                 
         ScriptSegment scriptSegment = new ScriptSegment(
                 (String) jsonObject.get("id"), //id
@@ -77,7 +84,8 @@ public class JsonTratament {
                 parseJsonObjectToList(jsonObject,"commands") != null ? parseJsonObjectToList(jsonObject,"commands") : null,//commands
                 scenario,//scenario
                 showButtons,//showButton
-                parseJsonObjectToList(jsonObject, "routes") != null ? parseJsonObjectToList(jsonObject, "routes") : null//routes
+                parseJsonObjectToList(jsonObject, "routes") != null ? parseJsonObjectToList(jsonObject, "routes") : null,//routes
+                enemies
         );
         
         //scriptSegment.showData();

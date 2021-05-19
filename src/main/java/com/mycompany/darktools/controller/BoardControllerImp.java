@@ -13,6 +13,7 @@ import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
+import com.mycompany.darktools.utils.JsonTratament;
 import com.mycompany.darktools.utils.ScriptSegmentConditions;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -223,9 +224,14 @@ public class BoardControllerImp extends Observable implements BoardController {
                 goToNextScriptSegment(ScriptSegmentConditions.rollDice6());
             } else if(board.getCurrentScriptSegment().getCommands().contains("battle")){
                 System.out.println("Momento batalha!");
+                
+                updateTeamEnemy();//Fazer mais testes!
+                
                 setChanged();
                 notifyObservers("battle");
-            } else {
+            } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD20")){
+            //
+            }else {
                 goToNextScriptSegment(0);
             }
         }
@@ -288,4 +294,23 @@ public class BoardControllerImp extends Observable implements BoardController {
         
     }
    
+    /**
+     * Função que atualiza o time inimigo que irá batalhar com o jogador
+     */
+    private void updateTeamEnemy(){
+        List<Personage> enemiesList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        Team teamEnemy = new Team();
+        List<Personage> selectecEnemiesList = new ArrayList<Personage>();
+
+        for(int i = 0; i < getBoard().getCurrentScriptSegment().getEnemies().size(); i++){
+            for(int y = 0; y < enemiesList.size(); y++){
+                if(getBoard().getCurrentScriptSegment().getEnemies().get(i).equals(enemiesList.get(y).getNPCid())){
+                    selectecEnemiesList.add(enemiesList.get(y));
+                }
+            }
+        }
+
+        teamEnemy.setPersonages(selectecEnemiesList);
+        board.setTeamEnemy(teamEnemy);
+    }
 }

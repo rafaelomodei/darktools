@@ -729,8 +729,8 @@
     {
         "id": "7.3a",
         "enemy": [
-            "gobli3",
-            "goblin1"
+            "goblin4",
+            "goblin4"
         ],
         "turnSide": "enemy",
         "whoSpeaks": "goblin",
@@ -751,7 +751,7 @@
         "id": "7.4a",
         "enemy": [
             "troll1",
-            "troll2"
+            "troll1"
         ],
         "turnSide": "enemy",
         "whoSpeaks": "Troll",
@@ -771,7 +771,7 @@
     {
         "id": "7.5a",
         "enemy": [
-            "lobo3",
+            "lobo1",
             "lobo1"
         ],
         "turnSide": "enemy",
