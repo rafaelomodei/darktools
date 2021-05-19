@@ -7,18 +7,32 @@ package com.mycompany.darktools.controller.viwer;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 
 /**
  * FXML Controller class
  *
  * @author Rafae
  */
-public class BattleController implements Initializable {
+public class SaveControllerViwer implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    
+    
+    @FXML
+    private CheckBox cb_Easy;
+
+    @FXML
+    private CheckBox cb_medium;
+
+    @FXML
+    private CheckBox cb_hard;
+
+    @FXML
+    private Button btn_exit;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

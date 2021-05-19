@@ -25,7 +25,7 @@ import javafx.scene.layout.VBox;
  *
  * @author Rafae
  */
-public class HistorieController implements Initializable {
+public class HistorieControllerViwer implements Initializable {
     
     @FXML
     private BorderPane borderPane_scene;

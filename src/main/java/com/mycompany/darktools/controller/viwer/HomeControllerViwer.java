@@ -22,7 +22,7 @@ import javafx.scene.layout.BorderPane;
  *
  * @author Rafae
  */
-public class HomeController implements Initializable {
+public class HomeControllerViwer implements Initializable {
     
     
     @FXML

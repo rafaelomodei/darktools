@@ -22,7 +22,7 @@ import javafx.stage.Stage;
  *
  * @author Rafae
  */
-public class OpeningTrailerController implements Initializable {
+public class OpeningTrailerControllerViwer implements Initializable {
 
     private Stage stage;
     private String VIDEO_URL = getClass().getResource("/iu/video/OpeningTraileDarkTools.mp4").toString();
