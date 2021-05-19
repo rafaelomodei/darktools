@@ -39,7 +39,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     
     static BoardControllerImp uniqueIndex;
     
-    public BoardControllerImp(){}
+    private BoardControllerImp(){}
     
     /**
      * A classe board controller será singleton para só tem um de sua existência operante em todo o código
@@ -137,7 +137,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void startGame(){
         ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
         
-        Board board = new Board(createDefaulTeam(), 10000, "default", "0a");
+        Board board = new Board(createDefaulTeam(), 10000, "default", "7.0a");//mudar para rota "0a"
         
         board.setScriptSegments(scriptSegmentController.getScriptSegments());
         
@@ -202,7 +202,7 @@ public class BoardControllerImp extends Observable implements BoardController {
                 showButtons();
                 readWord(currentWord);
                 reproduceAudio();
-                System.out.println("Responda a pergunta!");  
+                //System.out.println("Responda a pergunta!");  
             } else {
                 goToNextScriptSegment(0);
             }
@@ -219,7 +219,8 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void readWord(int currentWord){
         
         /*-------aqui preciso direcionar para filtragem de comportamentos */
-        System.out.println("Esse screptSegment tem: "+board.getCurrentScriptSegment().getCommands());
+        System.out.println("Esse scriptSegment e o : "+board.getCurrentScriptSegment().getId());
+        //System.out.println("Esse screptSegment tem: "+board.getCurrentScriptSegment().getCommands());
         if(board.getCurrentScriptSegment().getCommands().contains("battle")){
                 System.out.println("Momento batalha!");
                 setChanged();
@@ -260,7 +261,7 @@ public class BoardControllerImp extends Observable implements BoardController {
             clip = new AudioClip(AUDIO_URL);
             clip.play();
         } catch (Exception e) {
-            System.out.println("Sem arquivos de audio!");
+            //System.out.println("Sem arquivos de audio!");
         }
         
     }

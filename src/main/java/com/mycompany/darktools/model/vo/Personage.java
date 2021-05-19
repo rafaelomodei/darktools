@@ -64,6 +64,10 @@ public class Personage {
         this.name = name;
         this.skills = skills;
         this.imagePath = imagePath;
+        this.maxlife = 100;
+        this.life = this.maxlife;
+        this.isAlive = true;
+        this.isActiveToBattle = true;
     }
 
     /**
@@ -74,9 +78,12 @@ public class Personage {
      * @param pathImageBody Caminho onde se encontra a imagem de corpo do personagem
      * @param pathImageFace Caminho onde se encontra a imagem de rosto do personagem
      */
-    public Personage(String NPCid ,String name, List skills, String pathImageFace, String pathImageBody){
+    public Personage(String NPCid ,String name, float life, List skills, String pathImageFace, String pathImageBody){
         this.NPCid = NPCid;
         this.name = name;
+        this.life = life;
+        this.isAlive = true;
+        this.isActiveToBattle = true;
         this.skills = skills;
         this.pathImageFace = pathImageFace;
         this.pathImageBody = pathImageBody;

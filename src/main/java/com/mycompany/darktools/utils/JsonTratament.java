@@ -123,6 +123,7 @@ public class JsonTratament {
         Personage personage = new Personage(
                 (String) jsonObject.get("id"),
                 (String) jsonObject.get("name"),
+                ((Double)jsonObject.get("life")).floatValue(),
                 skills,
                 (String) jsonObject.get("pathimagebody"),
                 (String) jsonObject.get("pathimageface")

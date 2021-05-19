@@ -9,11 +9,12 @@ import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.TeamTurn;
 import java.util.List;
+import java.util.Observable;
 
 /**
  * Classe responsável por controlar as batalhas no jogo
  */
-public class BattleController {
+public class BattleController extends Observable{
     
     List<Personage> TeamEnemy;
     List<Personage> TeamPlayer;
@@ -22,6 +23,11 @@ public class BattleController {
     
     TeamTurn teamTurn;
 
+    /**
+     * Contrutor do BattleController
+     * @param TeamEnemy Time inimigo
+     * @param TeamPlayer Time do jogador
+     */
     public BattleController(List<Personage> TeamEnemy, List<Personage> TeamPlayer) {
         this.TeamEnemy = TeamEnemy;
         this.TeamPlayer = TeamPlayer;
@@ -31,20 +37,42 @@ public class BattleController {
     }
     
     /**
-     * Função que fará o controle dos acontecimentos no turno do usuário
+     * Função que realizará as acoes do turno do jogador
+     * @param personageGoToAttack Personage do time do jogador que irá atacar
+     * @param skillUsed Habilidade usada
+     * @param personageToBeAttacked Personagem que será atacado
      */
-    public void battleTurn(Personage personageAttacker ,Skill skill, Personage personageDefensive){
+    public void battleTurn(int personageGoToAttack, int skillUsed, int personageToBeAttacked){
         
         if(teamTurn == TeamTurn.Player){
             
+            boolean attacked;
+            
+            attacked = attack(TeamPlayer.get(personageGoToAttack), TeamPlayer.get(personageGoToAttack).getSkills().get(skillUsed), TeamEnemy.get(personageToBeAttacked));
+            
+            if(!attacked){
+                return;
+            }
+            
             
             if(whoIsAttackTeamPlayer == TeamPlayer.size()-1){
-                whoIsAttackTeamEnemy = 0;
+                whoIsAttackTeamPlayer = 0;
             } else {
                 whoIsAttackTeamPlayer++;
             }
             
-            teamTurn = TeamTurn.Enemy;
+            if(isTeamAlive(TeamEnemy) == false){
+                
+                System.out.println("Time inimigo morto!");
+                setChanged();
+                notifyObservers("endbattle");
+                
+            } else {
+                
+                teamTurn = TeamTurn.Enemy;
+                battleTurn();
+            }
+            
         } else {
             System.out.println("Não é sua vez de joga. Espere.");
         }
@@ -57,6 +85,7 @@ public class BattleController {
         
         if(teamTurn == TeamTurn.Enemy){
             attack(TeamEnemy.get(whoIsAttackTeamEnemy), TeamEnemy.get(whoIsAttackTeamEnemy).getSkills().get(0), EnemyBasicIA());
+            System.out.println("Quem vai atacar no time inimigo: "+whoIsAttackTeamEnemy);
             
             if(whoIsAttackTeamEnemy == TeamEnemy.size()-1){
                 whoIsAttackTeamEnemy = 0;
@@ -64,8 +93,17 @@ public class BattleController {
                 whoIsAttackTeamEnemy++;
             }
             
-            teamTurn = TeamTurn.Player;
-            System.out.println("Vez do jogador atacar!");
+            updateIsAliveTeam(TeamPlayer);
+            
+            if(isTeamAlive(TeamEnemy) == true){
+                teamTurn = TeamTurn.Player;
+                System.out.println("Vez do jogador atacar!");
+            } else {
+                System.out.println("Time do jogador morto!");
+                setChanged();
+                notifyObservers("losegame");
+            }
+            
             
         }
     }
@@ -75,30 +113,46 @@ public class BattleController {
      * @param personageAttacker Personagem que atacou
      * @param skill Habilidade usada
      * @param personageDefensive Personagem que levou o dano
+     * @return True = Ataque realizado com sucesso. False = Não foi possível realizar o ataque.
      */
-    private void attack(Personage personageAttacker ,Skill skill, Personage personageDefensive){
-        personageDefensive.setLife(personageDefensive.getLife()-skill.getDamage());
-        System.out.println("Personagem :"+personageDefensive.getName()+" recebeu dano "+skill.getDamage()+" da habilidade "+skill.getName()+" de "+personageAttacker.getName());
-    }
-    
-    /**
-     * Função que fará a verificação e atualização do estado de vida dos personagens do time do inimigo
-     */
-    private void verifyLifeTeamEnemy(){
-        for(int i = 0; i<TeamEnemy.size(); i++){
-            Personage personage = TeamEnemy.get(i);
-            if(personage.getLife() <= 0){
-                killPersonage(personage);
-            }
+    private boolean attack(Personage personageAttacker ,Skill skill, Personage personageDefensive){  
+        
+        if(personageDefensive.isIsActiveToBattle()){
+            personageDefensive.setLife(personageDefensive.getLife()-skill.getDamage());
+        
+            System.out.println("Personagem :"+personageDefensive.getName()+" recebeu dano "+skill.getDamage()+" da habilidade "+skill.getName()+" de "+personageAttacker.getName());
+            System.out.println("A vida atual de "+personageDefensive.getName()+" e "+personageDefensive.getLife());
+
+            updateIsAliveTeam(TeamEnemy);
+            return true;
+        } else {
+            System.out.println("Esse inimigo esta morto, selecione outro!");
+            return false;
         }
     }
     
     /**
-     * Função que fará a verificação e atualização do estado de vida dos personagens do time do jogador
+     * Função que retorna se o time está vivo ou morto
+     * @return True = vivo. False = Morto.
      */
-    private void verifyLifeTeamPlayer(){
-        for(int i = 0; i<TeamPlayer.size(); i++){
-            Personage personage = TeamPlayer.get(i);
+    private boolean isTeamAlive(List<Personage> team){
+        for(int i = 0; i<team.size(); i++){
+            Personage personage = team.get(i);
+            if(personage.isIsAlive() == true){
+                return true;
+            }
+        }
+        return false; 
+    }
+    
+    
+    /**
+     * Função que fará a atualização do estado de vida dos personagens
+     * @param team Time que será atualizado
+     */
+    private void updateIsAliveTeam(List<Personage> team){
+        for(int i = 0; i<team.size(); i++){
+            Personage personage = team.get(i);
             if(personage.getLife() <= 0){
                 killPersonage(personage);
             }
@@ -124,7 +178,7 @@ public class BattleController {
         
         for(int i = 0; i < TeamPlayer.size(); i++){
          
-            if(TeamPlayer.get(i).isIsActiveToBattle() || TeamPlayer.get(i).isIsAlive()){
+            if(TeamPlayer.get(i).isIsActiveToBattle() && TeamPlayer.get(i).isIsAlive()){
                 
                 if(selectedPersonage == null){
                     selectedPersonage = TeamPlayer.get(i);

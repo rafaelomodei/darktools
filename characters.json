@@ -2,7 +2,26 @@
 	{
 		"id": "cavaleiro1",
 		"name": "Erick Mavine",
+		"life": 100.0,
 		"damage": 20.0,
+		"skill": "Lançada",
+		"pathimagebody": "ui.character.archer/acher_back_battle.png",
+		"pathimageface": "ui.img/acher_self.png"
+	},
+	{
+		"id": "cavaleiro2",
+		"name": "Jonathan",
+		"life": 50.0,
+		"damage": 10.0,
+		"skill": "Lançada",
+		"pathimagebody": "ui.character.archer/acher_back_battle.png",
+		"pathimageface": "ui.img/acher_self.png"
+	},
+	{
+		"id": "cavaleiro3",
+		"name": "Maria",
+		"life": 80.0,
+		"damage": 30.0,
 		"skill": "Lançada",
 		"pathimagebody": "ui.character.archer/acher_back_battle.png",
 		"pathimageface": "ui.img/acher_self.png"

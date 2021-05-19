@@ -37,7 +37,7 @@ import javafx.scene.layout.VBox;
  */
 public class HistorieController implements Initializable, Observer {
     
-    BoardControllerImp boardControllerImp = new BoardControllerImp();
+    BoardControllerImp boardControllerImp = BoardControllerImp.getInstante();
     
     @FXML
     private BorderPane borderPane_scene;
@@ -64,7 +64,7 @@ public class HistorieController implements Initializable, Observer {
     
     List<Button> buttonList = new ArrayList<Button>();
     
-    Observable boardController;
+    Observable boardControllerObservable;
     
     @FXML
     private VBox vbox_option;
@@ -82,20 +82,18 @@ public class HistorieController implements Initializable, Observer {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        boardControllerImp.startGame();//comeca o jogo
+        boardControllerImp.startGame();//comeca o jogo tem que por em outro lugar e aqui tem que ficar uma função para dar continuidade ao sair das outras telas
         
         imgScene = new Image(SCENE_URL);
                 
         imageView_scene.setImage(imgScene);
         imageView_scene.setEffect(gaussianBlur);
         
-        label_titleHistorie.setText("Dive Rock");
-        
         imgCharacter = new Image(CHARATER_URL);
         imageView_character.setImage(imgCharacter);
         
-        this.boardController = boardControllerImp;
-        boardController.addObserver(this);//adiciona o observer
+        this.boardControllerObservable = boardControllerImp;
+        boardControllerObservable.addObserver(this);//adiciona o observer
                 
         buttonList.add(button_option01);
         buttonList.add(button_option02);
@@ -209,9 +207,10 @@ public class HistorieController implements Initializable, Observer {
             if(object.equals("hideButtons")){
                 hideButtons();
             }
+            
             if(object.equals("battle")){
                 try {
-                    switchToWindow("BattleTest");
+                    switchToWindow("Battle");
                 } catch (IOException ex) {
                     Logger.getLogger(HistorieController.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -225,6 +224,7 @@ public class HistorieController implements Initializable, Observer {
      * @param Screen String com o nome ta tela
      * @throws IOException 
      */
+    @FXML
     private void switchToWindow(String screen) throws IOException {
         try{
             ViwerController viwerController = ViwerController.getStante();
