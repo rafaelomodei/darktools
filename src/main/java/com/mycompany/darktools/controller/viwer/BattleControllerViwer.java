@@ -26,9 +26,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 
 /**
- * FXML Controller class
- *
- * @author Rafae
+ * Classe responsável pelo controle de dados da interface das batalhas
  */
 public class BattleControllerViwer implements Initializable, Observer {
 
