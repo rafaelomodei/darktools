@@ -17,7 +17,7 @@ import javafx.scene.control.CheckBox;
  *
  * @author Rafae
  */
-public class SaveController implements Initializable {
+public class SaveControllerViwer implements Initializable {
 
     
     

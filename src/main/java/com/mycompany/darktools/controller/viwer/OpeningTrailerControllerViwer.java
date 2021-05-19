@@ -6,54 +6,54 @@
 package com.mycompany.darktools.controller.viwer;
 
 import com.mycompany.darktools.controller.ViwerController;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
  * @author Rafae
  */
-public class HomeController implements Initializable {
-    
-    
+public class OpeningTrailerControllerViwer implements Initializable {
+
+    private Stage stage;
+    private String VIDEO_URL = getClass().getResource("/iu/video/OpeningTraileDarkTools.mp4").toString();
+    private Media media;
+    private MediaPlayer mediaPlayer;
+    @FXML
+    private MediaView mediaView;
     @FXML
     private BorderPane borderPane;
+   
     
-    @FXML
-    private ImageView background;
-    
-    @FXML
-    private Button btn_start;
-
-    private String BACKGROUNG_URL =  getClass().getResource("/iu/img/image_02.png").toString();
-    
-    public void start(){
-        
-    }
+   
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       background = new ImageView(BACKGROUNG_URL);
-       background.setPreserveRatio(true);
-       background.setFitWidth(1280);
-       background.setX(152.0);
-       borderPane.setCenter(background);
-    }   
+        stage = new Stage();
+        stage.setTitle("Dark Tools");
+        media  = new Media(VIDEO_URL);
+        mediaPlayer = new MediaPlayer(media);
+        mediaPlayer.setAutoPlay(true);
+        mediaView = new MediaView(mediaPlayer);
+        
+        borderPane.setCenter(mediaView);
+    }
     
     @FXML
     private void switchToWindow() throws IOException {
         try{
+            mediaPlayer.stop();
             ViwerController viwerController = ViwerController.getStante();
-            viwerController.setRoot("Historie");
+            viwerController.setRoot("Home");
         }catch(Exception e){
             System.out.println("Erro: " + e);
         }

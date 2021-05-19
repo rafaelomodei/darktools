@@ -31,12 +31,10 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
 /**
- * FXML Controller class
- *
- * @author Rafae
+ * Classe responsável pelas batalhas
  */
-public class HistorieController implements Initializable, Observer {
-    
+public class HistorieControllerViwer implements Initializable, Observer {
+
     BoardControllerImp boardControllerImp = BoardControllerImp.getInstante();
     
     @FXML
@@ -78,8 +76,7 @@ public class HistorieController implements Initializable, Observer {
     private String CHARATER_URL =  getClass().getResource("/iu/img/acher_self.png").toString();
     private Image imgScene;
     private Image imgCharacter;
-   
-    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         boardControllerImp.startGame();//comeca o jogo tem que por em outro lugar e aqui tem que ficar uma função para dar continuidade ao sair das outras telas
@@ -212,7 +209,7 @@ public class HistorieController implements Initializable, Observer {
                 try {
                     switchToWindow("Battle");
                 } catch (IOException ex) {
-                    Logger.getLogger(HistorieController.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(HistorieControllerViwer.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
             

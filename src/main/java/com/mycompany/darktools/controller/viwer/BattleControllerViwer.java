@@ -6,27 +6,31 @@
 package com.mycompany.darktools.controller.viwer;
 
 import com.mycompany.darktools.controller.BattleController;
-import com.mycompany.darktools.controller.BoardController;
 import com.mycompany.darktools.controller.BoardControllerImp;
 import com.mycompany.darktools.controller.ViwerController;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.utils.JsonTratament;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.ResourceBundle;
-import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.ProgressBar;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 
 /**
- * Classe responsável pelo controle das batalhas
+ * FXML Controller class
+ *
+ * @author Rafae
  */
-public class BattleControllerView implements Initializable, Observer {
+public class BattleControllerViwer implements Initializable, Observer {
 
     BoardControllerImp boardControllerImp = BoardControllerImp.getInstante();
     
@@ -35,11 +39,77 @@ public class BattleControllerView implements Initializable, Observer {
     Observable battleControllerObservable;
     
     @FXML
-    private Button buttonEnemy;
+    private ImageView imageView_character1;
 
     @FXML
-    private Button buttonAttack;
-    
+    private Pane pane_characterInfo3;
+
+    @FXML
+    private Pane pane_characterInfo2;
+
+    @FXML
+    private Pane pane_characterInfo1;
+
+    @FXML
+    private ProgressBar progressBar_characterLife;
+
+    @FXML
+    private Button bottun_special;
+
+    @FXML
+    private ProgressBar progressBar_characterLife2;
+
+    @FXML
+    private ProgressBar progressBar_characterLife1;
+
+    @FXML
+    private ImageView imageView_character2;
+
+    @FXML
+    private ImageView imageView_scene;
+
+    @FXML
+    private Label label_characterName;
+
+    @FXML
+    private Button bottun_attack;
+
+    @FXML
+    private Label label_characterName2;
+
+    @FXML
+    private Label label_characterName1;
+
+    @FXML
+    private Button bottun_shield;
+
+    @FXML
+    private ImageView imageView_character;
+
+    @FXML
+    private VBox vBox_characterInfo;
+
+    @FXML
+    private Button bottun_enemy05;
+
+    @FXML
+    private Button bottun_enemy06;
+
+    @FXML
+    private Button bottun_enemy07;
+
+    @FXML
+    private Button bottun_enemy01;
+
+    @FXML
+    private Button bottun_enemy02;
+
+    @FXML
+    private Button bottun_enemy03;
+
+    @FXML
+    private Button bottun_enemy04;
+
     String selectedEnemyToAttack, selectedSkill = null;
     
     @Override
@@ -51,8 +121,16 @@ public class BattleControllerView implements Initializable, Observer {
         
         battleController = new BattleController(TeamEnemy, TeamPlayer);
         
+        //battleController = new BattleController(TeamEnemy, TeamEnemy);
+        
         this.battleControllerObservable = battleController;
         battleControllerObservable.addObserver(this);
+        
+        bottun_enemy01.setVisible(true);
+        
+        bottun_enemy02.setVisible(true);
+        
+        bottun_enemy03.setVisible(true);
     }
     
     /**
@@ -85,13 +163,13 @@ public class BattleControllerView implements Initializable, Observer {
     
     @FXML
     private void selectEnemy1(){
-        System.out.println("Enemy0 selecionado!");
+        System.out.println("Enemy1 selecionado!");
         selectedEnemyToAttack = "1";
     }
     
     @FXML
     private void selectEnemy2(){
-        System.out.println("Enemy0 selecionado!");
+        System.out.println("Enemy2 selecionado!");
         selectedEnemyToAttack = "2";
     }
 

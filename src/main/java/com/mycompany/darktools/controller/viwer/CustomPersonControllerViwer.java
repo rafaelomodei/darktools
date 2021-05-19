@@ -14,7 +14,7 @@ import javafx.fxml.Initializable;
  *
  * @author Rafae
  */
-public class CustomPersonController implements Initializable {
+public class CustomPersonControllerViwer implements Initializable {
 
     /**
      * Initializes the controller class.
