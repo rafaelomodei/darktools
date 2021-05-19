@@ -7,10 +7,10 @@ package com.mycompany.darktools.utils;
 
 import com.mycompany.darktools.model.vo.ScriptSegment;
 import java.util.List;
+import java.util.Random;
 
 /**
- *
- * @author acer
+ * Classe responsável pelo controle das respostas de acordo com o "commands" dos scriptSegment
  */
 public class ScriptSegmentConditions {
     
@@ -39,6 +39,14 @@ public class ScriptSegmentConditions {
         
         if(commandsList.contains("RollDiceD6")){
             System.out.println("Rolar o dado D6!");
+            System.out.println("Resultado do D6 "+rollDice6());
+            
         }
+    }
+    
+    public static int rollDice6(){
+        Random generator = new Random();
+        
+        return generator.nextInt(6);  
     }
 }
