@@ -31,9 +31,7 @@ import javafx.scene.layout.VBox;
  *
  * @author Rafae
  */
-public class HistorieController implements Initializable, Observer {
-    
-    BoardControllerImp boardControllerImp = new BoardControllerImp();
+public class HistorieControllerViwer implements Initializable, Observer {
     
     @FXML
     private BorderPane borderPane_scene;
@@ -74,7 +72,14 @@ public class HistorieController implements Initializable, Observer {
     private String CHARATER_URL =  getClass().getResource("/iu/img/acher_self.png").toString();
     private Image imgScene;
     private Image imgCharacter;
+<<<<<<< HEAD:src/main/java/com/mycompany/darktools/controller/viwer/HistorieController.java
    
+=======
+    /**
+     * Initializes the controller class.
+     */
+    
+>>>>>>> viwer:src/main/java/com/mycompany/darktools/controller/viwer/HistorieControllerViwer.java
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

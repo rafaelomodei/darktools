@@ -21,7 +21,7 @@ import javafx.scene.media.MediaView;
  *
  * @author Rafae
  */
-public class LoadingController implements Initializable {
+public class LoadingControllerViwer implements Initializable {
     
     @FXML
     private BorderPane bp_background;
