@@ -39,7 +39,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     
     static BoardControllerImp uniqueIndex;
     
-    public BoardControllerImp(){}
+    private BoardControllerImp(){}
     
     /**
      * A classe board controller será singleton para só tem um de sua existência operante em todo o código
@@ -137,7 +137,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void startGame(){
         ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
         
-        Board board = new Board(null, 10000, "default", "0a");
+        Board board = new Board(createDefaulTeam(), 10000, "default", "7.0a");//mudar para rota "0a"
         
         board.setScriptSegments(scriptSegmentController.getScriptSegments());
         
@@ -147,6 +147,38 @@ public class BoardControllerImp extends Observable implements BoardController {
         
         setBoard(board);
     }
+    
+    /**
+     * Função que cria uma time padrão com 3 personages e cada um com uma habilidade unica
+     * @return Retorna o time para testes
+     */
+    private Team createDefaulTeam(){
+        Skill skill1 = new Skill("Soco", 20.0f);
+        Skill skill2 = new Skill("Tiro", 50.0f);
+        Skill skill3 = new Skill("Bola de fogo", 20.0f);
+        List<Skill> skillList = new ArrayList<Skill>();
+        skillList.add(skill1);
+        
+        List<Skill> skillList1 = new ArrayList<Skill>();
+        skillList1.add(skill2);
+        
+        List<Skill> skillList2 = new ArrayList<Skill>();
+        skillList2.add(skill3);
+        
+        Personage personage0 = new Personage("Guerreiro", skillList, null);
+        Personage personage1 = new Personage("Arqueiro", skillList1, null);
+        Personage personage2 = new Personage("Mago", skillList2, null);
+        
+        List<Personage> personages = new ArrayList<Personage>();
+        personages.add(personage0);
+        personages.add(personage1);
+        personages.add(personage2);
+        
+        Team teamDefault = new Team(personages, 0.0);
+        
+        return teamDefault;
+    }
+    
     
     /**
      * Avança para o proximo ScriptSegment de acordo com a escolha
@@ -183,7 +215,7 @@ public class BoardControllerImp extends Observable implements BoardController {
                 showButtons();
                 readWord(currentWord);
                 reproduceAudio();
-                System.out.println("Responda a pergunta!");  
+                //System.out.println("Responda a pergunta!");  
             } else {
                 goToNextScriptSegment(0);
             }
@@ -199,14 +231,24 @@ public class BoardControllerImp extends Observable implements BoardController {
      */
     public void readWord(int currentWord){
         
-        /*-------aqui preciso direcionar para filtragem de comportamentos 
-        
+        /*-------aqui preciso direcionar para filtragem de comportamentos */
+        System.out.println("Esse scriptSegment e o : "+board.getCurrentScriptSegment().getId());
+        //System.out.println("Esse screptSegment tem: "+board.getCurrentScriptSegment().getCommands());
+        if(board.getCurrentScriptSegment().getCommands().contains("battle")){
+                //System.out.println("Momento batalha!");
+                setChanged();
+                notifyObservers("battle");
+            }
         if(this.currentWord == board.getCurrentScriptSegment().getWords().size()-1){
-            if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
-                showButtons(1);
-            } 
+            //if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
+                
+            //}
+            
+            
         }
-        */
+        /*-------aqui preciso direcionar para filtragem de comportamentos */
+        
+        
         Hashtable<String, String> my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
         my_dict.put("word", board.getCurrentScriptSegment().getWords().get(this.currentWord));
         setChanged();
@@ -232,7 +274,7 @@ public class BoardControllerImp extends Observable implements BoardController {
             clip = new AudioClip(AUDIO_URL);
             clip.play();
         } catch (Exception e) {
-            System.out.println("Sem arquivos de audio!");
+            //System.out.println("Sem arquivos de audio!");
         }
         
     }

@@ -1,41 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.BattleController">
-    <stylesheets>
-        <URL value="@battle.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.BattleControllerView">
    <children>
-      <BorderPane prefHeight="720.0" prefWidth="1280.0">
-         <bottom>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button mnemonicParsing="false" style="-fx-background-image: url(&quot;/iu/img/acher_self.png&quot;);;" text="Button" />
-                  <Button mnemonicParsing="false" text="Button" />
-                  <ImageView fx:id="imageView_attack" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../iu/batlle/ataque-01.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="imageView_defend" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../iu/batlle/ataque-01.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="imageView_special" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../iu/batlle/ataque-01.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </HBox>
-         </bottom></BorderPane>
+      <Button fx:id="buttonEnemy" layoutX="156.0" layoutY="61.0" mnemonicParsing="false" onAction="#selectEnemy" text="Enemy" />
+      <Button fx:id="buttonAttack" layoutX="268.0" layoutY="272.0" mnemonicParsing="false" onAction="#attack" text="Attack" />
+      <Button fx:id="buttonEnemy1" layoutX="268.0" layoutY="61.0" mnemonicParsing="false" onAction="#selectEnemy1" text="Button" />
+      <Button fx:id="buttonEnemy2" layoutX="376.0" layoutY="61.0" mnemonicParsing="false" onAction="#selectEnemy2" text="Button" />
    </children>
 </AnchorPane>
