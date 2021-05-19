@@ -165,9 +165,9 @@ public class BoardControllerImp extends Observable implements BoardController {
         List<Skill> skillList2 = new ArrayList<Skill>();
         skillList2.add(skill3);
         
-        Personage personage0 = new Personage("Guerreiro", skillList, null);
-        Personage personage1 = new Personage("Arqueiro", skillList1, null);
-        Personage personage2 = new Personage("Mago", skillList2, null);
+        Personage personage0 = new Personage("Guerreiro", skillList, "/iu/batlle/character.png", "/iu/character/warrior/guerreiro_back_batlle.png");
+        Personage personage1 = new Personage("Arqueiro", skillList1, "/iu/batlle/character.png","/iu/character/acher/acher_back_battle.png");
+        Personage personage2 = new Personage("Mago", skillList2, "/iu/batlle/character.png","/iu/character/mage/mago_back_batlle.png");
         
         List<Personage> personages = new ArrayList<Personage>();
         personages.add(personage0);

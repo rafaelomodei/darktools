@@ -54,6 +54,8 @@ public class BattleController extends Observable{
                 return;
             }
             
+            setChanged();
+            notifyObservers("updateTurn");
             
             if(whoIsAttackTeamPlayer == TeamPlayer.size()-1){
                 whoIsAttackTeamPlayer = 0;
@@ -85,7 +87,6 @@ public class BattleController extends Observable{
         
         if(teamTurn == TeamTurn.Enemy){
             attack(TeamEnemy.get(whoIsAttackTeamEnemy), TeamEnemy.get(whoIsAttackTeamEnemy).getSkills().get(0), EnemyBasicIA());
-            System.out.println("Quem vai atacar no time inimigo: "+whoIsAttackTeamEnemy);
             
             if(whoIsAttackTeamEnemy == TeamEnemy.size()-1){
                 whoIsAttackTeamEnemy = 0;
@@ -94,6 +95,8 @@ public class BattleController extends Observable{
             }
             
             updateIsAliveTeam(TeamPlayer);
+            setChanged();
+            notifyObservers("updateTurn");
             
             if(isTeamAlive(TeamEnemy) == true){
                 teamTurn = TeamTurn.Player;
@@ -118,7 +121,12 @@ public class BattleController extends Observable{
     private boolean attack(Personage personageAttacker ,Skill skill, Personage personageDefensive){  
         
         if(personageDefensive.isIsActiveToBattle()){
-            personageDefensive.setLife(personageDefensive.getLife()-skill.getDamage());
+            
+            if(personageDefensive.getLife()-skill.getDamage() < 0){
+                personageDefensive.setLife(0);
+            } else {
+                personageDefensive.setLife(personageDefensive.getLife()-skill.getDamage());
+            }
         
             System.out.println("Personagem :"+personageDefensive.getName()+" recebeu dano "+skill.getDamage()+" da habilidade "+skill.getName()+" de "+personageAttacker.getName());
             System.out.println("A vida atual de "+personageDefensive.getName()+" e "+personageDefensive.getLife());
