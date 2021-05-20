@@ -472,7 +472,7 @@
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":[""],
-        "routes":["10"]
+        "routes":["10a"]
     },
     {
         "id":"9.2a",
