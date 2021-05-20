@@ -69,7 +69,7 @@
     },
             {
         "id":"2.1a",
-        "turnSide":"enemy",
+        "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["Ele dá uma rasante e pega com suas garras um homem e duas crianças, e voa até as montanhas distantes."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
@@ -98,7 +98,7 @@
         "id":"3.1a",
         "turnSide":"neutral",
         "whoSpeaks":"Master",
-        "words":["A cidade está em chamas! Há várias pessoas feridas na rua. No caos, as pessoas gritam para que Rei faça algo."],
+        "words":["A cidade está em chamas! Há várias pessoas feridas na rua. No caos, as pessoas gritam para que o Rei faça algo."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":[""],
         "routes":["3.2a"]
@@ -174,7 +174,7 @@
         "id":"4.3a",
         "turnSide":"enemy",
         "whoSpeaks":"Rei",
-        "words":["Se vocês me trouxer o artefato, estou disposto a lhe fornecer 6 mil peças de ouro por pessoa.", "Dessa forma, poderei negociar com este maldito dragão para que deixe minhas terras."],
+        "words":["Se voces me trouxerem o artefato estou disposto a lhes fornecer, estou disposto a lhe fornecer 6 mil peças de ouro por pessoa.", "Dessa forma, poderei negociar com este maldito dragão para que deixe minhas terras."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["Questionar", "Aceitar", "Recusar"],
@@ -196,7 +196,7 @@
         "turnSide":"neutral",
         "whoSpeaks":"Master",
         "words":["Os aventureiros seguem então para a floresta de Taiga. A ultima localizaçao conhecida do Artefato"],
-        "wordsSongs":["etc/songs/speaks1.mp3"],
+        "wordsSongs":["etc/songs/w"],
         "commands":[""],
         "routes":["5a"]
     },
@@ -520,7 +520,7 @@
         "words":["Encontrei a Catacumba! Cheira a morte, sera que devemos mesmo entrar?"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":[""],
-        "routes":["10"]
+        "routes":["10a"]
     },
     {
         "id":"10a",
