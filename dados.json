@@ -629,7 +629,7 @@
         "words":["Para tentar abrir vocês precisam passar por um teste de força de 10 rolando um D20"],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":["Rolar dado"],
+        "showButtons":["RollDiceD20"],
         "valueDice":[">10", "<10"],
         "routes":["12a", "11.2a"]
     },
@@ -965,7 +965,7 @@
         "words":["É possível ver que os buracos finos nas paredes levam até o topo da catacumba, onde o vento é encanado.", "No final do corredor há uma grande porta dupla com escrito “saiam agora” a porta está trancada, como a porta é de madeira também pode ser derrubada com teste de força nivel 10 rolando um D20."],
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
-        "showButtons":["Rolar dado"],
+        "showButtons":["RollDiceD20"],
         "valueDice":[">10", "<10"],
         "routes":["18.4a"]
     },
