@@ -24,12 +24,22 @@ import javafx.scene.layout.BorderPane;
  */
 public class HomeControllerViwer implements Initializable {
     
-    
     @FXML
     private BorderPane borderPane;
-    
+
     @FXML
     private ImageView background;
+
+    @FXML
+    private Button button_exit;
+
+    @FXML
+    private Button button_credits;
+
+    @FXML
+    private Button button_start;
+
+   
     
     @FXML
     private Button btn_start;
@@ -57,7 +67,26 @@ public class HomeControllerViwer implements Initializable {
         }catch(Exception e){
             System.out.println("Erro: " + e);
         }
+    }
+    
+    @FXML
+    void switchToWindowCredits() throws IOException {
+        try{
+            ViwerController viwerController = ViwerController.getStante();
+            viwerController.setRoot("Credits");
+        }catch(Exception e){
+            System.out.println("Erro: " + e);
+        }
+    }
 
+    @FXML
+    void switchToWindowExit() throws IOException {
+        try{
+            ViwerController viwerController = ViwerController.getStante();
+            viwerController.setRoot("Historie");
+        }catch(Exception e){
+            System.out.println("Erro: " + e);
+        }
     }
     
 }
