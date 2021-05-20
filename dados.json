@@ -842,9 +842,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "Battle"
         ],
         "routes": [
@@ -865,9 +862,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "Battle"
         ],
         "routes": [
@@ -889,9 +883,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "Battle"
         ],
         "routes": [
@@ -937,9 +928,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "Battle"
         ],
         "routes": [
@@ -977,7 +965,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons",
             "RollDiceD6"
         ],
         "routes": [
@@ -1001,13 +988,10 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             ""
         ],
         "routes": [
-            "10"
+            "10a"
         ]
     },
     {
@@ -1027,9 +1011,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "battle"
         ],
         "routes": [
@@ -1054,9 +1035,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "Battle"
         ],
         "routes": [
@@ -1078,9 +1056,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons"
-        ],
-        "showButtons": [
             "Battle"
         ],
         "routes": [
@@ -1118,7 +1093,7 @@
             ""
         ],
         "routes": [
-            "10"
+            "10a"
         ]
     },
     {
@@ -1294,7 +1269,7 @@
         ],
         "routes": [
             "11.1a",
-            "11.2"
+            "11.2a"
         ]
     },
     {
@@ -1316,7 +1291,7 @@
         ],
         "routes": [
             "11.1.1a",
-            "11.2"
+            "11.2a"
         ]
     },
     {
