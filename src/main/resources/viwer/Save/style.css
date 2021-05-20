@@ -1,0 +1,17 @@
+.track-background{
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.thumb{
+    -fx-border-color: transparent;
+}
+
+#vBoxBackground{
+    -fx-background-color: transparent;
+}
+
+.btn_option{
+    -fx-background-color: rgba(0, 0, 0, 0.8);
+    -fx-background-radius: 10px;
+}
