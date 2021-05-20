@@ -29,8 +29,8 @@ import javafx.scene.media.AudioClip;
  */
 public class TelaEscolhasController implements Initializable, Observer {
 
-    
-    BoardControllerImp boardControllerImp = new BoardControllerImp();
+    BoardControllerImp boardControllerImp = BoardControllerImp.getInstante();
+   
     
     @FXML
     private Label label;

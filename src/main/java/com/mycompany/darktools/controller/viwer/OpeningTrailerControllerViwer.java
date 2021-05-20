@@ -51,6 +51,7 @@ public class OpeningTrailerControllerViwer implements Initializable {
     @FXML
     private void switchToWindow() throws IOException {
         try{
+            mediaPlayer.stop();
             ViwerController viwerController = ViwerController.getStante();
             viwerController.setRoot("Home");
         }catch(Exception e){

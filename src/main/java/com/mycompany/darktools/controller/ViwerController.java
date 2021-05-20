@@ -1,7 +1,5 @@
 package com.mycompany.darktools.controller;
 
-import static akka.event.jul.Logger.root;
-import static com.google.common.io.Resources.getResource;
 import java.io.IOException;
 import java.net.URL;
 import javafx.fxml.FXMLLoader;
@@ -25,7 +23,7 @@ public class ViwerController {
     private final double width = 1280;
     private final double height = 720;
     
-    private String STYLESHEET_MODENA = "Battle";
+    private String STYLESHEET_MODENA = "OpeningTrailer";
     
     static ViwerController uniqueIndex;
     

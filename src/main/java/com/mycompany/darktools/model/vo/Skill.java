@@ -30,7 +30,7 @@ public class Skill {
     @Column(name = "name", nullable = false)
     String name;
 
-    public Skill(float damage, String name) {
+    public Skill(String name, float damage) {
         this.damage = damage;
         this.name = name;
     }

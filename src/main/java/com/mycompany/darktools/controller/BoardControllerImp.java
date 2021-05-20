@@ -13,6 +13,7 @@ import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
+import com.mycompany.darktools.utils.JsonTratament;
 import com.mycompany.darktools.utils.ScriptSegmentConditions;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -39,7 +40,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     
     static BoardControllerImp uniqueIndex;
     
-    public BoardControllerImp(){}
+    private BoardControllerImp(){}
     
     /**
      * A classe board controller será singleton para só tem um de sua existência operante em todo o código
@@ -137,7 +138,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void startGame(){
         ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
         
-        Board board = new Board(null, 10000, "default", "0a");
+        Board board = new Board(createDefaulTeam(), 10000, "default", "7.0a");//mudar para rota "0a"
         
         board.setScriptSegments(scriptSegmentController.getScriptSegments());
         
@@ -147,6 +148,38 @@ public class BoardControllerImp extends Observable implements BoardController {
         
         setBoard(board);
     }
+    
+    /**
+     * Função que cria uma time padrão com 3 personages e cada um com uma habilidade unica
+     * @return Retorna o time para testes
+     */
+    private Team createDefaulTeam(){
+        Skill skill1 = new Skill("Soco", 20.0f);
+        Skill skill2 = new Skill("Tiro", 50.0f);
+        Skill skill3 = new Skill("Bola de fogo", 20.0f);
+        List<Skill> skillList = new ArrayList<Skill>();
+        skillList.add(skill1);
+        
+        List<Skill> skillList1 = new ArrayList<Skill>();
+        skillList1.add(skill2);
+        
+        List<Skill> skillList2 = new ArrayList<Skill>();
+        skillList2.add(skill3);
+        
+        Personage personage0 = new Personage("Guerreiro", skillList, "/iu/batlle/character.png", "/iu/character/warrior/guerreiro_back_batlle.png");
+        Personage personage1 = new Personage("Arqueiro", skillList1, "/iu/batlle/character.png","/iu/character/acher/acher_back_battle.png");
+        Personage personage2 = new Personage("Mago", skillList2, "/iu/batlle/character.png","/iu/character/mage/mago_back_batlle.png");
+        
+        List<Personage> personages = new ArrayList<Personage>();
+        personages.add(personage0);
+        personages.add(personage1);
+        personages.add(personage2);
+        
+        Team teamDefault = new Team(personages, 0.0);
+        
+        return teamDefault;
+    }
+    
     
     /**
      * Avança para o proximo ScriptSegment de acordo com a escolha
@@ -166,7 +199,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     }
 
     /**
-     * Função que irá passando os textos de fala
+     * Função que irá passando os textos de fala e filtrando de acordo com o commands
      */
     @Override
     public void goToNextWord() {
@@ -184,13 +217,24 @@ public class BoardControllerImp extends Observable implements BoardController {
                 readWord(currentWord);
                 reproduceAudio();
                 System.out.println("Responda a pergunta!");  
-            } else {
+            } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD6")) {
+                System.out.println("Momento do D6!");
+                readWord(currentWord);
+                reproduceAudio();
+                goToNextScriptSegment(ScriptSegmentConditions.rollDice6());
+            } else if(board.getCurrentScriptSegment().getCommands().contains("battle")){
+                System.out.println("Momento batalha!");
+                
+                updateTeamEnemy();//Fazer mais testes!
+                
+                setChanged();
+                notifyObservers("battle");
+            } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD20")){
+            //
+            }else {
                 goToNextScriptSegment(0);
             }
-            
-            
         }
-            
     }
 
     /**
@@ -198,17 +242,16 @@ public class BoardControllerImp extends Observable implements BoardController {
      * @param currentWord Variável que armazena qual a fala sendo falada no momento
      */
     public void readWord(int currentWord){
-        
-        /*-------aqui preciso direcionar para filtragem de comportamentos 
-        
-        if(this.currentWord == board.getCurrentScriptSegment().getWords().size()-1){
-            if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
-                showButtons(1);
-            } 
-        }
-        */
+
+        System.out.println("Esse scriptSegment e o : "+board.getCurrentScriptSegment().getId());
+                
         Hashtable<String, String> my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
         my_dict.put("word", board.getCurrentScriptSegment().getWords().get(this.currentWord));
+        setChanged();
+        notifyObservers(my_dict);
+        
+        my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
+        my_dict.put("title", board.getCurrentScriptSegment().getWhoSpeaks());
         setChanged();
         notifyObservers(my_dict);
 
@@ -227,7 +270,7 @@ public class BoardControllerImp extends Observable implements BoardController {
             clip = new AudioClip(AUDIO_URL);
             clip.play();
         } catch (Exception e) {
-            System.out.println("Sem arquivos de audio!");
+            //System.out.println("Sem arquivos de audio!");
         }
         
     }
@@ -251,4 +294,23 @@ public class BoardControllerImp extends Observable implements BoardController {
         
     }
    
+    /**
+     * Função que atualiza o time inimigo que irá batalhar com o jogador
+     */
+    private void updateTeamEnemy(){
+        List<Personage> enemiesList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        Team teamEnemy = new Team();
+        List<Personage> selectecEnemiesList = new ArrayList<Personage>();
+
+        for(int i = 0; i < getBoard().getCurrentScriptSegment().getEnemies().size(); i++){
+            for(int y = 0; y < enemiesList.size(); y++){
+                if(getBoard().getCurrentScriptSegment().getEnemies().get(i).equals(enemiesList.get(y).getNPCid())){
+                    selectecEnemiesList.add(enemiesList.get(y));
+                }
+            }
+        }
+
+        teamEnemy.setPersonages(selectecEnemiesList);
+        board.setTeamEnemy(teamEnemy);
+    }
 }
