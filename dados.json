@@ -601,7 +601,7 @@
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["Deixa-lo para trás", "Tentar abrir mais a entrada"],
-        "routes":["11.1a", "11.2"]
+        "routes":["11.1a", "11.2a"]
     },
     {
         "id":"11.1a",
@@ -611,7 +611,7 @@
         "wordsSongs":["etc/songs/speaks1.mp3"],
         "commands":["showButtons"],
         "showButtons":["Seguir sem o Victus", "Tentar abrir mais a entrada"],
-        "routes":["11.1.1a", "11.2"]
+        "routes":["11.1.1a", "11.2a"]
     },
     {
         "id":"11.1.1a",
