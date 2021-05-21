@@ -8,8 +8,8 @@ package com.mycompany.darktools.controller.viwer;
 import com.mycompany.darktools.controller.BoardControllerImp;
 import com.mycompany.darktools.controller.ViwerController;
 import com.mysql.cj.x.protobuf.MysqlxExpect.Open.Condition.Key;
-import java.awt.event.KeyEvent;
-import java.beans.EventHandler;
+//import java.awt.event.KeyEvent;
+//import java.beans.EventHandler;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -30,9 +30,12 @@ import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.VBox;
 
+
+import javafx.scene.input.KeyEvent;
+import javafx.event.EventHandler;
 /**
  * Classe responsável pelas batalhas
  */
@@ -68,17 +71,20 @@ public class HistorieControllerViwer implements Initializable, Observer {
     Observable boardControllerObservable;
     
     @FXML
-    private VBox vbox_option;
+    private BorderPane border_paneMenu;
     
     @FXML
     private BorderPane borderPane_options;
     
     private Effect gaussianBlur = new GaussianBlur();
     
-    private String SCENE_URL =  getClass().getResource("/iu/img/ogro1.png").toString();
+    private String SCENE_URL =  getClass().getResource("/iu/backgroun/save/saveBackgroung.png").toString();
     private String CHARATER_URL =  getClass().getResource("/iu/img/goblin4_self.png").toString();
     private Image imgScene;
     private Image imgCharacter;
+    
+    @FXML
+    private AnchorPane page;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -103,8 +109,22 @@ public class HistorieControllerViwer implements Initializable, Observer {
         
         hideButtons();
         
+        setStateMenu(false);
+        
         //boardControllerImp.goToNextWord();  
         boardControllerImp.readWord(0);
+        
+        page.setOnKeyPressed(new EventHandler<KeyEvent>(){
+            @Override
+            public void handle(KeyEvent event) {
+                System.out.println("A letra "+event.getCode().getName());
+                if(event.getCode() == KeyCode.ESCAPE){
+                    setStateMenu(!getStateMenu());
+                }
+            }
+            
+        });
+        
     }
     
     /** Essas funções deve ser retiradas!**/
@@ -139,12 +159,41 @@ public class HistorieControllerViwer implements Initializable, Observer {
     }
     
     @FXML
-    private void buttonNextWord(){
-        
+    private void buttonNextWord(){     
         boardControllerImp.goToNextWord();
+    }
         
+    /**
+     * Essa função direciona para o salvamento da Board atual
+     */
+    @FXML
+    private void saveGame() {
+        boardControllerImp.saveGame(boardControllerImp.getBoard());
+        System.out.println("Jogo salvo!");
     }
 
+    /**
+     * Função direciona para o menu
+     * @throws IOException 
+     */
+    @FXML
+    private void returnToMenu() throws IOException {
+        System.out.println("Retorne ao menu!");
+        switchToWindow("Home");
+    }
+
+    /**
+     * Seta o estado do menu
+     * @param value True = Ativo e visíviel. False = Desativo e invisível;
+     */
+    private void setStateMenu(boolean value){
+        border_paneMenu.setVisible(value);
+    }
+    
+    private boolean getStateMenu(){
+        return border_paneMenu.isVisible();
+    }
+    
     /**
      * Setar o texto da fala
      * @param word String com a fala
@@ -153,8 +202,22 @@ public class HistorieControllerViwer implements Initializable, Observer {
         label_descripitionHistorie.setText(word);
     }
     
+    /**
+     * Setar o nome de quem tá falando o texto
+     * @param title String com o nome de quem fala
+     */
     private void setTextInLabelTitle(String title){
         label_titleHistorie.setText(title);
+    }
+    
+    /**
+     * Seta a imagem de quem fala no momento
+     */
+    private void setImageFace(String pathImageFace){
+        
+        imgCharacter = new Image(pathImageFace);
+        imageView_character.setImage(imgCharacter);
+        
     }
     
     /**
@@ -201,6 +264,9 @@ public class HistorieControllerViwer implements Initializable, Observer {
             if(map.containsKey("showButtons")){
                 showButtons((List) map.get("showButtons"));
             }
+            if(map.containsKey("pathimageface")){
+                setImageFace((String)map.get("pathimageface"));
+            }
             
         }
         if(object instanceof String){
@@ -243,14 +309,4 @@ public class HistorieControllerViwer implements Initializable, Observer {
 
     }
     
-    /**
-     *
-     * @param ke
-     */
-    public void handle(KeyEvent ke) {
-        if (ke.equals(KeyCode.ESCAPE)){
-            System.out.println("Apertou ESC");
-        }
-    
-    }
 }

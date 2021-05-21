@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
@@ -11,7 +20,7 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.HomeControllerViwer">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.HomeControllerViwer">
    <children>
       <BorderPane fx:id="borderPane" layoutY="-360.0" prefHeight="720.0" prefWidth="1280.0">
          <center>
@@ -29,7 +38,7 @@
                      <effect>
                         <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
                            <color>
-                              <Color green="0.8833333253860474" blue="1.0" />
+                              <Color blue="1.0" green="0.8833333253860474" />
                            </color>
                         </DropShadow>
                      </effect>
@@ -37,14 +46,14 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="btn_start" fx:id="button_credits" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindowCredits" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Créditos" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="btn_start" fx:id="button_loadgame" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loadGamePage" prefHeight="43.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Carregar jogo" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
                      <effect>
                         <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
                            <color>
-                              <Color green="0.8833333253860474" blue="1.0" />
+                              <Color blue="1.0" green="0.8833333253860474" />
                            </color>
                         </DropShadow>
                      </effect>
@@ -59,7 +68,7 @@
                      <effect>
                         <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
                            <color>
-                              <Color green="0.8833333253860474" blue="1.0" />
+                              <Color blue="1.0" green="0.8833333253860474" />
                            </color>
                         </DropShadow>
                      </effect>

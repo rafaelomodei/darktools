@@ -5,6 +5,9 @@
  */
 package com.mycompany.darktools.controller.viwer;
 
+import com.mycompany.darktools.controller.BoardControllerImp;
+import com.mycompany.darktools.controller.ViwerController;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -19,7 +22,7 @@ import javafx.scene.control.CheckBox;
  */
 public class SaveControllerViwer implements Initializable {
 
-    
+    BoardControllerImp boardControllerImp = BoardControllerImp.getInstante();
     
     @FXML
     private CheckBox cb_Easy;
@@ -38,4 +41,24 @@ public class SaveControllerViwer implements Initializable {
         // TODO
     }    
     
+    @FXML
+    private void startNewGame() throws IOException {
+        try{
+            boardControllerImp.startGame();//comeca o jogo tem que por em outro lugar e aqui tem que ficar uma função para dar continuidade ao sair das outras telas
+            ViwerController viwerController = ViwerController.getStante();
+            viwerController.setRoot("Historie");
+        }catch(Exception e){
+            System.out.println("Erro: " + e);
+        }
+    }
+    
+    @FXML
+    private void switchToHome() throws IOException {
+        try{
+            ViwerController viwerController = ViwerController.getStante();
+            viwerController.setRoot("Home");
+        }catch(Exception e){
+            System.out.println("Erro: " + e);
+        }
+    }
 }
