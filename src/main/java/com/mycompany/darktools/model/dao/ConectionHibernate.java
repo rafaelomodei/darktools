@@ -10,10 +10,6 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import org.hibernate.HibernateException;
 
-/**
- *
- * @author acer
- */
 public class ConectionHibernate {
     private static EntityManagerFactory factory;
     private static EntityManager manager;
@@ -25,13 +21,20 @@ public class ConectionHibernate {
                 if (manager == null)
                 {
                     try {
-                        factory = Persistence.createEntityManagerFactory("com.mycompany_darktools_jar_1.0-SNAPSHOTPU");
-                        manager = factory.createEntityManager();
+                        try {
+                            factory = Persistence.createEntityManagerFactory("com.mycompany_darktools_jar_1.0-SNAPSHOTPU");
+                            manager = factory.createEntityManager();
+                        } catch (Exception e) {
+                            System.out.println("Erro do getInstance "+e);
+                        }
+                        
+                        //
                     } catch(HibernateException he) {
                         System.err.println(he.getMessage());
                     }
                 }
             }
+            
         }
         
         return manager;

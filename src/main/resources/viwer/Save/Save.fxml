@@ -53,7 +53,7 @@
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="button_newGame" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#startNewGame" prefHeight="50.0" prefWidth="150.0" text="Novo Jogo" textAlignment="CENTER">
+                  <Button fx:id="button_newGame" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToNewGame" prefHeight="50.0" prefWidth="150.0" text="Novo Jogo" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>

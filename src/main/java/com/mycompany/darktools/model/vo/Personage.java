@@ -50,9 +50,6 @@ public class Personage {
     
     @ManyToMany
     List<Skill> skills;
-    
-    @Column(name = "imagepath", nullable = false, unique = true)
-    String imagePath;
 
     @Transient
     String pathImageFace;
@@ -73,7 +70,6 @@ public class Personage {
         this.skills = skills;
         this.pathImageFace = pathImageFace;
         this.pathImageBody = pathImageBody;
-        this.imagePath = imagePath;
         this.maxlife = maxlife;
         this.life = this.maxlife;
         this.isAlive = true;
@@ -123,14 +119,6 @@ public class Personage {
 
     public void setSkills(List<Skill> skills) {
         this.skills = skills;
-    }
-
-    public String getImagePath() {
-        return imagePath;
-    }
-
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
     }
 
     public String getPathImageFace() {

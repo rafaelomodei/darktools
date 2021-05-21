@@ -36,6 +36,7 @@ import javafx.scene.layout.BorderPane;
 
 import javafx.scene.input.KeyEvent;
 import javafx.event.EventHandler;
+import javafx.scene.layout.Pane;
 /**
  * Classe responsável pelas batalhas
  */
@@ -65,6 +66,10 @@ public class HistorieControllerViwer implements Initializable, Observer {
     private Button button_option02;
     @FXML
     private Button button_option03;
+    @FXML
+    private Pane pane_console;
+    @FXML
+    private Label label_console;
     
     List<Button> buttonList = new ArrayList<Button>();
     
@@ -117,7 +122,7 @@ public class HistorieControllerViwer implements Initializable, Observer {
         page.setOnKeyPressed(new EventHandler<KeyEvent>(){
             @Override
             public void handle(KeyEvent event) {
-                System.out.println("A letra "+event.getCode().getName());
+                //System.out.println("A letra "+event.getCode().getName());
                 if(event.getCode() == KeyCode.ESCAPE){
                     setStateMenu(!getStateMenu());
                 }
@@ -168,8 +173,18 @@ public class HistorieControllerViwer implements Initializable, Observer {
      */
     @FXML
     private void saveGame() {
-        boardControllerImp.saveGame(boardControllerImp.getBoard());
-        System.out.println("Jogo salvo!");
+        
+        try {
+            boardControllerImp.inicialize();
+            System.out.println("Jogo salvo!");
+        } catch (Exception e) {
+            System.out.println("Erro! = "+e );
+        }
+        //boardControllerImp.saveGame(boardControllerImp.getBoard());
+        
+        //pane_console.setVisible(true);
+        //label_console.setText("Jogo Salvo!");
+        //ConectionHibernate.close();
     }
 
     /**
@@ -188,6 +203,9 @@ public class HistorieControllerViwer implements Initializable, Observer {
      */
     private void setStateMenu(boolean value){
         border_paneMenu.setVisible(value);
+        if(getStateMenu() == false){
+            pane_console.setVisible(false);
+        }
     }
     
     private boolean getStateMenu(){
