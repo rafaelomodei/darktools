@@ -302,7 +302,15 @@ public class HistorieControllerViwer implements Initializable, Observer {
             
             if(object.equals("losegame")){
                 try {
-                    switchToWindow("Home");
+                    switchToWindow("GameOver");
+                } catch (IOException ex) {
+                    Logger.getLogger(HistorieControllerViwer.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            
+            if(object.equals("endGame")){
+                try {
+                    switchToWindow("Victory");
                 } catch (IOException ex) {
                     Logger.getLogger(HistorieControllerViwer.class.getName()).log(Level.SEVERE, null, ex);
                 }

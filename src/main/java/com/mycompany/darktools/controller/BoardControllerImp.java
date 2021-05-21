@@ -237,7 +237,10 @@ public class BoardControllerImp extends Observable implements BoardController {
                 
             } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD20")){
                 System.out.println("Rolar dado D20");
-            }else {
+            }else if(board.getCurrentScriptSegment().getCommands().contains("creditos")){
+                setChanged();
+                notifyObservers("endGame");
+            } else {
                 goToNextScriptSegment(0);
             }
         }
