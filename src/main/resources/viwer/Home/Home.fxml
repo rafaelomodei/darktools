@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
@@ -16,20 +18,61 @@
             <ImageView fx:id="background" fitHeight="720.0" fitWidth="1280.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" y="360.0" BorderPane.alignment="CENTER" />
          </center>
       </BorderPane>
-      <Button id="btn_start" fx:id="btn_start" alignment="CENTER" contentDisplay="CENTER" layoutX="1056.0" layoutY="543.0" mnemonicParsing="false" onAction="#switchToWindow" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
-         <font>
-            <Font name="System Bold" size="25.0" />
-         </font>
-         <effect>
-            <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
-               <color>
-                  <Color green="0.8833333253860474" blue="1.0" />
-               </color>
-            </DropShadow>
-         </effect>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </Button>
+      <BorderPane prefHeight="720.0" prefWidth="1280.0">
+         <bottom>
+            <HBox alignment="CENTER" spacing="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button id="btn_start" fx:id="button_exit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindowExit" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Sair" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
+                           <color>
+                              <Color green="0.8833333253860474" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btn_start" fx:id="button_credits" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindowCredits" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Créditos" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
+                           <color>
+                              <Color green="0.8833333253860474" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btn_start" fx:id="button_start" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindow" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
+                           <color>
+                              <Color green="0.8833333253860474" blue="1.0" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="40.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
    </children>
 </AnchorPane>
