@@ -222,7 +222,7 @@ public class BoardControllerImp extends Observable implements BoardController {
                 readWord(currentWord);
                 reproduceAudio();
                 goToNextScriptSegment(ScriptSegmentConditions.rollDice6());
-            } else if(board.getCurrentScriptSegment().getCommands().contains("battle")){
+            } else if(board.getCurrentScriptSegment().getCommands().contains("Battle")){
                 System.out.println("Momento batalha!");
                 
                 updateTeamEnemy();//Fazer mais testes!
@@ -306,13 +306,17 @@ public class BoardControllerImp extends Observable implements BoardController {
         List<Personage> selectecEnemiesList = new ArrayList<Personage>();
         //Tá pegando o mesmo?
         for(int i = 0; i < getBoard().getCurrentScriptSegment().getEnemies().size(); i++){
+            Personage selectedPersonage = null;
             for(int y = 0; y < enemiesList.size(); y++){
                 if(getBoard().getCurrentScriptSegment().getEnemies().get(i).equals(enemiesList.get(y).getNPCid())){
                     enemiesList.get(y);
-                    Personage selectedPersonage = new Personage(enemiesList.get(y).getNPCid(), enemiesList.get(y).getName(), enemiesList.get(y).getLife(), enemiesList.get(y).getSkills() ,  enemiesList.get(y).getPathImageFace(), enemiesList.get(y).getPathImageBody());
+                    selectedPersonage = new Personage(enemiesList.get(y).getNPCid(), enemiesList.get(y).getName(), enemiesList.get(y).getLife(), enemiesList.get(y).getSkills() ,  enemiesList.get(y).getPathImageFace(), enemiesList.get(y).getPathImageBody());
                     selectecEnemiesList.add(selectedPersonage);
                     System.out.println("O time inimigo e composto por "+enemiesList.get(y).getName());
                 }
+            }
+            if(selectedPersonage == null){
+                System.out.println("Personagem não econtrado no JSON de NPCs!");
             }
         }
 
