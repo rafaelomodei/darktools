@@ -92,6 +92,7 @@ public class Personage {
         this.NPCid = NPCid;
         this.name = name;
         this.life = life;
+        this.maxlife = life;
         this.isAlive = true;
         this.isActiveToBattle = true;
         this.skills = skills;
@@ -162,6 +163,10 @@ public class Personage {
 
     public void setIsActiveToBattle(boolean isActiveToBattle) {
         this.isActiveToBattle = isActiveToBattle;
+    }
+
+    public float getMaxlife() {
+        return maxlife;
     }
     
     

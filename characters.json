@@ -5,8 +5,8 @@
 		"life": 150.0,
 		"damage": 30.0,
 		"skill": "Espada (Corte)",
-		"pathimagebody": "ui.character.victus/victus.png",
-		"pathimageface": "ui.img/victus_self.png"
+		"pathimagebody": "/iu/img/victus.png",
+		"pathimageface": "/iu/img/victus_self.png"
 	},
 	{
 		"id": "davi",
@@ -14,8 +14,8 @@
 		"life": 120.0,
 		"damage": 20.0,
 		"skill": "Arco de Ossos (Perfuração)",
-		"pathimagebody": "ui.character.davi/davi.png",
-		"pathimageface": "ui.img/davi_self.png"
+		"pathimagebody": "/iu/img/davi.png",
+		"pathimageface": "/iu/img/davi_self.png"
 	},
 	{
 		"id": "arletics",
@@ -23,8 +23,8 @@
 		"life": 100.0,
 		"damage": 20.0,
 		"skill": "Magia (Confusão)",
-		"pathimagebody": "ui.character.arletics/arletics.png",
-		"pathimageface": "ui.img/arletics_self.png"
+		"pathimagebody": "/iu/img/arletics.png",
+		"pathimageface": "/iu/img/arletics_self.png"
 	},
 	{
 		"id": "rei",
@@ -32,8 +32,8 @@
 		"life": 100.0,
 		"damage": 20.0,
 		"skill": "Clava Real (Corte)",
-		"pathimagebody": "ui.character.rei/rei.png",
-		"pathimageface": "ui.img/rei_self.png"
+		"pathimagebody": "/iu/img/rei.png",
+		"pathimageface": "/iu/img/rei_self.png"
 	},
 	{
 		"id": "cavaleiro1",
@@ -41,8 +41,8 @@
 		"life": 100.0,
 		"damage": 20.0,
 		"skill": "Lançada",
-		"pathimagebody": "ui.character.cavaleiro1/cavaleiro1.png",
-		"pathimageface": "ui.img/cavaleiro1_self.png"
+		"pathimagebody": "/iu/img/cavaleiro1.png",
+		"pathimageface": "/iu/img/cavaleiro1_self.png"
 	},
 	{
 		"id": "cavaleiro2",
@@ -50,8 +50,8 @@
 		"life": 50.0,
 		"damage": 10.0,
 		"skill": "Lançada",
-		"pathimagebody": "ui.character.cavaleiro2/cavaleiro2.png",
-		"pathimageface": "ui.img/cavaleiro2_self.png"
+		"pathimagebody": "/iu/img/cavaleiro2.png",
+		"pathimageface": "/iu/img/cavaleiro2_self.png"
 	},
 	{
 		"id": "ogro1",
@@ -59,8 +59,8 @@
 		"life": 100.0,
 		"damage": 25.0,
 		"skill": "Clava (Contusão)",
-		"pathimagebody": "ui.character.ogro1/ogro1.png",
-		"pathimageface": "ui.img/ogro1_self.png"
+		"pathimagebody": "/iu/img/ogro1.png",
+		"pathimageface": "/iu/img/ogro1_self.png"
 	},
 	{
 		"id": "ogro2",
@@ -68,8 +68,8 @@
 		"life": 100.0,
 		"damage": 20.0,
 		"skill": "Clava (Contusão)",
-		"pathimagebody": "ui.character.ogro2/ogro2.png",
-		"pathimageface": "ui.img/ogro2_self.png"
+		"pathimagebody": "/iu/img/ogro2.png",
+		"pathimageface": "/iu/img/ogro2_self.png"
 	},
 	{
 		"id": "goblin1",
@@ -77,8 +77,8 @@
 		"life": 50.0,
 		"damage": 5.0,
 		"skill": "Pedrada",
-		"pathimagebody": "ui.character.goblin1/goblin1.png",
-		"pathimageface": "ui.img/goblin1_self.png"
+		"pathimagebody": "/iu/img/goblin1.png",
+		"pathimageface": "/iu/img/goblin1_self.png"
 	},
 	{
 		"id": "goblin2",
@@ -86,8 +86,8 @@
 		"life": 50.0,
 		"damage": 5.0,
 		"skill": "Pedrada",
-		"pathimagebody": "ui.character.goblin2/goblin2.png",
-		"pathimageface": "ui.img/goblin2_self.png"
+		"pathimagebody": "/iu/img/goblin2.png",
+		"pathimageface": "/iu/img/goblin2_self.png"
 	},
 	{
 		"id": "goblin3",
@@ -95,8 +95,8 @@
 		"life": 50.0,
 		"damage": 15.0,
 		"skill": "Machado (Corte)",
-		"pathimagebody": "ui.character.goblin3/goblin3.png",
-		"pathimageface": "ui.img/goblin3_self.png"
+		"pathimagebody": "/iu/img/goblin3.png",
+		"pathimageface": "/iu/img/goblin3_self.png"
 	},
 	{
 		"id": "goblin4",
@@ -104,8 +104,8 @@
 		"life": 50.0,
 		"damage": 15.0,
 		"skill": "Machado (Corte)",
-		"pathimagebody": "ui.character.goblin4/goblin4.png",
-		"pathimageface": "ui.img/goblin4_self.png"
+		"pathimagebody": "/iu/img/goblin4.png",
+		"pathimageface": "/iu/img/goblin4_self.png"
 	},
 	{
 		"id": "goblin5",
@@ -113,8 +113,8 @@
 		"life": 80.0,
 		"damage": 30.0,
 		"skill": "Crucius (Magia)",
-		"pathimagebody": "ui.character.goblin5/goblin5.png",
-		"pathimageface": "ui.img/goblin5_self.png"
+		"pathimagebody": "/iu/img/goblin5.png",
+		"pathimageface": "/iu/img/goblin5_self.png"
 	},
 	{
 		"id": "troll1",
@@ -122,8 +122,8 @@
 		"life": 80.0,
 		"damage": 20.0,
 		"skill": "Clava Congelante (Contusão + Fratura)",
-		"pathimagebody": "ui.character.troll1/troll1.png",
-		"pathimageface": "ui.img/troll1_self.png"
+		"pathimagebody": "/iu/img/troll1.png",
+		"pathimageface": "/iu/img/troll1_self.png"
 	},
 	{
 		"id": "troll2",
@@ -131,8 +131,8 @@
 		"life": 100.0,
 		"damage": 35.0,
 		"skill": "Clava Flamejante (Contusão + Queimadura)",
-		"pathimagebody": "ui.character.troll2/troll2.png",
-		"pathimageface": "ui.img/troll2_self.png"
+		"pathimagebody": "/iu/img/troll2.png",
+		"pathimageface": "/iu/img/troll2_self.png"
 	},
 	{
 		"id": "troll3",
@@ -140,8 +140,8 @@
 		"life": 100.0,
 		"damage": 35.0,
 		"skill": "Clava Congelante (Contusão + Congelamento)",
-		"pathimagebody": "ui.character.troll3/troll3.png",
-		"pathimageface": "ui.img/troll3_self.png"
+		"pathimagebody": "/iu/img/troll3.png",
+		"pathimageface": "/iu/img/troll3_self.png"
 	},
 	{
 		"id": "lobo1",
@@ -149,8 +149,8 @@
 		"life": 40.0,
 		"damage": 10.0,
 		"skill": "Mordida (Corte + Queimadura)",
-		"pathimagebody": "ui.character.lobo1/lobo1.png",
-		"pathimageface": "ui.img/lobo1_self.png"
+		"pathimagebody": "/iu/img/lobo1.png",
+		"pathimageface": "/iu/img/lobo1_self.png"
 	},
 	{
 		"id": "lobo2",
@@ -158,8 +158,8 @@
 		"life": 40.0,
 		"damage": 10.0,
 		"skill": "Mordida (Corte + Ipotermia)",
-		"pathimagebody": "ui.character.lobo2/lobo2.png",
-		"pathimageface": "ui.img/lobo2_self.png"
+		"pathimagebody": "/iu/img/lobo2.png",
+		"pathimageface": "/iu/img/lobo2_self.png"
 	},
 	{
 		"id": "lobo3",
@@ -167,8 +167,8 @@
 		"life": 40.0,
 		"damage": 10.0,
 		"skill": "Mordida (Corte)",
-		"pathimagebody": "ui.character.lobo3/lobo3.png",
-		"pathimageface": "ui.img/lobo3_self.png"
+		"pathimagebody": "/iu/img/lobo3.png",
+		"pathimageface": "/iu/img/lobo3_self.png"
 	},
 	{
 		"id": "lobo4",
@@ -176,8 +176,8 @@
 		"life": 40.0,
 		"damage": 10.0,
 		"skill": "Mordida (Corte + Venêno)",
-		"pathimagebody": "ui.character.lobo4/lobo4.png",
-		"pathimageface": "ui.img/lobo4_self.png"
+		"pathimagebody": "/iu/img/lobo4.png",
+		"pathimageface": "/iu/img/lobo4_self.png"
 	},
 	{
 		"id": "verme1",
@@ -185,8 +185,8 @@
 		"life": 150.0,
 		"damage": 40.0,
 		"skill": "Bote (Corte + Venêno)",
-		"pathimagebody": "ui.character.verme1/verme1.png",
-		"pathimageface": "ui.img/verme1_self.png"
+		"pathimagebody": "/iu/img/verme1.png",
+		"pathimageface": "/iu/img/verme1_self.png"
 	},
 	{
 		"id": "guardiao",
@@ -194,8 +194,8 @@
 		"life": 200.0,
 		"damage": 50.0,
 		"skill": "Espada do Guardião (Corte)",
-		"pathimagebody": "ui.character.guardiao/guardiao.png",
-		"pathimageface": "ui.img/guardiao_self.png"
+		"pathimagebody": "/iu/img/guardiao.png",
+		"pathimageface": "/iu/img/guardiao_self.png"
 	},
 	{
 		"id": "berylus",
@@ -203,8 +203,8 @@
 		"life": 600.0,
 		"damage": 60.0,
 		"skill": "Garras (Corte)",
-		"pathimagebody": "ui.character.berylus/berylus.png",
-		"pathimageface": "ui.img/berylus_self.png"
+		"pathimagebody": "/iu/img/berylus.png",
+		"pathimageface": "/iu/img/berylus_self.png"
 	},
 	{
 		"id": "umanakshumana",
@@ -212,8 +212,8 @@
 		"life": 8001.0,
 		"damage": 100.0,
 		"skill": "Foice (Corte)",
-		"pathimagebody": "ui.character.umanakshumana/umanakshumana.png",
-		"pathimageface": "ui.img/umanakshumana_self.png"
+		"pathimagebody": "/iu/img/umanakshumana.png",
+		"pathimageface": "/iu/img/umanakshumana_self.png"
 	},
 	{
 		"id": "master",
@@ -221,7 +221,7 @@
 		"life": 8001.0,
 		"damage": 100.0,
 		"skill": "Livro",
-		"pathimagebody": "ui.character.master/master.png",
-		"pathimageface": "ui.img/master_self.png"
+		"pathimagebody": "/iu/img/master.png",
+		"pathimageface": "/iu/img/master_self.png"
 	}
 ]
