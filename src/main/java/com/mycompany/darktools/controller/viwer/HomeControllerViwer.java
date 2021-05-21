@@ -64,11 +64,10 @@ public class HomeControllerViwer implements Initializable {
     }   
     
     @FXML
-    private void switchToWindow() throws IOException {
+    private void switchToNewGame() throws IOException {
         try{
-            boardControllerImp.startGame();//comeca o jogo tem que por em outro lugar e aqui tem que ficar uma função para dar continuidade ao sair das outras telas
             ViwerController viwerController = ViwerController.getStante();
-            viwerController.setRoot("Historie");
+            viwerController.setRoot("NewSave");
         }catch(Exception e){
             System.out.println("Erro: " + e);
         }

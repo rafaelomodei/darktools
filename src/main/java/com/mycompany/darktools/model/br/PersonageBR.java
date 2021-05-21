@@ -51,8 +51,8 @@ public class PersonageBR {
         return personageDao.listAll();
     }
     
-    public void SaveAll(List Personages){
-        personageDao.saveAll(Personages);
+    public void SaveAll(List<Personage> personages){
+        personageDao.saveAll(personages);
     }
     
     public void DeleteAll(List Personages){

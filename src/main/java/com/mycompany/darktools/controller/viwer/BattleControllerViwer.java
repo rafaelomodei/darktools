@@ -17,6 +17,8 @@ import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -355,7 +357,7 @@ public class BattleControllerViwer implements Initializable, Observer {
                 String URL_IMAGE = TeamEnemy.get(i).getPathImageBody();
                 buttonsEnemyList.get(i).setStyle("-fx-background-image: url(" + URL_IMAGE + "); -fx-background-repeat:  no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size:  cover;");
             } else {
-                buttonsEnemyList.get(i).setVisible(false);
+                vBox_enemyList.get(i).setVisible(false);
             }
            
         }
@@ -374,7 +376,14 @@ public class BattleControllerViwer implements Initializable, Observer {
             if(object.equals("losegame")){
                 System.out.println("Derrota!");
                 setConsoleText("Derrota!");
-            }
+                try {
+                    switchToWindow("GameOver");
+                } catch (IOException ex) {
+                    Logger.getLogger(HistorieControllerViwer.class.getName()).log(Level.SEVERE, null, ex);
+                }                      
+                
+            }  
+            
             if(object.equals("updateTurn")){
                 updateLifeAllTeams();
                 updateImagesTeamPlayer();

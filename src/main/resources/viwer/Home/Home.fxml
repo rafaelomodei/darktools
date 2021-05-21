@@ -37,67 +37,51 @@
          <bottom>
             <HBox alignment="CENTER" prefWidth="1280.0" BorderPane.alignment="BOTTOM_CENTER">
                <children>
-                  <Pane>
-                     <children>
-                        <Pane prefHeight="100.0" prefWidth="1280.0" style="-fx-background-color: black; -fx-opacity: 0.6;" />
-                        <VBox>
-                           <children>
-                              <HBox alignment="CENTER" prefWidth="1280.0" spacing="100.0">
-                                 <children>
-                                    <Button id="btn_start" fx:id="button_exit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindowExit" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Sair" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="System Bold" size="25.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
-                                             <color>
-                                                <Color green="0.8833333253860474" blue="1.0" />
-                                             </color>
-                                          </DropShadow>
-                                       </effect>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </Button>
-                                    <Button id="btn_start" fx:id="button_loadgame" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loadGamePage" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Carregar jogo" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="System Bold" size="25.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
-                                             <color>
-                                                <Color green="0.8833333253860474" blue="1.0" />
-                                             </color>
-                                          </DropShadow>
-                                       </effect>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </Button>
-                                    <Button id="btn_start" fx:id="button_start" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindow" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE">
-                                       <font>
-                                          <Font name="System Bold" size="25.0" />
-                                       </font>
-                                       <effect>
-                                          <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
-                                             <color>
-                                                <Color green="0.8833333253860474" blue="1.0" />
-                                             </color>
-                                          </DropShadow>
-                                       </effect>
-                                       <cursor>
-                                          <Cursor fx:constant="HAND" />
-                                       </cursor>
-                                    </Button>
-                                 </children>
-                                 <padding>
-                                    <Insets bottom="40.0" />
-                                 </padding>
-                              </HBox>
-                           </children>
-                        </VBox>
-                     </children>
-                  </Pane>
+                  <Button id="btn_start" fx:id="button_exit" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindowExit" prefHeight="43.0" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Sair" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
+                           <color>
+                              <Color blue="1.0" green="0.8833333253860474" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btn_start" fx:id="button_loadgame" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#loadGamePage" prefHeight="43.0" prefWidth="200.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Carregar jogo" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
+                           <color>
+                              <Color blue="1.0" green="0.8833333253860474" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="btn_start" fx:id="button_start" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToNewGame" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <effect>
+                        <DropShadow blurType="ONE_PASS_BOX" height="222.5" radius="111.6125" spread="0.63" width="225.95">
+                           <color>
+                              <Color blue="1.0" green="0.8833333253860474" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
                </children>
             </HBox>
          </bottom>

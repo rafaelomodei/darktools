@@ -5,10 +5,7 @@
  */
 package com.mycompany.darktools.model.vo;
 
-/**
- *
- * @author acer
- */
+
 enum GameState {
     Stopped,
     Running

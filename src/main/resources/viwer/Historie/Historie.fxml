@@ -160,5 +160,29 @@
             </VBox>
          </center>
       </BorderPane>
+      <Pane fx:id="pane_console" layoutX="10.0" layoutY="10.0" style="-fx-background-radius: 20px;" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <BorderPane prefHeight="50.0">
+               <center>
+                  <Pane style="-fx-background-color: black; -fx-background-radius: 10px; -fx-opacity: 0.6;" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane prefHeight="50.0">
+                           <center>
+                              <Label fx:id="label_console" alignment="CENTER" text="texto" textFill="WHITE" BorderPane.alignment="CENTER_RIGHT">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </children>
+      </Pane>
    </children>
 </AnchorPane>
