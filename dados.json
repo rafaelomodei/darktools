@@ -961,7 +961,6 @@
             "etc/songs/speaks1.mp3"
         ],
         "commands": [
-            "showButtons",
             "RollDiceD6"
         ],
         "routes": [
@@ -1461,7 +1460,7 @@
             ""
         ],
         "routes": [
-            "13.0"
+            "13.0a"
         ]
     },
     {

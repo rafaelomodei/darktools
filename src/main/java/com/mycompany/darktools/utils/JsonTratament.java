@@ -133,8 +133,8 @@ public class JsonTratament {
                 (String) jsonObject.get("name"),
                 ((Double)jsonObject.get("life")).floatValue(),
                 skills,
-                (String) jsonObject.get("pathimagebody"),
-                (String) jsonObject.get("pathimageface")
+                (String) jsonObject.get("pathimageface"),
+                (String) jsonObject.get("pathimagebody")
         );
         
         return personage;

@@ -87,6 +87,9 @@ public class BattleControllerViwer implements Initializable, Observer {
     private Label label_characterName2;
     
     @FXML
+    private Label label_console;
+    
+    @FXML
     private Button bottun_attack;
 
     @FXML
@@ -118,8 +121,17 @@ public class BattleControllerViwer implements Initializable, Observer {
     @FXML
     private Button botton_enemy03;
     
+    List<VBox> vBox_enemyList = new ArrayList<VBox>();
+    
     @FXML
-    private VBox vBox_enemy1;
+    private VBox vBox_enemy1, vBox_enemy2, vBox_enemy3, vBox_enemy4, vBox_enemy5, vBox_enemy6, vBox_enemy7;
+    
+    List<ProgressBar> progressBar_enemyList = new ArrayList<ProgressBar>();
+    
+    @FXML
+    private ProgressBar progressBar_enemyLife1, progressBar_enemyLife2, progressBar_enemyLife3, progressBar_enemyLife4, progressBar_enemyLife5, progressBar_enemyLife6, progressBar_enemyLife7;
+
+
 
     List<Personage> TeamEnemy;
 
@@ -147,6 +159,8 @@ public class BattleControllerViwer implements Initializable, Observer {
         updateImagesTeamPlayer();
         updateImagesTeamEnemy();
         
+        setConsoleText("");
+        
     }
     
     /**
@@ -173,8 +187,29 @@ public class BattleControllerViwer implements Initializable, Observer {
         imageView_characters.add(imageView_character1);
         imageView_characters.add(imageView_character2);
         
+        vBox_enemyList.add(vBox_enemy1);
+        vBox_enemyList.add(vBox_enemy2);
+        vBox_enemyList.add(vBox_enemy3);
+        vBox_enemyList.add(vBox_enemy4);
+        vBox_enemyList.add(vBox_enemy5);
+        vBox_enemyList.add(vBox_enemy6);
+        vBox_enemyList.add(vBox_enemy7);
+        
+        progressBar_enemyList.add(progressBar_enemyLife1);
+        progressBar_enemyList.add(progressBar_enemyLife2);
+        progressBar_enemyList.add(progressBar_enemyLife3);
+        progressBar_enemyList.add(progressBar_enemyLife4);
+        progressBar_enemyList.add(progressBar_enemyLife5);
+        progressBar_enemyList.add(progressBar_enemyLife6);
+        progressBar_enemyList.add(progressBar_enemyLife7);
+        
         for(int i = 0; i<TeamEnemy.size(); i++){
             buttonsEnemyList.get(i).setVisible(true);
+        }
+        
+        for(int i = 0; i<vBox_enemyList.size(); i++ ){
+            vBox_enemyList.get(i).setVisible(false);
+            //progressBar_enemyList.get(i).setVisible(false);
         }
     }
     
@@ -184,14 +219,17 @@ public class BattleControllerViwer implements Initializable, Observer {
     @FXML
     private void attack(){
         System.out.println("Ataque selecionado!");
+        setConsoleText("Ataque selecionado!");
         
         selectedSkill = "0";
         
         if(selectedEnemyToAttack != null){
             battleController.battleTurn(0,0,Integer.parseInt(selectedEnemyToAttack));
+            setConsoleText("Inimigo atacado!");
             selectedSkill = null;
             selectedEnemyToAttack = null;
         } else {
+            setConsoleText("Selecione o inimigo a ser atacado!");
             System.out.println("Selecione o inimigo a ser atacado!");
         }
         
@@ -203,18 +241,49 @@ public class BattleControllerViwer implements Initializable, Observer {
     @FXML
     private void selectEnemy(){
         System.out.println("Enemy0 selecionado!");
+        setConsoleText("Enemy0 selecionado!");
         selectedEnemyToAttack = "0";
     }
     
     @FXML
     private void selectEnemy1(){
         System.out.println("Enemy1 selecionado!");
+        setConsoleText("Enemy1 selecionado!");
         selectedEnemyToAttack = "1";
     }
     
     @FXML
     private void selectEnemy2(){
         System.out.println("Enemy2 selecionado!");
+        setConsoleText("Enemy2 selecionado!");
+        selectedEnemyToAttack = "2";
+    }
+    
+    @FXML
+    private void selectEnemy3(){
+        System.out.println("Enemy3 selecionado!");
+        setConsoleText("Enemy3 selecionado!");
+        selectedEnemyToAttack = "2";
+    }
+    
+    @FXML
+    private void selectEnemy4(){
+        System.out.println("Enemy4 selecionado!");
+        setConsoleText("Enemy4 selecionado!");
+        selectedEnemyToAttack = "2";
+    }
+    
+    @FXML
+    private void selectEnemy5(){
+        System.out.println("Enemy5 selecionado!");
+        setConsoleText("Enemy5 selecionado!");
+        selectedEnemyToAttack = "2";
+    }
+    
+    @FXML
+    private void selectEnemy6(){
+        System.out.println("Enemy6 selecionado!");
+        setConsoleText("Enemy6 selecionado!");
         selectedEnemyToAttack = "2";
     }
     
@@ -223,10 +292,22 @@ public class BattleControllerViwer implements Initializable, Observer {
      */
     private void updateLifeAllTeams(){
         for(int i = 0; i < boardControllerImp.getBoard().getTeamPlayer().getPersonages().size(); i++){
-            progressBarList.get(i).setProgress((double)boardControllerImp.getBoard().getTeamPlayer().getPersonages().get(i).getLife()/100);
+            progressBarList.get(i).setProgress((double)lifeNormalize(boardControllerImp.getBoard().getTeamPlayer().getPersonages().get(i).getMaxlife(), boardControllerImp.getBoard().getTeamPlayer().getPersonages().get(i).getLife())/100);
             //System.out.println("Vida atual de "+boardControllerImp.getBoard().getTeamPlayer().getPersonages().get(i).getName()+" na interface e "+(double)boardControllerImp.getBoard().getTeamPlayer().getPersonages().get(i).getLife());
         }
         
+        for(int i = 0; i < boardControllerImp.getBoard().getTeamEnemy().getPersonages().size(); i++){
+            progressBar_enemyList.get(i).setProgress((double)lifeNormalize(boardControllerImp.getBoard().getTeamEnemy().getPersonages().get(i).getMaxlife(), boardControllerImp.getBoard().getTeamEnemy().getPersonages().get(i).getLife())/100);
+        }
+        
+    }
+    
+    /**
+     * Função que adapta a vida pra dar certo com o intevalo do progressBar
+     * @return valor final
+     */
+    private float lifeNormalize(float maxlife, float currentlife){
+        return (currentlife*100)/maxlife;
     }
     
     /**
@@ -249,10 +330,18 @@ public class BattleControllerViwer implements Initializable, Observer {
                 imagebodyList.get(i).setImage(new Image(boardControllerImp.getBoard().getTeamPlayer().getPersonages().get(i).getPathImageBody()));
             } else {
                 imagebodyList.get(i).setVisible(false);
+                setConsoleText(boardControllerImp.getBoard().getTeamPlayer().getPersonages().get(i).getName()+ " morreu em batalha!");
             }
             imageView_characters.get(i).setImage(new Image(boardControllerImp.getBoard().getTeamPlayer().getPersonages().get(i).getPathImageFace()));
             
         }
+    }
+    
+    private void setConsoleText(String text){
+        if(!label_console.getText().equals("Derrota!")){
+            label_console.setText(text);
+        }
+        
     }
     
     /**
@@ -260,12 +349,12 @@ public class BattleControllerViwer implements Initializable, Observer {
      */
     private void updateImagesTeamEnemy(){
         for(int i = 0; i < TeamEnemy.size(); i++){
-            //buttonsEnemyList.get(i).setStyle("-fx-background-image: url(\"/iu/character/others/batedor_batlle.png\");");
-            String URL_IMAGE= "/iu/img/goblin4.png";
-            vBox_enemy1.setVisible(false);
-            buttonsEnemyList.get(i).setStyle("-fx-background-image: url(" + URL_IMAGE + ");");
-            if(!TeamEnemy.get(i).isIsActiveToBattle()){
-               
+            
+            if(TeamEnemy.get(i).isIsActiveToBattle()){
+                vBox_enemyList.get(i).setVisible(true);
+                String URL_IMAGE = TeamEnemy.get(i).getPathImageBody();
+                buttonsEnemyList.get(i).setStyle("-fx-background-image: url(" + URL_IMAGE + "); -fx-background-repeat:  no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size:  cover;");
+            } else {
                 buttonsEnemyList.get(i).setVisible(false);
             }
            
@@ -284,12 +373,13 @@ public class BattleControllerViwer implements Initializable, Observer {
             }
             if(object.equals("losegame")){
                 System.out.println("Derrota!");
+                setConsoleText("Derrota!");
             }
             if(object.equals("updateTurn")){
                 updateLifeAllTeams();
-                //System.out.println("Atualizar vida de todos!");
                 updateImagesTeamPlayer();
                 updateImagesTeamEnemy();
+                setConsoleText("Sua vez de jogar!");
             }
             
         }
