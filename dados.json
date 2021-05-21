@@ -543,7 +543,7 @@
             "goblin2"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "goblin",
+        "whoSpeaks": "goblin1",
         "words": [
             "Quanto ouro vocês tem?"
         ],
@@ -564,7 +564,7 @@
             "lobo2"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "lobo",
+        "whoSpeaks": "lobo1",
         "words": [
             "Ahuuuuu!"
         ],
@@ -585,7 +585,7 @@
             "troll2"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "troll",
+        "whoSpeaks": "troll1",
         "words": [
             "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
         ],
@@ -629,7 +629,7 @@
             "troll2"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "troll",
+        "whoSpeaks": "troll1",
         "words": [
             "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
         ],
@@ -708,7 +708,7 @@
             "goblin4"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "goblin",
+        "whoSpeaks": "goblin1",
         "words": [
             "Ouro, ouro, ouro, eu so quero muis ouro!"
         ],
@@ -729,7 +729,7 @@
             "goblin1"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "goblin",
+        "whoSpeaks": "goblin1",
         "words": [
             "A beleza provoca o ladrão, mais do que o ouro, que que eu estou falando... me de logo este ouro!"
         ],
@@ -750,7 +750,7 @@
             "troll2"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "troll",
+        "whoSpeaks": "troll1",
         "words": [
             "Vocês não passar daqui, Troll forte, não deixar, Vai embora!"
         ],
@@ -771,7 +771,7 @@
             "lobo1"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "lobo",
+        "whoSpeaks": "lobo1",
         "words": [
             "Ahuuuuu!"
         ],
@@ -830,7 +830,7 @@
             "goblin1"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "goblin",
+        "whoSpeaks": "goblin1",
         "words": [
             "Voces tem ouro ai ne, Eu quero!"
         ],
@@ -871,7 +871,7 @@
             "goblin4"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "goblin",
+        "whoSpeaks": "goblin1",
         "words": [
             "Nossa, Nossa, como brilha... Quero essa espada pra mim agora!"
         ],
@@ -916,7 +916,7 @@
             "lobo4"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "Lobo",
+        "whoSpeaks": "lobo1",
         "words": [
             "Ahuuuuu! Ahuuuuu!"
         ],
@@ -1026,7 +1026,7 @@
             "goblin4"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "goblin",
+        "whoSpeaks": "goblin1",
         "words": [
             "Não vão nunca encontrar a Catacumba! então ja vomos matalos aqui!"
         ],
@@ -1047,7 +1047,7 @@
             "troll2"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "troll",
+        "whoSpeaks": "troll1",
         "words": [
             "Argh! Que fedor fedorento! Se eu matar melhora!"
         ],
@@ -1471,7 +1471,7 @@
             "goblin4"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "goblin",
+        "whoSpeaks": "goblin1",
         "words": [
             "Não vão nunca encontrar! mais carne pra gente!"
         ],
@@ -1766,7 +1766,7 @@
             "goblin4"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "goblin",
+        "whoSpeaks": "goblin1",
         "words": [
             "Não vão nunca encontrar! mais carne pra gente!"
         ],
@@ -1947,7 +1947,7 @@
             "verme1"
         ],
         "turnSide": "enemy",
-        "whoSpeaks": "verme",
+        "whoSpeaks": "verme1",
         "words": [
             ""
         ],

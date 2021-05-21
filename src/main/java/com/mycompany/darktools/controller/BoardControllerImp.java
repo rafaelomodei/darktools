@@ -138,7 +138,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void startGame(){
         ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
         
-        Board board = new Board(createDefaulTeam(), 10000, "default", "7.0a");//mudar para rota "0a"
+        Board board = new Board(createDefaulTeam(), 10000, "default", "0a");//mudar para rota "0a"
         
         board.setScriptSegments(scriptSegmentController.getScriptSegments());
         
@@ -254,7 +254,13 @@ public class BoardControllerImp extends Observable implements BoardController {
         notifyObservers(my_dict);
         
         my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
-        my_dict.put("title", board.getCurrentScriptSegment().getWhoSpeaks());
+        my_dict.put("title", foundNPC(board.getCurrentScriptSegment().getWhoSpeaks()).getName());
+        setChanged();
+        notifyObservers(my_dict);
+        
+        my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
+        my_dict.put("pathimageface", foundNPC(board.getCurrentScriptSegment().getWhoSpeaks()).getPathImageFace());
+        
         setChanged();
         notifyObservers(my_dict);
 
@@ -322,5 +328,20 @@ public class BoardControllerImp extends Observable implements BoardController {
 
         teamEnemy.setPersonages(selectecEnemiesList);
         board.setTeamEnemy(teamEnemy);
+    }
+    
+    /**
+     * Funçào que procura o NPC nos NPCs do jogo (deve ser retirada daqui!)
+     * @param id Id do NPC
+     * @return Retorna o personagem procurado
+     */
+    private Personage foundNPC(String id){
+        List<Personage> npcsList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        for(int i = 0; i<npcsList.size(); i++){
+            if(npcsList.get(i).getNPCid().equals(id)){
+                return npcsList.get(i);
+            }
+        }
+        return null;
     }
 }
