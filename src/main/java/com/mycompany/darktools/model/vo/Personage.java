@@ -63,17 +63,18 @@ public class Personage {
     /**
      * Contrutor do Personage para o usuário
      * @param name Nome do perosnagem
+     * @param maxlife Vida máxima do jogador
      * @param skills Lista de habilidades
      * @param pathImageFace Caminho onde se encontra a imagem de rosto
      * @param pathImageBody Caminho onde se econtra a imagem de corpo
      */
-    public Personage(String name, List skills, String pathImageFace, String pathImageBody) {
+    public Personage(String name, float maxlife,List skills, String pathImageFace, String pathImageBody) {
         this.name = name;
         this.skills = skills;
         this.pathImageFace = pathImageFace;
         this.pathImageBody = pathImageBody;
         this.imagePath = imagePath;
-        this.maxlife = 100;
+        this.maxlife = maxlife;
         this.life = this.maxlife;
         this.isAlive = true;
         this.isActiveToBattle = true;

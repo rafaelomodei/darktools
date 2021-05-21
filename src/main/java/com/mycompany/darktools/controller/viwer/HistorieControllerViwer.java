@@ -79,7 +79,7 @@ public class HistorieControllerViwer implements Initializable, Observer {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        boardControllerImp.startGame();//comeca o jogo tem que por em outro lugar e aqui tem que ficar uma função para dar continuidade ao sair das outras telas
+        
         
         imgScene = new Image(SCENE_URL);
                 
@@ -100,8 +100,8 @@ public class HistorieControllerViwer implements Initializable, Observer {
         
         hideButtons();
         
-        boardControllerImp.goToNextWord();  
-        
+        //boardControllerImp.goToNextWord();  
+        boardControllerImp.readWord(0);
     }
     
     /** Essas funções deve ser retiradas!**/
@@ -208,6 +208,14 @@ public class HistorieControllerViwer implements Initializable, Observer {
             if(object.equals("battle")){
                 try {
                     switchToWindow("Battle");
+                } catch (IOException ex) {
+                    Logger.getLogger(HistorieControllerViwer.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+            
+            if(object.equals("losegame")){
+                try {
+                    switchToWindow("Home");
                 } catch (IOException ex) {
                     Logger.getLogger(HistorieControllerViwer.class.getName()).log(Level.SEVERE, null, ex);
                 }

@@ -5,6 +5,7 @@
  */
 package com.mycompany.darktools.controller.viwer;
 
+import com.mycompany.darktools.controller.BoardControllerImp;
 import com.mycompany.darktools.controller.ViwerController;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -23,6 +24,9 @@ import javafx.scene.layout.BorderPane;
  * @author Rafae
  */
 public class HomeControllerViwer implements Initializable {
+    
+
+    BoardControllerImp boardControllerImp = BoardControllerImp.getInstante();
     
     @FXML
     private BorderPane borderPane;
@@ -52,6 +56,8 @@ public class HomeControllerViwer implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        
        background = new ImageView(BACKGROUNG_URL);
        background.setPreserveRatio(true);
        background.setFitWidth(1280);
@@ -62,6 +68,7 @@ public class HomeControllerViwer implements Initializable {
     @FXML
     private void switchToWindow() throws IOException {
         try{
+            boardControllerImp.startGame();//comeca o jogo tem que por em outro lugar e aqui tem que ficar uma função para dar continuidade ao sair das outras telas
             ViwerController viwerController = ViwerController.getStante();
             viwerController.setRoot("Historie");
         }catch(Exception e){

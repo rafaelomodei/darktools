@@ -68,9 +68,10 @@ public class BattleController extends Observable{
                 System.out.println("Time inimigo morto!");
                 setChanged();
                 notifyObservers("endbattle");
+                teamTurn = TeamTurn.Neutral;
                 
             } else {
-                
+
                 teamTurn = TeamTurn.Enemy;
                 battleTurn();
             }
@@ -98,7 +99,7 @@ public class BattleController extends Observable{
             setChanged();
             notifyObservers("updateTurn");
             
-            if(isTeamAlive(TeamEnemy) == true){
+            if(isTeamAlive(TeamPlayer) == true){
                 teamTurn = TeamTurn.Player;
                 System.out.println("Vez do jogador atacar!");
             } else {
@@ -161,7 +162,8 @@ public class BattleController extends Observable{
     private void updateIsAliveTeam(List<Personage> team){
         for(int i = 0; i<team.size(); i++){
             Personage personage = team.get(i);
-            if(personage.getLife() <= 0){
+            System.out.println("Personagem "+team.get(i).getName()+" contem "+team.get(i).getLife()+" de vida -----");
+            if(personage.getLife() <= 0 && personage.isIsAlive() == true){
                 killPersonage(personage);
             }
         }

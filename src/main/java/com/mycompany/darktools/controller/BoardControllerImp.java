@@ -144,7 +144,7 @@ public class BoardControllerImp extends Observable implements BoardController {
         
         board.setCurrentScriptSegment(scriptSegmentController.foundScriptSegment(board.getScriptSegments(), board.getSegmentStoppedId()));
         
-        currentWord = 0;//provisório
+        currentWord = 0;
         
         setBoard(board);
     }
@@ -166,9 +166,9 @@ public class BoardControllerImp extends Observable implements BoardController {
         List<Skill> skillList2 = new ArrayList<Skill>();
         skillList2.add(skill3);
         
-        Personage personage0 = new Personage("Guerreiro", skillList, "/iu/batlle/character.png", "/iu/character/warrior/guerreiro_back_batlle.png");
-        Personage personage1 = new Personage("Arqueiro", skillList1, "/iu/batlle/character.png","/iu/character/acher/acher_back_battle.png");
-        Personage personage2 = new Personage("Mago", skillList2, "/iu/batlle/character.png","/iu/character/mage/mago_back_batlle.png");
+        Personage personage0 = new Personage("Guerreiro", 100, skillList, "/iu/batlle/character.png", "/iu/character/warrior/guerreiro_back_batlle.png");
+        Personage personage1 = new Personage("Arqueiro", 100, skillList1, "/iu/batlle/character.png","/iu/character/acher/acher_back_battle.png");
+        Personage personage2 = new Personage("Mago", 100, skillList2, "/iu/batlle/character.png","/iu/character/mage/mago_back_batlle.png");
         
         List<Personage> personages = new ArrayList<Personage>();
         personages.add(personage0);
@@ -222,15 +222,18 @@ public class BoardControllerImp extends Observable implements BoardController {
                 readWord(currentWord);
                 reproduceAudio();
                 goToNextScriptSegment(ScriptSegmentConditions.rollDice6());
-            } else if(board.getCurrentScriptSegment().getCommands().contains("battle")){
+            } else if(board.getCurrentScriptSegment().getCommands().contains("Battle")){
                 System.out.println("Momento batalha!");
                 
                 updateTeamEnemy();//Fazer mais testes!
                 
                 setChanged();
                 notifyObservers("battle");
+                
+                goToNextScriptSegment(0);
+                
             } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD20")){
-            //
+                System.out.println("Rolar dado D20");
             }else {
                 goToNextScriptSegment(0);
             }
@@ -301,12 +304,19 @@ public class BoardControllerImp extends Observable implements BoardController {
         List<Personage> enemiesList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
         Team teamEnemy = new Team();
         List<Personage> selectecEnemiesList = new ArrayList<Personage>();
-
+        //Tá pegando o mesmo?
         for(int i = 0; i < getBoard().getCurrentScriptSegment().getEnemies().size(); i++){
+            Personage selectedPersonage = null;
             for(int y = 0; y < enemiesList.size(); y++){
                 if(getBoard().getCurrentScriptSegment().getEnemies().get(i).equals(enemiesList.get(y).getNPCid())){
-                    selectecEnemiesList.add(enemiesList.get(y));
+                    enemiesList.get(y);
+                    selectedPersonage = new Personage(enemiesList.get(y).getNPCid(), enemiesList.get(y).getName(), enemiesList.get(y).getLife(), enemiesList.get(y).getSkills() ,  enemiesList.get(y).getPathImageFace(), enemiesList.get(y).getPathImageBody());
+                    selectecEnemiesList.add(selectedPersonage);
+                    System.out.println("O time inimigo e composto por "+enemiesList.get(y).getName());
                 }
+            }
+            if(selectedPersonage == null){
+                System.out.println("Personagem não econtrado no JSON de NPCs!");
             }
         }
 
