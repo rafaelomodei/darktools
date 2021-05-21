@@ -117,6 +117,9 @@ public class BattleControllerViwer implements Initializable, Observer {
 
     @FXML
     private Button botton_enemy03;
+    
+    @FXML
+    private VBox vBox_enemy1;
 
     List<Personage> TeamEnemy;
 
@@ -258,9 +261,14 @@ public class BattleControllerViwer implements Initializable, Observer {
     private void updateImagesTeamEnemy(){
         for(int i = 0; i < TeamEnemy.size(); i++){
             //buttonsEnemyList.get(i).setStyle("-fx-background-image: url(\"/iu/character/others/batedor_batlle.png\");");
+            String URL_IMAGE= "/iu/img/goblin4.png";
+            vBox_enemy1.setVisible(false);
+            buttonsEnemyList.get(i).setStyle("-fx-background-image: url(" + URL_IMAGE + ");");
             if(!TeamEnemy.get(i).isIsActiveToBattle()){
+               
                 buttonsEnemyList.get(i).setVisible(false);
             }
+           
         }
     }
 
