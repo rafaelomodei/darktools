@@ -1,4 +1,4 @@
-package com.mycompany.darktools;
+ package com.mycompany.darktools;
 
 import com.mycompany.darktools.controller.PersonageController;
 import com.mycompany.darktools.controller.ScriptSegmentController;

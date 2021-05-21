@@ -53,7 +53,7 @@ public class TelaEscolhasController implements Initializable, Observer {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        boardControllerImp.startGame();//main
+        boardControllerImp.startGame("");//main
         
         
         buttonList.add(option1);

@@ -19,7 +19,12 @@ public class BoardDAOImpl implements BoardDAO{
     EntityManager manager;
     
     public BoardDAOImpl(){
-       manager = (EntityManager) ConectionHibernate.getInstance();
+        try {
+            manager = ConectionHibernate.getInstance();
+        } catch (Exception e) {
+            System.out.println("Erro no BoardDAOImpl "+e);
+        }
+       
     }   
     
     @Override

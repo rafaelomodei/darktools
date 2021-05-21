@@ -61,7 +61,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button id="btn_start" fx:id="button_start" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindow" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE">
+                  <Button id="btn_start" fx:id="button_start" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToNewGame" prefWidth="182.0" style="-fx-background-color: rgba(0, 0, 0, 0);" stylesheets="@../styles/Styles.css" text="Iníciar" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
