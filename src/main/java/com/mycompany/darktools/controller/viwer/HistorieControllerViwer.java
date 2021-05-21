@@ -7,6 +7,8 @@ package com.mycompany.darktools.controller.viwer;
 
 import com.mycompany.darktools.controller.BoardControllerImp;
 import com.mycompany.darktools.controller.ViwerController;
+import com.mysql.cj.x.protobuf.MysqlxExpect.Open.Condition.Key;
+import java.awt.event.KeyEvent;
 import java.beans.EventHandler;
 import java.io.IOException;
 import java.net.URL;
@@ -27,6 +29,7 @@ import javafx.scene.effect.Effect;
 import javafx.scene.effect.GaussianBlur;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
@@ -238,5 +241,16 @@ public class HistorieControllerViwer implements Initializable, Observer {
             System.out.println("Erro ao acessar a tela "+ screen +" / "+e);
         }
 
+    }
+    
+    /**
+     *
+     * @param ke
+     */
+    public void handle(KeyEvent ke) {
+        if (ke.equals(KeyCode.ESCAPE)){
+            System.out.println("Apertou ESC");
+        }
+    
     }
 }
