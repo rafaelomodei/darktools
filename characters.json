@@ -1,12 +1,48 @@
 [
 	{
+		"id": "victus",
+		"name": "Victus Marcho",
+		"life": 150.0,
+		"damage": 30.0,
+		"skill": "Espada (Corte)",
+		"pathimagebody": "/iu/img/victus.png",
+		"pathimageface": "/iu/img/victus_self.png"
+	},
+	{
+		"id": "davi",
+		"name": "Davi Rocks",
+		"life": 120.0,
+		"damage": 20.0,
+		"skill": "Arco de Ossos (Perfuração)",
+		"pathimagebody": "/iu/img/davi.png",
+		"pathimageface": "/iu/img/davi_self.png"
+	},
+	{
+		"id": "arletics",
+		"name": "Arletics Berruy",
+		"life": 100.0,
+		"damage": 20.0,
+		"skill": "Magia (Confusão)",
+		"pathimagebody": "/iu/img/arletics.png",
+		"pathimageface": "/iu/img/arletics_self.png"
+	},
+	{
+		"id": "rei",
+		"name": "Omodeis II",
+		"life": 100.0,
+		"damage": 20.0,
+		"skill": "Clava Real (Corte)",
+		"pathimagebody": "/iu/img/rei.png",
+		"pathimageface": "/iu/img/rei_self.png"
+	},
+	{
 		"id": "cavaleiro1",
 		"name": "Erick Mavine",
 		"life": 100.0,
 		"damage": 20.0,
 		"skill": "Lançada",
-		"pathimagebody": "ui.character.archer/acher_back_battle.png",
-		"pathimageface": "ui.img/acher_self.png"
+		"pathimagebody": "/iu/img/cavaleiro1.png",
+		"pathimageface": "/iu/img/cavaleiro1_self.png"
 	},
 	{
 		"id": "cavaleiro2",
@@ -14,52 +50,178 @@
 		"life": 50.0,
 		"damage": 10.0,
 		"skill": "Lançada",
-		"pathimagebody": "ui.character.archer/acher_back_battle.png",
-		"pathimageface": "ui.img/acher_self.png"
-	},
-	{
-		"id": "cavaleiro3",
-		"name": "Maria",
-		"life": 80.0,
-		"damage": 30.0,
-		"skill": "Lançada",
-		"pathimagebody": "ui.character.archer/acher_back_battle.png",
-		"pathimageface": "ui.img/acher_self.png"
+		"pathimagebody": "/iu/img/cavaleiro2.png",
+		"pathimageface": "/iu/img/cavaleiro2_self.png"
 	},
 	{
 		"id": "ogro1",
-		"name": "Ogro1",
+		"name": "Ogro M",
 		"life": 100.0,
-		"damage": 30.0,
-		"skill": "Chute",
-		"pathimagebody": "ui.character.archer/acher_back_battle.png",
-		"pathimageface": "ui.img/acher_self.png"
+		"damage": 25.0,
+		"skill": "Clava (Contusão)",
+		"pathimagebody": "/iu/img/ogro1.png",
+		"pathimageface": "/iu/img/ogro1_self.png"
+	},
+	{
+		"id": "ogro2",
+		"name": "Ogro F",
+		"life": 100.0,
+		"damage": 20.0,
+		"skill": "Clava (Contusão)",
+		"pathimagebody": "/iu/img/ogro2.png",
+		"pathimageface": "/iu/img/ogro2_self.png"
+	},
+	{
+		"id": "goblin1",
+		"name": "Goblin Aldeão M",
+		"life": 50.0,
+		"damage": 5.0,
+		"skill": "Pedrada",
+		"pathimagebody": "/iu/img/goblin1.png",
+		"pathimageface": "/iu/img/goblin1_self.png"
+	},
+	{
+		"id": "goblin2",
+		"name": "Goblin Aldeão F",
+		"life": 50.0,
+		"damage": 5.0,
+		"skill": "Pedrada",
+		"pathimagebody": "/iu/img/goblin2.png",
+		"pathimageface": "/iu/img/goblin2_self.png"
+	},
+	{
+		"id": "goblin3",
+		"name": "Goblin Guerreiro M",
+		"life": 50.0,
+		"damage": 15.0,
+		"skill": "Machado (Corte)",
+		"pathimagebody": "/iu/img/goblin3.png",
+		"pathimageface": "/iu/img/goblin3_self.png"
 	},
 	{
 		"id": "goblin4",
-		"name": "goblin4",
+		"name": "Goblin Guerreiro F",
 		"life": 50.0,
-		"damage": 20.0,
-		"skill": "Pedrada",
-		"pathimagebody": "ui.character.archer/acher_back_battle.png",
-		"pathimageface": "ui.img/acher_self.png"
+		"damage": 15.0,
+		"skill": "Machado (Corte)",
+		"pathimagebody": "/iu/img/goblin4.png",
+		"pathimageface": "/iu/img/goblin4_self.png"
+	},
+	{
+		"id": "goblin5",
+		"name": "Goblin Xamã",
+		"life": 80.0,
+		"damage": 30.0,
+		"skill": "Crucius (Magia)",
+		"pathimagebody": "/iu/img/goblin5.png",
+		"pathimageface": "/iu/img/goblin5_self.png"
 	},
 	{
 		"id": "troll1",
-		"name": "troll1",
-		"life": 120.0,
-		"damage": 50.0,
-		"skill": "Porretada",
-		"pathimagebody": "ui.character.archer/acher_back_battle.png",
-		"pathimageface": "ui.img/acher_self.png"
+		"name": "Troll da Montanha",
+		"life": 80.0,
+		"damage": 20.0,
+		"skill": "Clava Congelante (Contusão + Fratura)",
+		"pathimagebody": "/iu/img/troll1.png",
+		"pathimageface": "/iu/img/troll1_self.png"
+	},
+	{
+		"id": "troll2",
+		"name": "Troll Vulcânico",
+		"life": 100.0,
+		"damage": 35.0,
+		"skill": "Clava Flamejante (Contusão + Queimadura)",
+		"pathimagebody": "/iu/img/troll2.png",
+		"pathimageface": "/iu/img/troll2_self.png"
+	},
+	{
+		"id": "troll3",
+		"name": "Troll Invernal",
+		"life": 100.0,
+		"damage": 35.0,
+		"skill": "Clava Congelante (Contusão + Congelamento)",
+		"pathimagebody": "/iu/img/troll3.png",
+		"pathimageface": "/iu/img/troll3_self.png"
 	},
 	{
 		"id": "lobo1",
-		"name": "lobo1",
+		"name": "Lobo Flamejante",
 		"life": 40.0,
 		"damage": 10.0,
-		"skill": "Mordida",
-		"pathimagebody": "ui.character.archer/acher_back_battle.png",
-		"pathimageface": "ui.img/acher_self.png"
+		"skill": "Mordida (Corte + Queimadura)",
+		"pathimagebody": "/iu/img/lobo1.png",
+		"pathimageface": "/iu/img/lobo1_self.png"
+	},
+	{
+		"id": "lobo2",
+		"name": "Lobo invernal",
+		"life": 40.0,
+		"damage": 10.0,
+		"skill": "Mordida (Corte + Ipotermia)",
+		"pathimagebody": "/iu/img/lobo2.png",
+		"pathimageface": "/iu/img/lobo2_self.png"
+	},
+	{
+		"id": "lobo3",
+		"name": "Lobo Sanguinario",
+		"life": 40.0,
+		"damage": 10.0,
+		"skill": "Mordida (Corte)",
+		"pathimagebody": "/iu/img/lobo3.png",
+		"pathimageface": "/iu/img/lobo3_self.png"
+	},
+	{
+		"id": "lobo4",
+		"name": "Lobo de Taiga",
+		"life": 40.0,
+		"damage": 10.0,
+		"skill": "Mordida (Corte + Venêno)",
+		"pathimagebody": "/iu/img/lobo4.png",
+		"pathimageface": "/iu/img/lobo4_self.png"
+	},
+	{
+		"id": "verme1",
+		"name": "Verme Amaldiçoado",
+		"life": 150.0,
+		"damage": 40.0,
+		"skill": "Bote (Corte + Venêno)",
+		"pathimagebody": "/iu/img/verme1.png",
+		"pathimageface": "/iu/img/verme1_self.png"
+	},
+	{
+		"id": "guardiao",
+		"name": "Guardião do Artefato",
+		"life": 200.0,
+		"damage": 50.0,
+		"skill": "Espada do Guardião (Corte)",
+		"pathimagebody": "/iu/img/guardiao.png",
+		"pathimageface": "/iu/img/guardiao_self.png"
+	},
+	{
+		"id": "berylus",
+		"name": "Berylus do Artefato",
+		"life": 600.0,
+		"damage": 60.0,
+		"skill": "Garras (Corte)",
+		"pathimagebody": "/iu/img/berylus.png",
+		"pathimageface": "/iu/img/berylus_self.png"
+	},
+	{
+		"id": "umanakshumana",
+		"name": "Umanakshumaná Deus da destruição",
+		"life": 8001.0,
+		"damage": 100.0,
+		"skill": "Foice (Corte)",
+		"pathimagebody": "/iu/img/umanakshumana.png",
+		"pathimageface": "/iu/img/umanakshumana_self.png"
+	},
+	{
+		"id": "master",
+		"name": "Fiffer",
+		"life": 8001.0,
+		"damage": 100.0,
+		"skill": "Livro",
+		"pathimagebody": "/iu/img/master.png",
+		"pathimageface": "/iu/img/master_self.png"
 	}
 ]
