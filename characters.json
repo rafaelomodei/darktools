@@ -217,7 +217,7 @@
 	},
 	{
 		"id": "master",
-		"name": "Fiffer",
+		"name": "Mestre",
 		"life": 8001.0,
 		"damage": 100.0,
 		"skill": "Livro",
