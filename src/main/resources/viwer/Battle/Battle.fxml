@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import java.net.URL?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ProgressBar?>
@@ -19,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.BattleControllerViwer">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.BattleControllerViwer">
     <stylesheets>
         <URL value="@battle.css" />
     </stylesheets>
@@ -60,6 +55,30 @@
                </children>
             </HBox>
          </center></BorderPane>
+      <Pane fx:id="pane_characterInfo31" style="-fx-background-radius: 20px;" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <BorderPane prefHeight="50.0">
+               <center>
+                  <Pane style="-fx-background-color: black; -fx-background-radius: 10px; -fx-opacity: 0.6;" BorderPane.alignment="CENTER">
+                     <children>
+                        <BorderPane prefHeight="50.0">
+                           <center>
+                              <Label fx:id="label_characterName11" alignment="CENTER" text="texto" textFill="WHITE" BorderPane.alignment="CENTER_RIGHT">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <BorderPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </BorderPane.margin>
+                              </Label>
+                           </center>
+                        </BorderPane>
+                     </children>
+                  </Pane>
+               </center>
+            </BorderPane>
+         </children>
+      </Pane>
       <VBox fx:id="vBox_characterInfo" prefHeight="200.0" prefWidth="100.0" spacing="120.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="20.0">
          <children>
             <Pane fx:id="pane_characterInfo1" prefHeight="100.0" prefWidth="200.0" style="-fx-background-radius: 20px;">
@@ -112,12 +131,47 @@
             </Pane>
          </children>
       </VBox>
-      <Button fx:id="botton_enemy01" layoutX="200.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="botton_enemy02" layoutX="350.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy1" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="botton_enemy03" layoutX="500.0" layoutY="200.0" mnemonicParsing="false" onAction="#selectEnemy2" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="botton_enemy04" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="botton_enemy05" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="botton_enemy06" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
-      <Button fx:id="botton_enemy07" layoutX="20.0" layoutY="200.0" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" visible="false" />
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ProgressBar fx:id="progressBar_enemyLife7" prefHeight="20.0" prefWidth="100.0" progress="0.47" style="-fx-accent: red;" />
+            <Button fx:id="botton_enemy07" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" />
+         </children>
+      </VBox>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ProgressBar fx:id="progressBar_enemyLife6" prefHeight="20.0" prefWidth="100.0" progress="0.47" style="-fx-accent: red;" />
+            <Button fx:id="botton_enemy06" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" />
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ProgressBar fx:id="progressBar_enemyLife5" prefHeight="20.0" prefWidth="100.0" progress="0.47" style="-fx-accent: red;" />
+            <Button fx:id="botton_enemy05" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" />
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ProgressBar fx:id="progressBar_enemyLife4" prefHeight="20.0" prefWidth="100.0" progress="0.47" style="-fx-accent: red;" />
+            <Button fx:id="botton_enemy04" mnemonicParsing="false" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" />
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ProgressBar fx:id="progressBar_enemyLife3" prefHeight="20.0" prefWidth="100.0" progress="0.47" style="-fx-accent: red;" />
+            <Button fx:id="botton_enemy03" mnemonicParsing="false" onAction="#selectEnemy2" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" />
+         </children>
+      </VBox>
+      <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ProgressBar fx:id="progressBar_enemyLife2" prefHeight="20.0" prefWidth="100.0" progress="0.47" style="-fx-accent: red;" />
+            <Button fx:id="botton_enemy02" mnemonicParsing="false" onAction="#selectEnemy1" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" />
+         </children>
+      </VBox>
+      <VBox fx:id="vBox_enemy1" layoutX="300.0" layoutY="200.0" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <ProgressBar fx:id="progressBar_enemyLife1" prefHeight="20.0" prefWidth="100.0" progress="0.47" style="-fx-accent: red;" />
+            <Button fx:id="botton_enemy01" mnemonicParsing="false" onAction="#selectEnemy" prefHeight="120.0" prefWidth="120.0" style="-fx-background-image: url(&quot;/iu/character/others/batedor_batlle.png&quot;); -fx-background-repeat: no-repeat; -fx-background-color: rgba(0, 0, 0, 0); -fx-background-size: cover;" />
+         </children>
+      </VBox>
    </children>
 </AnchorPane>

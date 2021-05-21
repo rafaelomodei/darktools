@@ -72,8 +72,8 @@ public class HistorieControllerViwer implements Initializable, Observer {
     
     private Effect gaussianBlur = new GaussianBlur();
     
-    private String SCENE_URL =  getClass().getResource("/iu/img/image_03.png").toString();
-    private String CHARATER_URL =  getClass().getResource("/iu/img/acher_self.png").toString();
+    private String SCENE_URL =  getClass().getResource("/iu/img/ogro1.png").toString();
+    private String CHARATER_URL =  getClass().getResource("/iu/img/goblin4_self.png").toString();
     private Image imgScene;
     private Image imgCharacter;
 
