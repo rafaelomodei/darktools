@@ -42,8 +42,6 @@ public class HomeControllerViwer implements Initializable {
 
     @FXML
     private Button button_start;
-
-   
     
     @FXML
     private Button btn_start;
@@ -77,6 +75,12 @@ public class HomeControllerViwer implements Initializable {
     }
     
     @FXML
+    private void loadGamePage() throws IOException {
+        ViwerController viwerController = ViwerController.getStante();
+        viwerController.setRoot("Save");
+    }
+    
+    @FXML
     void switchToWindowCredits() throws IOException {
         try{
             ViwerController viwerController = ViwerController.getStante();
@@ -89,8 +93,7 @@ public class HomeControllerViwer implements Initializable {
     @FXML
     void switchToWindowExit() throws IOException {
         try{
-            ViwerController viwerController = ViwerController.getStante();
-            viwerController.setRoot("Historie");
+            System.exit(0);
         }catch(Exception e){
             System.out.println("Erro: " + e);
         }
