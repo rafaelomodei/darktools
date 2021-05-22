@@ -19,14 +19,19 @@ public class BoardBR {
     private BoardDAO boardDao;
     
     public BoardBR(){
-        boardDao = new BoardDAOImpl();
+        try {
+            boardDao = new BoardDAOImpl();
+        } catch (Exception e) {
+            System.out.println("Problema no BoardBR "+e);
+        }
+        
     }
     
     public void Save(Board board){
         try {
             boardDao.save(board);
         } catch (HibernateException he) {
-            System.out.println("Erro in to save Skill class :"+he);
+            System.out.println("Erro in to save Board class :"+he);
         }
     }
     
@@ -34,7 +39,7 @@ public class BoardBR {
         try {
             boardDao.update(board);
         } catch (HibernateException he) {
-            System.out.println("Erro in to upgrade Skill class :"+he);
+            System.out.println("Erro in to upgrade Board class :"+he);
         }
     }
     
@@ -42,7 +47,7 @@ public class BoardBR {
         try {
             boardDao.delete(board);
         } catch (HibernateException he) {
-            System.out.println("Erro in to delete Skill class :"+he);
+            System.out.println("Erro in to delete Board class :"+he);
         }
     }
     

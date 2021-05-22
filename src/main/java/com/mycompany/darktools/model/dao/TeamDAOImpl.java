@@ -19,7 +19,7 @@ public class TeamDAOImpl implements TeamDAO{
     EntityManager manager;
     
     public TeamDAOImpl(){
-       manager = (EntityManager) ConectionHibernate.getInstance();
+        manager = (EntityManager) ConectionHibernate.getInstance();
     }
     
     @Override

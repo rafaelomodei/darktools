@@ -12,16 +12,68 @@ import java.util.List;
  * @author acer
  */
 public class ScriptSegment {
+    String id;
     TeamTurn turnSide;
-    List<String> messages;
-    List<String> voicesPath;
+    String whoSpeaks;
+    List<String> words;
+    List<String> wordsSongsPath;
     List<String> commands;
+    String scenario;
+    List<String> showButton;
+    List<String> routes;
+    List<String> enemies;
 
-    public ScriptSegment(TeamTurn turnSide, List<String> messages, List<String> voicesPath, List<String> commands) {
+    public ScriptSegment(String id, TeamTurn turnSide, String whoSpeaks, List<String> words, List<String> wordsSongsPath, List<String> commands, String scenario, List<String> showButton, List<String> routes, List<String> enemies) {
+        this.id = id;
         this.turnSide = turnSide;
-        this.messages = messages;
-        this.voicesPath = voicesPath;
+        this.whoSpeaks = whoSpeaks;
+        this.words = words;
+        this.wordsSongsPath = wordsSongsPath;
         this.commands = commands;
+        this.scenario = scenario;
+        this.showButton = showButton;
+        this.routes = routes;
+        this.enemies = enemies;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public TeamTurn getTurnSide() {
+        return turnSide;
+    }
+
+    public String getWhoSpeaks() {
+        return whoSpeaks;
+    }
+
+    public List<String> getWords() {
+        return words;
+    }
+
+    public List<String> getCommands() {
+        return commands;
+    }
+
+    public String getScenario() {
+        return scenario;
+    }
+
+    public List<String> getShowButton() {
+        return showButton;
+    }
+
+    public List<String> getRoutes() {
+        return routes;
+    }
+
+    public List<String> getWordsSongsPath() {
+        return wordsSongsPath;
+    }
+
+    public List<String> getEnemies() {
+        return enemies;
     }
     
     

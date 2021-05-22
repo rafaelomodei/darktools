@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.LoadingControllerViwer">
+   <children>
+      <BorderPane fx:id="bp_background" layoutY="-360.0" prefHeight="720.0" prefWidth="1280.0">
+         <center>
+            <ImageView fx:id="imgv_background" fitHeight="720.0" fitWidth="1280.0" pickOnBounds="true" preserveRatio="true" y="-360.0" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <BorderPane id="md_loading" fx:id="bp_loading" layoutX="1087.0" layoutY="524.0" maxHeight="150.0" maxWidth="150.0" minHeight="150.0" minWidth="150.0" prefHeight="150.0" prefWidth="150.0" style="-fx-background-size: 150;" styleClass="md_loading" stylesheets="@Loading.css" AnchorPane.bottomAnchor="40.0" AnchorPane.rightAnchor="40.0">
+         <center>
+            <MediaView id="md_loading" fx:id="md_loading" fitHeight="150.0" fitWidth="150.0" styleClass="md_loading" BorderPane.alignment="CENTER">
+               <viewport>
+                  <Rectangle2D height="150.0" minX="150.0" minY="150.0" width="150.0" />
+               </viewport></MediaView>
+         </center>
+      </BorderPane>
+      <Label fx:id="lb_title" layoutX="92.0" layoutY="508.0" prefHeight="54.0" prefWidth="641.0" text="Title" textFill="WHITE" AnchorPane.leftAnchor="40.0">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.5017301440238953" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+      <Line endX="523.4000244140625" layoutX="159.0" layoutY="569.0" startX="-116.59999084472656">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Label fx:id="lb_description" alignment="TOP_LEFT" layoutX="42.0" layoutY="586.0" lineSpacing="2.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="108.0" prefWidth="726.0" text="Label nvkjndfjvnsjdfnvjsdnfjv vklsndfvnsdn sdsdn sdk nsfndjsnvsjdn jsndjf nsdfnvjsndfvnsd  njsdkfn s nvksdnfk js ksdnj nv nskd nksdfn jnsdfjvnjdfnvksd ajnsdkjnasjdn ajn janfj njadfn jknadjk nkdnf kjndfjvnakjdfn jand kandfkn adfk ndn kad" textAlignment="JUSTIFY" textFill="WHITE" textOverrun="CLIP" wrapText="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>

@@ -75,6 +75,9 @@ public class Board {
     @Temporal (TemporalType.TIMESTAMP)
     Date dateSave; //data e horário desse save
     
+    @Transient
+    ScriptSegment currentScriptSegment;
+    
     @Column(name = "segmentStoppedId", length = 15, nullable = false)
     String segmentStoppedId;
 
@@ -189,6 +192,14 @@ public class Board {
 
     public void setSegmentStoppedId(String segmentStoppedId) {
         this.segmentStoppedId = segmentStoppedId;
+    }
+
+    public ScriptSegment getCurrentScriptSegment() {
+        return currentScriptSegment;
+    }
+
+    public void setCurrentScriptSegment(ScriptSegment currentScriptSegment) {
+        this.currentScriptSegment = currentScriptSegment;
     }
     
     

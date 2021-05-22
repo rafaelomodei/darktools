@@ -1,4 +1,4 @@
-<h1 align="center"> Trabalho final da disciplina Linguagem de Programação Objeto Orientada </h1>
+<h1 align="center"> Trabalho final da disciplina Linguagem de Programação Objeto Orientada a</h1>
 
 
 ## Sumário

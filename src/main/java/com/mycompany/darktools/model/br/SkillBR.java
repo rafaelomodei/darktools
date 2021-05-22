@@ -50,12 +50,12 @@ public class SkillBR {
         return skillDao.listAll();
     }
     
-    public void saveAll(List Skills){
-        skillDao.saveAll(Skills);
+    public void saveAll(List<Skill> skills){
+        skillDao.saveAll(skills);
     }
     
-    public void UpgradeAll(List Skills){
-        List<Skill> slist = Skills;
+    public void UpgradeAll(List<Skill> skills){
+        List<Skill> slist = skills;
         try {
             for(Skill s : slist){
                 Upgrade(s);

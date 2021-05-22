@@ -31,23 +31,70 @@ public class Personage {
     private Long id;
     
     @Transient
+    private String NPCid;
+    
+    @Column(name = "isalive")
+    boolean isAlive;
+    
+    @Column(name = "isactivetobattle")
+    boolean isActiveToBattle;
+    
+    @Transient
     float life;
+    
+    @Transient
+    float maxlife;
     
     @Column(name = "name", nullable = false)
     String name;
     
     @ManyToMany
     List<Skill> skills;
-    
-    @Column(name = "imagepath", nullable = false, unique = true)
-    String imagePath;
 
-    public Personage(String name, List skills, String imagePath) {
+    @Transient
+    String pathImageFace;
+    
+    @Transient
+    String pathImageBody;
+    
+    /**
+     * Contrutor do Personage para o usuário
+     * @param name Nome do perosnagem
+     * @param maxlife Vida máxima do jogador
+     * @param skills Lista de habilidades
+     * @param pathImageFace Caminho onde se encontra a imagem de rosto
+     * @param pathImageBody Caminho onde se econtra a imagem de corpo
+     */
+    public Personage(String name, float maxlife,List skills, String pathImageFace, String pathImageBody) {
         this.name = name;
         this.skills = skills;
-        this.imagePath = imagePath;
+        this.pathImageFace = pathImageFace;
+        this.pathImageBody = pathImageBody;
+        this.maxlife = maxlife;
+        this.life = this.maxlife;
+        this.isAlive = true;
+        this.isActiveToBattle = true;
     }
 
+    /**
+     * Contrutos para NPC (Personagens não jogáveis)
+     * @param NPCid Id do NPC
+     * @param name Nome
+     * @param skills Lista de Skill, com as habilidades
+     * @param pathImageBody Caminho onde se encontra a imagem de corpo do personagem
+     * @param pathImageFace Caminho onde se encontra a imagem de rosto do personagem
+     */
+    public Personage(String NPCid ,String name, float life, List skills, String pathImageFace, String pathImageBody){
+        this.NPCid = NPCid;
+        this.name = name;
+        this.life = life;
+        this.maxlife = life;
+        this.isAlive = true;
+        this.isActiveToBattle = true;
+        this.skills = skills;
+        this.pathImageFace = pathImageFace;
+        this.pathImageBody = pathImageBody;
+    }
     
     
     public float getLife() {
@@ -74,12 +121,40 @@ public class Personage {
         this.skills = skills;
     }
 
-    public String getImagePath() {
-        return imagePath;
+    public String getPathImageFace() {
+        return pathImageFace;
     }
 
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
+    public String getPathImageBody() {
+        return pathImageBody;
+    }
+
+    public String getNPCid() {
+        return NPCid;
+    }
+
+    public void setNPCid(String NPCid) {
+        this.NPCid = NPCid;
+    }
+
+    public boolean isIsAlive() {
+        return isAlive;
+    }
+
+    public void setIsAlive(boolean isAlive) {
+        this.isAlive = isAlive;
+    }
+
+    public boolean isIsActiveToBattle() {
+        return isActiveToBattle;
+    }
+
+    public void setIsActiveToBattle(boolean isActiveToBattle) {
+        this.isActiveToBattle = isActiveToBattle;
+    }
+
+    public float getMaxlife() {
+        return maxlife;
     }
     
     
