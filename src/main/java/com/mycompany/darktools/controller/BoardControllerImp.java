@@ -61,13 +61,16 @@ public class BoardControllerImp extends Observable implements BoardController {
         this.board = board;
     }
     
-    
     @Override
     public void inicialize() {
+        
+        
         boardBR = new BoardBR();
-        personageBR = new PersonageBR();
-        skillBR = new SkillBR();
-        teamBR = new TeamBR();
+        //personageBR = new PersonageBR();
+        //skillBR = new SkillBR();
+        //teamBR = new TeamBR();
+        
+        
     }
     
     /**
@@ -132,13 +135,13 @@ public class BoardControllerImp extends Observable implements BoardController {
     
     /**
      * Função que inicializa a classe board que o jogo irá utilizar para manupular dados.
-     * O começo do game inicia com dados padrões, assim que for realizado o primero salvamento, os dados serão alterados.
+     * @param nameSave Nome do save
      */
     @Override
-    public void startGame(){
+    public void startGame(String saveName){
         ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
         
-        Board board = new Board(createDefaulTeam(), 10000, "default", "0a");//mudar para rota "0a"
+        Board board = new Board(createDefaulTeam(), 10000, saveName, "0a");//mudar para rota "0a"
         
         board.setScriptSegments(scriptSegmentController.getScriptSegments());
         
@@ -166,9 +169,9 @@ public class BoardControllerImp extends Observable implements BoardController {
         List<Skill> skillList2 = new ArrayList<Skill>();
         skillList2.add(skill3);
         
-        Personage personage0 = new Personage("Guerreiro", 100, skillList, "/iu/batlle/character.png", "/iu/character/warrior/guerreiro_back_batlle.png");
-        Personage personage1 = new Personage("Arqueiro", 100, skillList1, "/iu/batlle/character.png","/iu/character/acher/acher_back_battle.png");
-        Personage personage2 = new Personage("Mago", 100, skillList2, "/iu/batlle/character.png","/iu/character/mage/mago_back_batlle.png");
+        Personage personage0 = new Personage("Guerreiro", 100, skillList, "/iu/victus_self.png", "/iu/character/warrior/guerreiro_back_batlle.png");
+        Personage personage1 = new Personage("Arqueiro", 100, skillList1, "/iu/arletics_self.png","/iu/character/acher/acher_back_battle.png");
+        Personage personage2 = new Personage("Mago", 100, skillList2, "/iu/davi_self.png","/iu/character/mage/mago_back_batlle.png");
         
         List<Personage> personages = new ArrayList<Personage>();
         personages.add(personage0);
@@ -234,7 +237,10 @@ public class BoardControllerImp extends Observable implements BoardController {
                 
             } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD20")){
                 System.out.println("Rolar dado D20");
-            }else {
+            }else if(board.getCurrentScriptSegment().getCommands().contains("creditos")){
+                setChanged();
+                notifyObservers("endGame");
+            } else {
                 goToNextScriptSegment(0);
             }
         }

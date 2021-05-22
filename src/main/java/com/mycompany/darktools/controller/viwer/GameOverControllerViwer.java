@@ -41,7 +41,7 @@ public class GameOverControllerViwer implements Initializable {
 
     
     @FXML
-    private void switchToWindow() throws IOException {
+    private void switchToWindowCredits() throws IOException {
         ViwerController viwerController = ViwerController.getStante();
         viwerController.setRoot("Credits");
     }

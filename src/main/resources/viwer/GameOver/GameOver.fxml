@@ -37,7 +37,7 @@
          <bottom>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="button_credits" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindow" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgba(244, 244, 244, 0);" text="Créditos" textAlignment="CENTER" textFill="WHITE">
+                  <Button fx:id="button_credits" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#switchToWindowCredits" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: rgba(244, 244, 244, 0);" text="Créditos" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>

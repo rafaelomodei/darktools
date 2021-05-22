@@ -1753,7 +1753,7 @@
             ""
         ],
         "routes": [
-            "15.0"
+            "15.0a"
         ]
     },
     {
@@ -2458,6 +2458,9 @@
             "Algumas pessoas conseguiram deixar o planeta!",
             "Os que ficaram, lutaram inutilmente contra o Dragão e morreram",
             "O planeta inteiro foi dizimado!"
+        ],
+        "commands": [
+            "creditos"
         ],
         "scenario": [
             "destruicaoTotal"

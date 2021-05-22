@@ -7,10 +7,7 @@ package com.mycompany.darktools.model.vo;
 
 import java.util.List;
 
-/**
- *
- * @author acer
- */
+
 public class Map {
     List<Scenario> scenarios;
     String imagePath;

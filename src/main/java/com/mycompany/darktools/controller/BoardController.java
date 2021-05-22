@@ -28,7 +28,7 @@ public interface BoardController {
     
     void upgradeSave(Board board);
     
-    void startGame();
+    void startGame(String saveName);
     
     void goToNextScriptSegment(int choice);
     

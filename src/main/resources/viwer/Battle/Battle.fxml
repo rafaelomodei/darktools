@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -21,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.BattleControllerViwer">
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.darktools.controller.viwer.BattleControllerViwer">
     <stylesheets>
         <URL value="@battle.css" />
     </stylesheets>
@@ -99,7 +92,7 @@
                   </Label>
                   <ImageView fx:id="imageView_character" fitHeight="80.0" fitWidth="80.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../iu/batlle/character.png" />
+                        <Image url="@../../iu/img/victus_self.png" />
                      </image>
                   </ImageView>
                </children>
@@ -115,7 +108,7 @@
                   </Label>
                   <ImageView fx:id="imageView_character2" fitHeight="80.0" fitWidth="80.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../iu/batlle/character.png" />
+                        <Image url="@../../iu/img/arletics_self.png" />
                      </image>
                   </ImageView>
                </children>
@@ -131,7 +124,7 @@
                   </Label>
                   <ImageView fx:id="imageView_character1" fitHeight="80.0" fitWidth="80.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../iu/batlle/character.png" />
+                        <Image url="@../../iu/img/davi_self.png" />
                      </image>
                   </ImageView>
                </children>

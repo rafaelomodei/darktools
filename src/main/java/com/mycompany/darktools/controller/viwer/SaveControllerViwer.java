@@ -22,7 +22,6 @@ import javafx.scene.control.CheckBox;
  */
 public class SaveControllerViwer implements Initializable {
 
-    BoardControllerImp boardControllerImp = BoardControllerImp.getInstante();
     
     @FXML
     private CheckBox cb_Easy;
@@ -42,11 +41,10 @@ public class SaveControllerViwer implements Initializable {
     }    
     
     @FXML
-    private void startNewGame() throws IOException {
+    private void switchToNewGame() throws IOException {
         try{
-            boardControllerImp.startGame();//comeca o jogo tem que por em outro lugar e aqui tem que ficar uma função para dar continuidade ao sair das outras telas
             ViwerController viwerController = ViwerController.getStante();
-            viwerController.setRoot("Historie");
+            viwerController.setRoot("NewSave");
         }catch(Exception e){
             System.out.println("Erro: " + e);
         }
