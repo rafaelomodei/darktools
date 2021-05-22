@@ -65,7 +65,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void inicialize() {
         
         
-        boardBR = new BoardBR();
+        //boardBR = new BoardBR();
         //personageBR = new PersonageBR();
         //skillBR = new SkillBR();
         //teamBR = new TeamBR();
