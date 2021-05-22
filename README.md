@@ -20,11 +20,11 @@
 
 ### ✅ Features
 
-- [ ] layout UI
-- [ ] Criar cenas
-- [ ] Implementação da história
-- [ ] Salvar jogo
-- [ ] Persistir os dados no MYSQL
+- [x] layout UI
+- [x] Criar cenas
+- [x] Implementação da história
+- [x] Salvar jogo
+- [x] Persistir os dados no MYSQL
 
 
 ### ✅ Pré-requisitos e como rodar a aplicação
