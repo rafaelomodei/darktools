@@ -207,7 +207,7 @@
 		"pathimageface": "/iu/img/berylus_self.png"
 	},
 	{
-		"id": "umanakshumaná",
+		"id": "umanakshumana",
 		"name": "Umanakshumaná Deus da destruição",
 		"life": 8001.0,
 		"damage": 100.0,
@@ -217,7 +217,7 @@
 	},
 	{
 		"id": "master",
-		"name": "Fiffer",
+		"name": "Mestre",
 		"life": 8001.0,
 		"damage": 100.0,
 		"skill": "Livro",

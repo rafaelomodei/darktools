@@ -169,9 +169,9 @@ public class BoardControllerImp extends Observable implements BoardController {
         List<Skill> skillList2 = new ArrayList<Skill>();
         skillList2.add(skill3);
         
-        Personage personage0 = new Personage("Guerreiro", 100, skillList, "/iu/victus_self.png", "/iu/character/warrior/guerreiro_back_batlle.png");
-        Personage personage1 = new Personage("Arqueiro", 100, skillList1, "/iu/arletics_self.png","/iu/character/acher/acher_back_battle.png");
-        Personage personage2 = new Personage("Mago", 100, skillList2, "/iu/davi_self.png","/iu/character/mage/mago_back_batlle.png");
+        Personage personage0 = new Personage("Guerreiro", 100, skillList, "/iu/img/victus_self.png", "/iu/character/warrior/guerreiro_back_batlle.png");
+        Personage personage1 = new Personage("Arqueiro", 100, skillList1, "/iu/img/arletics_self.png","/iu/character/acher/acher_back_battle.png");
+        Personage personage2 = new Personage("Mago", 100, skillList2, "/iu/img/davi_self.png","/iu/character/mage/mago_back_batlle.png");
         
         List<Personage> personages = new ArrayList<Personage>();
         personages.add(personage0);
@@ -285,7 +285,7 @@ public class BoardControllerImp extends Observable implements BoardController {
             clip = new AudioClip(AUDIO_URL);
             clip.play();
         } catch (Exception e) {
-            //System.out.println("Sem arquivos de audio!");
+            System.out.println("Sem arquivos de audio!" + e);
         }
         
     }

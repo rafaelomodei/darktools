@@ -39,8 +39,12 @@ public class JsonTratament {
         
         for(JSONObject data: jsonObjects){
             //System.out.println("data :"+data.toString());
+            try{
+                scriptSegments.add(readScriptSegment(data));
+            }catch(Exception e){
+                   System.out.println("VAI SE FUDERRRRRRRRRRRRRRRRRRR" + e);
+            }
             
-            scriptSegments.add(readScriptSegment(data));
         }
         return scriptSegments;
     }
@@ -74,13 +78,14 @@ public class JsonTratament {
         } catch (Exception e) {
             enemies = null;
         }
-                
+        
+    
         ScriptSegment scriptSegment = new ScriptSegment(
                 (String) jsonObject.get("id"), //id
                 verifyTeamTurnInJsonBloc(jsonObject), //TurnSide
                 jsonObject.get("whoSpeaks") != null ? (String)jsonObject.get("whoSpeaks") : null, //whoSpeaks
                 parseJsonObjectToList(jsonObject,"words") != null ? parseJsonObjectToList(jsonObject,"words") : null, //words
-                parseJsonObjectToList(jsonObject, "wordsSongsPath") != null ? parseJsonObjectToList(jsonObject,"wordsSongsPath") : null, //wordsSongsPath
+                parseJsonObjectToList(jsonObject, "wordsSongs") != null ? parseJsonObjectToList(jsonObject,"wordsSongs") : null, //wordsSongsPath
                 parseJsonObjectToList(jsonObject,"commands") != null ? parseJsonObjectToList(jsonObject,"commands") : null,//commands
                 scenario,//scenario
                 showButtons,//showButton
