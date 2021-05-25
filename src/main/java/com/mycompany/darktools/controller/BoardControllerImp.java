@@ -198,51 +198,79 @@ public class BoardControllerImp extends Observable implements BoardController {
         
         hideButtons();
         readWord(currentWord);
-        reproduceAudio();
+        comportamentAntecipaded();
+        
     }
 
     /**
-     * Função que irá passando os textos de fala e filtrando de acordo com o commands
+     * Função que irá passando os textos de fala
      */
     @Override
     public void goToNextWord() {
         
         if (this.currentWord < board.getCurrentScriptSegment().getWords().size()-1){
             
-            this.currentWord++;
+            this.currentWord++; 
             readWord(currentWord);
-            reproduceAudio();
+            
+        } else { 
+            
+            comportamentsDesignation();
+            
+        }
+    }
+    
+    /**
+     * Função responsável por direcionar os comportamentos da interface de acordo com o que está escrito no "commands" do JSON da 
+     */
+    private void comportamentAntecipaded(){
+        if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
+            showButtons();
+            readWord(currentWord);
+            
+            System.out.println("Responda a pergunta!"); 
+        }
+    }
+    
+    /**
+     * Função responsável por direcionar os comportamentos da interface de acordo com o que está escrito no "commands" do JSON da história
+     */
+    private void comportamentsDesignation(){
+        
+        if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
+            showButtons();
+            readWord(currentWord);
+            
+            System.out.println("Responda a pergunta!"); 
+            
+        } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD6")) {
+            System.out.println("Momento do D6!");
+            readWord(currentWord);
+            
+            goToNextScriptSegment(ScriptSegmentConditions.rollDice6());
+            
+        } else if(board.getCurrentScriptSegment().getCommands().contains("Battle")){
+            System.out.println("Momento batalha!");
+
+            updateTeamEnemy();//Fazer mais testes!
+
+            setChanged();
+            notifyObservers("battle");
+
+            goToNextScriptSegment(0);
+            
+        } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD20")){
+            System.out.println("Rolar dado D20");
+            
+        }else if(board.getCurrentScriptSegment().getCommands().contains("creditos")){
+            setChanged();
+            notifyObservers("endGame");
+            
+        } else if(board.getCurrentScriptSegment().getCommands().contains("changeScenario")){
+            goToNextScriptSegment(0);
             
         } else {
-            
-            if(board.getCurrentScriptSegment().getCommands().contains("showButtons")){
-                showButtons();
-                readWord(currentWord);
-                reproduceAudio();
-                System.out.println("Responda a pergunta!");  
-            } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD6")) {
-                System.out.println("Momento do D6!");
-                readWord(currentWord);
-                reproduceAudio();
-                goToNextScriptSegment(ScriptSegmentConditions.rollDice6());
-            } else if(board.getCurrentScriptSegment().getCommands().contains("Battle")){
-                System.out.println("Momento batalha!");
-                
-                updateTeamEnemy();//Fazer mais testes!
-                
-                setChanged();
-                notifyObservers("battle");
-                
-                goToNextScriptSegment(0);
-                
-            } else if(board.getCurrentScriptSegment().getCommands().contains("RollDiceD20")){
-                System.out.println("Rolar dado D20");
-            }else if(board.getCurrentScriptSegment().getCommands().contains("creditos")){
-                setChanged();
-                notifyObservers("endGame");
-            } else {
-                goToNextScriptSegment(0);
-            }
+            goToNextScriptSegment(0);
         }
     }
 
@@ -253,7 +281,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void readWord(int currentWord){
 
         System.out.println("Esse scriptSegment e o : "+board.getCurrentScriptSegment().getId());
-                
+        
         Hashtable<String, String> my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
         my_dict.put("word", board.getCurrentScriptSegment().getWords().get(this.currentWord));
         setChanged();
@@ -269,6 +297,8 @@ public class BoardControllerImp extends Observable implements BoardController {
         
         setChanged();
         notifyObservers(my_dict);
+        
+        reproduceAudio();
 
     }
     
@@ -285,7 +315,7 @@ public class BoardControllerImp extends Observable implements BoardController {
             clip = new AudioClip(AUDIO_URL);
             clip.play();
         } catch (Exception e) {
-            System.out.println("Sem arquivos de audio!" + e);
+            System.out.println("Sem arquivos de audio! " + e);
         }
         
     }
@@ -306,7 +336,6 @@ public class BoardControllerImp extends Observable implements BoardController {
         my_dict.put("showButtons", (ArrayList<String>) board.getCurrentScriptSegment().getShowButton());
         setChanged();
         notifyObservers(my_dict);
-        
     }
    
     /**
