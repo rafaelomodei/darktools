@@ -38,17 +38,16 @@ public class BattleController extends Observable{
     
     /**
      * Função que realizará as acoes do turno do jogador
-     * @param personageGoToAttack Personage do time do jogador que irá atacar
      * @param skillUsed Habilidade usada
      * @param personageToBeAttacked Personagem que será atacado
      */
-    public void battleTurn(int personageGoToAttack, int skillUsed, int personageToBeAttacked){
+    public void battleTurn(int skillUsed, int personageToBeAttacked){
         
         if(teamTurn == TeamTurn.Player){
             
             boolean attacked;
             
-            attacked = attack(TeamPlayer.get(personageGoToAttack), TeamPlayer.get(personageGoToAttack).getSkills().get(skillUsed), TeamEnemy.get(personageToBeAttacked));
+            attacked = attack(TeamPlayer.get(whoIsAttackTeamPlayer), TeamPlayer.get(whoIsAttackTeamPlayer).getSkills().get(skillUsed), TeamEnemy.get(personageToBeAttacked));
             
             if(!attacked){
                 return;
@@ -59,25 +58,39 @@ public class BattleController extends Observable{
             
             if(whoIsAttackTeamPlayer == TeamPlayer.size()-1){
                 whoIsAttackTeamPlayer = 0;
+                
+                if(isTeamAlive(TeamEnemy) == false){
+                
+                    System.out.println("Time inimigo morto!");
+                    setChanged();
+                    notifyObservers("endbattle");
+                    teamTurn = TeamTurn.Neutral;
+                
+                } else {
+
+                    teamTurn = TeamTurn.Enemy;
+                    battleTurn();
+
+                }
+                
             } else {
-                whoIsAttackTeamPlayer++;
+                if(isTeamAlive(TeamEnemy) == false){
+                
+                    System.out.println("Time inimigo morto!");
+                    setChanged();
+                    notifyObservers("endbattle");
+                    teamTurn = TeamTurn.Neutral;
+                } else {
+                    whoIsAttackTeamPlayer++;
+                }
+                
             }
             
-            if(isTeamAlive(TeamEnemy) == false){
-                
-                System.out.println("Time inimigo morto!");
-                setChanged();
-                notifyObservers("endbattle");
-                teamTurn = TeamTurn.Neutral;
-                
-            } else {
-
-                teamTurn = TeamTurn.Enemy;
-                battleTurn();
-            }
+            
             
         } else {
             System.out.println("Não é sua vez de joga. Espere.");
+            battleTurn();
         }
     }
     
@@ -87,28 +100,31 @@ public class BattleController extends Observable{
     public void battleTurn(){
         
         if(teamTurn == TeamTurn.Enemy){
-            attack(TeamEnemy.get(whoIsAttackTeamEnemy), TeamEnemy.get(whoIsAttackTeamEnemy).getSkills().get(0), EnemyBasicIA());
-            
+            attack(TeamEnemy.get(whoIsAttackTeamEnemy), TeamEnemy.get(whoIsAttackTeamEnemy).getSkills().get(0), EnemyBasicIA());    
             if(whoIsAttackTeamEnemy == TeamEnemy.size()-1){
                 whoIsAttackTeamEnemy = 0;
+                if(isTeamAlive(TeamPlayer) == true){
+                    teamTurn = TeamTurn.Player;
+                    System.out.println("Vez do jogador atacar!");
+                } else {
+                    System.out.println("Time do jogador morto!");
+                    setChanged();
+                    notifyObservers("losegame");
+                }
             } else {
                 whoIsAttackTeamEnemy++;
-            }
-            
-            updateIsAliveTeam(TeamPlayer);
-            setChanged();
-            notifyObservers("updateTurn");
-            
-            if(isTeamAlive(TeamPlayer) == true){
-                teamTurn = TeamTurn.Player;
-                System.out.println("Vez do jogador atacar!");
-            } else {
-                System.out.println("Time do jogador morto!");
+                updateIsAliveTeam(TeamPlayer);
                 setChanged();
-                notifyObservers("losegame");
+                notifyObservers("updateTurn");
+                
+                if(isTeamAlive(TeamPlayer) == false){
+                    System.out.println("Time do jogador morto!");
+                    setChanged();
+                    notifyObservers("losegame");
+                } else {
+                    battleTurn();
+                }
             }
-            
-            
         }
     }
     
@@ -162,7 +178,7 @@ public class BattleController extends Observable{
     private void updateIsAliveTeam(List<Personage> team){
         for(int i = 0; i<team.size(); i++){
             Personage personage = team.get(i);
-            System.out.println("Personagem "+team.get(i).getName()+" contem "+team.get(i).getLife()+" de vida -----");
+            System.out.println("Personagem "+team.get(i).getName()+" contem "+team.get(i).getLife()+" de vida");
             if(personage.getLife() <= 0 && personage.isIsAlive() == true){
                 killPersonage(personage);
             }

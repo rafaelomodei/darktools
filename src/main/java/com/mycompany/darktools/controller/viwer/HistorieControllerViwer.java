@@ -135,32 +135,38 @@ public class HistorieControllerViwer implements Initializable, Observer {
     /** Essas funções deve ser retiradas!**/
     @FXML
     private void buttonOption0(){
-        boardControllerImp.goToNextScriptSegment(0); 
+        boardControllerImp.goToNextScriptSegment(0);
+        setTextInButtonNext("Próximo");
     }
     
     @FXML
     private void buttonOption1(){
         boardControllerImp.goToNextScriptSegment(1); 
+        setTextInButtonNext("Próximo");
     }
     
     @FXML
     private void buttonOption2(){
-        boardControllerImp.goToNextScriptSegment(2); 
+        boardControllerImp.goToNextScriptSegment(2);
+        setTextInButtonNext("Próximo");
     }
     
     @FXML
     private void buttonOption3(){
-        boardControllerImp.goToNextScriptSegment(3); 
+        boardControllerImp.goToNextScriptSegment(3);
+        setTextInButtonNext("Próximo");
     }
     
     @FXML
     private void buttonOption4(){
         boardControllerImp.goToNextScriptSegment(4); 
+        setTextInButtonNext("Próximo");
     }
     
     @FXML
     private void buttonOption5(){
-        boardControllerImp.goToNextScriptSegment(5); 
+        boardControllerImp.goToNextScriptSegment(5);
+        setTextInButtonNext("Próximo");
     }
     
     @FXML
@@ -238,6 +244,10 @@ public class HistorieControllerViwer implements Initializable, Observer {
         
     }
     
+    private void setTextInButtonNext(String text){
+        button_next.setText(text);
+    }
+    
     /**
      * Função que esconde os botões
      */
@@ -281,6 +291,7 @@ public class HistorieControllerViwer implements Initializable, Observer {
             }
             if(map.containsKey("showButtons")){
                 showButtons((List) map.get("showButtons"));
+                setTextInButtonNext("Repetir");
             }
             if(map.containsKey("pathimageface")){
                 setImageFace((String)map.get("pathimageface"));

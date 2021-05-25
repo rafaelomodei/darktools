@@ -226,7 +226,7 @@ public class BattleControllerViwer implements Initializable, Observer {
         selectedSkill = "0";
         
         if(selectedEnemyToAttack != null){
-            battleController.battleTurn(0,0,Integer.parseInt(selectedEnemyToAttack));
+            battleController.battleTurn(0,Integer.parseInt(selectedEnemyToAttack));
             setConsoleText("Inimigo atacado!");
             selectedSkill = null;
             selectedEnemyToAttack = null;
