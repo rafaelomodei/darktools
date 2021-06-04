@@ -10,7 +10,6 @@ import com.mycompany.darktools.model.dao.PersonageDAOImpl;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import java.util.List;
-import org.hibernate.HibernateException;
 
 /**
  *
@@ -26,7 +25,7 @@ public class PersonageBR {
     public void Save(Personage personage){
         try {
             personageDao.save(personage);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to save Personage class :"+he);
         }
     }
@@ -34,7 +33,7 @@ public class PersonageBR {
     public void Upgrade(Personage personage){
         try {
             personageDao.update(personage);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to upgrade Personage class :"+he);
         }
     }
@@ -42,7 +41,7 @@ public class PersonageBR {
     public void Delete(Personage personage){
         try {
             personageDao.delete(personage);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to delete Personage class :"+he);
         }
     }

@@ -9,7 +9,6 @@ import com.mycompany.darktools.model.dao.BoardDAO;
 import com.mycompany.darktools.model.dao.BoardDAOImpl;
 import com.mycompany.darktools.model.vo.Board;
 import java.util.List;
-import org.hibernate.HibernateException;
 
 /**
  *
@@ -30,7 +29,7 @@ public class BoardBR {
     public void Save(Board board){
         try {
             boardDao.save(board);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to save Board class :"+he);
         }
     }
@@ -38,7 +37,7 @@ public class BoardBR {
     public void Upgrade(Board board){
         try {
             boardDao.update(board);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to upgrade Board class :"+he);
         }
     }
@@ -46,7 +45,7 @@ public class BoardBR {
     public void Delete(Board board){
         try {
             boardDao.delete(board);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to delete Board class :"+he);
         }
     }

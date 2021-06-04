@@ -7,10 +7,6 @@ package com.mycompany.darktools.model.vo;
 
 import java.util.List;
 
-/**
- *
- * @author acer
- */
 public class ScriptSegment {
     String id;
     TeamTurn turnSide;

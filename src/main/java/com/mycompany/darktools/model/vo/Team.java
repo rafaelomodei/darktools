@@ -6,41 +6,18 @@
 package com.mycompany.darktools.model.vo;
 
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
 
-/**
- *
- * @author acer
- */
-@Entity
-@Table(name = "Team")
 public class Team {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    
     private Long id;
     
-    @OneToMany
-    @JoinTable(name = "PERSONAGE_LIST",
-            joinColumns=@JoinColumn(name = "TEAM_ID"),
-            inverseJoinColumns=@JoinColumn(name = "PERSONAGE_ID"))
     List<Personage> personages;
    
-    @Column(name = "money", nullable = false)
     Double money;
 
     public Team() {
     }
     
-
     public Team(List<Personage> personages, Double money) {
         this.personages = personages;
         this.money = money;

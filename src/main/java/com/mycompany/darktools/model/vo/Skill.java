@@ -5,29 +5,12 @@
  */
 package com.mycompany.darktools.model.vo;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-/**
- *
- * @author acer
- */
-@Entity
-@Table(name = "Skill")//noem que essa classe irá ter como tabela lá no banco
 public class Skill {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    
     private Long id;
     
-    @Column(name = "damage", nullable = false, precision = 3)
     float damage;
     
-    @Column(name = "name", nullable = false)
     String name;
 
     public Skill(String name, float damage) {

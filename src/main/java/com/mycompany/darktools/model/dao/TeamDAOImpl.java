@@ -8,39 +8,37 @@ package com.mycompany.darktools.model.dao;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
 import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 
 /**
  *
  * @author acer
  */
 public class TeamDAOImpl implements TeamDAO{
-    EntityManager manager;
+//    EntityManager manager;
     
     public TeamDAOImpl(){
-        manager = (EntityManager) ConectionHibernate.getInstance();
+        //manager = (EntityManager) ConectionHibernate.getInstance();
     }
     
     @Override
     public void save(Team team) {
-        manager.getTransaction().begin();
-        manager.persist(team);
-        manager.getTransaction().commit();
+//        manager.getTransaction().begin();
+//        manager.persist(team);
+//        manager.getTransaction().commit();
     }
 
     @Override
     public void update(Team team) {
-        manager.getTransaction().begin();
-        manager.merge(team);
-        manager.getTransaction().commit();
+//        manager.getTransaction().begin();
+//        manager.merge(team);
+//        manager.getTransaction().commit();
     }
 
     @Override
     public void delete(Team team) {
-        manager.getTransaction().begin();
-        manager.remove(team);
-        manager.getTransaction().commit();
+//        manager.getTransaction().begin();
+//        manager.remove(team);
+//        manager.getTransaction().commit();
     }
 
 }

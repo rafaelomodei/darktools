@@ -9,7 +9,6 @@ import com.mycompany.darktools.model.dao.SkillDAO;
 import com.mycompany.darktools.model.dao.SkillDAOImpl;
 import com.mycompany.darktools.model.vo.Skill;
 import java.util.List;
-import org.hibernate.HibernateException;
 
 /**
  *
@@ -25,7 +24,7 @@ public class SkillBR {
     public void Save(Skill skill){
         try {
             skillDao.save(skill);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to save Skill class :"+he);
         }
     }
@@ -33,7 +32,7 @@ public class SkillBR {
     public void Upgrade(Skill skill){
         try {
             skillDao.update(skill);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to upgrade Skill class :"+he);
         }
     }
@@ -41,7 +40,7 @@ public class SkillBR {
     public void Delete(Skill skill){
         try {
             skillDao.delete(skill);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to delete Skill class :"+he);
         }
     }
