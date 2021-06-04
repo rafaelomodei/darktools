@@ -20,14 +20,13 @@ public class ScriptSegmentController {
     
     static ScriptSegmentController uniqueIndex;
     
-    public ScriptSegmentController(){
+    private ScriptSegmentController(){
         scriptSegments = readScriptSegments(readAllArraysInArchiveJSON("dados.json"));
         
     }
     
     public static ScriptSegmentController getInstante(){ 
         if(uniqueIndex == null){ //se não existir a instancia
-            System.out.println("fui criado!");
             uniqueIndex = new ScriptSegmentController(); //cria
         }
         return uniqueIndex;//se ela já existe, retorna a mesma

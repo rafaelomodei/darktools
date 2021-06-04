@@ -139,7 +139,7 @@ public class BoardControllerImp extends Observable implements BoardController {
      */
     @Override
     public void startGame(String saveName){
-        ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
+        ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstante();
         
         Board board = new Board(createDefaulTeam(), 10000, saveName, "0a");//mudar para rota "0a"
         
@@ -190,7 +190,7 @@ public class BoardControllerImp extends Observable implements BoardController {
      */
     @Override
     public void goToNextScriptSegment(int choice){
-        ScriptSegmentController scriptSegmentController = new ScriptSegmentController();
+        ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstante();
         
         board.setCurrentScriptSegment(scriptSegmentController.foundNextScriptSegment(board.getScriptSegments(), board.getCurrentScriptSegment(), choice));
         
