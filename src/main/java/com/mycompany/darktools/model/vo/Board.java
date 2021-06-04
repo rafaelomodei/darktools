@@ -7,27 +7,9 @@ package com.mycompany.darktools.model.vo;
 
 import java.util.Date;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.persistence.Transient;
 
-
-/**
- *
- * @author acer
- */
-@Entity
-@Table (name = "Board")
 public class Board {
-    @Transient
+    
     static Board uniqueIndex;
     
     public Board(){}
@@ -38,47 +20,31 @@ public class Board {
         }
         return uniqueIndex;//se ela já existe, retorna a mesma
     }
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+
     private Long id;
     
-    @Transient //não vira um campo no banco de dados
     GameState gameState;
     
-    @OneToOne
-    @JoinColumn(name = "TEAMPLAYER_ID")
     Team teamPlayer;
     
-    @Transient
     Team teamEnemy;
     
-    @Transient
     Scenario currentScenario;
     
-    @Transient
     List<ScriptSegment> scriptSegments;
     
-    @Transient
     TeamTurn turnSide;
     
-    @Column(name = "citypeoplesalive", nullable = false)
     Integer cityPeoplesAlive;
     
-    @Transient
     Map map;
     
-    @Column(name = "namesave", length = 15, nullable = false, unique = true)
     String nameSave;
     
-    @Temporal (TemporalType.TIMESTAMP)
-    Date dateSave; //data e horário desse save
+    Date dateSave;
     
-    @Transient
     ScriptSegment currentScriptSegment;
     
-    @Column(name = "segmentStoppedId", length = 15, nullable = false)
     String segmentStoppedId;
 
     public Board(Team teamPlayer, Integer cityPeoplesAlive, String nameSave, String segmentStoppedId) {
@@ -87,9 +53,7 @@ public class Board {
         this.nameSave = nameSave;
         this.segmentStoppedId = segmentStoppedId;
     }
-    
-    
-    
+     
     public GameState getGameState() {
         return gameState;
     }

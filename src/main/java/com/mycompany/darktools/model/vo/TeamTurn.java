@@ -5,10 +5,6 @@
  */
 package com.mycompany.darktools.model.vo;
 
-/**
- *
- * @author acer
- */
 public enum TeamTurn {
     Enemy,
     Player,

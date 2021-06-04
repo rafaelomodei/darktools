@@ -9,7 +9,6 @@ import com.mycompany.darktools.model.dao.TeamDAO;
 import com.mycompany.darktools.model.dao.TeamDAOImpl;
 import com.mycompany.darktools.model.vo.Team;
 import java.util.List;
-import org.hibernate.HibernateException;
 
 /**
  *
@@ -25,7 +24,7 @@ public class TeamBR {
     public void Save(Team team){
         try {
             teamDao.save(team);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to save Team class :"+he);
         }
     }
@@ -33,7 +32,7 @@ public class TeamBR {
     public void Upgrade(Team team){
         try {
             teamDao.update(team);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to upgrade Team class :"+he);
         }
     }
@@ -41,7 +40,7 @@ public class TeamBR {
     public void Delete(Team team){
         try {
             teamDao.delete(team);
-        } catch (HibernateException he) {
+        } catch (Exception he) {
             System.out.println("Erro in to delete Team class :"+he);
         }
     }

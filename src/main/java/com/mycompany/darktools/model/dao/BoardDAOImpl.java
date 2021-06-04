@@ -1,26 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.darktools.model.dao;
 
 import com.mycompany.darktools.model.vo.Board;
-import com.mycompany.darktools.model.vo.Skill;
+import java.util.ArrayList;
 import java.util.List;
-import javax.persistence.EntityManager;
-import javax.persistence.Query;
 
-/**
- *
- * @author acer
- */
+
 public class BoardDAOImpl implements BoardDAO{
-    EntityManager manager;
+//    EntityManager manager;
     
     public BoardDAOImpl(){
         try {
-            manager = ConectionHibernate.getInstance();
+            //manager = ConectionHibernate.getInstance();
         } catch (Exception e) {
             System.out.println("Erro no BoardDAOImpl "+e);
         }
@@ -29,30 +19,30 @@ public class BoardDAOImpl implements BoardDAO{
     
     @Override
     public void save(Board board) {
-        manager.getTransaction().begin();
-        manager.persist(board);
-        manager.getTransaction().commit();
+//        manager.getTransaction().begin();
+//        manager.persist(board);
+//        manager.getTransaction().commit();
     }
 
     @Override
     public void update(Board board) {
-        manager.getTransaction().begin();
-        manager.merge(board);
-        manager.getTransaction().commit();
+//        manager.getTransaction().begin();
+//        manager.merge(board);
+//        manager.getTransaction().commit();
     }
 
     @Override
     public void delete(Board board) {
-        manager.getTransaction().begin();
-        manager.remove(board);
-        manager.getTransaction().commit();
+//        manager.getTransaction().begin();
+//        manager.remove(board);
+//        manager.getTransaction().commit();
     }
     
     public List<Board> listAll(){
-        List<Board> boards;
+        List<Board> boards = new ArrayList();
         
-        Query query = manager.createQuery("Select b FROM Board b");
-        boards = query.getResultList();
+//        Query query = manager.createQuery("Select b FROM Board b");
+//        boards = query.getResultList();
         
         return boards;
     }

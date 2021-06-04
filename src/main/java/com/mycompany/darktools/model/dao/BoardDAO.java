@@ -8,10 +8,6 @@ package com.mycompany.darktools.model.dao;
 import com.mycompany.darktools.model.vo.Board;
 import java.util.List;
 
-/**
- *
- * @author acer
- */
 public interface BoardDAO {
     void save(Board board);
     

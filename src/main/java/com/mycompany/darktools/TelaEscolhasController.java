@@ -6,11 +6,8 @@
 package com.mycompany.darktools;
 
 import com.mycompany.darktools.controller.BoardControllerImp;
-import com.mycompany.darktools.controller.ScriptSegmentController;
-import com.mycompany.darktools.model.vo.ScriptSegment;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 import java.util.Observable;
@@ -20,7 +17,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.media.AudioClip;
 
 /**
  * FXML Controller class

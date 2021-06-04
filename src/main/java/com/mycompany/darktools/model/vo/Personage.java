@@ -6,55 +6,32 @@
 package com.mycompany.darktools.model.vo;
 
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Transient;
 
 /**
  *
  * @author acer
  */
-@Entity
-@Table (name = "Personage")
+
 public class Personage {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+
     private Long id;
     
-    @Transient
     private String NPCid;
-    
-    @Column(name = "isalive")
+
     boolean isAlive;
     
-    @Column(name = "isactivetobattle")
     boolean isActiveToBattle;
     
-    @Transient
     float life;
     
-    @Transient
     float maxlife;
     
-    @Column(name = "name", nullable = false)
     String name;
     
-    @ManyToMany
     List<Skill> skills;
 
-    @Transient
     String pathImageFace;
     
-    @Transient
     String pathImageBody;
     
     /**
@@ -77,7 +54,7 @@ public class Personage {
     }
 
     /**
-     * Contrutos para NPC (Personagens não jogáveis)
+     * Construtor para NPC (Personagens não jogáveis)
      * @param NPCid Id do NPC
      * @param name Nome
      * @param skills Lista de Skill, com as habilidades

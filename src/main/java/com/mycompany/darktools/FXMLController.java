@@ -2,7 +2,6 @@ package com.mycompany.darktools;
 
 import com.mycompany.darktools.controller.BoardController;
 import com.mycompany.darktools.controller.BoardControllerImp;
-import com.mycompany.darktools.model.dao.ConectionHibernate;
 import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
@@ -75,7 +74,7 @@ public class FXMLController implements Initializable {
             System.out.println("erro no salvamento = "+e);
         }   
         
-        ConectionHibernate.close();
+        
     }
     
     @FXML
@@ -103,7 +102,7 @@ public class FXMLController implements Initializable {
     private void deleteSaveButtonAction(ActionEvent event) {
         //boardController.deleteSave(board);
         boardControllerImp.deleteSave(board);
-        ConectionHibernate.close();
+        
     }
     
     @FXML
