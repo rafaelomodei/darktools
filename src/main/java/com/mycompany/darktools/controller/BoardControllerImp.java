@@ -13,7 +13,6 @@ import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
-import com.mycompany.darktools.utils.JsonTratament;
 import com.mycompany.darktools.utils.ScriptSegmentConditions;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -192,13 +191,17 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void goToNextScriptSegment(int choice){
         ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstante();
         
-        board.setCurrentScriptSegment(scriptSegmentController.foundNextScriptSegment(board.getScriptSegments(), board.getCurrentScriptSegment(), choice));
+        try {
+            board.setCurrentScriptSegment(scriptSegmentController.foundNextScriptSegment(board.getScriptSegments(), board.getCurrentScriptSegment(), choice));
+        } catch (Exception e) {
+            System.out.println("Erro no goToNextScriptSegment "+e);
+        }finally{
+            this.currentWord = 0;//vai para a fala inicial do scriptSegment
         
-        this.currentWord = 0;//vai para a fala inicial do scriptSegment
-        
-        hideButtons();
-        readWord(currentWord);
-        comportamentAntecipaded();
+            hideButtons();
+            readWord(currentWord);
+            comportamentAntecipaded();
+        }
         
     }
 
@@ -342,7 +345,10 @@ public class BoardControllerImp extends Observable implements BoardController {
      * Função que atualiza o time inimigo que irá batalhar com o jogador
      */
     private void updateTeamEnemy(){
-        List<Personage> enemiesList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        //List<Personage> enemiesList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        
+        List<Personage> enemiesList = PersonageController.getInstante().personages;
+        
         Team teamEnemy = new Team();
         List<Personage> selectecEnemiesList = new ArrayList<Personage>();
         //Tá pegando o mesmo?
@@ -371,7 +377,10 @@ public class BoardControllerImp extends Observable implements BoardController {
      * @return Retorna o personagem procurado
      */
     private Personage foundNPC(String id){
-        List<Personage> npcsList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        //List<Personage> npcsList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        
+        List<Personage> npcsList = PersonageController.getInstante().personages;
+        
         for(int i = 0; i<npcsList.size(); i++){
             if(npcsList.get(i).getNPCid().equals(id)){
                 return npcsList.get(i);
