@@ -1,5 +1,18 @@
-<h1 align="center"> Trabalho final da disciplina Linguagem de Programação Objeto Orientada a</h1>
+<div align="center">
+  <img src="./public/darktoolsImage1.PNG" width="70%">
+</div>
 
+## Sobre
+<p>Darktools é um jogo, que você decidirá como um trio de personagens irão agir durante uma aventura.</p><br>
+<div align="center">
+  <img src="./public/darktoolsImage2.PNG" width="65%">
+  <p> Suas decisões irão te levar ao sucesso ou ao fracasso.</p>
+</div>
+
+<div align="center">
+  <img src="./public/darktoolsImage3.PNG" width="65%">
+  <p>Possuí combate em turnos, que encontrada diversos animais e monstros durante a aventura.</p>
+</div>
 
 ## Sumário
 <!--ts-->
@@ -22,7 +35,7 @@
 - [x] layout UI
 - [x] Criar cenas
 - [x] Implementação da história
-- [x] Salvar jogo
+- [ ] Salvar jogo
 
 
 ### ✅ Pré-requisitos e como rodar a aplicação
