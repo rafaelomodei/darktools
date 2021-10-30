@@ -40,11 +40,11 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 
 <table align="center">
   <tr>
-    <td align="center"><a href="https://github.com/jefersoncmn"><img style="border-radius: 50%;" src="./github/jefersonphoto.jpeg" width="100px;" alt=""/><br/><sub><b>Jeferson Carlos Martin</b></sub></a><br /><a href="https://github.com/jefersoncmn" title="Jeferson Carlos Martin"></a>
+    <td align="center"><a href="https://github.com/jefersoncmn"><img style="border-radius: 50%;" src="./public/jefersonphoto.jpeg" width="100px;" alt=""/><br/><sub><b>Jeferson Carlos Martin</b></sub></a><br /><a href="https://github.com/jefersoncmn" title="Jeferson Carlos Martin"></a>
     </td>
-    <td align="center"><a href="https://github.com/pedro182haa"><img style="border-radius: 50%;" src="./github/pedrophoto.jfif" width="100px;" alt=""/><br/><sub><b>Pedro Henrique Alves dos Anjos</b></sub></a><br /><a href="https://github.com/pedro182haa" title="Pedro Henrique Alves dos Anjos"></a>
+    <td align="center"><a href="https://github.com/pedro182haa"><img style="border-radius: 50%;" src="./public/pedrophoto.jfif" width="100px;" alt=""/><br/><sub><b>Pedro Henrique Alves dos Anjos</b></sub></a><br /><a href="https://github.com/pedro182haa" title="Pedro Henrique Alves dos Anjos"></a>
     </td>
-    <td align="center"><a href="https://github.com/rafaelomodei"><img style="border-radius: 50%;" src="./github/rafaelphoto.jfif" width="100px;" alt=""/><br/><sub><b>Rafael Geovani Omodei</b></sub></a><br /><a href="https://github.com/rafaelomodei" title="Jeferson Carlos Martin"></a>
+    <td align="center"><a href="https://github.com/rafaelomodei"><img style="border-radius: 50%;" src="./public/rafaelphoto.jfif" width="100px;" alt=""/><br/><sub><b>Rafael Geovani Omodei</b></sub></a><br /><a href="https://github.com/rafaelomodei" title="Jeferson Carlos Martin"></a>
     </td>
 </table>
 
