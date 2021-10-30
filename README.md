@@ -3,10 +3,10 @@
 </div>
 
 ## Sobre
-<p>Darktools é um jogo, que você decidirá como um trio de personagens irão agir durante uma aventura.</p><br>
+<p>Darktools é um jogo que você decidirá como um trio de personagens irão agir durante uma aventura.</p><br>
 <div align="center">
   <img src="./public/darktoolsImage2.PNG" width="65%">
-  <p> Suas decisões irão te levar ao sucesso ou ao fracasso.</p>
+  <p> Suas decisões irão te levar ao sucesso ou fracasso.</p>
 </div>
 
 <div align="center">
