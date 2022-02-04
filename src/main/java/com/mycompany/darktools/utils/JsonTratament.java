@@ -22,6 +22,7 @@ import com.mycompany.darktools.model.vo.ScriptSegment;
 import com.mycompany.darktools.model.vo.Skill;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 
@@ -42,7 +43,7 @@ public class JsonTratament {
             try{
                 scriptSegments.add(readScriptSegment(data));
             }catch(Exception e){
-                   System.out.println("VAI SE FUDERRRRRRRRRRRRRRRRRRR" + e);
+                   System.out.println("Erro no tratamento do json" + e);
             }
             
         }
@@ -240,14 +241,15 @@ public class JsonTratament {
      * @param filePath Caminho do arquivo JSON que será lido
      * @return Retorna uma lista de JSONObject com os dados contidos no JSON
      */
-    public static List<JSONObject> readAllArraysInArchiveJSON(String filePath){
+    public List<JSONObject> readAllArraysInArchiveJSON(String filePath){
         
         List<JSONObject> jsonObjects = new ArrayList<JSONObject>();
         JSONParser parser = new JSONParser();//Variaveis que irao armazenar os dados do arquivo JSON
         
         try{
+            InputStream input = getClass().getResourceAsStream(filePath);
+            BufferedReader arqIn = new BufferedReader(new InputStreamReader(input,"UTF-8"));
             
-            BufferedReader arqIn = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "UTF-8"));
             JSONArray array = (JSONArray) parser.parse(arqIn);
             
             for(int i=0; i< array.size(); i++){

@@ -116,7 +116,7 @@ public class HistorieControllerViwer implements Initializable, Observer {
         setStateMenu(false);
         
         //boardControllerImp.goToNextWord();  
-        boardControllerImp.readWord(0);
+//        boardControllerImp.readWord(0);
         
         page.setOnKeyPressed(new EventHandler<KeyEvent>(){
             @Override

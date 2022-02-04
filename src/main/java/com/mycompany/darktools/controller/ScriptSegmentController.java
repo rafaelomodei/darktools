@@ -6,10 +6,9 @@
 package com.mycompany.darktools.controller;
 
 import com.mycompany.darktools.model.vo.ScriptSegment;
-import static com.mycompany.darktools.utils.JsonTratament.readAllArraysInArchiveJSON;
+import com.mycompany.darktools.utils.JsonTratament;
 import static com.mycompany.darktools.utils.JsonTratament.readScriptSegments;
 import java.util.List;
-import java.util.Scanner;
 
 /**
  * Controlador responsável pelo manuseio da lista de ScriptSegments.
@@ -21,7 +20,9 @@ public class ScriptSegmentController {
     static ScriptSegmentController uniqueIndex;
     
     private ScriptSegmentController(){
-        scriptSegments = readScriptSegments(readAllArraysInArchiveJSON("dados.json"));
+        JsonTratament jsonTratament = new JsonTratament();
+        
+        scriptSegments = readScriptSegments(jsonTratament.readAllArraysInArchiveJSON("/data/dados.json"));
         
     }
     

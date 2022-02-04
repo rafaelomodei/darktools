@@ -141,7 +141,7 @@ public class BoardControllerImp extends Observable implements BoardController {
     public void startGame(String saveName){
         ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstante();
         
-        Board board = new Board(createDefaulTeam(), 10000, saveName, "0a");//mudar para rota "0a"
+        Board board = new Board(createDefaulTeam(), 10000, saveName, "0a");
         
         board.setScriptSegments(scriptSegmentController.getScriptSegments());
         
@@ -342,7 +342,8 @@ public class BoardControllerImp extends Observable implements BoardController {
      * Função que atualiza o time inimigo que irá batalhar com o jogador
      */
     private void updateTeamEnemy(){
-        List<Personage> enemiesList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        JsonTratament jsonTratament = new JsonTratament();
+        List<Personage> enemiesList = JsonTratament.createAllNPCs(jsonTratament.readAllArraysInArchiveJSON("/data/characters.json"));
         Team teamEnemy = new Team();
         List<Personage> selectecEnemiesList = new ArrayList<Personage>();
         //Tá pegando o mesmo?
@@ -371,7 +372,8 @@ public class BoardControllerImp extends Observable implements BoardController {
      * @return Retorna o personagem procurado
      */
     private Personage foundNPC(String id){
-        List<Personage> npcsList = JsonTratament.createAllNPCs(JsonTratament.readAllArraysInArchiveJSON("characters.json"));
+        JsonTratament jsonTratament = new JsonTratament();
+        List<Personage> npcsList = JsonTratament.createAllNPCs(jsonTratament.readAllArraysInArchiveJSON("/data/characters.json"));
         for(int i = 0; i<npcsList.size(); i++){
             if(npcsList.get(i).getNPCid().equals(id)){
                 return npcsList.get(i);
