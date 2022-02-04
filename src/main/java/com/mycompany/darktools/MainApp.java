@@ -16,10 +16,8 @@ public class MainApp extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
- 
-        ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstante();
         
-        ViwerController.getStante().start(stage);
+        ViwerController.getInstance().start(stage);
     }
 
 

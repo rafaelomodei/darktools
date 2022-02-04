@@ -29,7 +29,7 @@ public class ViwerController {
     
     public ViwerController(){}
     
-    public static ViwerController getStante() throws IOException{
+    public static ViwerController getInstance() throws IOException{
         if(uniqueIndex == null){
            
             uniqueIndex = new ViwerController();

@@ -13,9 +13,10 @@ import com.mycompany.darktools.model.vo.Board;
 import com.mycompany.darktools.model.vo.Personage;
 import com.mycompany.darktools.model.vo.Skill;
 import com.mycompany.darktools.model.vo.Team;
-import com.mycompany.darktools.utils.JsonTratament;
+import com.mycompany.darktools.utils.JsonReader;
 import com.mycompany.darktools.utils.ScriptSegmentConditions;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Hashtable;
 import java.util.List;
 import javafx.scene.media.AudioClip;
@@ -59,6 +60,10 @@ public class BoardControllerImp extends Observable implements BoardController {
 
     public void setBoard(Board board) {
         this.board = board;
+    }
+
+    public int getCurrentWord() {
+        return currentWord;
     }
     
     @Override
@@ -139,7 +144,7 @@ public class BoardControllerImp extends Observable implements BoardController {
      */
     @Override
     public void startGame(String saveName){
-        ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstante();
+        ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstance();
         
         Board board = new Board(createDefaulTeam(), 10000, saveName, "0a");
         
@@ -190,7 +195,7 @@ public class BoardControllerImp extends Observable implements BoardController {
      */
     @Override
     public void goToNextScriptSegment(int choice){
-        ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstante();
+        ScriptSegmentController scriptSegmentController = ScriptSegmentController.getInstance();
         
         board.setCurrentScriptSegment(scriptSegmentController.foundNextScriptSegment(board.getScriptSegments(), board.getCurrentScriptSegment(), choice));
         
@@ -252,7 +257,7 @@ public class BoardControllerImp extends Observable implements BoardController {
         } else if(board.getCurrentScriptSegment().getCommands().contains("Battle")){
             System.out.println("Momento batalha!");
 
-            updateTeamEnemy();//Fazer mais testes!
+            InstantiateTeamEnemy();//Fazer mais testes!
 
             setChanged();
             notifyObservers("battle");
@@ -288,12 +293,12 @@ public class BoardControllerImp extends Observable implements BoardController {
         notifyObservers(my_dict);
         
         my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
-        my_dict.put("title", foundNPC(board.getCurrentScriptSegment().getWhoSpeaks()).getName());
+        my_dict.put("title", FoundNPC(board.getCurrentScriptSegment().getWhoSpeaks()).getName());
         setChanged();
         notifyObservers(my_dict);
         
         my_dict = new Hashtable<String, String>();//uso de map para ajudar na identificação no view
-        my_dict.put("pathimageface", foundNPC(board.getCurrentScriptSegment().getWhoSpeaks()).getPathImageFace());
+        my_dict.put("pathimageface", FoundNPC(board.getCurrentScriptSegment().getWhoSpeaks()).getPathImageFace());
         
         setChanged();
         notifyObservers(my_dict);
@@ -339,14 +344,14 @@ public class BoardControllerImp extends Observable implements BoardController {
     }
    
     /**
-     * Função que atualiza o time inimigo que irá batalhar com o jogador
+     * Função que cria o time inimigo que irá batalhar com o jogador
      */
-    private void updateTeamEnemy(){
-        JsonTratament jsonTratament = new JsonTratament();
-        List<Personage> enemiesList = JsonTratament.createAllNPCs(jsonTratament.readAllArraysInArchiveJSON("/data/characters.json"));
+    private void InstantiateTeamEnemy(){
+
+        List<Personage> enemiesList = new ArrayList<Personage>(PersonageController.getInstance().getPersonages());
         Team teamEnemy = new Team();
         List<Personage> selectecEnemiesList = new ArrayList<Personage>();
-        //Tá pegando o mesmo?
+        
         for(int i = 0; i < getBoard().getCurrentScriptSegment().getEnemies().size(); i++){
             Personage selectedPersonage = null;
             for(int y = 0; y < enemiesList.size(); y++){
@@ -371,9 +376,8 @@ public class BoardControllerImp extends Observable implements BoardController {
      * @param id Id do NPC
      * @return Retorna o personagem procurado
      */
-    private Personage foundNPC(String id){
-        JsonTratament jsonTratament = new JsonTratament();
-        List<Personage> npcsList = JsonTratament.createAllNPCs(jsonTratament.readAllArraysInArchiveJSON("/data/characters.json"));
+    private Personage FoundNPC(String id){
+        List<Personage> npcsList = PersonageController.getInstance().getPersonages();
         for(int i = 0; i<npcsList.size(); i++){
             if(npcsList.get(i).getNPCid().equals(id)){
                 return npcsList.get(i);

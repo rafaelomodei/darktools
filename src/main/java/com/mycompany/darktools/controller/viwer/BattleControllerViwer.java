@@ -7,9 +7,10 @@ package com.mycompany.darktools.controller.viwer;
 
 import com.mycompany.darktools.controller.BattleController;
 import com.mycompany.darktools.controller.BoardControllerImp;
+import com.mycompany.darktools.controller.PersonageController;
 import com.mycompany.darktools.controller.ViwerController;
 import com.mycompany.darktools.model.vo.Personage;
-import com.mycompany.darktools.utils.JsonTratament;
+import com.mycompany.darktools.utils.JsonReader;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -141,9 +142,9 @@ public class BattleControllerViwer implements Initializable, Observer {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        JsonTratament jsonTratament = new JsonTratament();
-        TeamEnemy = JsonTratament.createAllNPCs(jsonTratament.readAllArraysInArchiveJSON("/data/characters.json"));//Isso deverá ser colocado na classe que fará o controle de comportamento com o sistema do dado e depois direcionado pra cá
+        JsonReader jsonTratament = new JsonReader();
         
+        TeamEnemy = PersonageController.getInstance().getPersonages();
         List<Personage> TeamPlayer = boardControllerImp.getBoard().getTeamPlayer().getPersonages();//<-
         
         TeamEnemy = boardControllerImp.getBoard().getTeamEnemy().getPersonages();
@@ -402,7 +403,7 @@ public class BattleControllerViwer implements Initializable, Observer {
     @FXML
     private void switchToWindow(String screen) throws IOException {
         try{
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot(screen);
         }catch(Exception e){
             System.out.println("Erro ao acessar a tela "+ screen +" / "+e);

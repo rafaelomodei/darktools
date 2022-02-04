@@ -42,13 +42,13 @@ public class GameOverControllerViwer implements Initializable {
     
     @FXML
     private void switchToWindowCredits() throws IOException {
-        ViwerController viwerController = ViwerController.getStante();
+        ViwerController viwerController = ViwerController.getInstance();
         viwerController.setRoot("Credits");
     }
     
     @FXML
     private void switchToWindowBack() throws IOException {
-        ViwerController viwerController = ViwerController.getStante();
+        ViwerController viwerController = ViwerController.getInstance();
         viwerController.setRoot("Home");
     }
 

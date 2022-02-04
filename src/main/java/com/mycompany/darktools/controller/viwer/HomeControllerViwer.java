@@ -66,7 +66,7 @@ public class HomeControllerViwer implements Initializable {
     @FXML
     private void switchToNewGame() throws IOException {
         try{
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot("NewSave");
         }catch(Exception e){
             System.out.println("Erro: " + e);
@@ -75,14 +75,14 @@ public class HomeControllerViwer implements Initializable {
     
     @FXML
     private void loadGamePage() throws IOException {
-        ViwerController viwerController = ViwerController.getStante();
+        ViwerController viwerController = ViwerController.getInstance();
         viwerController.setRoot("Save");
     }
     
     @FXML
     void switchToWindowCredits() throws IOException {
         try{
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot("Credits");
         }catch(Exception e){
             System.out.println("Erro: " + e);

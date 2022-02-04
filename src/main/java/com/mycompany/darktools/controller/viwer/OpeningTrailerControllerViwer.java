@@ -52,7 +52,7 @@ public class OpeningTrailerControllerViwer implements Initializable {
     private void switchToWindow() throws IOException {
         try{
             mediaPlayer.stop();
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot("Home");
         }catch(Exception e){
             System.out.println("Erro: " + e);

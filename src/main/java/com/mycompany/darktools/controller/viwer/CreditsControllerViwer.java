@@ -38,7 +38,7 @@ public class CreditsControllerViwer implements Initializable {
     
         @FXML
     private void switchToWindow() throws IOException {
-        ViwerController viwerController = ViwerController.getStante();
+        ViwerController viwerController = ViwerController.getInstance();
         viwerController.setRoot("Home");
     }
     

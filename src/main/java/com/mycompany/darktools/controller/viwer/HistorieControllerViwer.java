@@ -115,8 +115,7 @@ public class HistorieControllerViwer implements Initializable, Observer {
         
         setStateMenu(false);
         
-        //boardControllerImp.goToNextWord();  
-//        boardControllerImp.readWord(0);
+        boardControllerImp.readWord(boardControllerImp.getCurrentWord());
         
         page.setOnKeyPressed(new EventHandler<KeyEvent>(){
             @Override
@@ -337,7 +336,7 @@ public class HistorieControllerViwer implements Initializable, Observer {
     @FXML
     private void switchToWindow(String screen) throws IOException {
         try{
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot(screen);
         }catch(Exception e){
             System.out.println("Erro ao acessar a tela "+ screen +" / "+e);

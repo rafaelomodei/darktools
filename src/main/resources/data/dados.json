@@ -828,7 +828,7 @@
         "words":["Atrás da porta segue um pequeno corredor que os leva até uma grande sala, ao adentrar a sala é possível ver 5 goblins comendo carne de cervo, um deles é um Xamã."],
         "wordsSongs":["/songs/speaks/master/speaks15a.mp3"],
         "commands":[""],
-        "routes":["15.0"]
+        "routes":["15.0a"]
     },
     {
         "id":"15.0a",

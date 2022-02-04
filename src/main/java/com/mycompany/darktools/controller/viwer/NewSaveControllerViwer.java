@@ -34,7 +34,7 @@ public class NewSaveControllerViwer implements Initializable {
     @FXML
     private void switchToHome() throws IOException {
         try{
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot("Home");
         }catch(Exception e){
             System.out.println("Erro: " + e);
@@ -46,7 +46,7 @@ public class NewSaveControllerViwer implements Initializable {
         try{
             System.out.println("Valor no textfield = "+textField_nameSave.getText());
             boardControllerImp.startGame(textField_nameSave.getText());
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot("Historie");
         }catch(Exception e){
             System.out.println("Erro: " + e);

@@ -43,7 +43,7 @@ public class SaveControllerViwer implements Initializable {
     @FXML
     private void switchToNewGame() throws IOException {
         try{
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot("NewSave");
         }catch(Exception e){
             System.out.println("Erro: " + e);
@@ -53,7 +53,7 @@ public class SaveControllerViwer implements Initializable {
     @FXML
     private void switchToHome() throws IOException {
         try{
-            ViwerController viwerController = ViwerController.getStante();
+            ViwerController viwerController = ViwerController.getInstance();
             viwerController.setRoot("Home");
         }catch(Exception e){
             System.out.println("Erro: " + e);
